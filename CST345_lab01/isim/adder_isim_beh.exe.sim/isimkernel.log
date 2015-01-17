@@ -1,0 +1,10 @@
+Command line:
+   adder_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  12335
+
+Sat Jan 17 02:02:53 2015
+
+
+ Elaboration Time: 0.03125 sec
