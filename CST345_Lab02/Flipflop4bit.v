@@ -18,13 +18,14 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module latch4bit(
+module FF4bit(
+	input clk,
 	 input load,
     input [3:0] d,
     output reg [3:0] q
     );
 
-	always@(load)
+	always@(negedge clk)
 	begin
 		if(load)
 			q <= d;

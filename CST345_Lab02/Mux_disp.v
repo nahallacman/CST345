@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Mux_disp(
-	 input clk,
+	input clk,
     input dp0,
     input dp1,
     input dp2,
@@ -54,32 +54,40 @@ module Mux_disp(
 	 //2 bit counter
 	 always@(posedge clk)
 	 begin
+		sel += 1;
+	 end
+	 
+	 /*
+	 	 //2 bit counter
+	 always@(posedge clk)
+	 begin
 	 if (sel != 3) // this probably needs work
 	 sel = sel + 1;
 	 else
 	 sel = 0;
 	 end
+	 */
 	 
 //series of latches
-latch4bit lat0(
+FF4bit lat0(
 .load(dp0),
 .d(Val0),
 .q(memOut0)
 );
 
-latch4bit lat1(
+FF4bit lat1(
 .load(dp1),
 .d(Val1),
 .q(memOut1)
 );
 
-latch4bit lat2(
+FF4bit lat2(
 .load(dp2),
 .d(Val2),
 .q(memOut2)
 );
 
-latch4bit lat3(
+FF4bit lat3(
 .load(dp3),
 .d(Val3),
 .q(memOut3)
@@ -89,10 +97,10 @@ latch4bit lat3(
 always@(*)
 begin
 case(sel)
-0 : MuxOut = memOut0;
-1 : MuxOut = memOut1;
-2 : MuxOut = memOut2;
-3 : MuxOut = memOut3;
+0 : MuxOut <= memOut0;
+1 : MuxOut <= memOut1;
+2 : MuxOut <= memOut2;
+3 : MuxOut <= memOut3;
 default : MuxOut <= 4'bxxxx;
 endcase
 end
@@ -101,19 +109,20 @@ end
 always@(*)
 begin
 case(sel)
-0 : {an1,an2,an3,an4} = 4'b1000;
-1 : {an1,an2,an3,an4} = 4'b0100;
-2 : {an1,an2,an3,an4} = 4'b0010;
-3 : {an1,an2,an3,an4} = 4'b0001;
+0 : {an1,an2,an3,an4} <= 4'b1000;
+1 : {an1,an2,an3,an4} <= 4'b0100;
+2 : {an1,an2,an3,an4} <= 4'b0010;
+3 : {an1,an2,an3,an4} <= 4'b0001;
 default : {an1,an2,an3,an4} = 4'bxxxx;
 endcase
 end
 
 //base 10 to 7 seg decoder
+//could be a hex to 7 seg decoder
 always@(*)
 begin
 case(MuxOut)
-0: {a,b,c,d,e,f,g} = 7'b0000000; // these values have not been calcualted yet
+0: {a,b,c,d,e,f,g} = 7'b0000000; // these values have not been calculated yet
 1: {a,b,c,d,e,f,g} = 7'b1000000;
 2: {a,b,c,d,e,f,g} = 7'b0100000;
 3: {a,b,c,d,e,f,g} = 7'b0010000;
