@@ -54,7 +54,7 @@ module Mux_disp(
 	 //2 bit counter
 	 always@(posedge clk)
 	 begin
-		sel += 1;
+		sel = sel + 1;
 	 end
 	 
 	 /*
@@ -70,24 +70,28 @@ module Mux_disp(
 	 
 //series of latches
 FF4bit lat0(
+.clk(clk),
 .load(dp0),
 .d(Val0),
 .q(memOut0)
 );
 
 FF4bit lat1(
+.clk(clk),
 .load(dp1),
 .d(Val1),
 .q(memOut1)
 );
 
 FF4bit lat2(
+.clk(clk),
 .load(dp2),
 .d(Val2),
 .q(memOut2)
 );
 
 FF4bit lat3(
+.clk(clk),
 .load(dp3),
 .d(Val3),
 .q(memOut3)
