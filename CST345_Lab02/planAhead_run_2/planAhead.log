@@ -1,0 +1,155 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Mon Jan 26 04:15:52 2015
+# Process ID: 14940
+# Log file: C:/Users/cal/Desktop/School/CST345/CST345_Lab02/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/cal/Desktop/School/CST345/CST345_Lab02/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/cal/Desktop/School/CST345/CST345_Lab02/pa.fromHdl.tcl
+# create_project -name CST345_Lab02 -dir "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/planAhead_run_2" -part xc6slx16csg324-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "Mux_disp.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Mux_disp.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {Mux_disp.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Flipflop4bit.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Lab02_Toplevel.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top Lab02_Toplevel $srcset
+# add_files [list {Mux_disp.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx16csg324-3
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Mux_disp.v" into library work
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Flipflop4bit.v" into library work
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.v" into library work
+Loading clock regions from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+Loading io standards from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Mux_disp.ucf]
+Finished Parsing UCF File [C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Mux_disp.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: ddfb1e54
+open_rtl_design: Time (s): elapsed = 00:00:09 . Memory (MB): peak = 524.832 ; gain = 101.543
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin T10 [get_ports {switches[0]}]
+endgroup
+startgroup
+set_property package_pin T9 [get_ports {switches[1]}]
+endgroup
+startgroup
+set_property package_pin V9 [get_ports {switches[2]}]
+endgroup
+startgroup
+set_property package_pin M8 [get_ports {switches[3]}]
+endgroup
+startgroup
+set_property package_pin N8 [get_ports {switches[4]}]
+endgroup
+startgroup
+set_property package_pin P17 [get_ports an1]
+endgroup
+startgroup
+set_property package_pin P18 [get_ports an2]
+endgroup
+set_property package_pin "" [get_ports [list  an4]]
+startgroup
+set_property package_pin N15 [get_ports an3]
+endgroup
+startgroup
+set_property package_pin N16 [get_ports an4]
+endgroup
+set_property package_pin "" [get_ports [list  b]]
+startgroup
+set_property package_pin T17 [get_ports a]
+endgroup
+startgroup
+set_property package_pin T18 [get_ports b]
+endgroup
+set_property package_pin "" [get_ports [list  clk]]
+startgroup
+set_property package_pin U17 [get_ports c]
+endgroup
+startgroup
+set_property package_pin U18 [get_ports clk]
+endgroup
+set_property package_pin "" [get_ports [list  clk]]
+startgroup
+set_property package_pin U18 [get_ports d]
+endgroup
+set_property package_pin "" [get_ports [list  DownButton]]
+set_property package_pin "" [get_ports [list  dp]]
+startgroup
+set_property package_pin M14 [get_ports e]
+endgroup
+startgroup
+set_property package_pin N14 [get_ports f]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports g]
+endgroup
+startgroup
+set_property package_pin M13 [get_ports dp]
+endgroup
+set_property package_pin "" [get_ports [list  clk]]
+set_property package_pin "" [get_ports [list  DownButton]]
+startgroup
+set_property package_pin C4 [get_ports LeftButton]
+endgroup
+startgroup
+set_property package_pin B8 [get_ports MiddleButton]
+endgroup
+startgroup
+set_property package_pin D9 [get_ports RightButton]
+endgroup
+startgroup
+set_property package_pin A8 [get_ports UpButton]
+endgroup
+startgroup
+set_property package_pin D9 [get_ports RightButton]
+endgroup
+startgroup
+set_property package_pin C9 [get_ports DownButton]
+endgroup
+startgroup
+set_property package_pin T8 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin T8 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin T7 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin T8 [get_ports clk]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See C:/Users/cal/Desktop/School/CST345/CST345_Lab02\planAhead_pid14940.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Mon Jan 26 04:32:53 2015...
+INFO: [Common 17-83] Releasing license: PlanAhead
