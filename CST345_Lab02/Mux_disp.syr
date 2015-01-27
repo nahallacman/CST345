@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Mux_disp.prj
 
@@ -106,7 +106,7 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Parsing                                  *
 =========================================================================
 Analyzing Verilog file "C:\Users\cal\Desktop\School\CST345\CST345_Lab02\Flipflop4bit.v" into library work
-Parsing module <latch4bit>.
+Parsing module <FF4bit>.
 Analyzing Verilog file "C:\Users\cal\Desktop\School\CST345\CST345_Lab02\Mux_disp.v" into library work
 Parsing module <Mux_disp>.
 
@@ -117,8 +117,7 @@ Parsing module <Mux_disp>.
 Elaborating module <Mux_disp>.
 WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\CST345_Lab02\Mux_disp.v" Line 57: Result of 3-bit expression is truncated to fit in 2-bit target.
 
-Elaborating module <latch4bit>.
-WARNING:HDLCompiler:91 - "C:\Users\cal\Desktop\School\CST345\CST345_Lab02\Flipflop4bit.v" Line 30: Signal <d> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+Elaborating module <FF4bit>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -127,13 +126,13 @@ WARNING:HDLCompiler:91 - "C:\Users\cal\Desktop\School\CST345\CST345_Lab02\Flipfl
 Synthesizing Unit <Mux_disp>.
     Related source file is "C:\Users\cal\Desktop\School\CST345\CST345_Lab02\Mux_disp.v".
     Found 2-bit register for signal <sel>.
-    Found 2-bit adder for signal <sel[1]_GND_1_o_add_2_OUT> created at line 57.
-    Found 4x4-bit Read Only RAM for signal <_n0043>
-    Found 16x7-bit Read Only RAM for signal <_n0060>
-    Found 1-bit 4-to-1 multiplexer for signal <MuxOut<3>> created at line 110.
-    Found 1-bit 4-to-1 multiplexer for signal <MuxOut<2>> created at line 110.
-    Found 1-bit 4-to-1 multiplexer for signal <MuxOut<1>> created at line 110.
-    Found 1-bit 4-to-1 multiplexer for signal <MuxOut<0>> created at line 110.
+    Found 2-bit adder for signal <sel[1]_GND_1_o_add_1_OUT> created at line 57.
+    Found 4x4-bit Read Only RAM for signal <_n0035>
+    Found 16x7-bit Read Only RAM for signal <_n0052>
+    Found 1-bit 4-to-1 multiplexer for signal <MuxOut<3>> created at line 128.
+    Found 1-bit 4-to-1 multiplexer for signal <MuxOut<2>> created at line 128.
+    Found 1-bit 4-to-1 multiplexer for signal <MuxOut<1>> created at line 128.
+    Found 1-bit 4-to-1 multiplexer for signal <MuxOut<0>> created at line 128.
     Summary:
 	inferred   2 RAM(s).
 	inferred   1 Adder/Subtractor(s).
@@ -141,15 +140,12 @@ Synthesizing Unit <Mux_disp>.
 	inferred   4 Multiplexer(s).
 Unit <Mux_disp> synthesized.
 
-Synthesizing Unit <latch4bit>.
+Synthesizing Unit <FF4bit>.
     Related source file is "C:\Users\cal\Desktop\School\CST345\CST345_Lab02\Flipflop4bit.v".
-WARNING:Xst:737 - Found 1-bit latch for signal <q<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <q<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <q<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <q<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit register for signal <q>.
     Summary:
-	inferred   4 Latch(s).
-Unit <latch4bit> synthesized.
+	inferred   4 D-type flip-flop(s).
+Unit <FF4bit> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -160,10 +156,9 @@ Macro Statistics
  4x4-bit single-port Read Only RAM                     : 1
 # Adders/Subtractors                                   : 1
  2-bit adder                                           : 1
-# Registers                                            : 1
+# Registers                                            : 5
  2-bit register                                        : 1
-# Latches                                              : 16
- 1-bit latch                                           : 16
+ 4-bit register                                        : 4
 # Multiplexers                                         : 4
  1-bit 4-to-1 multiplexer                              : 4
 
@@ -176,7 +171,7 @@ Macro Statistics
 
 Synthesizing (advanced) Unit <Mux_disp>.
 The following registers are absorbed into counter <sel>: 1 register on signal <sel>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0043> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0035> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -187,7 +182,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0043> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to signal <an1>           |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0060> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0052> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -209,6 +204,8 @@ Macro Statistics
  4x4-bit single-port distributed Read Only RAM         : 1
 # Counters                                             : 1
  2-bit up counter                                      : 1
+# Registers                                            : 16
+ Flip-Flops                                            : 16
 # Multiplexers                                         : 4
  1-bit 4-to-1 multiplexer                              : 4
 
@@ -230,8 +227,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2
- Flip-Flops                                            : 2
+# Registers                                            : 18
+ Flip-Flops                                            : 18
 
 =========================================================================
 
@@ -261,11 +258,11 @@ Primitive and Black Box Usage:
 #      LUT6                        : 4
 # FlipFlops/Latches                : 18
 #      FD                          : 2
-#      LD                          : 16
-# Clock Buffers                    : 5
-#      BUFGP                       : 5
-# IO Buffers                       : 27
-#      IBUF                        : 16
+#      FDE_1                       : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 31
+#      IBUF                        : 20
 #      OBUF                        : 11
 
 Device utilization summary:
@@ -292,7 +289,7 @@ IO Utilization:
     IOB Flip Flops/Latches:              16
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -315,11 +312,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-dp3                                | BUFGP                  | 4     |
-dp2                                | BUFGP                  | 4     |
-dp1                                | BUFGP                  | 4     |
-dp0                                | BUFGP                  | 4     |
-clk                                | BUFGP                  | 2     |
+clk                                | BUFGP                  | 18    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -331,7 +324,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 2.190ns (Maximum Frequency: 456.663MHz)
-   Minimum input arrival time before clock: 1.838ns
+   Minimum input arrival time before clock: 2.227ns
    Maximum output required time after clock: 6.244ns
    Maximum combinational path delay: No path found
 
@@ -355,91 +348,34 @@ Delay:               2.190ns (Levels of Logic = 1)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              10   0.447   0.856  sel_0 (sel_0)
-     INV:I->O              1   0.206   0.579  sel_0_rstpot_INV_0 (sel_0_rstpot)
+     INV:I->O              1   0.206   0.579  Mcount_sel_xor<0>11_INV_0 (Result<0>)
      FD:D                      0.102          sel_0
     ----------------------------------------
     Total                      2.190ns (0.755ns logic, 1.435ns route)
                                        (34.5% logic, 65.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'dp3'
-  Total number of paths / destination ports: 4 / 4
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
 -------------------------------------------------------------------------
-Offset:              1.838ns (Levels of Logic = 1)
-  Source:            Val3<3> (PAD)
-  Destination:       lat3/q_3 (LATCH)
-  Destination Clock: dp3 falling
+Offset:              2.227ns (Levels of Logic = 1)
+  Source:            dp3 (PAD)
+  Destination:       lat3/q_3 (FF)
+  Destination Clock: clk falling
 
-  Data Path: Val3<3> to lat3/q_3
+  Data Path: dp3 to lat3/q_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Val3_3_IBUF (Val3_3_IBUF)
-     LD:D                      0.037          lat3/q_3
+     IBUF:I->O             4   1.222   0.683  dp3_IBUF (dp3_IBUF)
+     FDE_1:CE                  0.322          lat3/q_0
     ----------------------------------------
-    Total                      1.838ns (1.259ns logic, 0.579ns route)
-                                       (68.5% logic, 31.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'dp2'
-  Total number of paths / destination ports: 4 / 4
--------------------------------------------------------------------------
-Offset:              1.838ns (Levels of Logic = 1)
-  Source:            Val2<3> (PAD)
-  Destination:       lat2/q_3 (LATCH)
-  Destination Clock: dp2 falling
-
-  Data Path: Val2<3> to lat2/q_3
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Val2_3_IBUF (Val2_3_IBUF)
-     LD:D                      0.037          lat2/q_3
-    ----------------------------------------
-    Total                      1.838ns (1.259ns logic, 0.579ns route)
-                                       (68.5% logic, 31.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'dp1'
-  Total number of paths / destination ports: 4 / 4
--------------------------------------------------------------------------
-Offset:              1.838ns (Levels of Logic = 1)
-  Source:            Val1<3> (PAD)
-  Destination:       lat1/q_3 (LATCH)
-  Destination Clock: dp1 falling
-
-  Data Path: Val1<3> to lat1/q_3
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Val1_3_IBUF (Val1_3_IBUF)
-     LD:D                      0.037          lat1/q_3
-    ----------------------------------------
-    Total                      1.838ns (1.259ns logic, 0.579ns route)
-                                       (68.5% logic, 31.5% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'dp0'
-  Total number of paths / destination ports: 4 / 4
--------------------------------------------------------------------------
-Offset:              1.838ns (Levels of Logic = 1)
-  Source:            Val0<3> (PAD)
-  Destination:       lat0/q_3 (LATCH)
-  Destination Clock: dp0 falling
-
-  Data Path: Val0<3> to lat0/q_3
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  Val0_3_IBUF (Val0_3_IBUF)
-     LD:D                      0.037          lat0/q_3
-    ----------------------------------------
-    Total                      1.838ns (1.259ns logic, 0.579ns route)
-                                       (68.5% logic, 31.5% route)
+    Total                      2.227ns (1.544ns logic, 0.683ns route)
+                                       (69.3% logic, 30.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 64 / 11
+  Total number of paths / destination ports: 176 / 11
 -------------------------------------------------------------------------
 Offset:              6.244ns (Levels of Logic = 3)
   Source:            sel_0 (FF)
@@ -451,96 +387,12 @@ Offset:              6.244ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              10   0.447   1.221  sel_0 (sel_0)
-     LUT6:I0->O            7   0.203   1.021  Mmux_MuxOut<2>11 (MuxOut<2>)
-     LUT4:I0->O            1   0.203   0.579  Mram__n006051 (f_OBUF)
-     OBUF:I->O                 2.571          f_OBUF (f)
+     LUT6:I0->O            7   0.203   1.021  Mmux_MuxOut<0>11 (MuxOut<0>)
+     LUT4:I0->O            1   0.203   0.579  Mram__n005241 (e_OBUF)
+     OBUF:I->O                 2.571          e_OBUF (e)
     ----------------------------------------
     Total                      6.244ns (3.424ns logic, 2.820ns route)
                                        (54.8% logic, 45.2% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'dp1'
-  Total number of paths / destination ports: 28 / 7
--------------------------------------------------------------------------
-Offset:              5.901ns (Levels of Logic = 3)
-  Source:            lat1/q_3 (LATCH)
-  Destination:       a (PAD)
-  Source Clock:      dp1 falling
-
-  Data Path: lat1/q_3 to a
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.498   0.827  lat1/q_3 (lat1/q_3)
-     LUT6:I2->O            7   0.203   1.021  Mmux_MuxOut<3>11 (MuxOut<3>)
-     LUT4:I0->O            1   0.203   0.579  Mram__n006031 (d_OBUF)
-     OBUF:I->O                 2.571          d_OBUF (d)
-    ----------------------------------------
-    Total                      5.901ns (3.475ns logic, 2.426ns route)
-                                       (58.9% logic, 41.1% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'dp3'
-  Total number of paths / destination ports: 28 / 7
--------------------------------------------------------------------------
-Offset:              5.884ns (Levels of Logic = 3)
-  Source:            lat3/q_3 (LATCH)
-  Destination:       a (PAD)
-  Source Clock:      dp3 falling
-
-  Data Path: lat3/q_3 to a
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.498   0.808  lat3/q_3 (lat3/q_3)
-     LUT6:I3->O            7   0.205   1.021  Mmux_MuxOut<3>11 (MuxOut<3>)
-     LUT4:I0->O            1   0.203   0.579  Mram__n006031 (d_OBUF)
-     OBUF:I->O                 2.571          d_OBUF (d)
-    ----------------------------------------
-    Total                      5.884ns (3.477ns logic, 2.407ns route)
-                                       (59.1% logic, 40.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'dp2'
-  Total number of paths / destination ports: 28 / 7
--------------------------------------------------------------------------
-Offset:              5.758ns (Levels of Logic = 3)
-  Source:            lat2/q_3 (LATCH)
-  Destination:       a (PAD)
-  Source Clock:      dp2 falling
-
-  Data Path: lat2/q_3 to a
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.498   0.684  lat2/q_3 (lat2/q_3)
-     LUT6:I4->O            7   0.203   1.021  Mmux_MuxOut<3>11 (MuxOut<3>)
-     LUT4:I0->O            1   0.203   0.579  Mram__n006031 (d_OBUF)
-     OBUF:I->O                 2.571          d_OBUF (d)
-    ----------------------------------------
-    Total                      5.758ns (3.475ns logic, 2.283ns route)
-                                       (60.3% logic, 39.7% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'dp0'
-  Total number of paths / destination ports: 28 / 7
--------------------------------------------------------------------------
-Offset:              5.656ns (Levels of Logic = 3)
-  Source:            lat0/q_3 (LATCH)
-  Destination:       a (PAD)
-  Source Clock:      dp0 falling
-
-  Data Path: lat0/q_3 to a
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.498   0.580  lat0/q_3 (lat0/q_3)
-     LUT6:I5->O            7   0.205   1.021  Mmux_MuxOut<3>11 (MuxOut<3>)
-     LUT4:I0->O            1   0.203   0.579  Mram__n006031 (d_OBUF)
-     OBUF:I->O                 2.571          d_OBUF (d)
-    ----------------------------------------
-    Total                      5.656ns (3.477ns logic, 2.179ns route)
-                                       (61.5% logic, 38.5% route)
 
 =========================================================================
 
@@ -558,14 +410,14 @@ clk            |    2.190|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.43 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.46 secs
  
 --> 
 
 Total memory usage is 237808 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

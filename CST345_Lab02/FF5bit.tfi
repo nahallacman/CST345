@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+FF5bit instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .load(load), 
+    .d(d), 
+    .q(q)
+    );
+
+

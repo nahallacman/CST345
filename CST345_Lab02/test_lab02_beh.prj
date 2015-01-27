@@ -1,0 +1,5 @@
+verilog work "Mux_disp.v"
+verilog work "Flipflop4bit.v"
+verilog work "Lab02_Toplevel.v"
+verilog work "test_lab02.v"
+verilog work "C:/Xilinx/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

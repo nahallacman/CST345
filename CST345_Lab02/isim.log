@@ -1,0 +1,20 @@
+ISim log file
+Running: C:\Users\cal\Desktop\School\CST345\CST345_Lab02\test_lab02_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/cal/Desktop/School/CST345/CST345_Lab02/test_lab02_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+At time               120000, a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, dp = 0, an1 = 1, an2 = 0, an3 = 1, an4 = 1.
+At time               248000, a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, dp = 0, an1 = 1, an2 = 1, an3 = 1, an4 = 0.
+At time               376000, a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, dp = 0, an1 = 1, an2 = 1, an3 = 0, an4 = 1.
+At time               504000, a = 1, b = 1, c = 1, d = 1, e = 1, f = 1, g = 1, dp = 1, an1 = 0, an2 = 1, an3 = 1, an4 = 1.
+At time               632000, a = 0, b = 0, c = 0, d = 1, e = 0, f = 0, g = 0, dp = 1, an1 = 1, an2 = 1, an3 = 1, an4 = 0.
+At time               760000, a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, dp = 0, an1 = 0, an2 = 1, an3 = 1, an4 = 1.
+At time               888000, a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, dp = 0, an1 = 1, an2 = 1, an3 = 0, an4 = 1.

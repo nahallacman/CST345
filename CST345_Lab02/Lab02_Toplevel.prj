@@ -1,0 +1,3 @@
+verilog work "Mux_disp.v"
+verilog work "Flipflop4bit.v"
+verilog work "Lab02_Toplevel.v"

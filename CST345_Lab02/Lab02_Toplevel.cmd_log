@@ -1,0 +1,36 @@
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Mux_disp.ucf -p xc6slx16-csg324-3 Lab02_Toplevel.ngc Lab02_Toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Lab02_Toplevel_map.ncd Lab02_Toplevel.ngd Lab02_Toplevel.pcf 
+par -w -intstyle ise -ol high -mt off Lab02_Toplevel_map.ncd Lab02_Toplevel.ncd Lab02_Toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Lab02_Toplevel.twx Lab02_Toplevel.ncd -o Lab02_Toplevel.twr Lab02_Toplevel.pcf -ucf Mux_disp.ucf 
+bitgen -intstyle ise -f Lab02_Toplevel.ut Lab02_Toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Mux_disp.ucf -p xc6slx16-csg324-3 Lab02_Toplevel.ngc Lab02_Toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Lab02_Toplevel_map.ncd Lab02_Toplevel.ngd Lab02_Toplevel.pcf 
+par -w -intstyle ise -ol high -mt off Lab02_Toplevel_map.ncd Lab02_Toplevel.ncd Lab02_Toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Lab02_Toplevel.twx Lab02_Toplevel.ncd -o Lab02_Toplevel.twr Lab02_Toplevel.pcf -ucf Mux_disp.ucf 
+bitgen -intstyle ise -f Lab02_Toplevel.ut Lab02_Toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Mux_disp.ucf -p xc6slx16-csg324-3 Lab02_Toplevel.ngc Lab02_Toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Lab02_Toplevel_map.ncd Lab02_Toplevel.ngd Lab02_Toplevel.pcf 
+par -w -intstyle ise -ol high -mt off Lab02_Toplevel_map.ncd Lab02_Toplevel.ncd Lab02_Toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Lab02_Toplevel.twx Lab02_Toplevel.ncd -o Lab02_Toplevel.twr Lab02_Toplevel.pcf -ucf Mux_disp.ucf 
+bitgen -intstyle ise -f Lab02_Toplevel.ut Lab02_Toplevel.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.xst" -ofn "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Lab02_Toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Mux_disp.ucf -p xc6slx16-csg324-3 Lab02_Toplevel.ngc Lab02_Toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Lab02_Toplevel_map.ncd Lab02_Toplevel.ngd Lab02_Toplevel.pcf 
+par -w -intstyle ise -ol high -mt off Lab02_Toplevel_map.ncd Lab02_Toplevel.ncd Lab02_Toplevel.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Lab02_Toplevel.twx Lab02_Toplevel.ncd -o Lab02_Toplevel.twr Lab02_Toplevel.pcf -ucf Mux_disp.ucf 
+bitgen -intstyle ise -f Lab02_Toplevel.ut Lab02_Toplevel.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Mux_disp.ucf -p xc6slx16-csg324-3 Lab02_Toplevel.ngc Lab02_Toplevel.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Lab02_Toplevel_map.ncd Lab02_Toplevel.ngd Lab02_Toplevel.pcf 

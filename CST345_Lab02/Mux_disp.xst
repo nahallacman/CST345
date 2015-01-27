@@ -1,9 +1,6 @@
-set -tmpdir "xst/projnav.tmp"
-set -xsthdpdir "xst"
-run
--ifn Mux_disp.prj
--ofn Mux_disp
--ofmt NGC
+set -tmpdir "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/xst"
+run -compileonly yes
 -p xc6slx16-3-csg324
 -top Mux_disp
 -opt_mode Speed
@@ -50,3 +47,4 @@ run
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
+-ifn Mux_disp.prj

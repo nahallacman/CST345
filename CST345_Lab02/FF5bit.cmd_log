@@ -1,0 +1,4 @@
+vhdtdtfi -lib work C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Flipflop4bit.v -lang verilog -prj CST345_Lab02 -o FF5bit.spl -module FF5bit -template C:/Xilinx/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 FF5bit.spl C:/Users/cal/Desktop/School/CST345/CST345_Lab02/FF5bit.sym 
+vhdtdtfi -lang verilog -prj CST345_Lab02 -o C:/Users/cal/Desktop/School/CST345/CST345_Lab02/FF5bit.tfi -lib work C:/Users/cal/Desktop/School/CST345/CST345_Lab02//Flipflop4bit.v -module FF5bit -template C:/Xilinx/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj CST345_Lab02 -o C:/Users/cal/Desktop/School/CST345/CST345_Lab02/FF5bit.tfi -lib work C:/Users/cal/Desktop/School/CST345/CST345_Lab02//Flipflop4bit.v -module FF5bit -template C:/Xilinx/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

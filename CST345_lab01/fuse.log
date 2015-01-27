@@ -15,8 +15,7 @@ Compiling module adder
 Compiling module test_adder
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
 Built simulation executable C:/Users/cal/Desktop/School/CST345/CST345_lab01/test_adder_isim_beh.exe
-Fuse Memory Usage: 26200 KB
-Fuse CPU Usage: 358 ms
+Fuse Memory Usage: 26152 KB
+Fuse CPU Usage: 405 ms

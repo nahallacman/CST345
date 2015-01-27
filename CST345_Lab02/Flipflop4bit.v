@@ -18,16 +18,19 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module FF4bit(
-	input clk,
+module FF5bit(
+	 input clk,
+	 input rst,
 	 input load,
-    input [3:0] d,
-    output reg [3:0] q
+    input [4:0] d,
+    output reg [4:0] q
     );
 
 	always@(negedge clk)
 	begin
-		if(load)
+	if(rst)
+		q <= 0;
+	else if (load)
 			q <= d;
 	end
 
