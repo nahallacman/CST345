@@ -1,0 +1,3 @@
+vhdtdtfi -lib work C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Clock_Divider.v -lang verilog -prj CST345_Lab02 -o Clock_Divider.spl -module Clock_Divider -template C:/Xilinx/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 Clock_Divider.spl C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Clock_Divider.sym 
+vhdtdtfi -lang verilog -prj CST345_Lab02 -o C:/Users/cal/Desktop/School/CST345/CST345_Lab02/Clock_Divider.tfi -lib work C:/Users/cal/Desktop/School/CST345/CST345_Lab02//Clock_Divider.v -module Clock_Divider -template C:/Xilinx/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

@@ -1,5 +1,0 @@
-verilog isim_temp "Mux_disp.v"
-verilog isim_temp "Flipflop4bit.v"
-verilog isim_temp "Lab02_Toplevel.v"
-verilog isim_temp "test_lab02.v"
-verilog isim_temp "C:/Xilinx/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

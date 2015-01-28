@@ -1,3 +1,4 @@
 verilog work "Mux_disp.v"
 verilog work "Flipflop4bit.v"
+verilog work "Clock_Divider.v"
 verilog work "Lab02_Toplevel.v"

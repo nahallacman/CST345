@@ -22,4 +22,4 @@ NET "MiddleButton" LOC = B8;
 NET "UpButton" LOC = A8;
 NET "RightButton" LOC = D9;
 NET "DownButton" LOC = C9;
-NET "clk" LOC = T5;
+NET "clk" LOC = V10;

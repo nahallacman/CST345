@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 100ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -44,10 +44,27 @@ module Lab02_Toplevel(
 	 wire [4:0] memOut1;
 	 wire [4:0] memOut2;
 	 wire [4:0] memOut3;
+	 
+	 wire clk2;
+
+/*
+clock_divider clkdiv1(
+.clk_in(clk),
+.clk_out(clk2)
+);
+*/
+
+
+//cal's clock divider	 
+Clock_Divider_Cal clkdiv0(
+.reset(MiddleButton),
+.clk_in(clk),
+.clk_out(clk2)
+);
 
 //series of FlipFlops
 FF5bit lat0(
-.clk(clk),
+.clk(clk2),
 .rst(MiddleButton),
 .load(UpButton),
 .d( switches ),
@@ -55,7 +72,7 @@ FF5bit lat0(
 );
 
 FF5bit lat1(
-.clk(clk),
+.clk(clk2),
 .rst(MiddleButton),
 .load(RightButton),
 .d( switches ),
@@ -63,7 +80,7 @@ FF5bit lat1(
 );
 
 FF5bit lat2(
-.clk(clk),
+.clk(clk2),
 .rst(MiddleButton),
 .load(DownButton),
 .d( switches ),
@@ -72,7 +89,7 @@ FF5bit lat2(
 
 FF5bit lat3(
 .rst(MiddleButton),
-.clk(clk),
+.clk(clk2),
 .load(LeftButton),
 .d( switches ),
 .q( memOut3 )
@@ -80,7 +97,7 @@ FF5bit lat3(
 
 Mux_disp MuxDisplay(
 .reset(MiddleButton),
-.clk(clk),
+.clk(clk2),
 .dp0(memOut0[0]),
 .dp1(memOut1[0]),
 .dp2(memOut2[0]),

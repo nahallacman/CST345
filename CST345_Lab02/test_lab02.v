@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 100ps
 
 ////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -87,11 +87,11 @@ module test_lab02;
 		//force reset
 		MiddleButton = 1;
 		
-		#10;
+		#100;
 		
 		MiddleButton = 0;
 		 
-		#10;
+		#100;
 		$display("At time %t, a = %b, b = %b, c = %b, d = %b, e = %b, f = %b, g = %b, dp = %b, an1 = %b, an2 = %b, an3 = %b, an4 = %b.",$time,a,b,c,d,e,f,g,dp,an1,an2,an3,an4);
 
 		// Add stimulus here

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Jan 26 22:54:54 2015
+// Written by: Map P.20131013 on Wed Jan 28 04:24:27 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -11,7 +11,7 @@ COMP "dp" LOCATE = SITE "M13" LEVEL 1;
 COMP "DownButton" LOCATE = SITE "C9" LEVEL 1;
 COMP "switches<1>" LOCATE = SITE "T9" LEVEL 1;
 COMP "switches<2>" LOCATE = SITE "V9" LEVEL 1;
-COMP "clk" LOCATE = SITE "T8" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
 COMP "switches<3>" LOCATE = SITE "M8" LEVEL 1;
 COMP "switches<4>" LOCATE = SITE "N8" LEVEL 1;
 COMP "UpButton" LOCATE = SITE "A8" LEVEL 1;

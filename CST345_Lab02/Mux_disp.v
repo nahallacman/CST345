@@ -93,6 +93,7 @@ endcase
 end
 
 //2:4 bit encoder
+//active low
 always@(*)
 begin
 case(sel)
@@ -104,27 +105,28 @@ default : {an1,an2,an3,an4} = 4'bxxxx;
 endcase
 end
 
-//base 10 to 7 seg decoder
-//could be a hex to 7 seg decoder
+
+//hex to 7 seg decoder
+//active low
 always@(*)
 begin
 case(MuxOut[4:1])
-0: {a,b,c,d,e,f,g} = 7'b0000000; // these values have not been calculated yet
-1: {a,b,c,d,e,f,g} = 7'b1000000;
-2: {a,b,c,d,e,f,g} = 7'b0100000;
-3: {a,b,c,d,e,f,g} = 7'b0010000;
-4: {a,b,c,d,e,f,g} = 7'b0001000;
-5: {a,b,c,d,e,f,g} = 7'b0000100;
-6: {a,b,c,d,e,f,g} = 7'b0000010;
-7: {a,b,c,d,e,f,g} = 7'b0000001;
-8: {a,b,c,d,e,f,g} = 7'b1100000;
-9: {a,b,c,d,e,f,g} = 7'b0011000;
-10: {a,b,c,d,e,f,g} = 7'b0000110;
-11: {a,b,c,d,e,f,g} = 7'b1000001;
-12: {a,b,c,d,e,f,g} = 7'b1110000;
-13: {a,b,c,d,e,f,g} = 7'b0001110;
-14: {a,b,c,d,e,f,g} = 7'b1111001;
-15: {a,b,c,d,e,f,g} = 7'b1111111;
+0: {a,b,c,d,e,f,g} = 7'b0000001; 
+1: {a,b,c,d,e,f,g} = 7'b1001111;
+2: {a,b,c,d,e,f,g} = 7'b0010010;
+3: {a,b,c,d,e,f,g} = 7'b0000110;
+4: {a,b,c,d,e,f,g} = 7'b1001100;
+5: {a,b,c,d,e,f,g} = 7'b0100100;
+6: {a,b,c,d,e,f,g} = 7'b0100000;
+7: {a,b,c,d,e,f,g} = 7'b0001111;
+8: {a,b,c,d,e,f,g} = 7'b0000000;
+9: {a,b,c,d,e,f,g} = 7'b0001100;
+10: {a,b,c,d,e,f,g} = 7'b0001000;
+11: {a,b,c,d,e,f,g} = 7'b1100000;
+12: {a,b,c,d,e,f,g} = 7'b0110001;
+13: {a,b,c,d,e,f,g} = 7'b1000010;
+14: {a,b,c,d,e,f,g} = 7'b0110000;
+15: {a,b,c,d,e,f,g} = 7'b0111000;
 default : {a,b,c,d,e,f,g} = 7'bxxxxxxx;
 endcase
 end
