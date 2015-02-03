@@ -1,0 +1,3 @@
+verilog work "../picoblazeDemo/verilog/kcpsm6.v"
+verilog work "../picoblazeDemo/asm/simple.v"
+verilog work "../picoblazeDemo/verilog/exampleVerilog.v"
