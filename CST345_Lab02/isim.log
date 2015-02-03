@@ -1,0 +1,21 @@
+ISim log file
+Running: C:\Users\cal\Desktop\School\CST345\CST345_Lab02\test_Clock_Divider_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/cal/Desktop/School/CST345/CST345_Lab02/test_Clock_Divider_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/test_Clock_Divider.v" Line 35.  For instance test_Clock_Divider/uut/, width 18 of formal port i is not equal to width 16 of actual signal i.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run all
+At time             10300000, clk_in = 1, clk_out = 0.
+At time             20300000, clk_in = 1, clk_out = 0.
+At time             30300000, clk_in = 1, clk_out = 0.
+At time             40300000, clk_in = 1, clk_out = 0.
+At time             41300000, clk_in = 1, clk_out = 0.
+Stopped at time : 13042461 ns : File "C:/Users/cal/Desktop/School/CST345/CST345_Lab02/test_Clock_Divider.v" Line 87

@@ -1,0 +1,30 @@
+Command line:
+   test_FF5bit_isim_beh.exe
+     -simmode  gui
+     -simrunnum  2
+     -socket  29145
+
+Mon Feb 02 23:52:23 2015
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 519.774 Meg
+
+ Total Signals          : 18
+ Total Nets             : 26
+ Total Signal Drivers   : 10
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 13
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 120
+Total Line Count : 45
+Total Line Count : 45
+
+ Total Simulation Time: 0.078125 sec
+
+ Current Memory Usage: 677.069 Meg
+
+Mon Feb 02 23:53:05 2015
+

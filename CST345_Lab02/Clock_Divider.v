@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Cal Barkman
 // 
 // Create Date:    22:59:25 01/27/2015 
 // Design Name: 
@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Clock_Divider_Cal(
+module Clock_Divider(
 	 input reset,
     input clk_in,
     output reg clk_out,
@@ -37,6 +37,7 @@ module Clock_Divider_Cal(
 			clk_out <= 0;
 		end
 	else if(i > 99999)
+	//else if(i > 9) // edited for simulation 
 		begin
 			i <= 0;
 			clk_out <= ~clk_out;

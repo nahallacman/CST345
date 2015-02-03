@@ -1,0 +1,10 @@
+Command line:
+   test_Clock_Divider_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  29160
+
+Mon Feb 02 23:53:26 2015
+
+
+ Elaboration Time: 0.03125 sec

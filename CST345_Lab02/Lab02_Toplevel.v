@@ -56,7 +56,7 @@ clock_divider clkdiv1(
 
 
 //cal's clock divider	 
-Clock_Divider_Cal clkdiv0(
+Clock_Divider clkdiv0(
 .reset(MiddleButton),
 .clk_in(clk),
 .clk_out(clk2)

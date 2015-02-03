@@ -36,7 +36,7 @@ module test_Clock_Divider;
 
 	// Instantiate the Unit Under Test (UUT)
 	//clock_divider uut(
-	Clock_Divider_Cal uut (
+	Clock_Divider uut (
 		.i(i),
 		.reset(reset),
 		.clk_in(clk_in), 
