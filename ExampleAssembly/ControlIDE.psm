@@ -1,0 +1,47 @@
+; ControlIDE.psm
+;##########################################################################
+;## Company:            Oregon Institute of Technology
+;## Author(s):          Troy Scevers (troy.scevers@oit.edu)
+;##  
+;## Creation Date:      
+;## Revision:           1
+;## Program Purpose:    
+;##########################################################################
+;## Assembler Directives
+;##########################################################################
+	#EQU switches, 0x01		; switches address = port 01 (input)
+	#EQU led1, 0x01			; led address = port 01 (output)
+	#EQU led2, 0x02
+	#EQU led3, 0x03
+	#EQU led4, 0x04
+	
+	#EQU _SET, 0x0F			; set  is 00001111
+	#EQU _CLR, 0xF0	 		; clear  is 11110000
+	#EQU clr_mask, 0x0F	 	; clear mask to 00000000
+;##########################################################################
+; Main Program
+;##########################################################################
+main:   
+	RDPRT 	s0, switches	; input switch status into register s1
+	LOAD 	s1, s0			; Copy Register	
+case_1:
+	LOAD 	s2, _SET		; Load Register with Set Mask
+	WRPRT 	s2, led1		; write data to LEDs
+	COMP 	s2, s1			; Compare S2 with Set Value
+	JUMP 	NZ, case_3		;Jump If not Equal
+case_2:
+	LOAD 	s2, _CLR		; Load S2 with CLR Value
+	WRPRT 	s2, led2		; write data to LEDs
+	COMP 	s2, s1			; Compare Registers
+	JUMP 	Z,	case_4		; Jump if equal
+case_3:
+	AND 	s0, clr_mask	
+	JUMP 	NZ,  main
+	XOR 	s2, clr_mask	; complement  data (trick)
+	WRPRT 	s2, led3		; write data to LEDs
+	JUMP 	main			; main loop (do it again)
+case_4:
+	WRPRT 	s2, led4		; write data to LEDs
+	JUMP 	main			; main loop (do it again)      	
+;##########################################################################
+

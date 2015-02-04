@@ -1,0 +1,60 @@
+; ScratchIDE.psm
+;##########################################################################
+;## Company:            Oregon Institute of Technology
+;## Author(s):          Troy Scevers (troy.scevers@oit.edu)
+;##  
+;## Creation Date:      
+;## Revision:           1
+;## Program Purpose:    
+;##########################################################################
+;## Assembler Directives
+;##########################################################################
+#EQU remember1, 00
+#EQU remember2, 01
+#EQU remember3, 08
+#EQU remember4, 09
+#EQU multiplicand, s0  			;NAMEREG s0, multiplicand ; preserved
+#EQU multiplier, s1    			;NAMEREG s1, multiplier ; preserved
+#EQU bit_mask, s2    			;NAMEREG s2, bit_mask ; modified
+#EQU result_msb, s3    			;NAMEREG s3, result_msb ; most-significant byte (MSB) of result,
+#EQU result_lsb, s4    			;NAMEREG s4, result_lsb ; least-significant byte (LSB) of result,
+#EQU SWITCHE1, 0x01   			; switches address = port 01 (input)
+#EQU SWITCHE2, 0x02   			; switches address = port 02 (input)
+#EQU LEDS2, 0x03  				; LED address = port 03 (output)
+#EQU LEDS3, 0x04  				; LED address = port 04 (output)
+;##########################################################################
+; Main Program
+;##########################################################################
+main:   
+		LOAD 	bit_mask, 0x01	 		; start with least-significant bit (lsb)
+        LOAD 	result_msb, 0x00 		; clear product MSB
+        LOAD 	result_lsb, 0x00 		; clear product LSB (not required)
+
+        RDPRT 	multiplicand, SWITCHE1	; put multiplicand into register s2
+		RDPRT 	multiplier, SWITCHE2   	; put multiplier into register s1
+		WRMEM  	multiplicand, remember1
+        WRMEM  	multiplier, remember2
+
+
+; loop through all bits in multiplier
+mult_loop: 
+		TEST 	multiplier, bit_mask 	; check if bit is set
+        JUMP 	Z, no_add 				; if bit is not set, skip addition
+        ADD 	result_msb, multiplicand	; addition only occurs in MSB
+
+no_add:    
+		RORC 	result_msb 				; shift MSB right, CARRY into bit 7,
+										; lsb into CARRY
+        RORC 	result_lsb	 			; shift LSB right,
+										; lsb from result_msb into bit 7
+        SL0 	bit_mask 				; shift bit_mask left to examine
+										; next bit in multiplier
+        JUMP 	NZ, mult_loop 			; if all bit examined, then bit_mask = 0,
+										; loop if not 0
+        WRMEM  	result_msb, remember3
+        WRMEM  	result_lsb, remember4
+        WRPRT 	result_msb, LEDS3		; write data to LEDs
+        WRPRT 	result_lsb, LEDS2      	; write data to lEDs
+        JUMP 	main					; main loop (do it again)
+;##########################################################################
+

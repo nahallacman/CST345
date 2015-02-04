@@ -1,0 +1,41 @@
+; InterruptExampleIDE.psm
+;##########################################################################
+;## Company:            Oregon Institute of Technology
+;## Author(s):          Troy Scevers (troy.scevers@oit.edu)
+;##  
+;## Creation Date:      
+;## Revision:           1
+;## Program Purpose:    
+;##########################################################################
+;## Assembler Directives
+;##########################################################################
+#EQU waveform_prt, 0x02
+#EQU counter_port, 0x04
+#EQU pattern_10101010, 0xAA
+;##########################################################################
+; Main Program
+;##########################################################################
+main:
+	LOAD 	sA, 0x00				;reset interrupt counter
+	LOAD 	s2, pattern_10101010	;initial output condition
+	INT 	ENABLE
+
+drive_wave: 
+	WRPRT 	s2, waveform_prt
+	LOAD 	s0, 0x07				;delay size
+loop: 
+	SUB 	s0, 0x01				;delay loop
+	JUMP 	NZ, loop	
+	XOR 	s2, 0xFF				;toggle waveform
+	JUMP 	drive_wave
+
+#ORG 0x2B0
+int_routine: 
+	ADD 	sA, 0x01				;increment counter
+	WRPRT 	sA, counter_port
+	RETI ENABLE
+ 
+#ORG 0x3FF							;set interrupt vector
+	JUMP 	int_routine
+;##########################################################################
+

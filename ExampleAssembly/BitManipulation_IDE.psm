@@ -1,0 +1,35 @@
+; BitManipulation_IDE.psm
+;##########################################################################
+;## Company:            Oregon Institute of Technology
+;## Author(s):          Troy Scevers (troy.scevers@oit.edu)
+;##  
+;## Creation Date:      
+;## Revision:           1
+;## Program Purpose:    
+;##########################################################################
+;## Assembler Directives
+;##########################################################################
+	#EQU switches, 0x01	; switches address = port 01 (input)
+	#EQU led1, 0x01		; led address = port 01 (output)
+	#EQU led2, 0x02		; led address = port 02 (output)
+	#EQU led3, 0x03		; led address = port 03 (output)
+	#EQU set_mask, 0x02	; set mask to 00000010
+	#EQU clr_mask, 0x0F	; clear mask to 00001111
+	#EQU tog_mask, 0xFF	; clear mask to 11111111
+;##########################################################################
+;# Main Program
+;##########################################################################
+main:   
+	RDPRT 	s1, switches	; input switch status into register s1
+	LOAD 	s2, s1			
+	OR 		s2, set_mask	; set the 2nd lsb to a 1
+	WRPRT 	s2, led1
+
+	AND 	s2, clr_mask	; clear the upper byte 
+	WRPRT 	s2, led2
+		
+	XOR 	s2, tog_mask	; complement  data (trick)
+	WRPRT 	s2, led3		; write data to LEDs
+	JUMP 	main			; main loop (do it again)
+;##########################################################################
+

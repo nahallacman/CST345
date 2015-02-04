@@ -1,0 +1,22 @@
+      ; SIMPLE.psm
+      ;##########################################################################
+      ;## Company:            Oregon Institute of Technology
+      ;## Author(s):          Troy Scevers (troy.scevers@oit.edu)
+      ;##
+      ;## Creation Date:      1/26/2014
+      ;## Revision:           1
+      ;## Program Purpose:    Simple program for picoblaze to echo switches to
+      ;##                     LEDs
+      ;##########################################################################
+      ;## Assembler Directives
+      ;##########################################################################
+      #EQU SWITCHES, 0x01 		; Switches address = port 01 (input)
+      #EQU LEDS, 0x01    		 ; LEDs address = port 01 (output)
+      ;##########################################################################
+      ; Main Program
+      ;##########################################################################
+main: RDPRT s2, SWITCHES    ; Read switches into s2 register
+      ;        XOR s2, FF              ; Complement the switch Data
+      WRPRT s2, LEDS       ; Write the Data to the LEDs
+      JUMP main             ; Loop Back to top of main
+      ;##########################################################################
