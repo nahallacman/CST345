@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Tue Feb 03 01:38:20 2015">
+  <application stringID="par" timeStamp="Tue Feb 03 21:36:13 2015">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files (x86)\Git\git-cheetah\..\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\nodejs\;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Deskshare\Auto FTP Manager 5\;C:\Program Files (x86)\Microchip\xc32\v1.33\bin;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\x64\;C:\Program Files (x86)\Nmap;C:\Users\cal\AppData\Roaming\npm"/>
+          <item stringID="value" value="C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\nodejs\;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Deskshare\Auto FTP Manager 5\;C:\Program Files (x86)\Microchip\xc32\v1.33\bin;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\x64\;C:\Program Files (x86)\Nmap;C:\Users\cal\AppData\Roaming\npm"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -59,7 +59,7 @@
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="4 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="5 secs "/>
         <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="4 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
@@ -2347,14 +2347,14 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Tue Feb 03 01:38:21 2015">
+  <application stringID="Par" timeStamp="Tue Feb 03 21:36:14 2015">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Program Files (x86)\Git\git-cheetah\..\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\nodejs\;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Deskshare\Auto FTP Manager 5\;C:\Program Files (x86)\Microchip\xc32\v1.33\bin;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\x64\;C:\Program Files (x86)\Nmap;C:\Users\cal\AppData\Roaming\npm"/>
+          <item stringID="value" value="C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\nodejs\;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Deskshare\Auto FTP Manager 5\;C:\Program Files (x86)\Microchip\xc32\v1.33\bin;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\;C:\Program Files (x86)\Toshiba\Bluetooth Toshiba Stack\sys\x64\;C:\Program Files (x86)\Nmap;C:\Users\cal\AppData\Roaming\npm"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>

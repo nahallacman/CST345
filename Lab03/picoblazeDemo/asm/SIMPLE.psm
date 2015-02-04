@@ -20,7 +20,7 @@ main:   INPUT s2, SWITCHES      ; Read switches into s2 register
 ; check if the switch is pressed, if it is, complement the switch data
 ; first, load switch vale
 	INPUT s3, BUTTON
-	store s0, (s3)
+	COMPARE s3, 00
 ;then compare it to the inactive value
 	JUMP NZ, no_button_pressed
 ;if the switch is not pressed,
