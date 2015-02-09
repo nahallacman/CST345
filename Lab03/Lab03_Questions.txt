@@ -1,0 +1,25 @@
+Q.1)
+Board has a 100MHZ cloc.
+I run the picoblaze without a clock divider.
+Each operation takes exactly 2 clock cycles for the pico blaze.
+Below is the assembly with comments. In total there is 6 lines of code. One of them is a jump that skips one line of code so the shortest operation is 5 lines of code. 
+Each line of code translates to one processor operation that takes two clock cycles, so the longest the system will take is 12 clock cycles and the shortest it will take is 10 clock cycles.
+At 100MHz, this translates to (100*(10^6))^-1 = 1*10^-8 s per clock cycle, making my code take 1*10^-8s/cycle * 10 cycles = 1*10^-7s to 1*10^-8s/cycle * 12 cycles = 1.2*10^-7s.
+
+main:   INPUT s2, SWITCHES      ; Read switches into s2 register
+; check if the switch is pressed, if it is, complement the switch data
+; first, load switch vale
+	INPUT s3, BUTTON
+	COMPARE s3, 00
+;then compare it to the inactive value
+	JUMP NZ, no_button_pressed
+;if the switch is not pressed,
+    XOR s2, FF              ; Complement the switch Data
+no_button_pressed:
+        OUTPUT s2, LEDS         ; Write the Data to the LEDs
+        JUMP main               ; Loop Back to top of main'
+		
+		
+operation takes: 1*10^-7s to 1.2*10^-7s to complete.
+
+Q.2)
