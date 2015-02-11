@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+Clock_Divider instance_name (
+    .reset(reset), 
+    .clk_in(clk_in), 
+    .clk_out(clk_out), 
+    .i(i)
+    );
+
+

@@ -1,0 +1,30 @@
+
+
+
+// Instantiate the module
+Mux_disp instance_name (
+    .reset(reset), 
+    .clk(clk), 
+    .dp0(dp0), 
+    .dp1(dp1), 
+    .dp2(dp2), 
+    .dp3(dp3), 
+    .Val0(Val0), 
+    .Val1(Val1), 
+    .Val2(Val2), 
+    .Val3(Val3), 
+    .a(a), 
+    .b(b), 
+    .c(c), 
+    .d(d), 
+    .e(e), 
+    .f(f), 
+    .g(g), 
+    .dp(dp), 
+    .an1(an1), 
+    .an2(an2), 
+    .an3(an3), 
+    .an4(an4)
+    );
+
+

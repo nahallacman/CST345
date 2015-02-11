@@ -1,0 +1,36 @@
+
+
+NET "leds[7]" LOC = T11;
+NET "leds[6]" LOC = R11;
+NET "leds[5]" LOC = N11;
+NET "leds[4]" LOC = M11;
+NET "leds[3]" LOC = V15;
+NET "leds[2]" LOC = U15;
+NET "leds[1]" LOC = V16;
+NET "leds[0]" LOC = U16;
+NET "clk" LOC = V10;
+NET "rst" LOC = C9;
+NET "clk" TNM_NET = "clk";
+TIMESPEC TS_P2P = FROM  FFS TO  FFS 10 ns;
+TIMESPEC TS_clk = PERIOD "clk" 10 ns HIGH 50 %;
+
+
+NET "buttons[4]" LOC = C4;
+NET "buttons[3]" LOC = D9;
+NET "buttons[2]" LOC = A8;
+NET "buttons[0]" LOC = B8;
+
+# PlanAhead Generated physical constraints 
+
+NET "a" LOC = T17;
+NET "b" LOC = T18;
+NET "an1" LOC = P17;
+NET "an2" LOC = P18;
+NET "an3" LOC = N15;
+NET "an4" LOC = N16;
+NET "c" LOC = U17;
+NET "d" LOC = U18;
+NET "dp" LOC = M13;
+NET "e" LOC = M14;
+NET "f" LOC = N14;
+NET "g" LOC = L14;

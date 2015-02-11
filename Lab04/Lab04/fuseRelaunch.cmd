@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/test_keypad_controller_isim_beh.exe" -prj "C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/test_keypad_controller_beh.prj" "work.test_keypad_controller" "work.glbl" 

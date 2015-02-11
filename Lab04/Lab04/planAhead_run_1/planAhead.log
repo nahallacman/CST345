@@ -1,0 +1,135 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Wed Feb 11 00:52:18 2015
+# Process ID: 13728
+# Log file: C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/pa.fromHdl.tcl
+# create_project -name Lab04 -dir "C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/planAhead_run_1" -part xc6slx16csg324-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {../picoblazeDemo/verilog/kcpsm6.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../picoblazeDemo/asm/simple.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../Mux_disp.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../keypad_controller.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../picoblazeDemo/verilog/exampleVerilog.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top exampleVerilog $srcset
+# add_files [list {C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx16csg324-3
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/verilog/kcpsm6.v" into library work
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/asm/simple.v" into library work
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/Lab04/Mux_disp.v" into library work
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/Lab04/keypad_controller.v" into library work
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/verilog/exampleVerilog.v" into library work
+INFO: [Netlist 29-17] Analyzing 56 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+Loading io standards from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'leds[7]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:3]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'leds[6]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:4]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'leds[5]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:5]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'leds[4]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:6]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'leds[3]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:7]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'leds[2]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:8]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'leds[1]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:9]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'leds[0]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:10]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'sw[7]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:11]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'sw[6]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:12]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'sw[5]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:13]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'sw[4]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:14]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'sw[3]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:15]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'sw[2]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:16]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'sw[1]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:17]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'sw[0]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:18]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'buttons[4]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:27]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'buttons[3]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:28]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'buttons[2]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:29]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'buttons[0]' [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf:30]
+Finished Parsing UCF File [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 56 instances were transformed.
+  LUT6_2 => LUT6_2 (LUT6, LUT5): 50 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 4 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 2 instances
+
+Phase 0 | Netlist Checksum: 9974d464
+open_rtl_design: Time (s): elapsed = 00:00:09 . Memory (MB): peak = 514.848 ; gain = 97.355
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin T17 [get_ports a]
+endgroup
+startgroup
+set_property package_pin T18 [get_ports b]
+endgroup
+startgroup
+set_property package_pin P17 [get_ports an1]
+endgroup
+startgroup
+set_property package_pin P18 [get_ports an2]
+endgroup
+startgroup
+set_property package_pin N15 [get_ports an3]
+endgroup
+startgroup
+set_property package_pin N16 [get_ports an4]
+endgroup
+startgroup
+set_property package_pin U17 [get_ports c]
+endgroup
+startgroup
+set_property package_pin U18 [get_ports d]
+endgroup
+startgroup
+set_property package_pin M13 [get_ports dp]
+endgroup
+set_property package_pin "" [get_ports [list  dp0]]
+set_property package_pin "" [get_ports [list  dp3]]
+startgroup
+set_property package_pin M14 [get_ports e]
+endgroup
+startgroup
+set_property package_pin N14 [get_ports f]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports g]
+endgroup
+save_constraints -force
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See C:/Users/cal/Desktop/School/CST345/Lab04/Lab04\planAhead_pid13728.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Wed Feb 11 00:57:50 2015...
+INFO: [Common 17-83] Releasing license: PlanAhead

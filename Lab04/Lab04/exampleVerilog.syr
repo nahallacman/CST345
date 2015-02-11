@@ -1,0 +1,1201 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: exampleVerilog.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "exampleVerilog.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "exampleVerilog"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : exampleVerilog
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\kcpsm6.v" into library work
+Parsing module <kcpsm6>.
+Analyzing Verilog file "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\asm\simple.v" into library work
+Parsing module <simple>.
+Parsing module <jtag_loader_6>.
+Analyzing Verilog file "C:\Users\cal\Desktop\School\CST345\Lab04\Mux_disp.v" into library work
+Parsing module <Mux_disp>.
+Analyzing Verilog file "C:\Users\cal\Desktop\School\CST345\Lab04\keypad_controller.v" into library work
+Parsing module <keypad_controller>.
+Analyzing Verilog file "C:\Users\cal\Desktop\School\CST345\Lab04\Clock_Divider.v" into library work
+Parsing module <Clock_Divider>.
+Analyzing Verilog file "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" into library work
+Parsing module <exampleVerilog>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 110: Port rdl is not connected to this instance
+
+Elaborating module <exampleVerilog>.
+
+Elaborating module <kcpsm6(interrupt_vector=12'b01111111111,scratch_pad_memory_size=64,hwbuild=8'b0)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111111111111111111101010101010100000000000000000000111011101110)>.
+
+Elaborating module <FD>.
+
+Elaborating module <LUT6_2(INIT=64'b010000011000000000000101100000000110001000000000001001100)>.
+
+Elaborating module <LUT6_2(INIT=64'b010000000000000000000000000000000000000000100000000000)>.
+
+Elaborating module <LUT6(INIT=64'b01100101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100110000110011111111110000000010000000100000001000000010000000)>.
+
+Elaborating module <LUT6(INIT=64'b0101101000111100111111111111111100000000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111011101110111000000100111011100000000000000000000001000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111100000000000000000000000000000010001111111111)>.
+
+Elaborating module <LUT6(INIT=64'b1111111111111111111111111111111100000000000001000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111111111111111000100000000000000000000000000000010000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01111001010000000000000000000000100001000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111011100001000000000000000000000000000000000000000111100000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1101000000000000000000000000000000000010000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01001111110011111100000000000100001111011111001110)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100000011001100000000000000000010100000101010100000000000000000)>.
+
+Elaborating module <FDR>.
+
+Elaborating module <LUT6_2(INIT=64'b1000000000000000000000000000000000100000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0100000000000000000000000000000000000001000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b010000000000000100000000000000000000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1010110010101100111111110000000011111111000000001111111100000000)>.
+
+Elaborating module <XORCY>.
+
+Elaborating module <LUT6_2(INIT=64'b010000111011110000000000000000000)>.
+
+Elaborating module <MUXCY>.
+
+Elaborating module <LUT6(INIT=64'b0110100110010110100101100110100110010110011010010110100110010110)>.
+
+Elaborating module <LUT6(INIT=64'b1111111111111111101010101100110011110000111100001111000011110000)>.
+
+Elaborating module <LUT6_2(INIT=64'b011001100110011101010101100110011110000101010100000000000000000)>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <LUT6_2(INIT=64'b1010001010000000000000000000000000000000111100000000000011110000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01)>.
+
+Elaborating module <LUT6_2(INIT=64'b0110100000000000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1111101111111111000000000000000000000000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111111100000000111100001111000011001100110011001010101010101010)>.
+
+Elaborating module <LUT6(INIT=64'b010101010000000001111111100110011110011000000111100000000)>.
+
+Elaborating module <LUT6(INIT=64'b010101010000000001111111111001100110011001111000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b010101010000000000000000011001100110011001111000000000000)>.
+
+Elaborating module <RAM32M(INIT_A=64'b0,INIT_B=64'b0,INIT_C=64'b0,INIT_D=64'b0)>.
+
+Elaborating module <LUT6_2(INIT=64'b010101001010011010101010101010101010101010101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b0101010001001010010101010101010101010101010101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b0110100101101001011011101000101011001100110011000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1011111110111100100011111000110010110011101100001000001110000000)>.
+
+Elaborating module <LUT6(INIT=64'b1111111100000000111100001111000011001100110011001010101010101010)>.
+
+Elaborating module <RAM64M(INIT_A=64'b0,INIT_B=64'b0,INIT_C=64'b0,INIT_D=64'b0)>.
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 95: Assignment to k_write_strobe ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 97: Assignment to read_strobe ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 100: Assignment to interrupt_ack ignored, since the identifier is never used
+
+Elaborating module <simple(C_FAMILY="S6",C_RAM_SIZE_KWORDS=1,C_JTAG_LOADER_ENABLE=1)>.
+
+Elaborating module
+<RAMB16BWER(DATA_WIDTH_A=18,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=9'b0,RST_PRIORITY_A="CE",SRVAL_A=9'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=18,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=9'b0,RST_PRIORITY_B="CE",SRVAL_B=9'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b010000000000000110100100000000101110010111111110110000000000101110100110000000010010011000000101001001000000001,INIT_01=256'b0,INIT_02=256'b0,INIT_03=256'b0,INIT_04=256'b0,INIT_05=256'b0,INIT_06=256'b0,INIT_07=256'b0,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,I
+NIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0,INITP_00=256'b010100011010000,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b0)>.
+
+Elaborating module <jtag_loader_6(C_FAMILY="S6",C_NUM_PICOBLAZE=1,C_JTAG_LOADER_ENABLE=1,C_BRAM_MAX_ADDR_WIDTH=32'sb01010,C_ADDR_WIDTH_0=32'sb01010)>.
+
+Elaborating module <BSCAN_SPARTAN6(JTAG_CHAIN=2)>.
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 121: Assignment to kcpsm6_reset ignored, since the identifier is never used
+
+Elaborating module <keypad_controller>.
+WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\keypad_controller.v" Line 38: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 133: Size mismatch in connection of port <keypad_data>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 133: Assignment to keypad_data ignored, since the identifier is never used
+
+Elaborating module <Clock_Divider>.
+WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\Clock_Divider.v" Line 47: Result of 19-bit expression is truncated to fit in 18-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 140: Size mismatch in connection of port <i>. Formal port size is 18-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 140: Assignment to i ignored, since the identifier is never used
+
+Elaborating module <Mux_disp>.
+WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\Mux_disp.v" Line 66: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <exampleVerilog>.
+    Related source file is "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v".
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 89: Output port <k_write_strobe> of the instance <processor> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 89: Output port <read_strobe> of the instance <processor> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 89: Output port <interrupt_ack> of the instance <processor> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 114: Output port <rdl> of the instance <simple> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 127: Output port <keypad_data> of the instance <keypad> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 136: Output port <i> of the instance <DivBy100000> is unconnected or connected to loadless signal.
+    Found 8-bit register for signal <leds>.
+    Found 8-bit register for signal <in_port>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <exampleVerilog> synthesized.
+
+Synthesizing Unit <kcpsm6>.
+    Related source file is "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\kcpsm6.v".
+        hwbuild = 8'b00000000
+        interrupt_vector = 12'b001111111111
+        scratch_pad_memory_size = 64
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <reset_lut>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <run_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <internal_reset_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <sync_sleep_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <t_state_lut>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <t_state1_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <t_state2_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <int_enable_type_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <interrupt_enable_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <interrupt_enable_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <sync_interrupt_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <active_interrupt_lut>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <active_interrupt_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <interrupt_ack_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <pc_move_is_valid_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <move_type_lut>.
+    Set property "HBLKNM = KCPSM6_VECTOR1" for instance <pc_mode1_lut>.
+    Set property "HBLKNM = KCPSM6_VECTOR1" for instance <pc_mode2_lut>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <push_pop_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <alu_decode0_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <alu_mux_sel0_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <alu_decode1_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <alu_mux_sel1_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <alu_decode2_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <register_enable_type_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <register_enable_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <flag_enable_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <register_enable_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <spm_enable_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <k_write_strobe_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <spm_enable_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <read_strobe_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <write_strobe_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <read_strobe_flop>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <regbank_type_lut>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <bank_lut>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <bank_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <sx_addr4_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <arith_carry_xorcy>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <arith_carry_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <lower_parity_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <parity_muxcy>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <upper_parity_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <parity_xorcy>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <shift_carry_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <shift_carry_flop>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <carry_flag_lut>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <carry_flag_flop>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <init_zero_muxcy>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <use_zero_flag_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <use_zero_flag_flop>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <lower_zero_lut>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <lower_zero_muxcy>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <middle_zero_lut>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <middle_zero_muxcy>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <upper_zero_lut>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <upper_zero_muxcy>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <zero_flag_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <address_loop[0].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR0" for instance <address_loop[0].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[0].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[0].lsb_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[0].lsb_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[0].lsb_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <address_loop[1].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[1].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[1].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[1].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[1].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <address_loop[2].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR0" for instance <address_loop[2].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[2].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[2].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[2].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[2].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <address_loop[3].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[3].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[3].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[3].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[3].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[4].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR0" for instance <address_loop[4].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[4].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[4].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[4].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[4].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[5].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[5].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[5].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[5].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[5].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[6].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR0" for instance <address_loop[6].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[6].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[6].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[6].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[6].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[7].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[7].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[7].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[7].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[7].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[8].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR1" for instance <address_loop[8].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[8].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[8].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[8].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[8].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[9].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[9].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[9].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[9].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[9].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[10].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR1" for instance <address_loop[10].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[10].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[10].upper_pc.low_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[10].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[10].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[11].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[11].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[11].upper_pc.low_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[11].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <shadow_carry_flag_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <stack_zero_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <shadow_zero_flag_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <shadow_bank_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <stack_bit_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <stack_ram_low>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <stack_ram_high>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[0].lsb_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[0].lsb_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[0].lsb_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[0].lsb_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[1].upper_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[1].upper_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[1].upper_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[1].upper_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[2].upper_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[2].upper_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[2].upper_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[2].upper_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[3].upper_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[3].upper_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[3].upper_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[3].upper_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <stack_loop[4].upper_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <stack_loop[4].upper_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <stack_loop[4].upper_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <stack_loop[4].upper_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_PORT_ID" for instance <data_path_loop[0].output_data.sy_kk_mux_lut>.
+    Set property "HBLKNM = KCPSM6_OUT_PORT" for instance <data_path_loop[0].second_operand.out_port_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[0].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[0].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[0].lsb_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[0].lsb_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[0].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <data_path_loop[0].lsb_shift_rotate.shift_bit_lut>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[0].lsb_shift_rotate.shift_rotate_lut>.
+    Set property "HBLKNM = KCPSM6_ALU0" for instance <data_path_loop[0].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM0" for instance <data_path_loop[0].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[1].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[1].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[1].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[1].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[1].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_ALU0" for instance <data_path_loop[1].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM0" for instance <data_path_loop[1].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_PORT_ID" for instance <data_path_loop[2].output_data.sy_kk_mux_lut>.
+    Set property "HBLKNM = KCPSM6_OUT_PORT" for instance <data_path_loop[2].second_operand.out_port_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[2].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[2].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[2].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[2].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[2].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[2].mid_shift_rotate.shift_rotate_lut>.
+    Set property "HBLKNM = KCPSM6_ALU0" for instance <data_path_loop[2].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM0" for instance <data_path_loop[2].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[3].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[3].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[3].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[3].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[3].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_ALU0" for instance <data_path_loop[3].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM0" for instance <data_path_loop[3].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_PORT_ID" for instance <data_path_loop[4].output_data.sy_kk_mux_lut>.
+    Set property "HBLKNM = KCPSM6_OUT_PORT" for instance <data_path_loop[4].second_operand.out_port_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[4].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[4].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[4].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[4].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[4].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[4].mid_shift_rotate.shift_rotate_lut>.
+    Set property "HBLKNM = KCPSM6_ALU1" for instance <data_path_loop[4].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM1" for instance <data_path_loop[4].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[5].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[5].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[5].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[5].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[5].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_ALU1" for instance <data_path_loop[5].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM1" for instance <data_path_loop[5].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_PORT_ID" for instance <data_path_loop[6].output_data.sy_kk_mux_lut>.
+    Set property "HBLKNM = KCPSM6_OUT_PORT" for instance <data_path_loop[6].second_operand.out_port_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[6].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[6].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[6].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[6].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[6].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[6].msb_shift_rotate.shift_rotate_lut>.
+    Set property "HBLKNM = KCPSM6_ALU1" for instance <data_path_loop[6].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM1" for instance <data_path_loop[6].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[7].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[7].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[7].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[7].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[7].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_ALU1" for instance <data_path_loop[7].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM1" for instance <data_path_loop[7].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_REG0" for instance <lower_reg_banks>.
+    Set property "HBLKNM = KCPSM6_REG1" for instance <upper_reg_banks>.
+    Summary:
+	no macro.
+Unit <kcpsm6> synthesized.
+
+Synthesizing Unit <simple>.
+    Related source file is "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\asm\simple.v".
+        C_JTAG_LOADER_ENABLE = 1
+        C_FAMILY = "S6"
+        C_RAM_SIZE_KWORDS = 1
+        BRAM_ADDRESS_WIDTH = 10
+    Summary:
+	no macro.
+Unit <simple> synthesized.
+
+Synthesizing Unit <jtag_loader_6>.
+    Related source file is "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\asm\simple.v".
+        C_JTAG_LOADER_ENABLE = 1
+        C_FAMILY = "S6"
+        C_NUM_PICOBLAZE = 1
+        C_BRAM_MAX_ADDR_WIDTH = 10
+        C_PICOBLAZE_INSTRUCTION_DATA_WIDTH = 18
+        C_JTAG_CHAIN = 2
+        C_ADDR_WIDTH_0 = 5'b01010
+        C_ADDR_WIDTH_1 = 5'b01010
+        C_ADDR_WIDTH_2 = 5'b01010
+        C_ADDR_WIDTH_3 = 5'b01010
+        C_ADDR_WIDTH_4 = 5'b01010
+        C_ADDR_WIDTH_5 = 5'b01010
+        C_ADDR_WIDTH_6 = 5'b01010
+        C_ADDR_WIDTH_7 = 5'b01010
+    Found 1-bit register for signal <bram_ce>.
+    Found 1-bit register for signal <jtag_we_int>.
+    Found 1-bit register for signal <jtag_addr_int<0>>.
+    Found 1-bit register for signal <jtag_addr_int<1>>.
+    Found 1-bit register for signal <jtag_addr_int<2>>.
+    Found 1-bit register for signal <jtag_addr_int<3>>.
+    Found 1-bit register for signal <jtag_addr_int<4>>.
+    Found 1-bit register for signal <jtag_addr_int<5>>.
+    Found 1-bit register for signal <jtag_addr_int<6>>.
+    Found 1-bit register for signal <jtag_addr_int<7>>.
+    Found 1-bit register for signal <jtag_addr_int<8>>.
+    Found 1-bit register for signal <jtag_addr_int<9>>.
+    Found 1-bit register for signal <jtag_din_int<0>>.
+    Found 1-bit register for signal <jtag_din_int<1>>.
+    Found 1-bit register for signal <jtag_din_int<2>>.
+    Found 1-bit register for signal <jtag_din_int<3>>.
+    Found 1-bit register for signal <jtag_din_int<4>>.
+    Found 1-bit register for signal <jtag_din_int<5>>.
+    Found 1-bit register for signal <jtag_din_int<6>>.
+    Found 1-bit register for signal <jtag_din_int<7>>.
+    Found 1-bit register for signal <jtag_din_int<8>>.
+    Found 1-bit register for signal <jtag_din_int<9>>.
+    Found 1-bit register for signal <jtag_din_int<10>>.
+    Found 1-bit register for signal <jtag_din_int<11>>.
+    Found 1-bit register for signal <jtag_din_int<12>>.
+    Found 1-bit register for signal <jtag_din_int<13>>.
+    Found 1-bit register for signal <jtag_din_int<14>>.
+    Found 1-bit register for signal <jtag_din_int<15>>.
+    Found 1-bit register for signal <jtag_din_int<16>>.
+    Found 1-bit register for signal <jtag_din_int<17>>.
+    Found 8-bit register for signal <control_dout_int>.
+    Found 1-bit register for signal <picoblaze_reset_int>.
+    Found 1-bit register for signal <control_reg_ce>.
+    Summary:
+	inferred  40 D-type flip-flop(s).
+	inferred  27 Multiplexer(s).
+Unit <jtag_loader_6> synthesized.
+
+Synthesizing Unit <keypad_controller>.
+    Related source file is "C:\Users\cal\Desktop\School\CST345\Lab04\keypad_controller.v".
+    Found 2-bit register for signal <sel>.
+    Found 2-bit adder for signal <sel[1]_GND_51_o_add_1_OUT> created at line 38.
+    Found 4x4-bit Read Only RAM for signal <row>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <keypad_controller> synthesized.
+
+Synthesizing Unit <Clock_Divider>.
+    Related source file is "C:\Users\cal\Desktop\School\CST345\Lab04\Clock_Divider.v".
+    Found 1-bit register for signal <clk_out>.
+    Found 18-bit register for signal <i>.
+    Found 18-bit adder for signal <i[17]_GND_52_o_add_3_OUT> created at line 47.
+    Found 18-bit comparator greater for signal <GND_52_o_i[17]_LessThan_3_o> created at line 39
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <Clock_Divider> synthesized.
+
+Synthesizing Unit <Mux_disp>.
+    Related source file is "C:\Users\cal\Desktop\School\CST345\Lab04\Mux_disp.v".
+    Found 2-bit register for signal <sel>.
+    Found 2-bit adder for signal <sel[1]_GND_53_o_add_0_OUT> created at line 66.
+    Found 4x5-bit Read Only RAM for signal <MuxOut>
+    Found 4x1-bit Read Only RAM for signal <an4>
+    Found 4x1-bit Read Only RAM for signal <an3>
+    Found 4x1-bit Read Only RAM for signal <an2>
+    Found 4x1-bit Read Only RAM for signal <an1>
+    Found 16x7-bit Read Only RAM for signal <_n0045>
+    Summary:
+	inferred   6 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <Mux_disp> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 7
+ 16x7-bit single-port Read Only RAM                    : 1
+ 4x1-bit single-port Read Only RAM                     : 4
+ 4x4-bit single-port Read Only RAM                     : 1
+ 4x5-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 3
+ 18-bit adder                                          : 1
+ 2-bit adder                                           : 2
+# Registers                                            : 30
+ 1-bit register                                        : 23
+ 10-bit register                                       : 1
+ 18-bit register                                       : 1
+ 2-bit register                                        : 2
+ 8-bit register                                        : 3
+# Comparators                                          : 1
+ 18-bit comparator greater                             : 1
+# Multiplexers                                         : 28
+ 1-bit 2-to-1 multiplexer                              : 20
+ 18-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <in_port_6> (without init value) has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <Clock_Divider>.
+The following registers are absorbed into counter <i>: 1 register on signal <i>.
+Unit <Clock_Divider> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Mux_disp>.
+The following registers are absorbed into counter <sel>: 1 register on signal <sel>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_MuxOut> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 5-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sel>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <MuxOut>        |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_an4> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sel>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <an4>           |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_an3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sel>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <an3>           |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_an2> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sel>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <an2>           |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_an1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sel>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <an1>           |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0045> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <MuxOut<4:1>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Mux_disp> synthesized (advanced).
+
+Synthesizing (advanced) Unit <keypad_controller>.
+The following registers are absorbed into counter <sel>: 1 register on signal <sel>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_row> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sel>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <row>           |          |
+    -----------------------------------------------------------------------
+Unit <keypad_controller> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 7
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 4x1-bit single-port distributed Read Only RAM         : 4
+ 4x4-bit single-port distributed Read Only RAM         : 1
+ 4x5-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 3
+ 18-bit up counter                                     : 1
+ 2-bit up counter                                      : 2
+# Registers                                            : 139
+ Flip-Flops                                            : 139
+# Comparators                                          : 1
+ 18-bit comparator greater                             : 1
+# Multiplexers                                         : 27
+ 1-bit 2-to-1 multiplexer                              : 20
+ 18-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <in_port_6> (without init value) has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <in_port_5> in Unit <exampleVerilog> is equivalent to the following FF/Latch, which will be removed : <in_port_7> 
+WARNING:Xst:1710 - FF/Latch <control_dout_int_1> (without init value) has a constant value of 0 in block <jtag_loader_6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <control_dout_int_2> (without init value) has a constant value of 0 in block <jtag_loader_6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <control_dout_int_5> (without init value) has a constant value of 0 in block <jtag_loader_6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <control_dout_int_6> (without init value) has a constant value of 0 in block <jtag_loader_6>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <kcpsm6> ...
+
+Optimizing unit <exampleVerilog> ...
+
+Optimizing unit <keypad_controller> ...
+
+Optimizing unit <jtag_loader_6> ...
+WARNING:Xst:1710 - FF/Latch <DivBy100000/i_17> (without init value) has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block exampleVerilog, actual ratio is 2.
+WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 154
+ Flip-Flops                                            : 154
+
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : exampleVerilog.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 242
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 17
+#      LUT3                        : 24
+#      LUT4                        : 6
+#      LUT5                        : 14
+#      LUT6                        : 37
+#      LUT6_2                      : 50
+#      MUXCY                       : 45
+#      VCC                         : 1
+#      XORCY                       : 44
+# FlipFlops/Latches                : 154
+#      FD                          : 54
+#      FDC                         : 2
+#      FDCE                        : 2
+#      FDE                         : 40
+#      FDR                         : 41
+#      FDRE                        : 15
+# RAMS                             : 7
+#      RAM32M                      : 4
+#      RAM64M                      : 2
+#      RAMB16BWER                  : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 34
+#      IBUF                        : 10
+#      OBUF                        : 24
+# Others                           : 1
+#      BSCAN_SPARTAN6              : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             154  out of  18224     0%  
+ Number of Slice LUTs:                  175  out of   9112     1%  
+    Number used as Logic:               151  out of   9112     1%  
+    Number used as Memory:               24  out of   2176     1%  
+       Number used as RAM:               24
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    225
+   Number with an unused Flip Flop:      71  out of    225    31%  
+   Number with an unused LUT:            50  out of    225    22%  
+   Number of fully used LUT-FF pairs:   104  out of    225    46%  
+   Number of unique control sets:        15
+
+IO Utilization: 
+ Number of IOs:                          35
+ Number of bonded IOBs:                  35  out of    232    15%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------+----------------------------------------------------------------------+-------+
+Clock Signal                                     | Clock buffer(FF name)                                                | Load  |
+-------------------------------------------------+----------------------------------------------------------------------+-------+
+clk                                              | BUFGP                                                                | 121   |
+DivBy100000/clk_out                              | NONE(SevenSegDisplay/sel_0)                                          | 4     |
+simple/jtag_clk                                  | NONE(simple/instantiate_loader.jtag_loader_6_inst/control_dout_int_7)| 6     |
+simple/instantiate_loader.jtag_loader_6_inst/drck| BUFG                                                                 | 31    |
+-------------------------------------------------+----------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.579ns (Maximum Frequency: 131.944MHz)
+   Minimum input arrival time before clock: 3.228ns
+   Maximum output required time after clock: 4.798ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.579ns (frequency: 131.944MHz)
+  Total number of paths / destination ports: 9735 / 260
+-------------------------------------------------------------------------
+Delay:               7.579ns (Levels of Logic = 9)
+  Source:            simple/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:       processor/internal_reset_flop (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: simple/ram_1k_generate.s6.kcpsm6_rom to processor/internal_reset_flop
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOA12   16   1.850   1.004  simple/ram_1k_generate.s6.kcpsm6_rom (instruction<12>)
+     LUT6_2:I0->O6         2   0.568   0.616  processor/move_type_lut (processor/move_type)
+     LUT6_2:I2->O6         5   0.568   0.714  processor/push_pop_lut (processor/push_stack)
+     LUT6_2:I2->O6         1   0.568   0.000  processor/stack_loop[0].lsb_stack.stack_pointer_lut (processor/half_pointer_value<0>)
+     MUXCY:S->O            1   0.172   0.000  processor/stack_loop[0].lsb_stack.stack_muxcy (processor/stack_pointer_carry<0>)
+     MUXCY:CI->O           1   0.019   0.000  processor/stack_loop[1].upper_stack.stack_muxcy (processor/stack_pointer_carry<1>)
+     MUXCY:CI->O           1   0.019   0.000  processor/stack_loop[2].upper_stack.stack_muxcy (processor/stack_pointer_carry<2>)
+     MUXCY:CI->O           1   0.019   0.000  processor/stack_loop[3].upper_stack.stack_muxcy (processor/stack_pointer_carry<3>)
+     MUXCY:CI->O           1   0.213   0.579  processor/stack_loop[4].upper_stack.stack_muxcy (processor/stack_pointer_carry<4>)
+     LUT6_2:I2->O6         1   0.568   0.000  processor/reset_lut (processor/internal_reset_value)
+     FD:D                      0.102          processor/internal_reset_flop
+    ----------------------------------------
+    Total                      7.579ns (4.666ns logic, 2.913ns route)
+                                       (61.6% logic, 38.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DivBy100000/clk_out'
+  Clock period: 2.190ns (frequency: 456.663MHz)
+  Total number of paths / destination ports: 6 / 4
+-------------------------------------------------------------------------
+Delay:               2.190ns (Levels of Logic = 1)
+  Source:            SevenSegDisplay/sel_0 (FF)
+  Destination:       SevenSegDisplay/sel_0 (FF)
+  Source Clock:      DivBy100000/clk_out rising
+  Destination Clock: DivBy100000/clk_out rising
+
+  Data Path: SevenSegDisplay/sel_0 to SevenSegDisplay/sel_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             10   0.447   0.856  SevenSegDisplay/sel_0 (SevenSegDisplay/sel_0)
+     INV:I->O              1   0.206   0.579  SevenSegDisplay/Mcount_sel_xor<0>11_INV_0 (Result<0>)
+     FDC:D                     0.102          SevenSegDisplay/sel_0
+    ----------------------------------------
+    Total                      2.190ns (0.755ns logic, 1.435ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'simple/jtag_clk'
+  Clock period: 1.579ns (frequency: 633.372MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.579ns (Levels of Logic = 1)
+  Source:            simple/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0 (FF)
+  Destination:       simple/instantiate_loader.jtag_loader_6_inst/control_dout_int_7 (FF)
+  Source Clock:      simple/jtag_clk rising
+  Destination Clock: simple/jtag_clk rising
+
+  Data Path: simple/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0 to simple/instantiate_loader.jtag_loader_6_inst/control_dout_int_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.827  simple/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0 (simple/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0)
+     LUT5:I1->O            1   0.203   0.000  simple/instantiate_loader.jtag_loader_6_inst/Mmux_jtag_addr_int[3]_GND_48_o_wide_mux_87_OUT41 (simple/instantiate_loader.jtag_loader_6_inst/jtag_addr_int[3]_GND_48_o_wide_mux_87_OUT<7>)
+     FDR:D                     0.102          simple/instantiate_loader.jtag_loader_6_inst/control_dout_int_7
+    ----------------------------------------
+    Total                      1.579ns (0.752ns logic, 0.827ns route)
+                                       (47.6% logic, 52.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'simple/instantiate_loader.jtag_loader_6_inst/drck'
+  Clock period: 3.365ns (frequency: 297.217MHz)
+  Total number of paths / destination ports: 85 / 48
+-------------------------------------------------------------------------
+Delay:               3.365ns (Levels of Logic = 1)
+  Source:            simple/instantiate_loader.jtag_loader_6_inst/bram_ce_0 (FF)
+  Destination:       simple/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17 (FF)
+  Source Clock:      simple/instantiate_loader.jtag_loader_6_inst/drck rising
+  Destination Clock: simple/instantiate_loader.jtag_loader_6_inst/drck rising
+
+  Data Path: simple/instantiate_loader.jtag_loader_6_inst/bram_ce_0 to simple/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             21   0.447   1.342  simple/instantiate_loader.jtag_loader_6_inst/bram_ce_0 (simple/instantiate_loader.jtag_loader_6_inst/bram_ce_0)
+     LUT4:I1->O           18   0.205   1.049  simple/instantiate_loader.jtag_loader_6_inst/_n0186_inv1 (simple/instantiate_loader.jtag_loader_6_inst/_n0186_inv)
+     FDE:CE                    0.322          simple/instantiate_loader.jtag_loader_6_inst/jtag_din_int_0
+    ----------------------------------------
+    Total                      3.365ns (0.974ns logic, 2.391ns route)
+                                       (28.9% logic, 71.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 29 / 26
+-------------------------------------------------------------------------
+Offset:              3.045ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       processor/internal_reset_flop (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to processor/internal_reset_flop
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            23   1.222   1.153  rst_IBUF (rst_IBUF)
+     LUT6_2:I4->O6         1   0.568   0.000  processor/reset_lut (processor/internal_reset_value)
+     FD:D                      0.102          processor/internal_reset_flop
+    ----------------------------------------
+    Total                      3.045ns (1.892ns logic, 1.153ns route)
+                                       (62.1% logic, 37.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DivBy100000/clk_out'
+  Total number of paths / destination ports: 12 / 6
+-------------------------------------------------------------------------
+Offset:              3.228ns (Levels of Logic = 2)
+  Source:            column<3> (PAD)
+  Destination:       keypad/sel_1 (FF)
+  Destination Clock: DivBy100000/clk_out rising
+
+  Data Path: column<3> to keypad/sel_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.864  column_3_IBUF (column_3_IBUF)
+     LUT4:I0->O            2   0.203   0.616  keypad/column[3]_PWR_51_o_equal_6_o<3>1 (keypad/column[3]_PWR_51_o_equal_6_o)
+     FDCE:CE                   0.322          keypad/sel_0
+    ----------------------------------------
+    Total                      3.228ns (1.747ns logic, 1.481ns route)
+                                       (54.1% logic, 45.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'simple/jtag_clk'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              2.447ns (Levels of Logic = 1)
+  Source:            simple/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst:SEL (PAD)
+  Destination:       simple/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0 (FF)
+  Destination Clock: simple/jtag_clk rising
+
+  Data Path: simple/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst:SEL to simple/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SEL    21   0.000   1.342  simple/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst (simple/instantiate_loader.jtag_loader_6_inst/bram_ce_valid)
+     LUT3:I0->O            1   0.205   0.579  simple/instantiate_loader.jtag_loader_6_inst/bram_ce_valid_control_reg_ce_AND_5_o1 (simple/instantiate_loader.jtag_loader_6_inst/bram_ce_valid_control_reg_ce_AND_5_o)
+     FDE:CE                    0.322          simple/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0
+    ----------------------------------------
+    Total                      2.447ns (0.527ns logic, 1.921ns route)
+                                       (21.5% logic, 78.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'simple/instantiate_loader.jtag_loader_6_inst/drck'
+  Total number of paths / destination ports: 86 / 50
+-------------------------------------------------------------------------
+Offset:              2.854ns (Levels of Logic = 1)
+  Source:            simple/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst:SHIFT (PAD)
+  Destination:       simple/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17 (FF)
+  Destination Clock: simple/instantiate_loader.jtag_loader_6_inst/drck rising
+
+  Data Path: simple/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst:SHIFT to simple/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SHIFT   31   0.000   1.278  simple/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst (simple/instantiate_loader.jtag_loader_6_inst/shift)
+     LUT4:I3->O           18   0.205   1.049  simple/instantiate_loader.jtag_loader_6_inst/_n0186_inv1 (simple/instantiate_loader.jtag_loader_6_inst/_n0186_inv)
+     FDE:CE                    0.322          simple/instantiate_loader.jtag_loader_6_inst/jtag_din_int_0
+    ----------------------------------------
+    Total                      2.854ns (0.527ns logic, 2.327ns route)
+                                       (18.5% logic, 81.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            leds_7 (FF)
+  Destination:       leds<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: leds_7 to leds<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  leds_7 (leds_7)
+     OBUF:I->O                 2.571          leds_7_OBUF (leds<7>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DivBy100000/clk_out'
+  Total number of paths / destination ports: 29 / 15
+-------------------------------------------------------------------------
+Offset:              4.798ns (Levels of Logic = 2)
+  Source:            SevenSegDisplay/sel_0 (FF)
+  Destination:       e (PAD)
+  Source Clock:      DivBy100000/clk_out rising
+
+  Data Path: SevenSegDisplay/sel_0 to e
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             10   0.447   0.961  SevenSegDisplay/sel_0 (SevenSegDisplay/sel_0)
+     LUT2:I0->O            2   0.203   0.616  an21 (an2_OBUF)
+     OBUF:I->O                 2.571          e_OBUF (e)
+    ----------------------------------------
+    Total                      4.798ns (3.221ns logic, 1.577ns route)
+                                       (67.1% logic, 32.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'simple/instantiate_loader.jtag_loader_6_inst/drck'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.026ns (Levels of Logic = 0)
+  Source:            simple/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17 (FF)
+  Destination:       simple/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst:TDO (PAD)
+  Source Clock:      simple/instantiate_loader.jtag_loader_6_inst/drck rising
+
+  Data Path: simple/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17 to simple/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  simple/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17 (simple/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17)
+    BSCAN_SPARTAN6:TDO         0.000          simple/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst
+    ----------------------------------------
+    Total                      1.026ns (0.447ns logic, 0.579ns route)
+                                       (43.6% logic, 56.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock DivBy100000/clk_out
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+DivBy100000/clk_out|    2.190|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.579|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock simple/instantiate_loader.jtag_loader_6_inst/drck
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+simple/instantiate_loader.jtag_loader_6_inst/drck|    3.365|         |         |         |
+simple/jtag_clk                                  |    2.982|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock simple/jtag_clk
+-------------------------------------------------+---------+---------+---------+---------+
+                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------------+---------+---------+---------+---------+
+simple/instantiate_loader.jtag_loader_6_inst/drck|    2.766|         |         |         |
+simple/jtag_clk                                  |    1.579|         |         |         |
+-------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.72 secs
+ 
+--> 
+
+Total memory usage is 254000 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   32 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+

@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Lab04 -o C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/Mux_disp.tfi -lib work C:/Users/cal/Desktop/School/CST345/Lab04//Mux_disp.v -module Mux_disp -template C:/Xilinx/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

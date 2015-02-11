@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\cal\Desktop\School\CST345\Lab04\Lab04\exampleVerilog.ncd
+OUTFILE=C:\Users\cal\Desktop\School\CST345\Lab04\Lab04\exampleVerilog.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\cal\Desktop\School\CST345\Lab04\Lab04
+LICENSE=WebPack
+USER_INFO=210993382_0_0_379
