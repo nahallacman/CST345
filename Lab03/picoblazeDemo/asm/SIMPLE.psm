@@ -1,10 +1,11 @@
 ; SIMPLE.psm
 ;##########################################################################
 ;## Company:            Oregon Institute of Technology
-;## Author(s):          Troy Scevers (troy.scevers@oit.edu)
+;## Author(s):          Troy Scevers (troy.scevers@oit.edu)]
+;##	Edited by:			Cal Barkman
 ;##  
 ;## Creation Date:      1/26/2014
-;## Revision:           1
+;## Revision:           2
 ;## Program Purpose:    Simple program for picoblaze to echo switches to 
 ;##                     LEDs 
 ;##########################################################################
@@ -16,17 +17,17 @@ CONSTANT LEDS, 01               ; LEDs address = port 01 (output)
 ;##########################################################################
 ; Main Program
 ;##########################################################################
-main:   INPUT s2, SWITCHES      ; Read switches into s2 register
+main:    INPUT s2, SWITCHES      ; Read switches into s2 register
 ; check if the switch is pressed, if it is, complement the switch data
 ; first, load switch vale
-	INPUT s3, BUTTON
-	COMPARE s3, 00
+    INPUT s3, BUTTON
+    COMPARE s3, 00
 ;then compare it to the inactive value
-	JUMP NZ, no_button_pressed
+    JUMP NZ, no_button_pressed
 ;if the switch is not pressed,
     XOR s2, FF              ; Complement the switch Data
 no_button_pressed:
-        OUTPUT s2, LEDS         ; Write the Data to the LEDs
-        JUMP main               ; Loop Back to top of main
+    OUTPUT s2, LEDS         ; Write the Data to the LEDs
+    JUMP main               ; Loop Back to top of main
 ;##########################################################################
 

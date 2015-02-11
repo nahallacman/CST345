@@ -23,3 +23,19 @@ no_button_pressed:
 operation takes: 1*10^-7s to 1.2*10^-7s to complete.
 
 Q.2)
+Using just the assembly instructions there is no way to stop the PicoBlaze from executing instructions. You could do it in hardware using the reset line though.
+
+Q.3)
+The main function of the wrapping verilog was to control the input mux and the output mux with enable lines.
+
+Q.4)
+There are two forms of OUTPUT in the picoblaze assembly.
+case 1: OUTPUT sX, (sY)
+	this writes the sX register to the output port pointed to by sY
+	PORT_ID = Sy
+	OUT_PORT = sX
+case 2: OUTPUT sX, pp
+	this writes the sX register to the output port pp
+	PORT_ID = pp
+	OUT_PORT = sX
+If there were several banks of outputs recieving the same data, the first case would be useful as you could iterate over each port by incrementing just the sY register.
