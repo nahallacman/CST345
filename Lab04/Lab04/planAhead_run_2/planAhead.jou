@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Wed Feb 11 02:11:20 2015
+# Process ID: 2292
+# Log file: C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin T12 [get_ports {column[3]}]
+endgroup
+startgroup
+set_property package_pin V12 [get_ports {column[2]}]
+endgroup
+startgroup
+set_property package_pin N10 [get_ports {column[1]}]
+endgroup
+startgroup
+set_property package_pin P11 [get_ports {column[0]}]
+endgroup
+startgroup
+set_property package_pin M10 [get_ports {row[3]}]
+endgroup
+startgroup
+set_property package_pin N9 [get_ports {row[2]}]
+endgroup
+startgroup
+set_property package_pin U11 [get_ports {row[1]}]
+endgroup
+startgroup
+set_property package_pin V11 [get_ports {row[0]}]
+endgroup
+save_constraints

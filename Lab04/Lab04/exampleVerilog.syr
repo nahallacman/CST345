@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.11 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: exampleVerilog.prj
 
@@ -122,7 +122,7 @@ Parsing module <exampleVerilog>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 110: Port rdl is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 114: Port rdl is not connected to this instance
 
 Elaborating module <exampleVerilog>.
 
@@ -213,9 +213,9 @@ Elaborating module <LUT6(INIT=64'b1011111110111100100011111000110010110011101100
 Elaborating module <LUT6(INIT=64'b1111111100000000111100001111000011001100110011001010101010101010)>.
 
 Elaborating module <RAM64M(INIT_A=64'b0,INIT_B=64'b0,INIT_C=64'b0,INIT_D=64'b0)>.
-WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 95: Assignment to k_write_strobe ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 97: Assignment to read_strobe ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 100: Assignment to interrupt_ack ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 99: Assignment to k_write_strobe ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 101: Assignment to read_strobe ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 104: Assignment to interrupt_ack ignored, since the identifier is never used
 
 Elaborating module <simple(C_FAMILY="S6",C_RAM_SIZE_KWORDS=1,C_JTAG_LOADER_ENABLE=1)>.
 
@@ -228,17 +228,16 @@ Elaborating module <jtag_loader_6(C_FAMILY="S6",C_NUM_PICOBLAZE=1,C_JTAG_LOADER_
 Elaborating module <BSCAN_SPARTAN6(JTAG_CHAIN=2)>.
 
 Elaborating module <BUFG>.
-WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 121: Assignment to kcpsm6_reset ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 125: Assignment to kcpsm6_reset ignored, since the identifier is never used
 
 Elaborating module <keypad_controller>.
 WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\keypad_controller.v" Line 38: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:189 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 133: Size mismatch in connection of port <keypad_data>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 133: Assignment to keypad_data ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 137: Size mismatch in connection of port <keypad_data>. Formal port size is 4-bit while actual signal size is 1-bit.
 
 Elaborating module <Clock_Divider>.
 WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\Clock_Divider.v" Line 47: Result of 19-bit expression is truncated to fit in 18-bit target.
-WARNING:HDLCompiler:189 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 140: Size mismatch in connection of port <i>. Formal port size is 18-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 140: Assignment to i ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 144: Size mismatch in connection of port <i>. Formal port size is 18-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 144: Assignment to i ignored, since the identifier is never used
 
 Elaborating module <Mux_disp>.
 WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\Mux_disp.v" Line 66: Result of 3-bit expression is truncated to fit in 2-bit target.
@@ -249,12 +248,11 @@ WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\Mux_disp.v" 
 
 Synthesizing Unit <exampleVerilog>.
     Related source file is "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v".
-INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 89: Output port <k_write_strobe> of the instance <processor> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 89: Output port <read_strobe> of the instance <processor> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 89: Output port <interrupt_ack> of the instance <processor> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 114: Output port <rdl> of the instance <simple> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 127: Output port <keypad_data> of the instance <keypad> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 136: Output port <i> of the instance <DivBy100000> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 93: Output port <k_write_strobe> of the instance <processor> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 93: Output port <read_strobe> of the instance <processor> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 93: Output port <interrupt_ack> of the instance <processor> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 118: Output port <rdl> of the instance <simple> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 140: Output port <i> of the instance <DivBy100000> is unconnected or connected to loadless signal.
     Found 8-bit register for signal <leds>.
     Found 8-bit register for signal <in_port>.
     Summary:
@@ -583,14 +581,13 @@ Synthesizing Unit <Mux_disp>.
     Related source file is "C:\Users\cal\Desktop\School\CST345\Lab04\Mux_disp.v".
     Found 2-bit register for signal <sel>.
     Found 2-bit adder for signal <sel[1]_GND_53_o_add_0_OUT> created at line 66.
-    Found 4x5-bit Read Only RAM for signal <MuxOut>
     Found 4x1-bit Read Only RAM for signal <an4>
     Found 4x1-bit Read Only RAM for signal <an3>
     Found 4x1-bit Read Only RAM for signal <an2>
     Found 4x1-bit Read Only RAM for signal <an1>
     Found 16x7-bit Read Only RAM for signal <_n0045>
     Summary:
-	inferred   6 RAM(s).
+	inferred   5 RAM(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred   2 D-type flip-flop(s).
 Unit <Mux_disp> synthesized.
@@ -599,11 +596,10 @@ Unit <Mux_disp> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 7
+# RAMs                                                 : 6
  16x7-bit single-port Read Only RAM                    : 1
  4x1-bit single-port Read Only RAM                     : 4
  4x4-bit single-port Read Only RAM                     : 1
- 4x5-bit single-port Read Only RAM                     : 1
 # Adders/Subtractors                                   : 3
  18-bit adder                                          : 1
  2-bit adder                                           : 2
@@ -634,17 +630,6 @@ Unit <Clock_Divider> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Mux_disp>.
 The following registers are absorbed into counter <sel>: 1 register on signal <sel>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_MuxOut> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 4-word x 5-bit                      |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <sel>           |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <MuxOut>        |          |
-    -----------------------------------------------------------------------
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_an4> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -721,11 +706,10 @@ Unit <keypad_controller> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 7
+# RAMs                                                 : 6
  16x7-bit single-port distributed Read Only RAM        : 1
  4x1-bit single-port distributed Read Only RAM         : 4
  4x4-bit single-port distributed Read Only RAM         : 1
- 4x5-bit single-port distributed Read Only RAM         : 1
 # Counters                                             : 3
  18-bit up counter                                     : 1
  2-bit up counter                                      : 2
@@ -757,6 +741,8 @@ Optimizing unit <exampleVerilog> ...
 Optimizing unit <keypad_controller> ...
 
 Optimizing unit <jtag_loader_6> ...
+
+Optimizing unit <Mux_disp> ...
 WARNING:Xst:1710 - FF/Latch <DivBy100000/i_17> (without init value) has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
@@ -806,14 +792,14 @@ Top Level Output File Name         : exampleVerilog.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 242
+# BELS                             : 246
 #      GND                         : 1
 #      INV                         : 3
-#      LUT2                        : 17
+#      LUT2                        : 16
 #      LUT3                        : 24
-#      LUT4                        : 6
+#      LUT4                        : 8
 #      LUT5                        : 14
-#      LUT6                        : 37
+#      LUT6                        : 40
 #      LUT6_2                      : 50
 #      MUXCY                       : 45
 #      VCC                         : 1
@@ -846,16 +832,16 @@ Selected Device : 6slx16csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             154  out of  18224     0%  
- Number of Slice LUTs:                  175  out of   9112     1%  
-    Number used as Logic:               151  out of   9112     1%  
+ Number of Slice LUTs:                  179  out of   9112     1%  
+    Number used as Logic:               155  out of   9112     1%  
     Number used as Memory:               24  out of   2176     1%  
        Number used as RAM:               24
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    225
-   Number with an unused Flip Flop:      71  out of    225    31%  
-   Number with an unused LUT:            50  out of    225    22%  
-   Number of fully used LUT-FF pairs:   104  out of    225    46%  
+ Number of LUT Flip Flop pairs used:    229
+   Number with an unused Flip Flop:      75  out of    229    32%  
+   Number with an unused LUT:            50  out of    229    21%  
+   Number of fully used LUT-FF pairs:   104  out of    229    45%  
    Number of unique control sets:        15
 
 IO Utilization: 
@@ -889,7 +875,7 @@ Clock Information:
 Clock Signal                                     | Clock buffer(FF name)                                                | Load  |
 -------------------------------------------------+----------------------------------------------------------------------+-------+
 clk                                              | BUFGP                                                                | 121   |
-DivBy100000/clk_out                              | NONE(SevenSegDisplay/sel_0)                                          | 4     |
+DivBy100000/clk_out                              | NONE(keypad/sel_1)                                                   | 4     |
 simple/jtag_clk                                  | NONE(simple/instantiate_loader.jtag_loader_6_inst/control_dout_int_7)| 6     |
 simple/instantiate_loader.jtag_loader_6_inst/drck| BUFG                                                                 | 31    |
 -------------------------------------------------+----------------------------------------------------------------------+-------+
@@ -904,9 +890,9 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 7.579ns (Maximum Frequency: 131.944MHz)
-   Minimum input arrival time before clock: 3.228ns
-   Maximum output required time after clock: 4.798ns
-   Maximum combinational path delay: No path found
+   Minimum input arrival time before clock: 3.325ns
+   Maximum output required time after clock: 5.110ns
+   Maximum combinational path delay: 5.634ns
 
 Timing Details:
 ---------------
@@ -944,10 +930,10 @@ Delay:               7.579ns (Levels of Logic = 9)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DivBy100000/clk_out'
-  Clock period: 2.190ns (frequency: 456.663MHz)
+  Clock period: 2.242ns (frequency: 446.100MHz)
   Total number of paths / destination ports: 6 / 4
 -------------------------------------------------------------------------
-Delay:               2.190ns (Levels of Logic = 1)
+Delay:               2.242ns (Levels of Logic = 1)
   Source:            SevenSegDisplay/sel_0 (FF)
   Destination:       SevenSegDisplay/sel_0 (FF)
   Source Clock:      DivBy100000/clk_out rising
@@ -957,12 +943,12 @@ Delay:               2.190ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             10   0.447   0.856  SevenSegDisplay/sel_0 (SevenSegDisplay/sel_0)
-     INV:I->O              1   0.206   0.579  SevenSegDisplay/Mcount_sel_xor<0>11_INV_0 (Result<0>)
+     FDC:C->Q             12   0.447   0.908  SevenSegDisplay/sel_0 (SevenSegDisplay/sel_0)
+     INV:I->O              1   0.206   0.579  SevenSegDisplay/Mcount_sel_xor<0>11_INV_0 (SevenSegDisplay/Result<0>)
      FDC:D                     0.102          SevenSegDisplay/sel_0
     ----------------------------------------
-    Total                      2.190ns (0.755ns logic, 1.435ns route)
-                                       (34.5% logic, 65.5% route)
+    Total                      2.242ns (0.755ns logic, 1.487ns route)
+                                       (33.7% logic, 66.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'simple/jtag_clk'
@@ -1032,7 +1018,7 @@ Offset:              3.045ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DivBy100000/clk_out'
   Total number of paths / destination ports: 12 / 6
 -------------------------------------------------------------------------
-Offset:              3.228ns (Levels of Logic = 2)
+Offset:              3.325ns (Levels of Logic = 2)
   Source:            column<3> (PAD)
   Destination:       keypad/sel_1 (FF)
   Destination Clock: DivBy100000/clk_out rising
@@ -1041,12 +1027,12 @@ Offset:              3.228ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.222   0.864  column_3_IBUF (column_3_IBUF)
+     IBUF:I->O             5   1.222   0.962  column_3_IBUF (column_3_IBUF)
      LUT4:I0->O            2   0.203   0.616  keypad/column[3]_PWR_51_o_equal_6_o<3>1 (keypad/column[3]_PWR_51_o_equal_6_o)
      FDCE:CE                   0.322          keypad/sel_0
     ----------------------------------------
-    Total                      3.228ns (1.747ns logic, 1.481ns route)
-                                       (54.1% logic, 45.9% route)
+    Total                      3.325ns (1.747ns logic, 1.578ns route)
+                                       (52.5% logic, 47.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'simple/jtag_clk'
@@ -1111,21 +1097,21 @@ Offset:              3.597ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DivBy100000/clk_out'
   Total number of paths / destination ports: 29 / 15
 -------------------------------------------------------------------------
-Offset:              4.798ns (Levels of Logic = 2)
+Offset:              5.110ns (Levels of Logic = 2)
   Source:            SevenSegDisplay/sel_0 (FF)
-  Destination:       e (PAD)
+  Destination:       a (PAD)
   Source Clock:      DivBy100000/clk_out rising
 
-  Data Path: SevenSegDisplay/sel_0 to e
+  Data Path: SevenSegDisplay/sel_0 to a
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             10   0.447   0.961  SevenSegDisplay/sel_0 (SevenSegDisplay/sel_0)
-     LUT2:I0->O            2   0.203   0.616  an21 (an2_OBUF)
-     OBUF:I->O                 2.571          e_OBUF (e)
+     FDC:C->Q             12   0.447   1.273  SevenSegDisplay/sel_0 (SevenSegDisplay/sel_0)
+     LUT6:I0->O            2   0.203   0.616  SevenSegDisplay/Mram__n004531 (a_OBUF)
+     OBUF:I->O                 2.571          a_OBUF (a)
     ----------------------------------------
-    Total                      4.798ns (3.221ns logic, 1.577ns route)
-                                       (67.1% logic, 32.9% route)
+    Total                      5.110ns (3.221ns logic, 1.889ns route)
+                                       (63.0% logic, 37.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'simple/instantiate_loader.jtag_loader_6_inst/drck'
@@ -1147,6 +1133,25 @@ Offset:              1.026ns (Levels of Logic = 0)
                                        (43.6% logic, 56.4% route)
 
 =========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 16 / 4
+-------------------------------------------------------------------------
+Delay:               5.634ns (Levels of Logic = 3)
+  Source:            column<1> (PAD)
+  Destination:       e (PAD)
+
+  Data Path: column<1> to e
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.222   1.059  column_1_IBUF (column_1_IBUF)
+     LUT6:I1->O            1   0.203   0.579  SevenSegDisplay/Mram__n0045511 (f_OBUF)
+     OBUF:I->O                 2.571          f_OBUF (f)
+    ----------------------------------------
+    Total                      5.634ns (3.996ns logic, 1.638ns route)
+                                       (70.9% logic, 29.1% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
@@ -1156,7 +1161,7 @@ Clock to Setup on destination clock DivBy100000/clk_out
                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------+---------+---------+---------+---------+
-DivBy100000/clk_out|    2.190|         |         |         |
+DivBy100000/clk_out|    2.242|         |         |         |
 -------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -1189,13 +1194,13 @@ simple/jtag_clk                                  |    1.579|         |         |
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.72 secs
+Total CPU time to Xst completion: 5.79 secs
  
 --> 
 
 Total memory usage is 254000 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   32 (   0 filtered)
-Number of infos    :   15 (   0 filtered)
+Number of warnings :   31 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
 

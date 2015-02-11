@@ -20,7 +20,6 @@ NET "buttons[3]" LOC = D9;
 NET "buttons[2]" LOC = A8;
 NET "buttons[0]" LOC = B8;
 
-# PlanAhead Generated physical constraints 
 
 NET "a" LOC = T17;
 NET "b" LOC = T18;
@@ -34,3 +33,14 @@ NET "dp" LOC = M13;
 NET "e" LOC = M14;
 NET "f" LOC = N14;
 NET "g" LOC = L14;
+
+# PlanAhead Generated physical constraints 
+
+NET "column[3]" LOC = T12;
+NET "column[2]" LOC = V12;
+NET "column[1]" LOC = N10;
+NET "column[0]" LOC = P11;
+NET "row[3]" LOC = M10;
+NET "row[2]" LOC = N9;
+NET "row[1]" LOC = U11;
+NET "row[0]" LOC = V11;

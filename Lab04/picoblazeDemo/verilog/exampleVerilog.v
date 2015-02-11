@@ -44,7 +44,7 @@ module exampleVerilog(
 );
 
 //definitions for 7 seg display data
-    wire [3:0] Val0;
+    reg [3:0] Val0;
     wire [3:0] Val1;
     wire [3:0] Val2;
     wire [3:0] Val3;
@@ -52,7 +52,7 @@ module exampleVerilog(
     wire dp1;
     wire dp2;
     wire dp3;
-assign Val0 = 4'd1;
+//assign Val0 = 4'd1;
 assign Val1 = 4'd2;
 assign Val2 = 4'd3;
 assign Val3 = 4'd4;
@@ -61,6 +61,10 @@ assign dp1 = 1'b1;
 assign dp2 = 1'b0;
 assign dp3 = 1'b1;
 
+always@(*)
+begin
+Val0 = keypad_data;
+end
 	
 // Definitions for wiring in Picoblaze
 wire [11:0] address;

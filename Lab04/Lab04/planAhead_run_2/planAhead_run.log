@@ -1,0 +1,95 @@
+
+****** PlanAhead v14.7
+  **** Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/pa.fromHdl.tcl
+# create_project -name Lab04 -dir "C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/planAhead_run_2" -part xc6slx16csg324-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {../picoblazeDemo/verilog/kcpsm6.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../picoblazeDemo/asm/simple.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../Mux_disp.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../keypad_controller.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../Clock_Divider.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {../picoblazeDemo/verilog/exampleVerilog.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top exampleVerilog $srcset
+# add_files [list {C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx16csg324-3
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/verilog/kcpsm6.v" into library work
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/asm/simple.v" into library work
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/Lab04/Mux_disp.v" into library work
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/Lab04/keypad_controller.v" into library work
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/Lab04/Clock_Divider.v" into library work
+Analyzing Verilog file "C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/verilog/exampleVerilog.v" into library work
+INFO: [Netlist 29-17] Analyzing 56 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+Loading io standards from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf]
+Finished Parsing UCF File [C:/Users/cal/Desktop/School/CST345/Lab04/picoblazeDemo/PicoBlazeDemo.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 56 instances were transformed.
+  LUT6_2 => LUT6_2 (LUT6, LUT5): 50 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 4 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 2 instances
+
+Phase 0 | Netlist Checksum: a12bbbd7
+open_rtl_design: Time (s): elapsed = 00:00:07 . Memory (MB): peak = 551.219 ; gain = 124.316
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin T12 [get_ports {column[3]}]
+endgroup
+startgroup
+set_property package_pin V12 [get_ports {column[2]}]
+endgroup
+startgroup
+set_property package_pin N10 [get_ports {column[1]}]
+endgroup
+startgroup
+set_property package_pin P11 [get_ports {column[0]}]
+endgroup
+startgroup
+set_property package_pin M10 [get_ports {row[3]}]
+endgroup
+startgroup
+set_property package_pin N9 [get_ports {row[2]}]
+endgroup
+startgroup
+set_property package_pin U11 [get_ports {row[1]}]
+endgroup
+startgroup
+set_property package_pin V11 [get_ports {row[0]}]
+endgroup
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Wed Feb 11 02:13:12 2015...
+INFO: [Common 17-83] Releasing license: PlanAhead
