@@ -1,0 +1,157 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Feb 11 20:22:21 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "a" LOCATE = SITE "T17" LEVEL 1;
+COMP "b" LOCATE = SITE "T18" LEVEL 1;
+COMP "c" LOCATE = SITE "U17" LEVEL 1;
+COMP "d" LOCATE = SITE "U18" LEVEL 1;
+COMP "e" LOCATE = SITE "M14" LEVEL 1;
+COMP "f" LOCATE = SITE "N14" LEVEL 1;
+COMP "g" LOCATE = SITE "L14" LEVEL 1;
+COMP "dp" LOCATE = SITE "M13" LEVEL 1;
+COMP "an1" LOCATE = SITE "P17" LEVEL 1;
+COMP "an2" LOCATE = SITE "P18" LEVEL 1;
+COMP "an3" LOCATE = SITE "N15" LEVEL 1;
+COMP "an4" LOCATE = SITE "N16" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "rst" LOCATE = SITE "C9" LEVEL 1;
+COMP "leds<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "M11" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "N11" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "R11" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "T11" LEVEL 1;
+COMP "column<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "column<1>" LOCATE = SITE "N10" LEVEL 1;
+COMP "column<2>" LOCATE = SITE "V12" LEVEL 1;
+COMP "column<3>" LOCATE = SITE "T12" LEVEL 1;
+COMP "row<0>" LOCATE = SITE "V11" LEVEL 1;
+COMP "row<1>" LOCATE = SITE "U11" LEVEL 1;
+COMP "row<2>" LOCATE = SITE "N9" LEVEL 1;
+COMP "row<3>" LOCATE = SITE "M10" LEVEL 1;
+COMP "buttons<0>" LOCATE = SITE "B8" LEVEL 1;
+COMP "buttons<2>" LOCATE = SITE "A8" LEVEL 1;
+COMP "buttons<3>" LOCATE = SITE "D9" LEVEL 1;
+COMP "buttons<4>" LOCATE = SITE "C4" LEVEL 1;
+PIN simple/ram_1k_generate.s6.kcpsm6_rom_pins<28> = BEL
+        "simple/ram_1k_generate.s6.kcpsm6_rom" PINNAME CLKA;
+TIMEGRP clk = BEL "in_port_0" BEL "in_port_1" BEL "in_port_2" BEL "in_port_3"
+        BEL "in_port_4" BEL "in_port_5" BEL "Val0_0" BEL "Val0_1" BEL "Val0_2"
+        BEL "Val0_3" BEL "leds_0" BEL "leds_1" BEL "leds_2" BEL "leds_3" BEL
+        "leds_4" BEL "leds_5" BEL "leds_6" BEL "leds_7" BEL
+        "DivBy100000/clk_out" BEL "DivBy100000/i_0" BEL "DivBy100000/i_1" BEL
+        "DivBy100000/i_2" BEL "DivBy100000/i_3" BEL "DivBy100000/i_4" BEL
+        "DivBy100000/i_5" BEL "DivBy100000/i_6" BEL "DivBy100000/i_7" BEL
+        "DivBy100000/i_8" BEL "DivBy100000/i_9" BEL "DivBy100000/i_10" BEL
+        "DivBy100000/i_11" BEL "DivBy100000/i_12" BEL "DivBy100000/i_13" BEL
+        "DivBy100000/i_14" BEL "DivBy100000/i_15" BEL "DivBy100000/i_16" BEL
+        "processor/data_path_loop[7].small_spm.spm_flop" BEL
+        "processor/data_path_loop[7].low_hwbuild.shift_rotate_flop" BEL
+        "processor/data_path_loop[7].arith_logical_flop" BEL
+        "processor/data_path_loop[6].small_spm.spm_flop" BEL
+        "processor/data_path_loop[6].low_hwbuild.shift_rotate_flop" BEL
+        "processor/data_path_loop[6].arith_logical_flop" BEL
+        "processor/data_path_loop[5].small_spm.spm_flop" BEL
+        "processor/data_path_loop[5].low_hwbuild.shift_rotate_flop" BEL
+        "processor/data_path_loop[5].arith_logical_flop" BEL
+        "processor/data_path_loop[4].small_spm.spm_flop" BEL
+        "processor/data_path_loop[4].low_hwbuild.shift_rotate_flop" BEL
+        "processor/data_path_loop[4].arith_logical_flop" BEL
+        "processor/data_path_loop[3].small_spm.spm_flop" BEL
+        "processor/data_path_loop[3].low_hwbuild.shift_rotate_flop" BEL
+        "processor/data_path_loop[3].arith_logical_flop" BEL
+        "processor/data_path_loop[2].small_spm.spm_flop" BEL
+        "processor/data_path_loop[2].low_hwbuild.shift_rotate_flop" BEL
+        "processor/data_path_loop[2].arith_logical_flop" BEL
+        "processor/data_path_loop[1].small_spm.spm_flop" BEL
+        "processor/data_path_loop[1].low_hwbuild.shift_rotate_flop" BEL
+        "processor/data_path_loop[1].arith_logical_flop" BEL
+        "processor/data_path_loop[0].small_spm.spm_flop" BEL
+        "processor/data_path_loop[0].low_hwbuild.shift_rotate_flop" BEL
+        "processor/data_path_loop[0].arith_logical_flop" BEL
+        "processor/stack_loop[4].upper_stack.pointer_flop" BEL
+        "processor/stack_loop[3].upper_stack.pointer_flop" BEL
+        "processor/stack_loop[2].upper_stack.pointer_flop" BEL
+        "processor/stack_loop[1].upper_stack.pointer_flop" BEL
+        "processor/stack_loop[0].lsb_stack.pointer_flop" BEL
+        "processor/stack_bit_flop" BEL "processor/shadow_bank_flop" BEL
+        "processor/shadow_zero_flag_flop" BEL "processor/stack_zero_flop" BEL
+        "processor/shadow_carry_flag_flop" BEL
+        "processor/address_loop[11].pc_flop" BEL
+        "processor/address_loop[11].return_vector_flop" BEL
+        "processor/address_loop[10].pc_flop" BEL
+        "processor/address_loop[10].return_vector_flop" BEL
+        "processor/address_loop[9].pc_flop" BEL
+        "processor/address_loop[9].return_vector_flop" BEL
+        "processor/address_loop[8].pc_flop" BEL
+        "processor/address_loop[8].return_vector_flop" BEL
+        "processor/address_loop[7].pc_flop" BEL
+        "processor/address_loop[7].return_vector_flop" BEL
+        "processor/address_loop[6].pc_flop" BEL
+        "processor/address_loop[6].return_vector_flop" BEL
+        "processor/address_loop[5].pc_flop" BEL
+        "processor/address_loop[5].return_vector_flop" BEL
+        "processor/address_loop[4].pc_flop" BEL
+        "processor/address_loop[4].return_vector_flop" BEL
+        "processor/address_loop[3].pc_flop" BEL
+        "processor/address_loop[3].return_vector_flop" BEL
+        "processor/address_loop[2].pc_flop" BEL
+        "processor/address_loop[2].return_vector_flop" BEL
+        "processor/address_loop[1].pc_flop" BEL
+        "processor/address_loop[1].return_vector_flop" BEL
+        "processor/address_loop[0].pc_flop" BEL
+        "processor/address_loop[0].return_vector_flop" BEL
+        "processor/zero_flag_flop" BEL "processor/use_zero_flag_flop" BEL
+        "processor/carry_flag_flop" BEL "processor/shift_carry_flop" BEL
+        "processor/arith_carry_flop" BEL "processor/sx_addr4_flop" BEL
+        "processor/bank_flop" BEL "processor/write_strobe_flop" BEL
+        "processor/spm_enable_flop" BEL "processor/register_enable_flop" BEL
+        "processor/flag_enable_flop" BEL "processor/alu_mux_sel1_flop" BEL
+        "processor/alu_mux_sel0_flop" BEL "processor/active_interrupt_flop"
+        BEL "processor/interrupt_enable_flop" BEL "processor/t_state2_flop"
+        BEL "processor/t_state1_flop" BEL "processor/internal_reset_flop" BEL
+        "processor/run_flop" BEL "processor/sync_interrupt_flop" BEL
+        "clk_BUFGP/BUFG" PIN "simple/ram_1k_generate.s6.kcpsm6_rom_pins<28>"
+        BEL "processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMA"
+        BEL "processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMB"
+        BEL "processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMC"
+        BEL "processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMD"
+        BEL "processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMA"
+        BEL "processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMB"
+        BEL "processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMC"
+        BEL "processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMD"
+        BEL "processor/lower_reg_banks_RAMA_D1" BEL
+        "processor/lower_reg_banks_RAMA" BEL
+        "processor/lower_reg_banks_RAMB_D1" BEL
+        "processor/lower_reg_banks_RAMB" BEL
+        "processor/lower_reg_banks_RAMC_D1" BEL
+        "processor/lower_reg_banks_RAMC" BEL
+        "processor/lower_reg_banks_RAMD_D1" BEL
+        "processor/lower_reg_banks_RAMD" BEL
+        "processor/stack_ram_high_RAMA_D1" BEL "processor/stack_ram_high_RAMA"
+        BEL "processor/stack_ram_high_RAMB_D1" BEL
+        "processor/stack_ram_high_RAMB" BEL "processor/stack_ram_high_RAMC_D1"
+        BEL "processor/stack_ram_high_RAMC" BEL
+        "processor/stack_ram_high_RAMD_D1" BEL "processor/stack_ram_high_RAMD"
+        BEL "processor/stack_ram_low_RAMA_D1" BEL
+        "processor/stack_ram_low_RAMA" BEL "processor/stack_ram_low_RAMB_D1"
+        BEL "processor/stack_ram_low_RAMB" BEL
+        "processor/stack_ram_low_RAMC_D1" BEL "processor/stack_ram_low_RAMC"
+        BEL "processor/stack_ram_low_RAMD_D1" BEL
+        "processor/stack_ram_low_RAMD" BEL "processor/upper_reg_banks_RAMA_D1"
+        BEL "processor/upper_reg_banks_RAMA" BEL
+        "processor/upper_reg_banks_RAMB_D1" BEL
+        "processor/upper_reg_banks_RAMB" BEL
+        "processor/upper_reg_banks_RAMC_D1" BEL
+        "processor/upper_reg_banks_RAMC" BEL
+        "processor/upper_reg_banks_RAMD_D1" BEL
+        "processor/upper_reg_banks_RAMD";
+TIMEGRP "FFS" = FFS(*);
+TS_P2P = MAXDELAY FROM TIMEGRP "FFS" TO TIMEGRP "FFS" 10 ns;
+TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+SCHEMATIC END;
+

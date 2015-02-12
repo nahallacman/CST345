@@ -1,0 +1,72 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/lab04_toplevel_test_isim_beh.exe -prj C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/lab04_toplevel_test_beh.prj work.lab04_toplevel_test work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/verilog/kcpsm6.v" into library work
+Analyzing Verilog file "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/asm/simple.v" into library work
+Analyzing Verilog file "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../Mux_disp.v" into library work
+Analyzing Verilog file "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../keypad_controller.v" into library work
+Analyzing Verilog file "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../Clock_Divider.v" into library work
+Analyzing Verilog file "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/verilog/exampleVerilog.v" into library work
+Analyzing Verilog file "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/lab04_toplevel_test.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/verilog/exampleVerilog.v" Line 116: Port rdl is not connected to this instance
+WARNING:HDLCompiler:189 - "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/verilog/exampleVerilog.v" Line 139: Size mismatch in connection of port <keypad_data>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/verilog/exampleVerilog.v" Line 146: Size mismatch in connection of port <i>. Formal port size is 18-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 1716: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 1720: Element index 3 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 1803: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 1807: Element index 3 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 1864: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 1865: Element index 3 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 1916: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 1917: Element index 3 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 2012: Element index 23 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 2013: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 2018: Element index 31 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 2019: Element index 3 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 2122: Element index 23 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 2123: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 2128: Element index 31 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 2129: Element index 3 into memp is out of bounds
+Completed static elaboration
+Compiling module LUT6_2(INIT=64'b1111111111111111...
+Compiling module FD
+Compiling module LUT6(INIT=64'b01100101010101010)
+Compiling module FDR
+Compiling module XORCY
+Compiling module MUXCY
+Compiling module FDRE
+Compiling module RAM32M
+Compiling module RAM64M
+Compiling module kcpsm6_default
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 1543: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 1547: Element index 3 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 1629: Element index 2 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.20131013/rtf/verilog/src/unisims/RAMB16BWER.v" Line 1633: Element index 3 into memp is out of bounds
+Compiling module RAMB16BWER(DATA_WIDTH_A=18,DATA_...
+Compiling module BSCAN_SPARTAN6(JTAG_CHAIN=2)
+Compiling module BUFG
+WARNING:HDLCompiler:1007 - "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/asm/simple.v" Line 3138: Element index 1 into picoblaze_reset_int is out of bounds
+WARNING:HDLCompiler:1007 - "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/asm/simple.v" Line 3144: Element index 2 into picoblaze_reset_int is out of bounds
+WARNING:HDLCompiler:1007 - "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/asm/simple.v" Line 3150: Element index 3 into picoblaze_reset_int is out of bounds
+WARNING:HDLCompiler:1007 - "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/asm/simple.v" Line 3156: Element index 4 into picoblaze_reset_int is out of bounds
+WARNING:HDLCompiler:1007 - "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/asm/simple.v" Line 3162: Element index 5 into picoblaze_reset_int is out of bounds
+WARNING:HDLCompiler:1007 - "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/asm/simple.v" Line 3168: Element index 6 into picoblaze_reset_int is out of bounds
+WARNING:HDLCompiler:1007 - "C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/../../picoblazeDemo/asm/simple.v" Line 3174: Element index 7 into picoblaze_reset_int is out of bounds
+Compiling module jtag_loader_6(C_JTAG_LOADER_ENAB...
+Compiling module simple_default
+Compiling module keypad_controller
+Compiling module Clock_Divider
+Compiling module Mux_disp
+Compiling module exampleVerilog
+Compiling module lab04_toplevel_test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 55 Verilog Units
+Built simulation executable C:/Users/mainuser/Desktop/School/CST345/Lab04/Lab04_laptop/Lab04_laptop/lab04_toplevel_test_isim_beh.exe
+Fuse Memory Usage: 58272 KB
+Fuse CPU Usage: 2203 ms

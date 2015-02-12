@@ -22,12 +22,14 @@ module exampleVerilog(
     input wire clk,
     input wire rst,
 	// keypad input
-	input wire [3:0] column,
+	//input wire [3:0] column,
+	input wire [3:0] row,
 	//not used input and output
 	input wire [4:0] buttons,
     output reg [7:0] leds,
 	// keypad output
-	output wire [3:0] row,
+	//output wire [3:0] row,
+	output wire [3:0] column,
 	// 7 seg display output
 	output wire a,
     output wire b,
@@ -61,11 +63,14 @@ assign dp1 = 1'b1;
 assign dp2 = 1'b0;
 assign dp3 = 1'b1;
 
-always@(*)
+	wire [3:0] keypad_data;
+//assign Val0[3:0] = keypad_data;
+
+always@(negedge clk)
 begin
-Val0 = keypad_data;
+{Val0} = keypad_data;
 end
-	
+
 // Definitions for wiring in Picoblaze
 wire [11:0] address;
 wire [17:0] instruction;

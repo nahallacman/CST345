@@ -27,10 +27,10 @@ module test_keypad_controller;
 	// Inputs
 	reg reset;
 	reg clk;
-	reg [3:0] column;
+	reg [3:0] row;
 
 	// Outputs
-	wire [3:0] row;
+	wire [3:0] column;
 	wire interrupt;
 	wire [3:0] keypad_data;
 
@@ -51,7 +51,7 @@ module test_keypad_controller;
 		// Initialize Inputs
 		reset = 0;
 		clk = 0;
-		column = 4'b1111;
+		row = 4'b1111;
 
 		// Wait 100 ns for global reset to finish
 		#100;
@@ -62,8 +62,9 @@ module test_keypad_controller;
 		
 		#1000;
 		
-		column = 4'b1011;
-        
+		row = 4'b1011;
+		#100;
+		row = 4'b1111;       
 		// Add stimulus here
 
 	end
