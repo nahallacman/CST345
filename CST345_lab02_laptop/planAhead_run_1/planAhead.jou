@@ -1,0 +1,100 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Wed Jan 28 18:55:43 2015
+# Process ID: 69076
+# Log file: C:/Users/mainuser/Desktop/School/CST345/CST345_lab02_laptop/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/mainuser/Desktop/School/CST345/CST345_lab02_laptop/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/mainuser/Desktop/School/CST345/CST345_lab02_laptop/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+set_property package_pin "" [get_ports [list  {switches[1]}]]
+startgroup
+set_property package_pin T17 [get_ports a]
+endgroup
+set_property package_pin "" [get_ports [list  an1]]
+set_property package_pin "" [get_ports [list  an4]]
+startgroup
+set_property package_pin T18 [get_ports b]
+endgroup
+startgroup
+set_property package_pin U17 [get_ports c]
+endgroup
+set_property package_pin "" [get_ports [list  d]]
+set_property package_pin "" [get_ports [list  dp]]
+set_property package_pin "" [get_ports [list  d]]
+set_property package_pin "" [get_ports [list  clk]]
+startgroup
+set_property package_pin U18 [get_ports d]
+endgroup
+startgroup
+set_property package_pin M14 [get_ports e]
+endgroup
+startgroup
+set_property package_pin N14 [get_ports f]
+endgroup
+startgroup
+set_property package_pin N14 [get_ports f]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports g]
+endgroup
+startgroup
+set_property package_pin M13 [get_ports dp]
+endgroup
+set_property package_pin "" [get_ports [list  an1]]
+set_property package_pin "" [get_ports [list  {switches[0]}]]
+startgroup
+set_property package_pin T10 [get_ports {switches[0]}]
+endgroup
+startgroup
+set_property package_pin T9 [get_ports {switches[1]}]
+endgroup
+set_property package_pin "" [get_ports [list  {switches[3]}]]
+startgroup
+set_property package_pin V9 [get_ports {switches[2]}]
+endgroup
+startgroup
+set_property package_pin M8 [get_ports {switches[3]}]
+endgroup
+startgroup
+set_property package_pin N8 [get_ports {switches[4]}]
+endgroup
+set_property package_pin "" [get_ports [list  MiddleButton]]
+startgroup
+set_property package_pin C4 [get_ports LeftButton]
+endgroup
+startgroup
+set_property package_pin C9 [get_ports DownButton]
+endgroup
+startgroup
+set_property package_pin B8 [get_ports MiddleButton]
+endgroup
+startgroup
+set_property package_pin A9 [get_ports UpButton]
+endgroup
+startgroup
+set_property package_pin D9 [get_ports RightButton]
+endgroup
+startgroup
+set_property package_pin A8 [get_ports UpButton]
+endgroup
+set_property package_pin "" [get_ports [list  clk]]
+startgroup
+set_property package_pin V10 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin N16 [get_ports an1]
+endgroup
+startgroup
+set_property package_pin N15 [get_ports an2]
+endgroup
+set_property package_pin "" [get_ports [list  an3]]
+startgroup
+set_property package_pin P18 [get_ports an3]
+endgroup
+startgroup
+set_property package_pin P17 [get_ports an4]
+endgroup
+save_constraints

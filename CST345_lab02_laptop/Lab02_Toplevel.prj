@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/test.v"
+verilog work "../CST345_Lab02/Mux_disp.v"
+verilog work "../CST345_Lab02/Flipflop4bit.v"
+verilog work "../CST345_Lab02/Clock_Divider.v"
+verilog work "../CST345_Lab02/Lab02_Toplevel.v"
