@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Lab04 -o C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/sync_int.tfi -lib work C:/Users/cal/Desktop/School/CST345/Lab04//InterruptSynch.v -module sync_int -template C:/Xilinx/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

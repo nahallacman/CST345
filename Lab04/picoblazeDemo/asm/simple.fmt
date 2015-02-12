@@ -1,31 +1,58 @@
                    ; SIMPLE.psm
                    ;##########################################################################
                    ;## Company:            Oregon Institute of Technology
-                   ;## Author(s):          Troy Scevers (troy.scevers@oit.edu)
+                   ;## Author(s):          Cal Barkman (nahallacman@gmail.com or callahan.barkman@gmail.com)
                    ;##
-                   ;## Creation Date:      1/26/2014
+                   ;## Creation Date:      2/12/2015
                    ;## Revision:           1
-                   ;## Program Purpose:    Simple program for picoblaze to echo switches to
-                   ;##                     LEDs
+                   ;## Program Purpose:    Picoblaze program to enter keystrokes from the keypad
+                   ; on the PMOD1 header to the 4x7seg display, shifting recorded keystrokes
+                   ; across the 4x7seg display. A pressed button clears the screen to 0's.
                    ;##########################################################################
                    ;## Assembler Directives
                    ;##########################################################################
-                   CONSTANT SWITCHES, 01      ; Switches address = port 01 (input)
+                   CONSTANT KEYPAD, 01        ; Keypad address = port 01 (input)
                    CONSTANT BUTTON, 02        ; Button address = port 02 (input)
-                   CONSTANT LEDS, 01          ; LEDs address = port 01 (output)
+                   CONSTANT 7SEG0, 00         ; 7seg bank 0 address = port 01 (output)
+                   CONSTANT 7SEG1, 01         ; 7seg bank 1 address = port 01 (output)
+                   CONSTANT 7SEG2, 10         ; 7seg bank 2 address = port 01 (output)
+                   CONSTANT 7SEG3, 11         ; 7seg bank 3 address = port 01 (output)
+                   NAMEREG sA, r7seg0
+                   NAMEREG sB, r7seg1
+                   NAMEREG sC, r7seg2
+                   NAMEREG sD, r7seg3
+                   NAMEREG sE, keypad_value
                    ;##########################################################################
                    ; Main Program
                    ;##########################################################################
-             main: INPUT s2, SWITCHES         ; Read switches into s2 register
-                   ; check if the switch is pressed, if it is, complement the switch data
+             main: 
+                   ; check if a button is pressed, if it is, clear the 7 seg registers
                    ; first, load switch vale
                    INPUT s3, BUTTON
                    COMPARE s3, 00
                    ;then compare it to the inactive value
-                   JUMP NZ, no_button_pressed
-                   ;if the switch is not pressed,
-                   XOR s2, FF                 ; Complement the switch Data
+                   JUMP Z, no_button_pressed
+                   ;if the switch is pressed, clear the registers
+                   LOAD r7seg0, 00
+                   LOAD r7seg1, 00
+                   LOAD r7seg2, 00
+                   LOAD r7seg3, 00
 no_button_pressed: 
-                   OUTPUT s2, LEDS            ; Write the Data to the LEDs
+                   OUTPUT r7seg0, 7SEG0       ; Write the 7 seg output to the appropriate registers
+                   OUTPUT r7seg1, 7SEG1
+                   OUTPUT r7seg2, 7SEG2
+                   OUTPUT r7seg3, 7SEG3
                    JUMP main                  ; Loop Back to top of main
                    ;##########################################################################
+                   ; Interrupt handling
+                   ;------------------------------------------------------------------------------------
+                   ADDRESS 2B0
+      int_routine: 
+                   INPUT keypad_value, KEYPAD
+                   LOAD r7seg0, r7seg1
+                   LOAD r7seg1, r7seg2
+                   LOAD r7seg2, r7seg3
+                   LOAD r7seg3, keypad_value
+                   RETURNI ENABLE
+                   ADDRESS 3FF                ;set interrupt vector
+                   JUMP int_routine

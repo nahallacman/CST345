@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Feb 11 02:21:27 2015
+// Written by: Map P.20131013 on Thu Feb 12 02:54:45 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -17,14 +17,6 @@ COMP "an3" LOCATE = SITE "N15" LEVEL 1;
 COMP "an4" LOCATE = SITE "N16" LEVEL 1;
 COMP "clk" LOCATE = SITE "V10" LEVEL 1;
 COMP "rst" LOCATE = SITE "C9" LEVEL 1;
-COMP "leds<0>" LOCATE = SITE "U16" LEVEL 1;
-COMP "leds<1>" LOCATE = SITE "V16" LEVEL 1;
-COMP "leds<2>" LOCATE = SITE "U15" LEVEL 1;
-COMP "leds<3>" LOCATE = SITE "V15" LEVEL 1;
-COMP "leds<4>" LOCATE = SITE "M11" LEVEL 1;
-COMP "leds<5>" LOCATE = SITE "N11" LEVEL 1;
-COMP "leds<6>" LOCATE = SITE "R11" LEVEL 1;
-COMP "leds<7>" LOCATE = SITE "T11" LEVEL 1;
 COMP "column<0>" LOCATE = SITE "P11" LEVEL 1;
 COMP "column<1>" LOCATE = SITE "N10" LEVEL 1;
 COMP "column<2>" LOCATE = SITE "V12" LEVEL 1;
@@ -37,17 +29,19 @@ COMP "buttons<0>" LOCATE = SITE "B8" LEVEL 1;
 COMP "buttons<2>" LOCATE = SITE "A8" LEVEL 1;
 COMP "buttons<3>" LOCATE = SITE "D9" LEVEL 1;
 COMP "buttons<4>" LOCATE = SITE "C4" LEVEL 1;
-PIN simple/ram_1k_generate.s6.kcpsm6_rom_pins<28> = BEL
-        "simple/ram_1k_generate.s6.kcpsm6_rom" PINNAME CLKA;
+PIN SIMPLE/ram_1k_generate.s6.kcpsm6_rom_pins<28> = BEL
+        "SIMPLE/ram_1k_generate.s6.kcpsm6_rom" PINNAME CLKA;
 TIMEGRP clk = BEL "in_port_0" BEL "in_port_1" BEL "in_port_2" BEL "in_port_3"
-        BEL "in_port_4" BEL "in_port_5" BEL "leds_0" BEL "leds_1" BEL "leds_2"
-        BEL "leds_3" BEL "leds_4" BEL "leds_5" BEL "leds_6" BEL "leds_7" BEL
-        "DivBy100000/clk_out" BEL "DivBy100000/i_0" BEL "DivBy100000/i_1" BEL
-        "DivBy100000/i_2" BEL "DivBy100000/i_3" BEL "DivBy100000/i_4" BEL
-        "DivBy100000/i_5" BEL "DivBy100000/i_6" BEL "DivBy100000/i_7" BEL
-        "DivBy100000/i_8" BEL "DivBy100000/i_9" BEL "DivBy100000/i_10" BEL
-        "DivBy100000/i_11" BEL "DivBy100000/i_12" BEL "DivBy100000/i_13" BEL
-        "DivBy100000/i_14" BEL "DivBy100000/i_15" BEL "DivBy100000/i_16" BEL
+        BEL "in_port_4" BEL "Val0_0" BEL "Val0_1" BEL "Val0_2" BEL "Val0_3"
+        BEL "Val3_0" BEL "Val3_1" BEL "Val3_2" BEL "Val3_3" BEL "Val1_0" BEL
+        "Val1_1" BEL "Val1_2" BEL "Val1_3" BEL "Val2_0" BEL "Val2_1" BEL
+        "Val2_2" BEL "Val2_3" BEL "DivBy100000/clk_out" BEL "DivBy100000/i_0"
+        BEL "DivBy100000/i_1" BEL "DivBy100000/i_2" BEL "DivBy100000/i_3" BEL
+        "DivBy100000/i_4" BEL "DivBy100000/i_5" BEL "DivBy100000/i_6" BEL
+        "DivBy100000/i_7" BEL "DivBy100000/i_8" BEL "DivBy100000/i_9" BEL
+        "DivBy100000/i_10" BEL "DivBy100000/i_11" BEL "DivBy100000/i_12" BEL
+        "DivBy100000/i_13" BEL "DivBy100000/i_14" BEL "DivBy100000/i_15" BEL
+        "DivBy100000/i_16" BEL
         "processor/data_path_loop[7].small_spm.spm_flop" BEL
         "processor/data_path_loop[7].low_hwbuild.shift_rotate_flop" BEL
         "processor/data_path_loop[7].arith_logical_flop" BEL
@@ -114,16 +108,17 @@ TIMEGRP clk = BEL "in_port_0" BEL "in_port_1" BEL "in_port_2" BEL "in_port_3"
         BEL "processor/interrupt_enable_flop" BEL "processor/t_state2_flop"
         BEL "processor/t_state1_flop" BEL "processor/internal_reset_flop" BEL
         "processor/run_flop" BEL "processor/sync_interrupt_flop" BEL
-        "clk_BUFGP/BUFG" PIN "simple/ram_1k_generate.s6.kcpsm6_rom_pins<28>"
-        BEL "processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMA"
-        BEL "processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMB"
-        BEL "processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMC"
-        BEL "processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMD"
-        BEL "processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMA"
-        BEL "processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMB"
-        BEL "processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMC"
-        BEL "processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMD"
-        BEL "processor/lower_reg_banks_RAMA_D1" BEL
+        "clk_BUFGP/BUFG" PIN "SIMPLE/ram_1k_generate.s6.kcpsm6_rom_pins<28>"
+        BEL "instance_name/Mshreg_interrupt" BEL "instance_name/interrupt" BEL
+        "processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMA" BEL
+        "processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMB" BEL
+        "processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMC" BEL
+        "processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMD" BEL
+        "processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMA" BEL
+        "processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMB" BEL
+        "processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMC" BEL
+        "processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMD" BEL
+        "processor/lower_reg_banks_RAMA_D1" BEL
         "processor/lower_reg_banks_RAMA" BEL
         "processor/lower_reg_banks_RAMB_D1" BEL
         "processor/lower_reg_banks_RAMB" BEL

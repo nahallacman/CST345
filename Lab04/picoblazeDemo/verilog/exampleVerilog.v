@@ -26,7 +26,7 @@ module exampleVerilog(
 	input wire [3:0] row,
 	//not used input and output
 	input wire [4:0] buttons,
-    output reg [7:0] leds,
+//    output reg [7:0] leds,
 	// keypad output
 	//output wire [3:0] row,
 	output wire [3:0] column,
@@ -47,30 +47,31 @@ module exampleVerilog(
 
 //definitions for 7 seg display data
     reg [3:0] Val0;
-    wire [3:0] Val1;
-    wire [3:0] Val2;
-    wire [3:0] Val3;
+    reg [3:0] Val1;
+    reg [3:0] Val2;
+    reg [3:0] Val3;
 	 wire dp0; 
     wire dp1;
     wire dp2;
     wire dp3;
 //assign Val0 = 4'd1;
-assign Val1 = 4'd2;
-assign Val2 = 4'd3;
-assign Val3 = 4'd4;
+//assign Val1 = 4'd2;
+//assign Val2 = 4'd3;
+//assign Val3 = 4'd4;
 assign dp0 = 1'b0;
 assign dp1 = 1'b1;
 assign dp2 = 1'b0;
 assign dp3 = 1'b1;
 
 	wire [3:0] keypad_data;
+	wire interrupt_keypad;
 //assign Val0[3:0] = keypad_data;
-
+/*
 always@(negedge clk)
 begin
 {Val0} = keypad_data;
 end
-
+*/
 // Definitions for wiring in Picoblaze
 wire [11:0] address;
 wire [17:0] instruction;
@@ -116,11 +117,11 @@ assign kcpsm6_sleep = 1'b0;
 //assign interrupt = 0;
 
 // Tie in the program ROM
- simple #(
+SIMPLE #(
 	.C_FAMILY             ("S6"), //Family 'S6' or 'V6'
 	.C_RAM_SIZE_KWORDS    (1),  	//Program size '1', '2' or '4'
 	.C_JTAG_LOADER_ENABLE (1))  	//Include JTAG Loader when set to '1' 
-  simple (    				    		//Name to match your PSM file
+  SIMPLE (    				    		//Name to match your PSM file
 // 	.rdl 			(kcpsm6_reset),
 	.enable 		(bram_enable),
 	.address 		(address),
@@ -136,9 +137,9 @@ assign kcpsm6_reset = cpu_reset;
 keypad_controller keypad (
     .reset(rst), 
     .clk(clk_1khz), //does this clock need a 1khz operation? faster? slower?
-    .column(column),
-    .row(row), 
-    .interrupt(interrupt), 
+    .row(row),
+    .column(column),	 
+    .interrupt(interrupt_keypad), 
     .keypad_data(keypad_data)
     );
 
@@ -148,6 +149,14 @@ Clock_Divider DivBy100000 (
     .clk_out(clk_1khz), 
     .i(i)
     );
+
+//interrupt synchronizer to ensure a 2 clock cycles interrupt is triggered, then no other interrupt will be triggered until the interrupt line has gone low and then back high	 
+sync_int instance_name (
+    .clk(clk), 
+    .interrupt_in(interrupt_keypad), 
+    .interrupt(interrupt)
+    );	 
+	 
 	 
 //assign leds[7:0] = i[17:9];
 
@@ -182,8 +191,7 @@ always @ (posedge clk)
   begin
       case (port_id[1:0])    
         // Read input_port_b at port address 01 hex
-         //2'b01 : in_port <= keypad_data;
-			2'b01 : in_port <= 8'b10101010;
+			2'b01 : in_port <= keypad_data;
 			2'b10 : in_port <= buttons;
         default : in_port <= 8'bXXXXXXXX ;  
       endcase
@@ -195,9 +203,39 @@ always @ (posedge clk)
       // 'write_strobe' is used to qualify all writes to general output ports.
       if (write_strobe == 1'b1) begin
         // Write to output_port_w at port address 01 hex
-        if (port_id[0] == 1'b1) begin
-          leds <= out_port;
-        end
+        case (port_id[1:0])
+			2'b00: begin
+			Val0 <= out_port[3:0];
+			Val1 <= Val1;
+			Val2 <= Val2;
+			Val3 <= Val3;
+			end
+			2'b01: begin
+			Val0 <= Val0;
+			Val1 <= out_port[3:0];
+			Val2 <= Val2;
+			Val3 <= Val3;
+			end
+			2'b10: begin
+			Val0 <= Val0;
+			Val1 <= Val1;
+			Val2 <= out_port[3:0];
+			Val3 <= Val3;
+			end
+			2'b11: begin
+			Val0 <= Val0;
+			Val1 <= Val1;
+			Val2 <= Val2;
+			Val3 <= out_port[3:0];
+			end
+			default: begin
+			Val0 <= Val0;
+			Val1 <= Val1;
+			Val2 <= Val2;
+			Val3 <= Val3;
+			end
+		endcase
+        
       end
   end	  
   

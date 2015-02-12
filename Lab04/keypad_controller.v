@@ -12,7 +12,8 @@
 // Description: 
 //
 // Dependencies: 
-//
+//b10 : in_port <= 
+
 // Revision: 
 // Revision 0.01 - File Created
 // Additional Comments: 

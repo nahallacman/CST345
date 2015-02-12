@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+sync_int instance_name (
+    .clk(clk), 
+    .interrupt_in(interrupt_in), 
+    .interrupt(interrupt)
+    );
+
+
