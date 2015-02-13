@@ -65,9 +65,6 @@ LOAD r7seg0, r7seg1
 LOAD r7seg1, r7seg2
 LOAD r7seg2, r7seg3
 LOAD r7seg3, keypad_value
-;LOAD s4, AA
-;OUTPUT s4, LEDS
-;JUMP int_routine
 RETURNI ENABLE
  
 ADDRESS 3FF			;set interrupt vector
