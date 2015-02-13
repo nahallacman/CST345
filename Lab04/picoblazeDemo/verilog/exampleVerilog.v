@@ -26,7 +26,7 @@ module exampleVerilog(
 	input wire [3:0] row,
 	//not used input and output
 	input wire [4:0] buttons,
-//    output reg [7:0] leds,
+    output reg [7:0] leds,
 	// keypad output
 	//output wire [3:0] row,
 	output wire [3:0] column,
@@ -46,10 +46,12 @@ module exampleVerilog(
 );
 
 //definitions for 7 seg display data
+
     reg [3:0] Val0;
     reg [3:0] Val1;
     reg [3:0] Val2;
     reg [3:0] Val3;
+
 	 wire dp0; 
     wire dp1;
     wire dp2;
@@ -65,6 +67,8 @@ assign dp3 = 1'b1;
 
 	wire [3:0] keypad_data;
 	wire interrupt_keypad;
+	
+	wire synced_interrupt;
 //assign Val0[3:0] = keypad_data;
 /*
 always@(negedge clk)
@@ -106,7 +110,7 @@ kcpsm6 #(
 	.out_port 		(out_port),
 	.read_strobe 	(read_strobe),
 	.in_port 		(in_port),
-	.interrupt 		(interrupt),
+	.interrupt 		(synced_interrupt),
 	.interrupt_ack 	(interrupt_ack),
 	.reset          (rst),
 	.sleep		    (kcpsm6_sleep),
@@ -151,10 +155,10 @@ Clock_Divider DivBy100000 (
     );
 
 //interrupt synchronizer to ensure a 2 clock cycles interrupt is triggered, then no other interrupt will be triggered until the interrupt line has gone low and then back high	 
-sync_int instance_name (
+sync_int interrupt_synchonrizer (
     .clk(clk), 
     .interrupt_in(interrupt_keypad), 
-    .interrupt(interrupt)
+    .interrupt(synced_interrupt)
     );	 
 	 
 	 
@@ -203,36 +207,48 @@ always @ (posedge clk)
       // 'write_strobe' is used to qualify all writes to general output ports.
       if (write_strobe == 1'b1) begin
         // Write to output_port_w at port address 01 hex
-        case (port_id[1:0])
-			2'b00: begin
+        case (port_id[2:0])
+			3'd1: begin
 			Val0 <= out_port[3:0];
 			Val1 <= Val1;
 			Val2 <= Val2;
 			Val3 <= Val3;
+			leds <= leds;
 			end
-			2'b01: begin
+			3'd2: begin
 			Val0 <= Val0;
 			Val1 <= out_port[3:0];
 			Val2 <= Val2;
 			Val3 <= Val3;
+			leds <= leds;
 			end
-			2'b10: begin
+			3'd3: begin
 			Val0 <= Val0;
 			Val1 <= Val1;
 			Val2 <= out_port[3:0];
 			Val3 <= Val3;
+			leds <= leds;
 			end
-			2'b11: begin
+			3'd4: begin
 			Val0 <= Val0;
 			Val1 <= Val1;
 			Val2 <= Val2;
 			Val3 <= out_port[3:0];
+			leds <= leds;
+			end
+			3'd5: begin
+			Val0 <= Val0;
+			Val1 <= Val1;
+			Val2 <= Val2;
+			Val3 <= Val3;
+			leds <= out_port[7:0];
 			end
 			default: begin
 			Val0 <= Val0;
 			Val1 <= Val1;
 			Val2 <= Val2;
 			Val3 <= Val3;
+			leds <= leds;
 			end
 		endcase
         

@@ -13,10 +13,11 @@
                    ;##########################################################################
                    CONSTANT KEYPAD, 01        ; Keypad address = port 01 (input)
                    CONSTANT BUTTON, 02        ; Button address = port 02 (input)
-                   CONSTANT 7SEG0, 00         ; 7seg bank 0 address = port 01 (output)
-                   CONSTANT 7SEG1, 01         ; 7seg bank 1 address = port 01 (output)
-                   CONSTANT 7SEG2, 10         ; 7seg bank 2 address = port 01 (output)
-                   CONSTANT 7SEG3, 11         ; 7seg bank 3 address = port 01 (output)
+                   CONSTANT out7SEG0, 01      ; 7seg bank 0 address = port 01 (output)
+                   CONSTANT out7SEG1, 02      ; 7seg bank 1 address = port 02 (output)
+                   CONSTANT out7SEG2, 03      ; 7seg bank 2 address = port 03 (output)
+                   CONSTANT out7SEG3, 04      ; 7seg bank 3 address = port 04 (output)
+                   CONSTANT LEDS, 05          ; LED bank output = port 5 (output)
                    NAMEREG sA, r7seg0
                    NAMEREG sB, r7seg1
                    NAMEREG sC, r7seg2
@@ -25,23 +26,32 @@
                    ;##########################################################################
                    ; Main Program
                    ;##########################################################################
+       initialize: 
+                   ENABLE INTERRUPT
              main: 
+                   ;for debugging turn off the LEDS
+                   ;LOAD s4, 00
+                   INPUT s4, KEYPAD
                    ; check if a button is pressed, if it is, clear the 7 seg registers
                    ; first, load switch vale
                    INPUT s3, BUTTON
-                   COMPARE s3, 00
                    ;then compare it to the inactive value
+                   COMPARE s3, 00
+                   ;and jump if no button is pressed
                    JUMP Z, no_button_pressed
                    ;if the switch is pressed, clear the registers
                    LOAD r7seg0, 00
                    LOAD r7seg1, 00
                    LOAD r7seg2, 00
                    LOAD r7seg3, 00
+                   ;and for debugging, turn on the LEDS
+                   LOAD s4, FF
 no_button_pressed: 
-                   OUTPUT r7seg0, 7SEG0       ; Write the 7 seg output to the appropriate registers
-                   OUTPUT r7seg1, 7SEG1
-                   OUTPUT r7seg2, 7SEG2
-                   OUTPUT r7seg3, 7SEG3
+                   OUTPUT r7seg0, out7SEG0    ; Write the 7 seg output to the appropriate registers
+                   OUTPUT r7seg1, out7SEG1
+                   OUTPUT r7seg2, out7SEG2
+                   OUTPUT r7seg3, out7SEG3
+                   OUTPUT s4, LEDS
                    JUMP main                  ; Loop Back to top of main
                    ;##########################################################################
                    ; Interrupt handling
@@ -53,6 +63,9 @@ no_button_pressed:
                    LOAD r7seg1, r7seg2
                    LOAD r7seg2, r7seg3
                    LOAD r7seg3, keypad_value
+                   ;LOAD s4, AA
+                   ;OUTPUT s4, LEDS
+                   ;JUMP int_routine
                    RETURNI ENABLE
                    ADDRESS 3FF                ;set interrupt vector
                    JUMP int_routine

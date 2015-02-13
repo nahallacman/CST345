@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: exampleVerilog.prj
 
@@ -124,7 +124,7 @@ Parsing module <exampleVerilog>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 120: Port rdl is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 124: Port rdl is not connected to this instance
 
 Elaborating module <exampleVerilog>.
 
@@ -215,31 +215,31 @@ Elaborating module <LUT6(INIT=64'b1011111110111100100011111000110010110011101100
 Elaborating module <LUT6(INIT=64'b1111111100000000111100001111000011001100110011001010101010101010)>.
 
 Elaborating module <RAM64M(INIT_A=64'b0,INIT_B=64'b0,INIT_C=64'b0,INIT_D=64'b0)>.
-WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 105: Assignment to k_write_strobe ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 107: Assignment to read_strobe ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 110: Assignment to interrupt_ack ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 109: Assignment to k_write_strobe ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 111: Assignment to read_strobe ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 114: Assignment to interrupt_ack ignored, since the identifier is never used
 
 Elaborating module <SIMPLE(C_FAMILY="S6",C_RAM_SIZE_KWORDS=1,C_JTAG_LOADER_ENABLE=1)>.
 
 Elaborating module
-<RAMB16BWER(DATA_WIDTH_A=18,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=9'b0,RST_PRIORITY_A="CE",SRVAL_A=9'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=18,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=9'b0,RST_PRIORITY_B="CE",SRVAL_B=9'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b01000000000000011011101000100011101110000010000110110110000000111011010000000000001110100000000000111000000000000011011000000000001101000000000001000000000011111010011000000001001001100000010,INIT_01=256'b0,INIT_02=256'b0,INIT_03=256'b0,INIT_04=256'b0,INIT_05=256'b0,INIT_06=256'b0,INIT_07=256'b0,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256
-'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0100100000000000100001101111000000000110011010000000010111100000000001010101100001001111000000001,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b010001010110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,INITP_00=256'b0101010101000000000110100,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-0000000,INITP_06=256'b0,INITP_07=256'b1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)>.
+<RAMB16BWER(DATA_WIDTH_A=18,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=9'b0,RST_PRIORITY_A="CE",SRVAL_A=9'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=18,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=9'b0,RST_PRIORITY_B="CE",SRVAL_B=9'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b010000000000001110101000000010111011101000001001101110000000011110110110000001011011010000000010001010011111111000111010000000000011100000000000001101100000000000110100000000000100000000010101101001100000000100100110000001010010100000000011000000000000001,INIT_01=256'b0,INIT_02=256'b0,INIT_03=256'b0,INIT_04=256'b0,INIT_05=256'b0,INIT_06=256'b0,INIT_07=256'b0,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D
+=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0100100000000000100001101111000000000110011010000000010111100000000001010101100001001111000000001,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b010001010110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,INITP_00=256'b010101010101000000000001101000010,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b010000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000000,INITP_06=256'b0,INITP_07=256'b1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)>.
 
 Elaborating module <jtag_loader_6(C_FAMILY="S6",C_NUM_PICOBLAZE=1,C_JTAG_LOADER_ENABLE=1,C_BRAM_MAX_ADDR_WIDTH=32'sb01010,C_ADDR_WIDTH_0=32'sb01010)>.
 
 Elaborating module <BSCAN_SPARTAN6(JTAG_CHAIN=2)>.
 
 Elaborating module <BUFG>.
-WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 131: Assignment to kcpsm6_reset ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 135: Assignment to kcpsm6_reset ignored, since the identifier is never used
 
 Elaborating module <keypad_controller>.
 WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\keypad_controller.v" Line 42: Result of 3-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <Clock_Divider>.
 WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\Clock_Divider.v" Line 47: Result of 19-bit expression is truncated to fit in 18-bit target.
-WARNING:HDLCompiler:189 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 150: Size mismatch in connection of port <i>. Formal port size is 18-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 150: Assignment to i ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 154: Size mismatch in connection of port <i>. Formal port size is 18-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 154: Assignment to i ignored, since the identifier is never used
 
 Elaborating module <sync_int>.
 
@@ -252,18 +252,19 @@ WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\Mux_disp.v" 
 
 Synthesizing Unit <exampleVerilog>.
     Related source file is "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v".
-INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 99: Output port <k_write_strobe> of the instance <processor> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 99: Output port <read_strobe> of the instance <processor> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 99: Output port <interrupt_ack> of the instance <processor> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 124: Output port <rdl> of the instance <SIMPLE> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 146: Output port <i> of the instance <DivBy100000> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 103: Output port <k_write_strobe> of the instance <processor> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 103: Output port <read_strobe> of the instance <processor> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 103: Output port <interrupt_ack> of the instance <processor> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 128: Output port <rdl> of the instance <SIMPLE> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" line 150: Output port <i> of the instance <DivBy100000> is unconnected or connected to loadless signal.
     Found 4-bit register for signal <Val0>.
     Found 4-bit register for signal <Val1>.
     Found 4-bit register for signal <Val2>.
     Found 4-bit register for signal <Val3>.
+    Found 8-bit register for signal <leds>.
     Found 8-bit register for signal <in_port>.
     Summary:
-	inferred  24 D-type flip-flop(s).
+	inferred  32 D-type flip-flop(s).
 Unit <exampleVerilog> synthesized.
 
 Synthesizing Unit <kcpsm6>.
@@ -621,13 +622,13 @@ Macro Statistics
 # Adders/Subtractors                                   : 3
  18-bit adder                                          : 1
  2-bit adder                                           : 2
-# Registers                                            : 36
+# Registers                                            : 37
  1-bit register                                        : 26
  10-bit register                                       : 1
  18-bit register                                       : 1
  2-bit register                                        : 2
  4-bit register                                        : 4
- 8-bit register                                        : 2
+ 8-bit register                                        : 3
 # Comparators                                          : 1
  18-bit comparator greater                             : 1
 # Multiplexers                                         : 29
@@ -736,8 +737,8 @@ Macro Statistics
 # Counters                                             : 3
  18-bit up counter                                     : 1
  2-bit up counter                                      : 2
-# Registers                                            : 147
- Flip-Flops                                            : 147
+# Registers                                            : 155
+ Flip-Flops                                            : 155
 # Comparators                                          : 1
  18-bit comparator greater                             : 1
 # Multiplexers                                         : 28
@@ -783,15 +784,15 @@ WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 
 Final Macro Processing ...
 
 Processing Unit <exampleVerilog> :
-	Found 2-bit shift register for signal <instance_name/interrupt>.
+	Found 2-bit shift register for signal <interrupt_synchonrizer/interrupt>.
 Unit <exampleVerilog> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 162
- Flip-Flops                                            : 162
+# Registers                                            : 170
+ Flip-Flops                                            : 170
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -818,23 +819,23 @@ Top Level Output File Name         : exampleVerilog.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 257
+# BELS                             : 258
 #      GND                         : 1
 #      INV                         : 3
 #      LUT2                        : 12
-#      LUT3                        : 24
-#      LUT4                        : 16
+#      LUT3                        : 20
+#      LUT4                        : 21
 #      LUT5                        : 18
 #      LUT6                        : 43
 #      LUT6_2                      : 50
 #      MUXCY                       : 45
 #      VCC                         : 1
 #      XORCY                       : 44
-# FlipFlops/Latches                : 163
+# FlipFlops/Latches                : 171
 #      FD                          : 53
 #      FDC                         : 3
 #      FDCE                        : 2
-#      FDE                         : 49
+#      FDE                         : 57
 #      FDR                         : 41
 #      FDRE                        : 15
 # RAMS                             : 7
@@ -846,9 +847,9 @@ Primitive and Black Box Usage:
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 26
+# IO Buffers                       : 34
 #      IBUF                        : 10
-#      OBUF                        : 16
+#      OBUF                        : 24
 # Others                           : 1
 #      BSCAN_SPARTAN6              : 1
 
@@ -859,23 +860,23 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             163  out of  18224     0%  
- Number of Slice LUTs:                  191  out of   9112     2%  
-    Number used as Logic:               166  out of   9112     1%  
+ Number of Slice Registers:             171  out of  18224     0%  
+ Number of Slice LUTs:                  192  out of   9112     2%  
+    Number used as Logic:               167  out of   9112     1%  
     Number used as Memory:               25  out of   2176     1%  
        Number used as RAM:               24
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    245
-   Number with an unused Flip Flop:      82  out of    245    33%  
-   Number with an unused LUT:            54  out of    245    22%  
-   Number of fully used LUT-FF pairs:   109  out of    245    44%  
-   Number of unique control sets:        20
+ Number of LUT Flip Flop pairs used:    251
+   Number with an unused Flip Flop:      80  out of    251    31%  
+   Number with an unused LUT:            59  out of    251    23%  
+   Number of fully used LUT-FF pairs:   112  out of    251    44%  
+   Number of unique control sets:        21
 
 IO Utilization: 
- Number of IOs:                          27
- Number of bonded IOBs:                  27  out of    232    11%  
+ Number of IOs:                          35
+ Number of bonded IOBs:                  35  out of    232    15%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of     32     3%  
@@ -903,8 +904,8 @@ Clock Information:
 -------------------------------------------------+----------------------------------------------------------------------+-------+
 Clock Signal                                     | Clock buffer(FF name)                                                | Load  |
 -------------------------------------------------+----------------------------------------------------------------------+-------+
-clk                                              | BUFGP                                                                | 130   |
-interrupt_keypad(keypad/_n00511:O)               | NONE(*)(instance_name/ff_data)                                       | 1     |
+clk                                              | BUFGP                                                                | 138   |
+interrupt_keypad(keypad/_n00511:O)               | NONE(*)(interrupt_synchonrizer/ff_data)                              | 1     |
 DivBy100000/clk_out                              | NONE(SevenSegDisplay/sel_0)                                          | 4     |
 SIMPLE/jtag_clk                                  | NONE(SIMPLE/instantiate_loader.jtag_loader_6_inst/control_dout_int_7)| 6     |
 SIMPLE/instantiate_loader.jtag_loader_6_inst/drck| BUFG                                                                 | 31    |
@@ -934,7 +935,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 7.579ns (frequency: 131.944MHz)
-  Total number of paths / destination ports: 9887 / 277
+  Total number of paths / destination ports: 10135 / 293
 -------------------------------------------------------------------------
 Delay:               7.579ns (Levels of Logic = 9)
   Source:            SIMPLE/ram_1k_generate.s6.kcpsm6_rom (RAM)
@@ -1054,16 +1055,16 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'interrupt_keypad'
 -------------------------------------------------------------------------
 Offset:              3.455ns (Levels of Logic = 2)
   Source:            row<0> (PAD)
-  Destination:       instance_name/ff_data (FF)
+  Destination:       interrupt_synchonrizer/ff_data (FF)
   Destination Clock: interrupt_keypad rising
 
-  Data Path: row<0> to instance_name/ff_data
+  Data Path: row<0> to interrupt_synchonrizer/ff_data
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             7   1.222   1.021  row_0_IBUF (row_0_IBUF)
-     LUT5:I1->O            1   0.203   0.579  instance_name/clear1 (instance_name/clear)
-     FDC:CLR                   0.430          instance_name/ff_data
+     LUT5:I1->O            1   0.203   0.579  interrupt_synchonrizer/clear1 (interrupt_synchonrizer/clear)
+     FDC:CLR                   0.430          interrupt_synchonrizer/ff_data
     ----------------------------------------
     Total                      3.455ns (1.855ns logic, 1.599ns route)
                                        (53.7% logic, 46.3% route)
@@ -1129,6 +1130,27 @@ Offset:              2.854ns (Levels of Logic = 1)
                                        (18.5% logic, 81.5% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 120 / 15
+-------------------------------------------------------------------------
+Offset:              5.850ns (Levels of Logic = 3)
+  Source:            Val1_0 (FF)
+  Destination:       a (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Val1_0 to a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.827  Val1_0 (Val1_0)
+     LUT6:I2->O            7   0.203   1.021  SevenSegDisplay/Mmux_MuxOut11 (SevenSegDisplay/MuxOut<1>)
+     LUT4:I0->O            1   0.203   0.579  SevenSegDisplay/Mram__n004541 (e_OBUF)
+     OBUF:I->O                 2.571          e_OBUF (e)
+    ----------------------------------------
+    Total                      5.850ns (3.424ns logic, 2.426ns route)
+                                       (58.5% logic, 41.5% route)
+
+=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'DivBy100000/clk_out'
   Total number of paths / destination ports: 73 / 16
 -------------------------------------------------------------------------
@@ -1148,27 +1170,6 @@ Offset:              6.271ns (Levels of Logic = 3)
     ----------------------------------------
     Total                      6.271ns (3.424ns logic, 2.847ns route)
                                        (54.6% logic, 45.4% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 112 / 7
--------------------------------------------------------------------------
-Offset:              5.850ns (Levels of Logic = 3)
-  Source:            Val1_0 (FF)
-  Destination:       a (PAD)
-  Source Clock:      clk rising
-
-  Data Path: Val1_0 to a
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDE:C->Q              1   0.447   0.827  Val1_0 (Val1_0)
-     LUT6:I2->O            7   0.203   1.021  SevenSegDisplay/Mmux_MuxOut11 (SevenSegDisplay/MuxOut<1>)
-     LUT4:I0->O            1   0.203   0.579  SevenSegDisplay/Mram__n004541 (e_OBUF)
-     OBUF:I->O                 2.571          e_OBUF (e)
-    ----------------------------------------
-    Total                      5.850ns (3.424ns logic, 2.426ns route)
-                                       (58.5% logic, 41.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'SIMPLE/instantiate_loader.jtag_loader_6_inst/drck'
@@ -1241,8 +1242,8 @@ clk            |    2.620|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.92 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.30 secs
  
 --> 
 

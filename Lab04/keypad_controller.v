@@ -126,7 +126,7 @@ always@(*)
 	6'b111101 : keypad_data <= 4'h4; // 4
 	6'b111011 : keypad_data <= 4'h7; // 7
 	6'b110111 : keypad_data <= 4'h0; // 0
-	default : keypad_data <= 4'bXXXX ;
+	default : keypad_data <= 4'bXXXX;
 	endcase
 	end
 

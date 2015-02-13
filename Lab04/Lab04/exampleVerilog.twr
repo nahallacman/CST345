@@ -32,21 +32,21 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_P2P = MAXDELAY FROM TIMEGRP "FFS" TO TIMEGRP "FFS" 10 ns;
 For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
 
- 3907 paths analyzed, 784 endpoints analyzed, 0 failing endpoints
+ 3963 paths analyzed, 800 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors)
- Maximum delay is   5.538ns.
+ Maximum delay is   7.260ns.
 --------------------------------------------------------------------------------
 
-Paths for end point Val0_3 (SLICE_X31Y20.CE), 3 paths
+Paths for end point in_port_3 (SLICE_X13Y25.B4), 2 paths
 --------------------------------------------------------------------------------
-Slack (setup paths):    4.462ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               processor/bank_flop (FF)
-  Destination:          Val0_3 (FF)
+Slack (setup paths):    2.740ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               keypad/sel_0 (FF)
+  Destination:          in_port_3 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.503ns (Levels of Logic = 3)
-  Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Data Path Delay:      8.793ns (Levels of Logic = 2)
+  Clock Path Skew:      1.568ns (2.460 - 0.892)
+  Source Clock:         DivBy100000/clk_out rising
+  Destination Clock:    clk_BUFGP rising at 0.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -55,37 +55,32 @@ Slack (setup paths):    4.462ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: processor/bank_flop to Val0_3
+  Maximum Data Path at Slow Process Corner: keypad/sel_0 to in_port_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y36.CQ      Tcko                  0.408   processor/KCPSM6_STACK1
-                                                       processor/bank_flop
-    SLICE_X26Y31.A5      net (fanout=7)        1.097   processor/bank
-    SLICE_X26Y31.A       Tilo                  0.203   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA_D1
-    SLICE_X27Y32.D3      net (fanout=2)        0.513   processor/sy<1>
-    SLICE_X27Y32.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
-    SLICE_X30Y20.A2      net (fanout=15)       1.762   port_id<1>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.340   processor/KCPSM6_OUT_PORT
-                                                       Val0_3
+    SLICE_X17Y25.AQ      Tcko                  0.391   keypad/sel<1>
+                                                       keypad/sel_0
+    SLICE_X13Y25.C2      net (fanout=7)        7.494   keypad/sel<0>
+    SLICE_X13Y25.C       Tilo                  0.259   in_port<4>
+                                                       port_id[1]_GND_1_o_select_4_OUT<4>_SW0
+    SLICE_X13Y25.B4      net (fanout=1)        0.327   N3
+    SLICE_X13Y25.CLK     Tas                   0.322   in_port<4>
+                                                       port_id[1]_GND_1_o_select_4_OUT<4>
+                                                       in_port_3
     -------------------------------------------------  ---------------------------
-    Total                                      5.503ns (1.413ns logic, 4.090ns route)
-                                                       (25.7% logic, 74.3% route)
+    Total                                      8.793ns (0.972ns logic, 7.821ns route)
+                                                       (11.1% logic, 88.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup paths):    4.822ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               processor/bank_flop (FF)
-  Destination:          Val0_3 (FF)
+Slack (setup paths):    8.102ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               keypad/sel_1 (FF)
+  Destination:          in_port_3 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.143ns (Levels of Logic = 3)
-  Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Data Path Delay:      3.431ns (Levels of Logic = 2)
+  Clock Path Skew:      1.568ns (2.460 - 0.892)
+  Source Clock:         DivBy100000/clk_out rising
+  Destination Clock:    clk_BUFGP rising at 0.000ns
   Clock Uncertainty:    0.035ns
 
   Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -94,71 +89,33 @@ Slack (setup paths):    4.822ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: processor/bank_flop to Val0_3
+  Maximum Data Path at Slow Process Corner: keypad/sel_1 to in_port_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y36.CQ      Tcko                  0.408   processor/KCPSM6_STACK1
-                                                       processor/bank_flop
-    SLICE_X26Y31.A5      net (fanout=7)        1.097   processor/bank
-    SLICE_X26Y31.AMUX    Tilo                  0.261   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA
-    SLICE_X27Y32.D5      net (fanout=2)        0.434   processor/sy<0>
-    SLICE_X27Y32.DMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT5
-    SLICE_X30Y20.A5      net (fanout=15)       1.369   port_id<0>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.340   processor/KCPSM6_OUT_PORT
-                                                       Val0_3
+    SLICE_X17Y25.BQ      Tcko                  0.391   keypad/sel<1>
+                                                       keypad/sel_1
+    SLICE_X13Y25.C6      net (fanout=5)        2.132   keypad/sel<1>
+    SLICE_X13Y25.C       Tilo                  0.259   in_port<4>
+                                                       port_id[1]_GND_1_o_select_4_OUT<4>_SW0
+    SLICE_X13Y25.B4      net (fanout=1)        0.327   N3
+    SLICE_X13Y25.CLK     Tas                   0.322   in_port<4>
+                                                       port_id[1]_GND_1_o_select_4_OUT<4>
+                                                       in_port_3
     -------------------------------------------------  ---------------------------
-    Total                                      5.143ns (1.525ns logic, 3.618ns route)
-                                                       (29.7% logic, 70.3% route)
-
---------------------------------------------------------------------------------
-Slack (setup paths):    6.867ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               processor/write_strobe_flop (FF)
-  Destination:          Val0_3 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      3.098ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: processor/write_strobe_flop to Val0_3
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X23Y32.BQ      Tcko                  0.391   processor/KCPSM6_STROBES
-                                                       processor/write_strobe_flop
-    SLICE_X30Y20.A4      net (fanout=2)        1.446   write_strobe
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.340   processor/KCPSM6_OUT_PORT
-                                                       Val0_3
-    -------------------------------------------------  ---------------------------
-    Total                                      3.098ns (0.934ns logic, 2.164ns route)
-                                                       (30.1% logic, 69.9% route)
+    Total                                      3.431ns (0.972ns logic, 2.459ns route)
+                                                       (28.3% logic, 71.7% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point Val0_2 (SLICE_X31Y20.CE), 3 paths
+Paths for end point Val0_2 (SLICE_X25Y13.CE), 4 paths
 --------------------------------------------------------------------------------
-Slack (setup paths):    4.478ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup paths):    4.232ns (requirement - (data path - clock path skew + uncertainty))
   Source:               processor/bank_flop (FF)
   Destination:          Val0_2 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.487ns (Levels of Logic = 3)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.725ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.008ns (0.348 - 0.356)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -173,31 +130,31 @@ Slack (setup paths):    4.478ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y36.CQ      Tcko                  0.408   processor/KCPSM6_STACK1
+    SLICE_X16Y31.CQ      Tcko                  0.408   processor/KCPSM6_STACK1
                                                        processor/bank_flop
-    SLICE_X26Y31.A5      net (fanout=7)        1.097   processor/bank
-    SLICE_X26Y31.A       Tilo                  0.203   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA_D1
-    SLICE_X27Y32.D3      net (fanout=2)        0.513   processor/sy<1>
-    SLICE_X27Y32.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
-    SLICE_X30Y20.A2      net (fanout=15)       1.762   port_id<1>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.324   processor/KCPSM6_OUT_PORT
+    SLICE_X18Y29.C5      net (fanout=7)        0.852   processor/bank
+    SLICE_X18Y29.CMUX    Tilo                  0.261   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMC
+    SLICE_X19Y28.C3      net (fanout=2)        0.878   processor/sy<2>
+    SLICE_X19Y28.CMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[2].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X24Y13.A2      net (fanout=12)       1.750   port_id<2>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.340   Val0<3>
                                                        Val0_2
     -------------------------------------------------  ---------------------------
-    Total                                      5.487ns (1.397ns logic, 4.090ns route)
-                                                       (25.5% logic, 74.5% route)
+    Total                                      5.725ns (1.527ns logic, 4.198ns route)
+                                                       (26.7% logic, 73.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup paths):    4.838ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup paths):    4.828ns (requirement - (data path - clock path skew + uncertainty))
   Source:               processor/bank_flop (FF)
   Destination:          Val0_2 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.127ns (Levels of Logic = 3)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.129ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.008ns (0.348 - 0.356)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -212,67 +169,31 @@ Slack (setup paths):    4.838ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y36.CQ      Tcko                  0.408   processor/KCPSM6_STACK1
+    SLICE_X16Y31.CQ      Tcko                  0.408   processor/KCPSM6_STACK1
                                                        processor/bank_flop
-    SLICE_X26Y31.A5      net (fanout=7)        1.097   processor/bank
-    SLICE_X26Y31.AMUX    Tilo                  0.261   processor/KCPSM6_REG0
+    SLICE_X18Y29.A5      net (fanout=7)        0.967   processor/bank
+    SLICE_X18Y29.AMUX    Tilo                  0.261   processor/KCPSM6_REG0
                                                        processor/lower_reg_banks_RAMA
-    SLICE_X27Y32.D5      net (fanout=2)        0.434   processor/sy<0>
-    SLICE_X27Y32.DMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+    SLICE_X19Y28.D5      net (fanout=2)        0.406   processor/sy<0>
+    SLICE_X19Y28.DMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
                                                        processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT5
-    SLICE_X30Y20.A5      net (fanout=15)       1.369   port_id<0>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.324   processor/KCPSM6_OUT_PORT
+    SLICE_X24Y13.A5      net (fanout=16)       1.511   port_id<0>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.340   Val0<3>
                                                        Val0_2
     -------------------------------------------------  ---------------------------
-    Total                                      5.127ns (1.509ns logic, 3.618ns route)
-                                                       (29.4% logic, 70.6% route)
-
---------------------------------------------------------------------------------
-Slack (setup paths):    6.883ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               processor/write_strobe_flop (FF)
-  Destination:          Val0_2 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      3.082ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: processor/write_strobe_flop to Val0_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X23Y32.BQ      Tcko                  0.391   processor/KCPSM6_STROBES
-                                                       processor/write_strobe_flop
-    SLICE_X30Y20.A4      net (fanout=2)        1.446   write_strobe
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.324   processor/KCPSM6_OUT_PORT
-                                                       Val0_2
-    -------------------------------------------------  ---------------------------
-    Total                                      3.082ns (0.918ns logic, 2.164ns route)
+    Total                                      5.129ns (1.527ns logic, 3.602ns route)
                                                        (29.8% logic, 70.2% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point Val0_1 (SLICE_X31Y20.CE), 3 paths
---------------------------------------------------------------------------------
-Slack (setup paths):    4.486ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup paths):    5.020ns (requirement - (data path - clock path skew + uncertainty))
   Source:               processor/bank_flop (FF)
-  Destination:          Val0_1 (FF)
+  Destination:          Val0_2 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.479ns (Levels of Logic = 3)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      4.937ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.008ns (0.348 - 0.356)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -283,35 +204,38 @@ Slack (setup paths):    4.486ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: processor/bank_flop to Val0_1
+  Maximum Data Path at Slow Process Corner: processor/bank_flop to Val0_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y36.CQ      Tcko                  0.408   processor/KCPSM6_STACK1
+    SLICE_X16Y31.CQ      Tcko                  0.408   processor/KCPSM6_STACK1
                                                        processor/bank_flop
-    SLICE_X26Y31.A5      net (fanout=7)        1.097   processor/bank
-    SLICE_X26Y31.A       Tilo                  0.203   processor/KCPSM6_REG0
+    SLICE_X18Y29.A5      net (fanout=7)        0.967   processor/bank
+    SLICE_X18Y29.A       Tilo                  0.203   processor/KCPSM6_REG0
                                                        processor/lower_reg_banks_RAMA_D1
-    SLICE_X27Y32.D3      net (fanout=2)        0.513   processor/sy<1>
-    SLICE_X27Y32.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
+    SLICE_X19Y28.D4      net (fanout=2)        0.404   processor/sy<1>
+    SLICE_X19Y28.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
                                                        processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
-    SLICE_X30Y20.A2      net (fanout=15)       1.762   port_id<1>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.316   processor/KCPSM6_OUT_PORT
-                                                       Val0_1
+    SLICE_X24Y13.A3      net (fanout=16)       1.433   port_id<1>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.340   Val0<3>
+                                                       Val0_2
     -------------------------------------------------  ---------------------------
-    Total                                      5.479ns (1.389ns logic, 4.090ns route)
-                                                       (25.4% logic, 74.6% route)
+    Total                                      4.937ns (1.415ns logic, 3.522ns route)
+                                                       (28.7% logic, 71.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup paths):    4.846ns (requirement - (data path - clock path skew + uncertainty))
+
+Paths for end point Val0_1 (SLICE_X25Y13.CE), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup paths):    4.248ns (requirement - (data path - clock path skew + uncertainty))
   Source:               processor/bank_flop (FF)
   Destination:          Val0_1 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      5.119ns (Levels of Logic = 3)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.709ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.008ns (0.348 - 0.356)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -326,31 +250,31 @@ Slack (setup paths):    4.846ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y36.CQ      Tcko                  0.408   processor/KCPSM6_STACK1
+    SLICE_X16Y31.CQ      Tcko                  0.408   processor/KCPSM6_STACK1
                                                        processor/bank_flop
-    SLICE_X26Y31.A5      net (fanout=7)        1.097   processor/bank
-    SLICE_X26Y31.AMUX    Tilo                  0.261   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA
-    SLICE_X27Y32.D5      net (fanout=2)        0.434   processor/sy<0>
-    SLICE_X27Y32.DMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT5
-    SLICE_X30Y20.A5      net (fanout=15)       1.369   port_id<0>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.316   processor/KCPSM6_OUT_PORT
+    SLICE_X18Y29.C5      net (fanout=7)        0.852   processor/bank
+    SLICE_X18Y29.CMUX    Tilo                  0.261   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMC
+    SLICE_X19Y28.C3      net (fanout=2)        0.878   processor/sy<2>
+    SLICE_X19Y28.CMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[2].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X24Y13.A2      net (fanout=12)       1.750   port_id<2>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.324   Val0<3>
                                                        Val0_1
     -------------------------------------------------  ---------------------------
-    Total                                      5.119ns (1.501ns logic, 3.618ns route)
-                                                       (29.3% logic, 70.7% route)
+    Total                                      5.709ns (1.511ns logic, 4.198ns route)
+                                                       (26.5% logic, 73.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup paths):    6.891ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               processor/write_strobe_flop (FF)
+Slack (setup paths):    4.844ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               processor/bank_flop (FF)
   Destination:          Val0_1 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.074ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      5.113ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.008ns (0.348 - 0.356)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -361,34 +285,148 @@ Slack (setup paths):    6.891ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: processor/write_strobe_flop to Val0_1
+  Maximum Data Path at Slow Process Corner: processor/bank_flop to Val0_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y32.BQ      Tcko                  0.391   processor/KCPSM6_STROBES
-                                                       processor/write_strobe_flop
-    SLICE_X30Y20.A4      net (fanout=2)        1.446   write_strobe
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.316   processor/KCPSM6_OUT_PORT
+    SLICE_X16Y31.CQ      Tcko                  0.408   processor/KCPSM6_STACK1
+                                                       processor/bank_flop
+    SLICE_X18Y29.A5      net (fanout=7)        0.967   processor/bank
+    SLICE_X18Y29.AMUX    Tilo                  0.261   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMA
+    SLICE_X19Y28.D5      net (fanout=2)        0.406   processor/sy<0>
+    SLICE_X19Y28.DMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X24Y13.A5      net (fanout=16)       1.511   port_id<0>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.324   Val0<3>
                                                        Val0_1
     -------------------------------------------------  ---------------------------
-    Total                                      3.074ns (0.910ns logic, 2.164ns route)
+    Total                                      5.113ns (1.511ns logic, 3.602ns route)
                                                        (29.6% logic, 70.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup paths):    5.036ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               processor/bank_flop (FF)
+  Destination:          Val0_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      4.921ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.008ns (0.348 - 0.356)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: processor/bank_flop to Val0_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y31.CQ      Tcko                  0.408   processor/KCPSM6_STACK1
+                                                       processor/bank_flop
+    SLICE_X18Y29.A5      net (fanout=7)        0.967   processor/bank
+    SLICE_X18Y29.A       Tilo                  0.203   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMA_D1
+    SLICE_X19Y28.D4      net (fanout=2)        0.404   processor/sy<1>
+    SLICE_X19Y28.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
+    SLICE_X24Y13.A3      net (fanout=16)       1.433   port_id<1>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.324   Val0<3>
+                                                       Val0_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.921ns (1.399ns logic, 3.522ns route)
+                                                       (28.4% logic, 71.6% route)
 
 --------------------------------------------------------------------------------
 Hold Paths: TS_P2P = MAXDELAY FROM TIMEGRP "FFS" TO TIMEGRP "FFS" 10 ns;
 --------------------------------------------------------------------------------
 
-Paths for end point processor/stack_loop[3].upper_stack.pointer_flop (SLICE_X24Y35.SR), 1 path
+Paths for end point in_port_2 (SLICE_X13Y25.A1), 2 paths
 --------------------------------------------------------------------------------
-Slack (hold path):      0.341ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.021ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               keypad/sel_1 (FF)
+  Destination:          in_port_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.907ns (Levels of Logic = 2)
+  Positive Clock Path Skew: 1.851ns (2.692 - 0.841)
+  Source Clock:         DivBy100000/clk_out rising
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Slow Process Corner: keypad/sel_1 to in_port_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y25.BQ      Tcko                  0.368   keypad/sel<1>
+                                                       keypad/sel_1
+    SLICE_X17Y25.B5      net (fanout=5)        0.192   keypad/sel<1>
+    SLICE_X17Y25.BMUX    Tilo                  0.294   keypad/sel<1>
+                                                       port_id[1]_GND_1_o_select_4_OUT<5>_SW0
+    SLICE_X13Y25.A1      net (fanout=1)        0.761   N5
+    SLICE_X13Y25.CLK     Tah         (-Th)    -0.292   in_port<4>
+                                                       port_id[1]_GND_1_o_select_4_OUT<5>
+                                                       in_port_2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.907ns (0.954ns logic, 0.953ns route)
+                                                       (50.0% logic, 50.0% route)
+--------------------------------------------------------------------------------
+Slack (hold path):      0.251ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               keypad/sel_0 (FF)
+  Destination:          in_port_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      2.137ns (Levels of Logic = 2)
+  Positive Clock Path Skew: 1.851ns (2.692 - 0.841)
+  Source Clock:         DivBy100000/clk_out rising
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Slow Process Corner: keypad/sel_0 to in_port_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y25.AQ      Tcko                  0.368   keypad/sel<1>
+                                                       keypad/sel_0
+    SLICE_X17Y25.B1      net (fanout=7)        0.422   keypad/sel<0>
+    SLICE_X17Y25.BMUX    Tilo                  0.294   keypad/sel<1>
+                                                       port_id[1]_GND_1_o_select_4_OUT<5>_SW0
+    SLICE_X13Y25.A1      net (fanout=1)        0.761   N5
+    SLICE_X13Y25.CLK     Tah         (-Th)    -0.292   in_port<4>
+                                                       port_id[1]_GND_1_o_select_4_OUT<5>
+                                                       in_port_2
+    -------------------------------------------------  ---------------------------
+    Total                                      2.137ns (0.954ns logic, 1.183ns route)
+                                                       (44.6% logic, 55.4% route)
+--------------------------------------------------------------------------------
+
+Paths for end point processor/stack_loop[3].upper_stack.pointer_flop (SLICE_X16Y30.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.340ns (requirement - (clock path skew + uncertainty - data path))
   Source:               processor/internal_reset_flop (FF)
   Destination:          processor/stack_loop[3].upper_stack.pointer_flop (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.341ns (Levels of Logic = 0)
-  Positive Clock Path Skew: 0.000ns
+  Data Path Delay:      0.344ns (Levels of Logic = 0)
+  Positive Clock Path Skew: 0.004ns (0.044 - 0.040)
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
@@ -397,24 +435,24 @@ Slack (hold path):      0.341ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y34.CQ      Tcko                  0.200   processor/KCPSM6_CONTROL
+    SLICE_X16Y29.CQ      Tcko                  0.200   processor/KCPSM6_CONTROL
                                                        processor/internal_reset_flop
-    SLICE_X24Y35.SR      net (fanout=9)        0.140   processor/internal_reset
-    SLICE_X24Y35.CLK     Tcksr       (-Th)    -0.001   processor/KCPSM6_STACK0
+    SLICE_X16Y30.SR      net (fanout=9)        0.143   processor/internal_reset
+    SLICE_X16Y30.CLK     Tcksr       (-Th)    -0.001   processor/KCPSM6_STACK0
                                                        processor/stack_loop[3].upper_stack.pointer_flop
     -------------------------------------------------  ---------------------------
-    Total                                      0.341ns (0.201ns logic, 0.140ns route)
-                                                       (58.9% logic, 41.1% route)
+    Total                                      0.344ns (0.201ns logic, 0.143ns route)
+                                                       (58.4% logic, 41.6% route)
 --------------------------------------------------------------------------------
 
-Paths for end point processor/stack_loop[2].upper_stack.pointer_flop (SLICE_X24Y35.SR), 1 path
+Paths for end point processor/stack_loop[2].upper_stack.pointer_flop (SLICE_X16Y30.SR), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.354ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.353ns (requirement - (clock path skew + uncertainty - data path))
   Source:               processor/internal_reset_flop (FF)
   Destination:          processor/stack_loop[2].upper_stack.pointer_flop (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.354ns (Levels of Logic = 0)
-  Positive Clock Path Skew: 0.000ns
+  Data Path Delay:      0.357ns (Levels of Logic = 0)
+  Positive Clock Path Skew: 0.004ns (0.044 - 0.040)
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
@@ -423,59 +461,33 @@ Slack (hold path):      0.354ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y34.CQ      Tcko                  0.200   processor/KCPSM6_CONTROL
+    SLICE_X16Y29.CQ      Tcko                  0.200   processor/KCPSM6_CONTROL
                                                        processor/internal_reset_flop
-    SLICE_X24Y35.SR      net (fanout=9)        0.140   processor/internal_reset
-    SLICE_X24Y35.CLK     Tcksr       (-Th)    -0.014   processor/KCPSM6_STACK0
+    SLICE_X16Y30.SR      net (fanout=9)        0.143   processor/internal_reset
+    SLICE_X16Y30.CLK     Tcksr       (-Th)    -0.014   processor/KCPSM6_STACK0
                                                        processor/stack_loop[2].upper_stack.pointer_flop
     -------------------------------------------------  ---------------------------
-    Total                                      0.354ns (0.214ns logic, 0.140ns route)
-                                                       (60.5% logic, 39.5% route)
---------------------------------------------------------------------------------
-
-Paths for end point processor/stack_loop[0].lsb_stack.pointer_flop (SLICE_X24Y35.SR), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.365ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               processor/internal_reset_flop (FF)
-  Destination:          processor/stack_loop[0].lsb_stack.pointer_flop (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.365ns (Levels of Logic = 0)
-  Positive Clock Path Skew: 0.000ns
-  Source Clock:         clk_BUFGP rising at 10.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path at Fast Process Corner: processor/internal_reset_flop to processor/stack_loop[0].lsb_stack.pointer_flop
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X24Y34.CQ      Tcko                  0.200   processor/KCPSM6_CONTROL
-                                                       processor/internal_reset_flop
-    SLICE_X24Y35.SR      net (fanout=9)        0.140   processor/internal_reset
-    SLICE_X24Y35.CLK     Tcksr       (-Th)    -0.025   processor/KCPSM6_STACK0
-                                                       processor/stack_loop[0].lsb_stack.pointer_flop
-    -------------------------------------------------  ---------------------------
-    Total                                      0.365ns (0.225ns logic, 0.140ns route)
-                                                       (61.6% logic, 38.4% route)
+    Total                                      0.357ns (0.214ns logic, 0.143ns route)
+                                                       (59.9% logic, 40.1% route)
 --------------------------------------------------------------------------------
 
 ================================================================================
 Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 6501 paths analyzed, 769 endpoints analyzed, 0 failing endpoints
+ 6837 paths analyzed, 789 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   7.649ns.
+ Minimum period is   8.189ns.
 --------------------------------------------------------------------------------
 
-Paths for end point Val0_3 (SLICE_X31Y20.CE), 14 paths
+Paths for end point Val0_2 (SLICE_X25Y13.CE), 21 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     2.351ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     1.811ns (requirement - (data path - clock path skew + uncertainty))
   Source:               SIMPLE/ram_1k_generate.s6.kcpsm6_rom (RAM)
-  Destination:          Val0_3 (FF)
+  Destination:          Val0_2 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.587ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.027ns (0.456 - 0.483)
+  Data Path Delay:      8.099ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.055ns (0.435 - 0.490)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -486,35 +498,116 @@ Slack (setup path):     2.351ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_3
+  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X1Y18.DOA4    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
+    RAMB16_X1Y16.DOA4    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
                                                        SIMPLE/ram_1k_generate.s6.kcpsm6_rom
-    SLICE_X26Y31.A1      net (fanout=7)        1.739   instruction<4>
-    SLICE_X26Y31.A       Tilo                  0.203   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA_D1
-    SLICE_X27Y32.D3      net (fanout=2)        0.513   processor/sy<1>
-    SLICE_X27Y32.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
-    SLICE_X30Y20.A2      net (fanout=15)       1.762   port_id<1>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.340   processor/KCPSM6_OUT_PORT
-                                                       Val0_3
+    SLICE_X18Y29.C1      net (fanout=7)        1.784   instruction<4>
+    SLICE_X18Y29.CMUX    Tilo                  0.261   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMC
+    SLICE_X19Y28.C3      net (fanout=2)        0.878   processor/sy<2>
+    SLICE_X19Y28.CMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[2].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X24Y13.A2      net (fanout=12)       1.750   port_id<2>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.340   Val0<3>
+                                                       Val0_2
     -------------------------------------------------  ---------------------------
-    Total                                      7.587ns (2.855ns logic, 4.732ns route)
+    Total                                      8.099ns (2.969ns logic, 5.130ns route)
+                                                       (36.7% logic, 63.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.871ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SIMPLE/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:          Val0_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.039ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.055ns (0.435 - 0.490)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y16.DOA5    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
+                                                       SIMPLE/ram_1k_generate.s6.kcpsm6_rom
+    SLICE_X18Y29.C2      net (fanout=7)        1.724   instruction<5>
+    SLICE_X18Y29.CMUX    Tilo                  0.261   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMC
+    SLICE_X19Y28.C3      net (fanout=2)        0.878   processor/sy<2>
+    SLICE_X19Y28.CMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[2].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X24Y13.A2      net (fanout=12)       1.750   port_id<2>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.340   Val0<3>
+                                                       Val0_2
+    -------------------------------------------------  ---------------------------
+    Total                                      8.039ns (2.969ns logic, 5.070ns route)
+                                                       (36.9% logic, 63.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.012ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               SIMPLE/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:          Val0_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.898ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.055ns (0.435 - 0.490)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y16.DOA6    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
+                                                       SIMPLE/ram_1k_generate.s6.kcpsm6_rom
+    SLICE_X18Y29.C3      net (fanout=7)        1.583   instruction<6>
+    SLICE_X18Y29.CMUX    Tilo                  0.261   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMC
+    SLICE_X19Y28.C3      net (fanout=2)        0.878   processor/sy<2>
+    SLICE_X19Y28.CMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[2].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X24Y13.A2      net (fanout=12)       1.750   port_id<2>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.340   Val0<3>
+                                                       Val0_2
+    -------------------------------------------------  ---------------------------
+    Total                                      7.898ns (2.969ns logic, 4.929ns route)
                                                        (37.6% logic, 62.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     2.445ns (requirement - (data path - clock path skew + uncertainty))
+
+Paths for end point Val0_1 (SLICE_X25Y13.CE), 21 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.827ns (requirement - (data path - clock path skew + uncertainty))
   Source:               SIMPLE/ram_1k_generate.s6.kcpsm6_rom (RAM)
-  Destination:          Val0_3 (FF)
+  Destination:          Val0_1 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.493ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.027ns (0.456 - 0.483)
+  Data Path Delay:      8.083ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.055ns (0.435 - 0.490)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -525,35 +618,35 @@ Slack (setup path):     2.445ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_3
+  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X1Y18.DOA5    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
+    RAMB16_X1Y16.DOA4    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
                                                        SIMPLE/ram_1k_generate.s6.kcpsm6_rom
-    SLICE_X26Y31.A2      net (fanout=7)        1.645   instruction<5>
-    SLICE_X26Y31.A       Tilo                  0.203   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA_D1
-    SLICE_X27Y32.D3      net (fanout=2)        0.513   processor/sy<1>
-    SLICE_X27Y32.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
-    SLICE_X30Y20.A2      net (fanout=15)       1.762   port_id<1>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.340   processor/KCPSM6_OUT_PORT
-                                                       Val0_3
+    SLICE_X18Y29.C1      net (fanout=7)        1.784   instruction<4>
+    SLICE_X18Y29.CMUX    Tilo                  0.261   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMC
+    SLICE_X19Y28.C3      net (fanout=2)        0.878   processor/sy<2>
+    SLICE_X19Y28.CMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[2].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X24Y13.A2      net (fanout=12)       1.750   port_id<2>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.324   Val0<3>
+                                                       Val0_1
     -------------------------------------------------  ---------------------------
-    Total                                      7.493ns (2.855ns logic, 4.638ns route)
-                                                       (38.1% logic, 61.9% route)
+    Total                                      8.083ns (2.953ns logic, 5.130ns route)
+                                                       (36.5% logic, 63.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     2.507ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     1.887ns (requirement - (data path - clock path skew + uncertainty))
   Source:               SIMPLE/ram_1k_generate.s6.kcpsm6_rom (RAM)
-  Destination:          Val0_3 (FF)
+  Destination:          Val0_1 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.431ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.027ns (0.456 - 0.483)
+  Data Path Delay:      8.023ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.055ns (0.435 - 0.490)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -564,38 +657,35 @@ Slack (setup path):     2.507ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_3
+  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X1Y18.DOA6    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
+    RAMB16_X1Y16.DOA5    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
                                                        SIMPLE/ram_1k_generate.s6.kcpsm6_rom
-    SLICE_X26Y31.A3      net (fanout=7)        1.583   instruction<6>
-    SLICE_X26Y31.A       Tilo                  0.203   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA_D1
-    SLICE_X27Y32.D3      net (fanout=2)        0.513   processor/sy<1>
-    SLICE_X27Y32.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
-    SLICE_X30Y20.A2      net (fanout=15)       1.762   port_id<1>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.340   processor/KCPSM6_OUT_PORT
-                                                       Val0_3
+    SLICE_X18Y29.C2      net (fanout=7)        1.724   instruction<5>
+    SLICE_X18Y29.CMUX    Tilo                  0.261   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMC
+    SLICE_X19Y28.C3      net (fanout=2)        0.878   processor/sy<2>
+    SLICE_X19Y28.CMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[2].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X24Y13.A2      net (fanout=12)       1.750   port_id<2>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.324   Val0<3>
+                                                       Val0_1
     -------------------------------------------------  ---------------------------
-    Total                                      7.431ns (2.855ns logic, 4.576ns route)
-                                                       (38.4% logic, 61.6% route)
+    Total                                      8.023ns (2.953ns logic, 5.070ns route)
+                                                       (36.8% logic, 63.2% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point Val0_2 (SLICE_X31Y20.CE), 14 paths
---------------------------------------------------------------------------------
-Slack (setup path):     2.367ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     2.028ns (requirement - (data path - clock path skew + uncertainty))
   Source:               SIMPLE/ram_1k_generate.s6.kcpsm6_rom (RAM)
-  Destination:          Val0_2 (FF)
+  Destination:          Val0_1 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.571ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.027ns (0.456 - 0.483)
+  Data Path Delay:      7.882ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.055ns (0.435 - 0.490)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -606,35 +696,38 @@ Slack (setup path):     2.367ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_2
+  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X1Y18.DOA4    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
+    RAMB16_X1Y16.DOA6    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
                                                        SIMPLE/ram_1k_generate.s6.kcpsm6_rom
-    SLICE_X26Y31.A1      net (fanout=7)        1.739   instruction<4>
-    SLICE_X26Y31.A       Tilo                  0.203   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA_D1
-    SLICE_X27Y32.D3      net (fanout=2)        0.513   processor/sy<1>
-    SLICE_X27Y32.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
-    SLICE_X30Y20.A2      net (fanout=15)       1.762   port_id<1>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.324   processor/KCPSM6_OUT_PORT
-                                                       Val0_2
+    SLICE_X18Y29.C3      net (fanout=7)        1.583   instruction<6>
+    SLICE_X18Y29.CMUX    Tilo                  0.261   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMC
+    SLICE_X19Y28.C3      net (fanout=2)        0.878   processor/sy<2>
+    SLICE_X19Y28.CMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[2].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X24Y13.A2      net (fanout=12)       1.750   port_id<2>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.324   Val0<3>
+                                                       Val0_1
     -------------------------------------------------  ---------------------------
-    Total                                      7.571ns (2.839ns logic, 4.732ns route)
+    Total                                      7.882ns (2.953ns logic, 4.929ns route)
                                                        (37.5% logic, 62.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     2.461ns (requirement - (data path - clock path skew + uncertainty))
+
+Paths for end point Val0_3 (SLICE_X25Y13.CE), 21 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.835ns (requirement - (data path - clock path skew + uncertainty))
   Source:               SIMPLE/ram_1k_generate.s6.kcpsm6_rom (RAM)
-  Destination:          Val0_2 (FF)
+  Destination:          Val0_3 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.477ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.027ns (0.456 - 0.483)
+  Data Path Delay:      8.075ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.055ns (0.435 - 0.490)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -645,35 +738,35 @@ Slack (setup path):     2.461ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_2
+  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X1Y18.DOA5    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
+    RAMB16_X1Y16.DOA4    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
                                                        SIMPLE/ram_1k_generate.s6.kcpsm6_rom
-    SLICE_X26Y31.A2      net (fanout=7)        1.645   instruction<5>
-    SLICE_X26Y31.A       Tilo                  0.203   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA_D1
-    SLICE_X27Y32.D3      net (fanout=2)        0.513   processor/sy<1>
-    SLICE_X27Y32.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
-    SLICE_X30Y20.A2      net (fanout=15)       1.762   port_id<1>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.324   processor/KCPSM6_OUT_PORT
-                                                       Val0_2
+    SLICE_X18Y29.C1      net (fanout=7)        1.784   instruction<4>
+    SLICE_X18Y29.CMUX    Tilo                  0.261   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMC
+    SLICE_X19Y28.C3      net (fanout=2)        0.878   processor/sy<2>
+    SLICE_X19Y28.CMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[2].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X24Y13.A2      net (fanout=12)       1.750   port_id<2>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.316   Val0<3>
+                                                       Val0_3
     -------------------------------------------------  ---------------------------
-    Total                                      7.477ns (2.839ns logic, 4.638ns route)
-                                                       (38.0% logic, 62.0% route)
+    Total                                      8.075ns (2.945ns logic, 5.130ns route)
+                                                       (36.5% logic, 63.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     2.523ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     1.895ns (requirement - (data path - clock path skew + uncertainty))
   Source:               SIMPLE/ram_1k_generate.s6.kcpsm6_rom (RAM)
-  Destination:          Val0_2 (FF)
+  Destination:          Val0_3 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.415ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.027ns (0.456 - 0.483)
+  Data Path Delay:      8.015ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.055ns (0.435 - 0.490)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -684,38 +777,35 @@ Slack (setup path):     2.523ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_2
+  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X1Y18.DOA6    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
+    RAMB16_X1Y16.DOA5    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
                                                        SIMPLE/ram_1k_generate.s6.kcpsm6_rom
-    SLICE_X26Y31.A3      net (fanout=7)        1.583   instruction<6>
-    SLICE_X26Y31.A       Tilo                  0.203   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA_D1
-    SLICE_X27Y32.D3      net (fanout=2)        0.513   processor/sy<1>
-    SLICE_X27Y32.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
-    SLICE_X30Y20.A2      net (fanout=15)       1.762   port_id<1>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.324   processor/KCPSM6_OUT_PORT
-                                                       Val0_2
+    SLICE_X18Y29.C2      net (fanout=7)        1.724   instruction<5>
+    SLICE_X18Y29.CMUX    Tilo                  0.261   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMC
+    SLICE_X19Y28.C3      net (fanout=2)        0.878   processor/sy<2>
+    SLICE_X19Y28.CMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[2].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X24Y13.A2      net (fanout=12)       1.750   port_id<2>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.316   Val0<3>
+                                                       Val0_3
     -------------------------------------------------  ---------------------------
-    Total                                      7.415ns (2.839ns logic, 4.576ns route)
-                                                       (38.3% logic, 61.7% route)
+    Total                                      8.015ns (2.945ns logic, 5.070ns route)
+                                                       (36.7% logic, 63.3% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point Val0_1 (SLICE_X31Y20.CE), 14 paths
---------------------------------------------------------------------------------
-Slack (setup path):     2.375ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     2.036ns (requirement - (data path - clock path skew + uncertainty))
   Source:               SIMPLE/ram_1k_generate.s6.kcpsm6_rom (RAM)
-  Destination:          Val0_1 (FF)
+  Destination:          Val0_3 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.563ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.027ns (0.456 - 0.483)
+  Data Path Delay:      7.874ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.055ns (0.435 - 0.490)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -726,189 +816,111 @@ Slack (setup path):     2.375ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_1
+  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    RAMB16_X1Y18.DOA4    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
+    RAMB16_X1Y16.DOA6    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
                                                        SIMPLE/ram_1k_generate.s6.kcpsm6_rom
-    SLICE_X26Y31.A1      net (fanout=7)        1.739   instruction<4>
-    SLICE_X26Y31.A       Tilo                  0.203   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA_D1
-    SLICE_X27Y32.D3      net (fanout=2)        0.513   processor/sy<1>
-    SLICE_X27Y32.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
-    SLICE_X30Y20.A2      net (fanout=15)       1.762   port_id<1>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.316   processor/KCPSM6_OUT_PORT
-                                                       Val0_1
+    SLICE_X18Y29.C3      net (fanout=7)        1.583   instruction<6>
+    SLICE_X18Y29.CMUX    Tilo                  0.261   processor/KCPSM6_REG0
+                                                       processor/lower_reg_banks_RAMC
+    SLICE_X19Y28.C3      net (fanout=2)        0.878   processor/sy<2>
+    SLICE_X19Y28.CMUX    Tilo                  0.313   processor/KCPSM6_PORT_ID
+                                                       processor/data_path_loop[2].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X24Y13.A2      net (fanout=12)       1.750   port_id<2>
+    SLICE_X24Y13.A       Tilo                  0.205   Val1<3>
+                                                       _n0073_inv1
+    SLICE_X25Y13.CE      net (fanout=1)        0.718   _n0073_inv
+    SLICE_X25Y13.CLK     Tceck                 0.316   Val0<3>
+                                                       Val0_3
     -------------------------------------------------  ---------------------------
-    Total                                      7.563ns (2.831ns logic, 4.732ns route)
+    Total                                      7.874ns (2.945ns logic, 4.929ns route)
                                                        (37.4% logic, 62.6% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     2.469ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               SIMPLE/ram_1k_generate.s6.kcpsm6_rom (RAM)
-  Destination:          Val0_1 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      7.469ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.027ns (0.456 - 0.483)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    RAMB16_X1Y18.DOA5    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
-                                                       SIMPLE/ram_1k_generate.s6.kcpsm6_rom
-    SLICE_X26Y31.A2      net (fanout=7)        1.645   instruction<5>
-    SLICE_X26Y31.A       Tilo                  0.203   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA_D1
-    SLICE_X27Y32.D3      net (fanout=2)        0.513   processor/sy<1>
-    SLICE_X27Y32.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
-    SLICE_X30Y20.A2      net (fanout=15)       1.762   port_id<1>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.316   processor/KCPSM6_OUT_PORT
-                                                       Val0_1
-    -------------------------------------------------  ---------------------------
-    Total                                      7.469ns (2.831ns logic, 4.638ns route)
-                                                       (37.9% logic, 62.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     2.531ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               SIMPLE/ram_1k_generate.s6.kcpsm6_rom (RAM)
-  Destination:          Val0_1 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      7.407ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.027ns (0.456 - 0.483)
-  Source Clock:         clk_BUFGP rising at 0.000ns
-  Destination Clock:    clk_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: SIMPLE/ram_1k_generate.s6.kcpsm6_rom to Val0_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    RAMB16_X1Y18.DOA6    Trcko_DOA             1.850   SIMPLE/ram_1k_generate.s6.kcpsm6_rom
-                                                       SIMPLE/ram_1k_generate.s6.kcpsm6_rom
-    SLICE_X26Y31.A3      net (fanout=7)        1.583   instruction<6>
-    SLICE_X26Y31.A       Tilo                  0.203   processor/KCPSM6_REG0
-                                                       processor/lower_reg_banks_RAMA_D1
-    SLICE_X27Y32.D3      net (fanout=2)        0.513   processor/sy<1>
-    SLICE_X27Y32.D       Tilo                  0.259   processor/KCPSM6_PORT_ID
-                                                       processor/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
-    SLICE_X30Y20.A2      net (fanout=15)       1.762   port_id<1>
-    SLICE_X30Y20.A       Tilo                  0.203   Val3<3>
-                                                       _n0069_inv1
-    SLICE_X31Y20.CE      net (fanout=1)        0.718   _n0069_inv
-    SLICE_X31Y20.CLK     Tceck                 0.316   processor/KCPSM6_OUT_PORT
-                                                       Val0_1
-    -------------------------------------------------  ---------------------------
-    Total                                      7.407ns (2.831ns logic, 4.576ns route)
-                                                       (38.2% logic, 61.8% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point processor/stack_ram_low_RAMA (SLICE_X26Y35.D2), 1 path
+Paths for end point processor/stack_ram_high_RAMA (SLICE_X18Y32.AX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.294ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               processor/stack_loop[1].upper_stack.pointer_flop (FF)
-  Destination:          processor/stack_ram_low_RAMA (RAM)
+Slack (hold path):      0.360ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               processor/address_loop[4].pc_flop (FF)
+  Destination:          processor/stack_ram_high_RAMA (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.304ns (Levels of Logic = 0)
-  Clock Path Skew:      0.010ns (0.097 - 0.087)
+  Data Path Delay:      0.364ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.044 - 0.040)
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: processor/stack_loop[1].upper_stack.pointer_flop to processor/stack_ram_low_RAMA
+  Minimum Data Path at Fast Process Corner: processor/address_loop[4].pc_flop to processor/stack_ram_high_RAMA
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y35.BQ      Tcko                  0.200   processor/KCPSM6_STACK0
-                                                       processor/stack_loop[1].upper_stack.pointer_flop
-    SLICE_X26Y35.D2      net (fanout=9)        0.399   processor/stack_pointer<1>
-    SLICE_X26Y35.CLK     Tah         (-Th)     0.295   processor/KCPSM6_STACK_RAM0
-                                                       processor/stack_ram_low_RAMA
+    SLICE_X18Y34.AQ      Tcko                  0.234   processor/KCPSM6_PC1
+                                                       processor/address_loop[4].pc_flop
+    SLICE_X18Y32.AX      net (fanout=3)        0.250   address<4>
+    SLICE_X18Y32.CLK     Tdh         (-Th)     0.120   processor/KCPSM6_STACK_RAM1
+                                                       processor/stack_ram_high_RAMA
     -------------------------------------------------  ---------------------------
-    Total                                      0.304ns (-0.095ns logic, 0.399ns route)
-                                                       (-31.3% logic, 131.3% route)
+    Total                                      0.364ns (0.114ns logic, 0.250ns route)
+                                                       (31.3% logic, 68.7% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point processor/stack_ram_low_RAMA_D1 (SLICE_X26Y35.D2), 1 path
+Paths for end point processor/stack_ram_high_RAMB (SLICE_X18Y32.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.294ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               processor/stack_loop[1].upper_stack.pointer_flop (FF)
-  Destination:          processor/stack_ram_low_RAMA_D1 (RAM)
+Slack (hold path):      0.450ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               processor/address_loop[6].pc_flop (FF)
+  Destination:          processor/stack_ram_high_RAMB (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.304ns (Levels of Logic = 0)
-  Clock Path Skew:      0.010ns (0.097 - 0.087)
+  Data Path Delay:      0.454ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.044 - 0.040)
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: processor/stack_loop[1].upper_stack.pointer_flop to processor/stack_ram_low_RAMA_D1
+  Minimum Data Path at Fast Process Corner: processor/address_loop[6].pc_flop to processor/stack_ram_high_RAMB
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y35.BQ      Tcko                  0.200   processor/KCPSM6_STACK0
-                                                       processor/stack_loop[1].upper_stack.pointer_flop
-    SLICE_X26Y35.D2      net (fanout=9)        0.399   processor/stack_pointer<1>
-    SLICE_X26Y35.CLK     Tah         (-Th)     0.295   processor/KCPSM6_STACK_RAM0
-                                                       processor/stack_ram_low_RAMA_D1
+    SLICE_X18Y34.CQ      Tcko                  0.234   processor/KCPSM6_PC1
+                                                       processor/address_loop[6].pc_flop
+    SLICE_X18Y32.BX      net (fanout=3)        0.331   address<6>
+    SLICE_X18Y32.CLK     Tdh         (-Th)     0.111   processor/KCPSM6_STACK_RAM1
+                                                       processor/stack_ram_high_RAMB
     -------------------------------------------------  ---------------------------
-    Total                                      0.304ns (-0.095ns logic, 0.399ns route)
-                                                       (-31.3% logic, 131.3% route)
+    Total                                      0.454ns (0.123ns logic, 0.331ns route)
+                                                       (27.1% logic, 72.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point processor/stack_ram_low_RAMB (SLICE_X26Y35.D2), 1 path
+Paths for end point processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMA (SLICE_X14Y28.CE), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.294ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               processor/stack_loop[1].upper_stack.pointer_flop (FF)
-  Destination:          processor/stack_ram_low_RAMB (RAM)
+Slack (hold path):      0.459ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               processor/spm_enable_flop (FF)
+  Destination:          processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMA (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.304ns (Levels of Logic = 0)
-  Clock Path Skew:      0.010ns (0.097 - 0.087)
+  Data Path Delay:      0.461ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.040 - 0.038)
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: processor/stack_loop[1].upper_stack.pointer_flop to processor/stack_ram_low_RAMB
+  Minimum Data Path at Fast Process Corner: processor/spm_enable_flop to processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMA
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X24Y35.BQ      Tcko                  0.200   processor/KCPSM6_STACK0
-                                                       processor/stack_loop[1].upper_stack.pointer_flop
-    SLICE_X26Y35.D2      net (fanout=9)        0.399   processor/stack_pointer<1>
-    SLICE_X26Y35.CLK     Tah         (-Th)     0.295   processor/KCPSM6_STACK_RAM0
-                                                       processor/stack_ram_low_RAMB
+    SLICE_X15Y28.AQ      Tcko                  0.198   processor/KCPSM6_STROBES
+                                                       processor/spm_enable_flop
+    SLICE_X14Y28.CE      net (fanout=2)        0.151   processor/spm_enable
+    SLICE_X14Y28.CLK     Tckce       (-Th)    -0.112   processor/KCPSM6_SPM1
+                                                       processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMA
     -------------------------------------------------  ---------------------------
-    Total                                      0.304ns (-0.095ns logic, 0.399ns route)
-                                                       (-31.3% logic, 131.3% route)
+    Total                                      0.461ns (0.310ns logic, 0.151ns route)
+                                                       (67.2% logic, 32.8% route)
 
 --------------------------------------------------------------------------------
 
@@ -919,7 +931,7 @@ Slack: 6.876ns (period - min period limit)
   Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
   Physical resource: SIMPLE/ram_1k_generate.s6.kcpsm6_rom/CLKA
   Logical resource: SIMPLE/ram_1k_generate.s6.kcpsm6_rom/CLKA
-  Location pin: RAMB16_X1Y18.CLKA
+  Location pin: RAMB16_X1Y16.CLKA
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 8.270ns (period - min period limit)
@@ -933,9 +945,9 @@ Slack: 8.270ns (period - min period limit)
 Slack: 8.962ns (period - min period limit)
   Period: 10.000ns
   Min period limit: 1.038ns (963.391MHz) (Tcp)
-  Physical resource: processor/KCPSM6_SPM1/CLK
-  Logical resource: processor/data_path_loop[4].small_spm.small_spm_ram.spm_ram_RAMA/CLK
-  Location pin: SLICE_X18Y31.CLK
+  Physical resource: processor/KCPSM6_SPM0/CLK
+  Logical resource: processor/data_path_loop[0].small_spm.small_spm_ram.spm_ram_RAMA/CLK
+  Location pin: SLICE_X14Y25.CLK
   Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -952,11 +964,11 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    7.649|         |         |         |
-row<0>         |    3.215|         |         |         |
-row<1>         |    3.215|         |         |         |
-row<2>         |    3.215|         |         |         |
-row<3>         |    3.215|         |         |         |
+clk            |    8.189|         |         |         |
+row<0>         |    2.928|         |         |         |
+row<1>         |    2.928|         |         |         |
+row<2>         |    2.928|         |         |         |
+row<3>         |    2.928|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock row<0>
@@ -964,7 +976,7 @@ Clock to Setup on destination clock row<0>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.402|         |         |         |
+clk            |    3.825|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock row<1>
@@ -972,7 +984,7 @@ Clock to Setup on destination clock row<1>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.402|         |         |         |
+clk            |    3.825|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock row<2>
@@ -980,7 +992,7 @@ Clock to Setup on destination clock row<2>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.402|         |         |         |
+clk            |    3.825|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock row<3>
@@ -988,7 +1000,7 @@ Clock to Setup on destination clock row<3>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.402|         |         |         |
+clk            |    3.825|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -997,17 +1009,17 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 10408 paths, 0 nets, and 834 connections
+Constraints cover 10800 paths, 0 nets, and 862 connections
 
 Design statistics:
-   Minimum period:   7.649ns{1}   (Maximum frequency: 130.736MHz)
-   Maximum path delay from/to any node:   5.538ns
+   Minimum period:   8.189ns{1}   (Maximum frequency: 122.115MHz)
+   Maximum path delay from/to any node:   7.260ns
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu Feb 12 02:54:57 2015 
+Analysis completed Thu Feb 12 22:53:39 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:

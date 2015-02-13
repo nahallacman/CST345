@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/cal/Desktop/School/CST345/Lab04/Lab04/test_keypad_controller.v";
+static const char *ng0 = "C:/Users/cal/Desktop/School/CST345/Lab04/test_keypad_controller.v";
 static int ng1[] = {0, 0};
 static unsigned int ng2[] = {15U, 0U};
 static int ng3[] = {1, 0};
@@ -177,14 +177,24 @@ LAB7:    xsi_set_current_line(65, ng0);
     t2 = ((char*)((ng4)));
     t3 = (t0 + 2088);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 4);
+    xsi_set_current_line(66, ng0);
+    t2 = (t0 + 3064);
+    xsi_process_wait(t2, 100000LL);
+    *((char **)t1) = &&LAB8;
+    goto LAB1;
+
+LAB8:    xsi_set_current_line(67, ng0);
+    t2 = ((char*)((ng2)));
+    t3 = (t0 + 2088);
+    xsi_vlogvar_assign_value(t3, t2, 0, 0, 4);
     goto LAB1;
 
 }
 
 
-extern void work_m_00000000001519951003_2989407007_init()
+extern void work_m_00000000000147125723_2989407007_init()
 {
 	static char *pe[] = {(void *)Always_47_0,(void *)Initial_50_1};
-	xsi_register_didat("work_m_00000000001519951003_2989407007", "isim/test_keypad_controller_isim_beh.exe.sim/work/m_00000000001519951003_2989407007.didat");
+	xsi_register_didat("work_m_00000000000147125723_2989407007", "isim/test_keypad_controller_isim_beh.exe.sim/work/m_00000000000147125723_2989407007.didat");
 	xsi_register_executes(pe);
 }
