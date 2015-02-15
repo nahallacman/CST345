@@ -1,0 +1,78 @@
+; BINARY to BCD converter
+; written by Cal Barkman (callahan.barkman@gmail.com)
+; created on 2/14/15
+
+;NAMEREG sF, HUNDREDS
+;NAMEREG sE, TENS
+;NAMEREG sD, UNITS
+;NAMEREG sC, BINARY
+;NAMEREG sB, COUNT
+;NAMEREG sA, FOUR
+;NAMEREG s9, Mask
+
+;main program
+main_init:
+LOAD sA, 04 
+LOAD sB, 08
+LOAD sC, 0xFF
+main_loop:
+CALL add3
+Call shift_hundreds
+SUB sB, 01
+COMP sB, 00
+JUMP NZ main_loop
+stop: ;stop the program with an infinate loop
+JUMP stop
+
+; add 3 routine, checks all 3 registers to see if they are greater than 4. If they are, it adds 3 to that register.
+add3: ; compare to 5
+COMP sA, sD ; if sX < sY, Carry = 1
+JUMP NC add3_tens
+ADD sD, 03 ; if 5 or greater, add 3
+add3_tens:
+COMP sA, sE
+JUMP NC add3_hundreds
+ADD sE, 03 ; if 5 or greater, add 3
+add3_hundreds:
+COMP sA, sF
+JUMP NC add3_done
+ADD sF, 03 ; if 5 or greater, add 3
+add3_done:
+RET
+
+; shift routine, shifts bits in to registers based on the register before it
+shift_hundreds:
+LOAD s9, 0x08 ; if ( TENS && 0x08 ) { SL1 HUNDREDS } else { SL0 HUNDREDS }
+AND s9, sE
+COMP s9, 0x08
+JUMP NZ shift_h_0
+SL1 sF
+JUMP shift_hundreds_done
+shift_h_0:
+SL0 sF
+shift_hundreds_done:
+AND sF, 0x0F ; mask HUNDREDS with 0x08
+shift_tens:
+LOAD s9, 0x08 ; if ( UNITS && 0x08 ) { SL1 TENS } else { SL0 TENS }
+AND s9, sD
+COMP s9, 0x08
+JUMP NZ shift_t_0
+SL1 sE
+JUMP shift_tens_done
+shift_t_0:
+SL0 sE
+shift_tens_done:
+AND sE, 0x0F ; mask TENS with 0x08
+shift_units:
+LOAD s9, 0x80 ;if ( BINARY && 0x80 ) { SL1 UNITS } else { SL0 UNITS }
+AND s9, sC
+COMP s9, 0x80
+JUMP NZ shift_u_0
+SL1 sD
+JUMP shift_done
+shift_u_0:
+SL0 sD
+shift_done:
+AND sD, 0x0F ; mask UNITS with 0x08
+SL0 sC ; dont forget to shift the original number once at the end of all the other shifting
+RET
