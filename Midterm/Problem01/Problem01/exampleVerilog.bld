@@ -1,0 +1,47 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc
+C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo
+.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd
+
+Reading NGO file
+"C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.n
+gc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDem
+o.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive 'processor/read_strobe_flop' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive 'processor/k_write_strobe_flop' has
+   unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'processor/interrupt_ack_flop' has
+   unconnected output pin
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   3
+
+Total memory usage is 178140 kilobytes
+
+Writing NGD file "exampleVerilog.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "exampleVerilog.bld"...

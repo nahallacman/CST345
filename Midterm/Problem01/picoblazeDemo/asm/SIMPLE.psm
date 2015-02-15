@@ -1,0 +1,93 @@
+; SIMPLE.psm
+;##########################################################################
+;## Company:            Oregon Institute of Technology
+;## Author(s):          Cal Barkman (nahallacman@gmail.com or callahan.barkman@gmail.com)
+;##  
+;## Creation Date:      2/12/2015
+;## Revision:           1
+;## Program Purpose:    Picoblaze program to enter keystrokes from the keypad 
+;	on the PMOD1 header to the 4x7seg display, shifting recorded keystrokes 
+;	across the 4x7seg display. A pressed button clears the screen to 0's.
+;##########################################################################
+;## Assembler Directives
+;##########################################################################
+CONSTANT KEYPAD, 01           	 ; Keypad address = port 01 (input)
+CONSTANT BUTTON, 02				 ; Button address = port 02 (input)
+CONSTANT out7SEG0, 01               ; 7seg bank 0 address = port 01 (output)
+CONSTANT out7SEG1, 02               ; 7seg bank 1 address = port 02 (output)
+CONSTANT out7SEG2, 03               ; 7seg bank 2 address = port 03 (output)
+CONSTANT out7SEG3, 04               ; 7seg bank 3 address = port 04 (output)
+CONSTANT LEDS, 05					; LED bank output = port 5 (output)
+NAMEREG sA, r7seg0
+NAMEREG sB, r7seg1
+NAMEREG sC, r7seg2
+NAMEREG sD, r7seg3
+NAMEREG sE, keypad_value
+NAMEREG sF, last_int_flag
+;##########################################################################
+; Main Program
+;##########################################################################
+initialize:
+DISABLE INTERRUPT ; turn interrupts off for now
+main:    
+;for debugging turn off the LEDS
+;LOAD keypad_value, 00
+INPUT keypad_value, KEYPAD
+LOAD s5, keypad_value ; use another register
+AND s5, 10 ; mask the value
+COMPARE s5, last_int_flag ; check if the interrupt_keypad flag has changed
+CALL Z, flag_changed
+
+; check if a button is pressed, if it is, clear the 7 seg registers
+; first, load switch vale
+    INPUT s3, BUTTON
+;then compare it to the inactive value
+    COMPARE s3, 00
+;and jump if no button is pressed
+    JUMP Z, no_button_pressed
+;if the switch is pressed, clear the registers
+	LOAD r7seg0, 00
+	LOAD r7seg1, 00
+	LOAD r7seg2, 00
+	LOAD r7seg3, 00
+;and for debugging, turn on the LEDS
+	LOAD s4, FF
+
+no_button_pressed:
+    OUTPUT r7seg0, out7SEG0    ; Write the 7 seg output to the appropriate registers
+	OUTPUT r7seg1, out7SEG1   
+	OUTPUT r7seg2, out7SEG2   
+	OUTPUT r7seg3, out7SEG3   
+	OUTPUT s4, LEDS
+    JUMP main               ; Loop Back to top of main
+;##########################################################################
+
+;subroutine for interpreting keypad key presses
+flag_changed:
+LOAD  last_int_flag, s5 ; write the change in flag so we don't re-trigger on the same edge
+COMPARE s5, 10 ;check if the int line is high
+JUMP Z, shift_7seg_display ; if the int line is high, read and shift the 7 seg display
+RETURN;if not, return
+shift_7seg_display:
+LOAD r7seg0, r7seg1
+LOAD r7seg1, r7seg2
+LOAD r7seg2, r7seg3
+LOAD r7seg3, keypad_value
+RETURN;done and return
+
+
+
+
+; Interrupt handling
+;------------------------------------------------------------------------------------
+ADDRESS 2B0
+int_routine: 
+INPUT keypad_value, KEYPAD
+LOAD r7seg0, r7seg1
+LOAD r7seg1, r7seg2
+LOAD r7seg2, r7seg3
+LOAD r7seg3, keypad_value
+RETURNI ENABLE
+ 
+ADDRESS 3FF			;set interrupt vector
+JUMP int_routine
