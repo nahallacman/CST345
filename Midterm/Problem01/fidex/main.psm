@@ -18,23 +18,39 @@
 #EQU out7SEG2, 0x03 ;CONSTANT out7SEG2, 03               ; 7seg bank 2 address = port 03 (WRPRT)
 #EQU out7SEG3, 0x04 ;CONSTANT out7SEG3, 04               ; 7seg bank 3 address = port 04 (WRPRT)
 #EQU LEDS, 0x05	;CONSTANT LEDS, 05					; LED bank WRPRT = port 5 (WRPRT)
+
+; labels for state machine
+#EQU s_LOAD, 0x01
+#EQU s_OPEN, 0x02
+#EQU s_INCORRECT, 0x03
+
+#EQU CODE_LED, 0x01
+#EQU DOOR_LED, 0x02
+
 #EQU r7seg0, sA;NAMEREG sA, r7seg0
 #EQU r7seg1, sB;NAMEREG sB, r7seg1
 #EQU r7seg2, sC;NAMEREG sC, r7seg2
 #EQU r7seg3, sD;NAMEREG sD, r7seg3
 #EQU keypad_value, sE;NAMEREG sE, keypad_value
 #EQU last_int_flag, sF;NAMEREG sF, last_int_flag
+#EQU int_count, s9
+#EQU int_done_count, s8
+#EQU int_state, s7
+#EQU char_count, s1
+#EQU output_leds, s2 ; LED 0 = door open, LED 1 = problem
 ;##########################################################################
 ; Main Program
 ;##########################################################################
 initialize:
 ;DISABLE INTERRUPT ; turn interrupts off for now
-
+INT DISABLE
+LOAD output_leds, 0x00
 main:
 ;for debugging turn off the LEDS
-LOAD keypad_value, 0x00
+;LOAD keypad_value, 0x00
 RDPRT keypad_value, KEYPAD
 LOAD s5, keypad_value ; use another register
+;AND s5, 0x10 ; mask the value
 AND s5, 0x10 ; mask the value
 COMP s5, last_int_flag ; check if the interrupt_keypad flag has changed
 CALL NZ, flag_changed
@@ -59,7 +75,8 @@ no_button_pressed:
 	WRPRT r7seg1, out7SEG1   
 	WRPRT r7seg2, out7SEG2   
 	WRPRT r7seg3, out7SEG3   
-	WRPRT keypad_value, LEDS
+	;WRPRT keypad_value, LEDS ; output debugging LED's
+	WRPRT output_leds, LEDS ; output door and problem leds
     JUMP main               ; Loop Back to top of main
 ;##########################################################################
 
@@ -69,30 +86,118 @@ LOAD  last_int_flag, s5 ; write the change in flag so we don't re-trigger on the
 LOAD s6, keypad_value ; use another register
 AND s6, 0x10 ; mask the value
 COMP s6, 0x10
-JUMP Z, shift_7seg_display ; if the int line is high, read and shift the 7 seg display
+JUMP Z, key_press  ; if the int line is high, a keypress has been detected
 RET;if not, return
-LOAD keypad_value, 0xF0
+
+
+;HERE: the state machine should pick where in the sequence to put things
+
+;a proper keypress has been read. Based on the key value, branch
+;if 0-9 is pressed, shift key in
+key_press:
+AND keypad_value, 0x0F ; mask off the interrupt bit
+COMP keypad_value, 0x0A ; check if the value is lower than ten
+JUMP C, shift_7seg_display
+;if C is pressed, clear the display
+COMP keypad_value, 0x0C ; check if the value is clear
+JUMP Z, reset
+;if E is pressed, check the current displayed string against saved codes
+COMP keypad_value, 0x0E
+JUMP Z, begin_check
+RET; if the keypress is any other value, ignore it
 
 shift_7seg_display:
 LOAD r7seg0, r7seg1
 LOAD r7seg1, r7seg2
 LOAD r7seg2, r7seg3
 LOAD r7seg3, keypad_value
+;increment number of key presses
+ADD char_count, 0x01
+;check if 5 key presses have been made
+COMP char_count, 0x05
+JUMP Z, incorrect
+;else
+;set up the interrupt for 5 seconds
+LOAD int_done_count, 0x05
+LOAD int_state, s_LOAD
+INT ENABLE
 RET;done and return
 
+reset:
+	LOAD r7seg0, 0x00
+	LOAD r7seg1, 0x00
+	LOAD r7seg2, 0x00
+	LOAD r7seg3, 0x00
+	;dont forget to add a lock the door option here
+	AND output_leds, CODE_LED ; mask off the door open LED
+	RET;done and return
 
+begin_check:
+;for testing, lets just pretend all codes work
 
+;check passed!
+LOAD int_done_count, 0x05 ; load interrupt machine with 5 seconds of delay
+LOAD int_state, s_OPEN
+OR output_leds, DOOR_LED ;mask ON the door LED
+RETI ENABLE ;done and return with enabled interrupts for delay interupt machine
+	
+incorrect:
+LOAD int_done_count, 0x02 ; load interrupt machine with 2 seconds of delay
+LOAD int_state, s_INCORRECT
+OR output_leds, CODE_LED; mask ON the bad door code LED 
+RETI ENABLE ;return and enable interrupts for delay interupt machine
 
 ; Interrupt handling
 ;------------------------------------------------------------------------------------
 ;ADDRESS 2B0
-;int_routine: 
-;RDPRT keypad_value, KEYPAD
-;LOAD r7seg0, r7seg1
-;LOAD r7seg1, r7seg2
-;LOAD r7seg2, r7seg3
-;LOAD r7seg3, keypad_value
-;RETURNI ENABLE
- 
+#org 0x2B0
+int_routine:
+ADD int_count, 0x01 ; increment count
+COMP int_done_count, int_count ; check if the counter is done
+JUMP Z, int_done
+RETI ENABLE
+
+int_done:
+LOAD int_count, 0x00 ; reset count
+;if state == s_LOAD
+COMP int_state, s_LOAD
+JUMP Z, int_load
+;if state == s_OPEN
+COMP int_state, s_OPEN
+JUMP Z, int_open
+;if state == s_INCORRECT
+COMP int_state, s_INCORRECT
+JUMP Z, int_incorrect
+
+;??? else return and disable?
+RETI DISABLE
+
+; change state to s_INCORRECT 
+; load int_done_count with 2
+; re-enable the timer to run again
+int_load:
+LOAD int_state, s_INCORRECT
+LOAD int_done_count, 0x02
+RETI ENABLE
+
+; change state to s_LOAD (?)
+; JUMP to reset vector
+; disable the timer
+int_open:
+LOAD int_state, s_LOAD
+INT DISABLE
+JUMP reset ; this may cause an imballance in the return stack
+
+; change state to s_LOAD (?)
+; disable the timer
+; turn off the flashing LED
+int_incorrect:
+LOAD int_state, s_LOAD
+AND output_leds, DOOR_LED ; mask off the other LED so it's state doesn't change, and clear the door LED
+RETI DISABLE
+
+;setup interrupt vector
+#org 0x3FF
+JUMP int_routine 
 ;ADDRESS 3FF			;set interrupt vector
 ;JUMP int_routine
