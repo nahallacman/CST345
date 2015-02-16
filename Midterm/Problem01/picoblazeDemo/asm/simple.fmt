@@ -31,7 +31,7 @@
                     DISABLE INTERRUPT          ; turn interrupts off for now
               main: 
                     ;for debugging turn off the LEDS
-                    ;LOAD keypad_value, 00
+                    LOAD keypad_value, 00
                     INPUT keypad_value, KEYPAD
                     LOAD s5, keypad_value      ; use another register
                     AND s5, 10                 ; mask the value
@@ -50,21 +50,24 @@
                     LOAD r7seg2, 00
                     LOAD r7seg3, 00
                     ;and for debugging, turn on the LEDS
-                    LOAD s4, FF
+                    LOAD keypad_value, FF
  no_button_pressed: 
                     OUTPUT r7seg0, out7SEG0    ; Write the 7 seg output to the appropriate registers
                     OUTPUT r7seg1, out7SEG1
                     OUTPUT r7seg2, out7SEG2
                     OUTPUT r7seg3, out7SEG3
-                    OUTPUT s4, LEDS
+                    OUTPUT keypad_value, LEDS
                     JUMP main                  ; Loop Back to top of main
                     ;##########################################################################
                     ;subroutine for interpreting keypad key presses
       flag_changed: 
                     LOAD last_int_flag, s5     ; write the change in flag so we don't re-trigger on the same edge
-                    COMPARE s5, 10             ;check if the int line is high
+                    LOAD s6, keypad_value      ; use another register
+                    AND s6, 10                 ; mask the value
+                    COMPARE s6, 10
                     JUMP Z, shift_7seg_display ; if the int line is high, read and shift the 7 seg display
                     RETURN                     ;if not, return
+                    LOAD keypad_value, F0
 shift_7seg_display: 
                     LOAD r7seg0, r7seg1
                     LOAD r7seg1, r7seg2

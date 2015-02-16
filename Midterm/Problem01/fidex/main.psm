@@ -11,88 +11,88 @@
 ;##########################################################################
 ;## Assembler Directives
 ;##########################################################################
-CONSTANT KEYPAD, 01           	 ; Keypad address = port 01 (input)
-CONSTANT BUTTON, 02				 ; Button address = port 02 (input)
-CONSTANT out7SEG0, 01               ; 7seg bank 0 address = port 01 (output)
-CONSTANT out7SEG1, 02               ; 7seg bank 1 address = port 02 (output)
-CONSTANT out7SEG2, 03               ; 7seg bank 2 address = port 03 (output)
-CONSTANT out7SEG3, 04               ; 7seg bank 3 address = port 04 (output)
-CONSTANT LEDS, 05					; LED bank output = port 5 (output)
-NAMEREG sA, r7seg0
-NAMEREG sB, r7seg1
-NAMEREG sC, r7seg2
-NAMEREG sD, r7seg3
-NAMEREG sE, keypad_value
-NAMEREG sF, last_int_flag
+#EQU KEYPAD, 0x01    ;CONSTANT KEYPAD, 01           	 ; Keypad address = port 01 (RDPRT)
+#EQU BUTTON, 0x02	  ;CONSTANT BUTTON, 02				 ; Button address = port 02 (RDPRT)
+#EQU out7SEG0, 0x01 ;CONSTANT out7SEG0, 01               ; 7seg bank 0 address = port 01 (WRPRT)
+#EQU out7SEG1, 0x02 ;CONSTANT out7SEG1, 02               ; 7seg bank 1 address = port 02 (WRPRT)
+#EQU out7SEG2, 0x03 ;CONSTANT out7SEG2, 03               ; 7seg bank 2 address = port 03 (WRPRT)
+#EQU out7SEG3, 0x04 ;CONSTANT out7SEG3, 04               ; 7seg bank 3 address = port 04 (WRPRT)
+#EQU LEDS, 0x05	;CONSTANT LEDS, 05					; LED bank WRPRT = port 5 (WRPRT)
+#EQU r7seg0, sA;NAMEREG sA, r7seg0
+#EQU r7seg1, sB;NAMEREG sB, r7seg1
+#EQU r7seg2, sC;NAMEREG sC, r7seg2
+#EQU r7seg3, sD;NAMEREG sD, r7seg3
+#EQU keypad_value, sE;NAMEREG sE, keypad_value
+#EQU last_int_flag, sF;NAMEREG sF, last_int_flag
 ;##########################################################################
 ; Main Program
 ;##########################################################################
 initialize:
-DISABLE INTERRUPT ; turn interrupts off for now
-main:    
+;DISABLE INTERRUPT ; turn interrupts off for now
+
+main:
 ;for debugging turn off the LEDS
-LOAD keypad_value, 00
-INPUT keypad_value, KEYPAD
+LOAD keypad_value, 0x00
+RDPRT keypad_value, KEYPAD
 LOAD s5, keypad_value ; use another register
-AND s5, 10 ; mask the value
-COMPARE s5, last_int_flag ; check if the interrupt_keypad flag has changed
-CALL Z, flag_changed
+AND s5, 0x10 ; mask the value
+COMP s5, last_int_flag ; check if the interrupt_keypad flag has changed
+CALL NZ, flag_changed
 
 ; check if a button is pressed, if it is, clear the 7 seg registers
 ; first, load switch vale
-    INPUT s3, BUTTON
+    RDPRT s3, BUTTON
 ;then compare it to the inactive value
-    COMPARE s3, 00
+    COMP s3, 0x00
 ;and jump if no button is pressed
     JUMP Z, no_button_pressed
 ;if the switch is pressed, clear the registers
-	LOAD r7seg0, 00
-	LOAD r7seg1, 00
-	LOAD r7seg2, 00
-	LOAD r7seg3, 00
+	LOAD r7seg0, 0x00
+	LOAD r7seg1, 0x00
+	LOAD r7seg2, 0x00
+	LOAD r7seg3, 0x00
 ;and for debugging, turn on the LEDS
-	LOAD keypad_value, FF
+	LOAD keypad_value, 0xFF
 
 no_button_pressed:
-    OUTPUT r7seg0, out7SEG0    ; Write the 7 seg output to the appropriate registers
-	OUTPUT r7seg1, out7SEG1   
-	OUTPUT r7seg2, out7SEG2   
-	OUTPUT r7seg3, out7SEG3   
-	OUTPUT keypad_value, LEDS
+    WRPRT r7seg0, out7SEG0    ; Write the 7 seg WRPRT to the appropriate registers
+	WRPRT r7seg1, out7SEG1   
+	WRPRT r7seg2, out7SEG2   
+	WRPRT r7seg3, out7SEG3   
+	WRPRT keypad_value, LEDS
     JUMP main               ; Loop Back to top of main
 ;##########################################################################
 
 ;subroutine for interpreting keypad key presses
 flag_changed:
 LOAD  last_int_flag, s5 ; write the change in flag so we don't re-trigger on the same edge
-
 LOAD s6, keypad_value ; use another register
-AND s6, 10 ; mask the value
-COMPARE s6, 10
+AND s6, 0x10 ; mask the value
+COMP s6, 0x10
 JUMP Z, shift_7seg_display ; if the int line is high, read and shift the 7 seg display
-RETURN;if not, return
-LOAD keypad_value, F0
+RET;if not, return
+LOAD keypad_value, 0xF0
 
 shift_7seg_display:
 LOAD r7seg0, r7seg1
 LOAD r7seg1, r7seg2
 LOAD r7seg2, r7seg3
 LOAD r7seg3, keypad_value
-RETURN;done and return
+RET;done and return
 
 
 
 
 ; Interrupt handling
 ;------------------------------------------------------------------------------------
-ADDRESS 2B0
-int_routine: 
-INPUT keypad_value, KEYPAD
-LOAD r7seg0, r7seg1
-LOAD r7seg1, r7seg2
-LOAD r7seg2, r7seg3
-LOAD r7seg3, keypad_value
-RETURNI ENABLE
+;ADDRESS 2B0
+;int_routine: 
+;RDPRT keypad_value, KEYPAD
+;LOAD r7seg0, r7seg1
+;LOAD r7seg1, r7seg2
+;LOAD r7seg2, r7seg3
+;LOAD r7seg3, keypad_value
+;RETURNI ENABLE
  
-ADDRESS 3FF			;set interrupt vector
-JUMP int_routine
+;ADDRESS 3FF			;set interrupt vector
+;JUMP int_routine

@@ -1,8 +1,10 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Feb 12 22:53:25 2015
+// Written by: Map P.20131013 on Sun Feb 15 21:42:51 2015
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "g" LOCATE = SITE "L14" LEVEL 1;
+COMP "dp" LOCATE = SITE "M13" LEVEL 1;
 COMP "an1" LOCATE = SITE "P17" LEVEL 1;
 COMP "an2" LOCATE = SITE "P18" LEVEL 1;
 COMP "an3" LOCATE = SITE "N15" LEVEL 1;
@@ -35,8 +37,6 @@ COMP "c" LOCATE = SITE "U17" LEVEL 1;
 COMP "d" LOCATE = SITE "U18" LEVEL 1;
 COMP "e" LOCATE = SITE "M14" LEVEL 1;
 COMP "f" LOCATE = SITE "N14" LEVEL 1;
-COMP "g" LOCATE = SITE "L14" LEVEL 1;
-COMP "dp" LOCATE = SITE "M13" LEVEL 1;
 PIN SIMPLE/ram_1k_generate.s6.kcpsm6_rom_pins<28> = BEL
         "SIMPLE/ram_1k_generate.s6.kcpsm6_rom" PINNAME CLKA;
 TIMEGRP clk = BEL "in_port_0" BEL "in_port_1" BEL "in_port_2" BEL "in_port_3"

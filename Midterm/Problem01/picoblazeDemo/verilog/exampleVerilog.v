@@ -121,12 +121,12 @@ assign kcpsm6_sleep = 1'b0;
 //assign interrupt = 0;
 
 // Tie in the program ROM
-SIMPLE #(
+simple #(
 	.C_FAMILY             ("S6"), //Family 'S6' or 'V6'
 	.C_RAM_SIZE_KWORDS    (1),  	//Program size '1', '2' or '4'
 	.C_JTAG_LOADER_ENABLE (1))  	//Include JTAG Loader when set to '1' 
-  SIMPLE (    				    		//Name to match your PSM file
-// 	.rdl 			(kcpsm6_reset),
+  simple (    				    		//Name to match your PSM file
+ 	.rdl 			(kcpsm6_reset),
 	.enable 		(bram_enable),
 	.address 		(address),
 	.instruction 	(instruction),
@@ -159,7 +159,7 @@ sync_int interrupt_synchonrizer (
     .clk(clk), 
     .interrupt_in(interrupt_keypad), 
     .interrupt(synced_interrupt)
-    );	 
+    ); 
 	 
 	 
 //assign leds[7:0] = i[17:9];

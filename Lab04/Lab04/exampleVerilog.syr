@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: exampleVerilog.prj
 
@@ -234,7 +234,7 @@ Elaborating module <BUFG>.
 WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Lab04\picoblazeDemo\verilog\exampleVerilog.v" Line 135: Assignment to kcpsm6_reset ignored, since the identifier is never used
 
 Elaborating module <keypad_controller>.
-WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\keypad_controller.v" Line 42: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\keypad_controller.v" Line 44: Result of 3-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <Clock_Divider>.
 WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Lab04\Clock_Divider.v" Line 47: Result of 19-bit expression is truncated to fit in 18-bit target.
@@ -564,12 +564,13 @@ Unit <jtag_loader_6> synthesized.
 Synthesizing Unit <keypad_controller>.
     Related source file is "C:\Users\cal\Desktop\School\CST345\Lab04\keypad_controller.v".
     Found 2-bit register for signal <sel>.
-    Found 2-bit adder for signal <sel[1]_GND_51_o_add_1_OUT> created at line 42.
+    Found 1-bit register for signal <interrupt>.
+    Found 2-bit adder for signal <sel[1]_GND_51_o_add_1_OUT> created at line 44.
     Found 4x4-bit Read Only RAM for signal <column>
     Summary:
 	inferred   1 RAM(s).
 	inferred   1 Adder/Subtractor(s).
-	inferred   2 D-type flip-flop(s).
+	inferred   3 D-type flip-flop(s).
 Unit <keypad_controller> synthesized.
 
 Synthesizing Unit <Clock_Divider>.
@@ -622,8 +623,8 @@ Macro Statistics
 # Adders/Subtractors                                   : 3
  18-bit adder                                          : 1
  2-bit adder                                           : 2
-# Registers                                            : 37
- 1-bit register                                        : 26
+# Registers                                            : 38
+ 1-bit register                                        : 27
  10-bit register                                       : 1
  18-bit register                                       : 1
  2-bit register                                        : 2
@@ -737,8 +738,8 @@ Macro Statistics
 # Counters                                             : 3
  18-bit up counter                                     : 1
  2-bit up counter                                      : 2
-# Registers                                            : 155
- Flip-Flops                                            : 155
+# Registers                                            : 156
+ Flip-Flops                                            : 156
 # Comparators                                          : 1
  18-bit comparator greater                             : 1
 # Multiplexers                                         : 28
@@ -791,8 +792,8 @@ Unit <exampleVerilog> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 170
- Flip-Flops                                            : 170
+# Registers                                            : 171
+ Flip-Flops                                            : 171
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -819,24 +820,24 @@ Top Level Output File Name         : exampleVerilog.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 258
+# BELS                             : 257
 #      GND                         : 1
 #      INV                         : 3
-#      LUT2                        : 12
+#      LUT2                        : 13
 #      LUT3                        : 20
-#      LUT4                        : 21
-#      LUT5                        : 18
+#      LUT4                        : 20
+#      LUT5                        : 17
 #      LUT6                        : 43
 #      LUT6_2                      : 50
 #      MUXCY                       : 45
 #      VCC                         : 1
 #      XORCY                       : 44
-# FlipFlops/Latches                : 171
+# FlipFlops/Latches                : 172
 #      FD                          : 53
 #      FDC                         : 3
 #      FDCE                        : 2
 #      FDE                         : 57
-#      FDR                         : 41
+#      FDR                         : 42
 #      FDRE                        : 15
 # RAMS                             : 7
 #      RAM32M                      : 4
@@ -860,19 +861,19 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             171  out of  18224     0%  
- Number of Slice LUTs:                  192  out of   9112     2%  
-    Number used as Logic:               167  out of   9112     1%  
+ Number of Slice Registers:             172  out of  18224     0%  
+ Number of Slice LUTs:                  191  out of   9112     2%  
+    Number used as Logic:               166  out of   9112     1%  
     Number used as Memory:               25  out of   2176     1%  
        Number used as RAM:               24
        Number used as SRL:                1
 
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:    251
-   Number with an unused Flip Flop:      80  out of    251    31%  
-   Number with an unused LUT:            59  out of    251    23%  
+   Number with an unused Flip Flop:      79  out of    251    31%  
+   Number with an unused LUT:            60  out of    251    23%  
    Number of fully used LUT-FF pairs:   112  out of    251    44%  
-   Number of unique control sets:        21
+   Number of unique control sets:        22
 
 IO Utilization: 
  Number of IOs:                          35
@@ -905,14 +906,11 @@ Clock Information:
 Clock Signal                                     | Clock buffer(FF name)                                                | Load  |
 -------------------------------------------------+----------------------------------------------------------------------+-------+
 clk                                              | BUFGP                                                                | 138   |
-interrupt_keypad(keypad/_n00511:O)               | NONE(*)(interrupt_synchonrizer/ff_data)                              | 1     |
-DivBy100000/clk_out                              | NONE(SevenSegDisplay/sel_0)                                          | 4     |
+keypad/interrupt                                 | NONE(interrupt_synchonrizer/ff_data)                                 | 1     |
+DivBy100000/clk_out                              | NONE(SevenSegDisplay/sel_0)                                          | 5     |
 SIMPLE/jtag_clk                                  | NONE(SIMPLE/instantiate_loader.jtag_loader_6_inst/control_dout_int_7)| 6     |
 SIMPLE/instantiate_loader.jtag_loader_6_inst/drck| BUFG                                                                 | 31    |
 -------------------------------------------------+----------------------------------------------------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -924,7 +922,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 7.579ns (Maximum Frequency: 131.944MHz)
-   Minimum input arrival time before clock: 3.455ns
+   Minimum input arrival time before clock: 3.467ns
    Maximum output required time after clock: 6.271ns
    Maximum combinational path delay: No path found
 
@@ -1032,7 +1030,7 @@ Delay:               3.365ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 41 / 25
 -------------------------------------------------------------------------
-Offset:              3.450ns (Levels of Logic = 3)
+Offset:              3.391ns (Levels of Logic = 3)
   Source:            row<1> (PAD)
   Destination:       in_port_3 (FF)
   Destination Clock: clk rising
@@ -1041,53 +1039,33 @@ Offset:              3.450ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             7   1.222   1.138  row_1_IBUF (row_1_IBUF)
+     IBUF:I->O             5   1.222   1.079  row_1_IBUF (row_1_IBUF)
      LUT6:I0->O            1   0.203   0.580  port_id[1]_GND_1_o_select_4_OUT<4>_SW0 (N3)
      LUT4:I3->O            1   0.205   0.000  port_id[1]_GND_1_o_select_4_OUT<4> (port_id[1]_GND_1_o_select_4_OUT<3>)
      FD:D                      0.102          in_port_3
     ----------------------------------------
-    Total                      3.450ns (1.732ns logic, 1.717ns route)
-                                       (50.2% logic, 49.8% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'interrupt_keypad'
-  Total number of paths / destination ports: 4 / 1
--------------------------------------------------------------------------
-Offset:              3.455ns (Levels of Logic = 2)
-  Source:            row<0> (PAD)
-  Destination:       interrupt_synchonrizer/ff_data (FF)
-  Destination Clock: interrupt_keypad rising
-
-  Data Path: row<0> to interrupt_synchonrizer/ff_data
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             7   1.222   1.021  row_0_IBUF (row_0_IBUF)
-     LUT5:I1->O            1   0.203   0.579  interrupt_synchonrizer/clear1 (interrupt_synchonrizer/clear)
-     FDC:CLR                   0.430          interrupt_synchonrizer/ff_data
-    ----------------------------------------
-    Total                      3.455ns (1.855ns logic, 1.599ns route)
-                                       (53.7% logic, 46.3% route)
+    Total                      3.391ns (1.732ns logic, 1.659ns route)
+                                       (51.1% logic, 48.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DivBy100000/clk_out'
-  Total number of paths / destination ports: 12 / 6
+  Total number of paths / destination ports: 16 / 7
 -------------------------------------------------------------------------
-Offset:              3.384ns (Levels of Logic = 2)
+Offset:              3.467ns (Levels of Logic = 2)
   Source:            row<0> (PAD)
-  Destination:       keypad/sel_1 (FF)
+  Destination:       keypad/interrupt (FF)
   Destination Clock: DivBy100000/clk_out rising
 
-  Data Path: row<0> to keypad/sel_1
+  Data Path: row<0> to keypad/interrupt
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             7   1.222   1.021  row_0_IBUF (row_0_IBUF)
-     LUT4:I0->O            2   0.203   0.616  keypad/row[3]_PWR_51_o_equal_6_o<3>1 (keypad/row[3]_PWR_51_o_equal_6_o)
-     FDCE:CE                   0.322          keypad/sel_0
+     IBUF:I->O             5   1.222   0.962  row_0_IBUF (row_0_IBUF)
+     LUT4:I0->O            3   0.203   0.650  keypad/row[3]_PWR_51_o_equal_7_o<3>1 (keypad/row[3]_PWR_51_o_equal_7_o)
+     FDR:R                     0.430          keypad/interrupt
     ----------------------------------------
-    Total                      3.384ns (1.747ns logic, 1.637ns route)
-                                       (51.6% logic, 48.4% route)
+    Total                      3.467ns (1.855ns logic, 1.612ns route)
+                                       (53.5% logic, 46.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SIMPLE/jtag_clk'
@@ -1228,22 +1206,23 @@ Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------+---------+---------+---------+---------+
 DivBy100000/clk_out|    2.738|         |         |         |
 clk                |    7.579|         |         |         |
-interrupt_keypad   |    1.026|         |         |         |
+keypad/interrupt   |    1.026|         |         |         |
 -------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock interrupt_keypad
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |    2.620|         |         |         |
----------------+---------+---------+---------+---------+
+Clock to Setup on destination clock keypad/interrupt
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+DivBy100000/clk_out|    2.380|         |         |         |
+clk                |    2.278|         |         |         |
+-------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.30 secs
+Total CPU time to Xst completion: 5.94 secs
  
 --> 
 
