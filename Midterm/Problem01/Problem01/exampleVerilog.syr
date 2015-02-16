@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.11 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: exampleVerilog.prj
 
@@ -116,6 +116,8 @@ Parsing module <sync_int>.
 Analyzing Verilog file "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\fidex\simple.v" into library work
 Parsing module <simple>.
 Parsing module <jtag_loader_6>.
+Analyzing Verilog file "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\Clock_Divider_2.v" into library work
+Parsing module <Clock_Divider_2>.
 Analyzing Verilog file "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\Clock_Divider.v" into library work
 Parsing module <Clock_Divider>.
 Analyzing Verilog file "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\picoblazeDemo\verilog\exampleVerilog.v" into library work
@@ -124,6 +126,7 @@ Parsing module <exampleVerilog>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
+WARNING:HDLCompiler:1016 - "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\picoblazeDemo\verilog\exampleVerilog.v" Line 157: Port i is not connected to this instance
 
 Elaborating module <exampleVerilog>.
 
@@ -221,8 +224,10 @@ WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01
 Elaborating module <simple(C_FAMILY="S6",C_RAM_SIZE_KWORDS=1,C_JTAG_LOADER_ENABLE=1)>.
 
 Elaborating module
-<RAMB16BWER(DATA_WIDTH_A=18,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=9'b0,RST_PRIORITY_A="CE",SRVAL_A=9'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=18,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=9'b0,RST_PRIORITY_B="CE",SRVAL_B=9'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b1101101100000010110110100000000100011110111111110001110100000000000111000000000000011011000000000001101000000000001000000000111011010011000000001001001100000010010000000001010011000101111100000011010100010000000001011110000010011110000000010001111000000000,INIT_01=256'b0101000000000000000011011110000000001100110100000000101111000000000010101011000000011110111100000101000000000000001000000001101111010110000100000011011000010000000001101110000000001111010100000010000000000000110111100000010111011101000001001101110000000011,INIT_02=256'b0,INIT_03=256'b0,INIT_04=256'b0,INIT_05=256'b0,INIT_06=256'b0,INIT_07=256'b0,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0
-C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b0,INITP_00=256'b01000000000001011010000001010101010100000000000110100110100000000,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b0,INITP_07=256'b0)>.
+<RAMB16BWER(DATA_WIDTH_A=18,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=9'b0,RST_PRIORITY_A="CE",SRVAL_A=9'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=18,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=9'b0,RST_PRIORITY_B="CE",SRVAL_B=9'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b1101101000000001000111101111111100011101000000000001110000000000000110110000000000011010000000000010000000001111110100110000000010010011000000100100000000010101110001011111000000110101000100000000010111100000100111100000000100010010000000001000000000000000,INIT_01=256'b010000000101110110111100000110010100000001000111101111000001010001111100000111101010000000000000010000000011011110101100001000000110110000100000000011011100000000011110101000000100000000000101101001000000101110111010000010011011100000000111101101100000010,INIT_02=256'b011011000000000001101000000000010100000000000010000000000000010001011100000001000110000000010100100000001110001101000100000101000100010000000100
+00110111100000000011001101000000001011110000000000101010110000010100000000000000100000001101001101111000001110,INIT_03=256'b0100100000000000101010010000000010001011100000011000110000000001010010000000000010101001000000010000101110000001000011000000001010101000000000000001100100000000100011101000000000001110000000000,INIT_04=256'b0,INIT_05=256'b0,INIT_06=256'b0,INIT_07=256'b0,INIT_08=256'b0,INIT_09=256'b0,INIT_0A=256'b0,INIT_0B=256'b0,INIT_0C=256'b0,INIT_0D=256'b0,INIT_0E=256'b0,INIT_0F=256'b0,INIT_10=256'b0,INIT_11=256'b0,INIT_12=256'b0,INIT_13=256'b0,INIT_14=256'b0,INIT_15=256'b0,INIT_16=256'b0,INIT_17=256'b0,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b010111000000011001000000000001000110000000001000010111000000111001000000000000001000101100001011010111000000
+11001000101011111111010111000000100010001010111100110101110000000100011001000000001001000000000001001000101011010011001000100100000001100100000001,INIT_2C=256'b010010000000000000011001000000010000101110000000100100000001011101000000000000000,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0,INIT_31=256'b0,INIT_32=256'b0,INIT_33=256'b0,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=256'b0,INIT_3E=256'b0,INIT_3F=256'b010001010110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,INITP_00=256'b0100000001000000010000000000010100000110101000000001011011101110100101101000000101010101010000000000011010011010000000010,INITP_01=256'b0,INITP_02=256'b0,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b01000001010001000001011011101
+11010010110101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,INITP_06=256'b0,INITP_07=256'b1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)>.
 
 Elaborating module <jtag_loader_6(C_FAMILY="S6",C_NUM_PICOBLAZE=1,C_JTAG_LOADER_ENABLE=1,C_BRAM_MAX_ADDR_WIDTH=32'sb01010,C_ADDR_WIDTH_0=32'sb01010)>.
 
@@ -240,6 +245,9 @@ WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\
 WARNING:HDLCompiler:189 - "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\picoblazeDemo\verilog\exampleVerilog.v" Line 154: Size mismatch in connection of port <i>. Formal port size is 18-bit while actual signal size is 1-bit.
 WARNING:HDLCompiler:1127 - "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\picoblazeDemo\verilog\exampleVerilog.v" Line 154: Assignment to i ignored, since the identifier is never used
 
+Elaborating module <Clock_Divider_2>.
+WARNING:HDLCompiler:413 - "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\Clock_Divider_2.v" Line 47: Result of 19-bit expression is truncated to fit in 18-bit target.
+
 Elaborating module <sync_int>.
 
 Elaborating module <Mux_disp>.
@@ -256,6 +264,7 @@ INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\picoblazeD
 INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\picoblazeDemo\verilog\exampleVerilog.v" line 103: Output port <interrupt_ack> of the instance <processor> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\picoblazeDemo\verilog\exampleVerilog.v" line 128: Output port <rdl> of the instance <simple> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\picoblazeDemo\verilog\exampleVerilog.v" line 150: Output port <i> of the instance <DivBy100000> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\picoblazeDemo\verilog\exampleVerilog.v" line 157: Output port <i> of the instance <DivBy1000> is unconnected or connected to loadless signal.
     Found 4-bit register for signal <Val0>.
     Found 4-bit register for signal <Val1>.
     Found 4-bit register for signal <Val2>.
@@ -585,6 +594,19 @@ Synthesizing Unit <Clock_Divider>.
 	inferred   1 Multiplexer(s).
 Unit <Clock_Divider> synthesized.
 
+Synthesizing Unit <Clock_Divider_2>.
+    Related source file is "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\Clock_Divider_2.v".
+    Found 1-bit register for signal <clk_out>.
+    Found 18-bit register for signal <i>.
+    Found 18-bit adder for signal <i[17]_GND_53_o_add_3_OUT> created at line 47.
+    Found 18-bit comparator greater for signal <GND_53_o_i[17]_LessThan_3_o> created at line 39
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <Clock_Divider_2> synthesized.
+
 Synthesizing Unit <sync_int>.
     Related source file is "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\InterruptSynch.v".
     Found 1-bit register for signal <q<0>>.
@@ -597,7 +619,7 @@ Unit <sync_int> synthesized.
 Synthesizing Unit <Mux_disp>.
     Related source file is "C:\Users\cal\Desktop\School\CST345\Midterm\Problem01\Mux_disp.v".
     Found 2-bit register for signal <sel>.
-    Found 2-bit adder for signal <sel[1]_GND_54_o_add_0_OUT> created at line 66.
+    Found 2-bit adder for signal <sel[1]_GND_55_o_add_0_OUT> created at line 66.
     Found 4x1-bit Read Only RAM for signal <an4>
     Found 4x1-bit Read Only RAM for signal <an3>
     Found 4x1-bit Read Only RAM for signal <an2>
@@ -619,21 +641,21 @@ Macro Statistics
  16x7-bit single-port Read Only RAM                    : 1
  4x1-bit single-port Read Only RAM                     : 4
  4x4-bit single-port Read Only RAM                     : 1
-# Adders/Subtractors                                   : 3
- 18-bit adder                                          : 1
+# Adders/Subtractors                                   : 4
+ 18-bit adder                                          : 2
  2-bit adder                                           : 2
-# Registers                                            : 38
- 1-bit register                                        : 27
+# Registers                                            : 40
+ 1-bit register                                        : 28
  10-bit register                                       : 1
- 18-bit register                                       : 1
+ 18-bit register                                       : 2
  2-bit register                                        : 2
  4-bit register                                        : 4
  8-bit register                                        : 3
-# Comparators                                          : 1
- 18-bit comparator greater                             : 1
-# Multiplexers                                         : 29
+# Comparators                                          : 2
+ 18-bit comparator greater                             : 2
+# Multiplexers                                         : 30
  1-bit 2-to-1 multiplexer                              : 20
- 18-bit 2-to-1 multiplexer                             : 2
+ 18-bit 2-to-1 multiplexer                             : 3
  5-bit 4-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 6
 
@@ -651,6 +673,10 @@ WARNING:Xst:2404 -  FFs/Latches <in_port<7:5>> (without init value) have a const
 Synthesizing (advanced) Unit <Clock_Divider>.
 The following registers are absorbed into counter <i>: 1 register on signal <i>.
 Unit <Clock_Divider> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Clock_Divider_2>.
+The following registers are absorbed into counter <i>: 1 register on signal <i>.
+Unit <Clock_Divider_2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Mux_disp>.
 The following registers are absorbed into counter <sel>: 1 register on signal <sel>.
@@ -734,13 +760,13 @@ Macro Statistics
  16x7-bit single-port distributed Read Only RAM        : 1
  4x1-bit single-port distributed Read Only RAM         : 4
  4x4-bit single-port distributed Read Only RAM         : 1
-# Counters                                             : 3
- 18-bit up counter                                     : 1
+# Counters                                             : 4
+ 18-bit up counter                                     : 2
  2-bit up counter                                      : 2
-# Registers                                            : 156
- Flip-Flops                                            : 156
-# Comparators                                          : 1
- 18-bit comparator greater                             : 1
+# Registers                                            : 157
+ Flip-Flops                                            : 157
+# Comparators                                          : 2
+ 18-bit comparator greater                             : 2
 # Multiplexers                                         : 28
  1-bit 2-to-1 multiplexer                              : 20
  18-bit 2-to-1 multiplexer                             : 1
@@ -776,7 +802,7 @@ WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 
 WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block exampleVerilog, actual ratio is 2.
+Found area constraint ratio of 100 (+ 5) on block exampleVerilog, actual ratio is 3.
 WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <processor/sync_sleep_flop> has a constant value of 0 in block <exampleVerilog>. This FF/Latch will be trimmed during the optimization process.
@@ -791,8 +817,8 @@ Unit <exampleVerilog> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 171
- Flip-Flops                                            : 171
+# Registers                                            : 190
+ Flip-Flops                                            : 190
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -819,33 +845,33 @@ Top Level Output File Name         : exampleVerilog.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 257
+# BELS                             : 315
 #      GND                         : 1
-#      INV                         : 3
+#      INV                         : 4
 #      LUT2                        : 13
-#      LUT3                        : 19
+#      LUT3                        : 37
 #      LUT4                        : 21
-#      LUT5                        : 17
-#      LUT6                        : 43
+#      LUT5                        : 18
+#      LUT6                        : 46
 #      LUT6_2                      : 50
-#      MUXCY                       : 45
+#      MUXCY                       : 62
 #      VCC                         : 1
-#      XORCY                       : 44
-# FlipFlops/Latches                : 172
+#      XORCY                       : 62
+# FlipFlops/Latches                : 191
 #      FD                          : 53
 #      FDC                         : 3
 #      FDCE                        : 2
 #      FDE                         : 57
-#      FDR                         : 42
-#      FDRE                        : 15
+#      FDR                         : 60
+#      FDRE                        : 16
 # RAMS                             : 7
 #      RAM32M                      : 4
 #      RAM64M                      : 2
 #      RAMB16BWER                  : 1
 # Shift Registers                  : 1
 #      SRLC16E                     : 1
-# Clock Buffers                    : 2
-#      BUFG                        : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
 #      BUFGP                       : 1
 # IO Buffers                       : 34
 #      IBUF                        : 10
@@ -860,19 +886,19 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             172  out of  18224     0%  
- Number of Slice LUTs:                  191  out of   9112     2%  
-    Number used as Logic:               166  out of   9112     1%  
+ Number of Slice Registers:             191  out of  18224     1%  
+ Number of Slice LUTs:                  214  out of   9112     2%  
+    Number used as Logic:               189  out of   9112     2%  
     Number used as Memory:               25  out of   2176     1%  
        Number used as RAM:               24
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    251
-   Number with an unused Flip Flop:      79  out of    251    31%  
-   Number with an unused LUT:            60  out of    251    23%  
-   Number of fully used LUT-FF pairs:   112  out of    251    44%  
-   Number of unique control sets:        22
+ Number of LUT Flip Flop pairs used:    274
+   Number with an unused Flip Flop:      83  out of    274    30%  
+   Number with an unused LUT:            60  out of    274    21%  
+   Number of fully used LUT-FF pairs:   131  out of    274    47%  
+   Number of unique control sets:        24
 
 IO Utilization: 
  Number of IOs:                          35
@@ -881,7 +907,7 @@ IO Utilization:
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of     32     3%  
     Number using Block RAM only:          1
- Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
 
 ---------------------------
 Partition Resource Summary:
@@ -905,8 +931,8 @@ Clock Information:
 Clock Signal                                     | Clock buffer(FF name)                                                | Load  |
 -------------------------------------------------+----------------------------------------------------------------------+-------+
 clk                                              | BUFGP                                                                | 138   |
-keypad/interrupt                                 | NONE(interrupt_synchonrizer/ff_data)                                 | 1     |
-DivBy100000/clk_out                              | NONE(SevenSegDisplay/sel_0)                                          | 5     |
+DivBy1000/clk_out                                | NONE(interrupt_synchonrizer/ff_data)                                 | 1     |
+DivBy100000/clk_out                              | BUFG                                                                 | 24    |
 simple/jtag_clk                                  | NONE(simple/instantiate_loader.jtag_loader_6_inst/control_dout_int_7)| 6     |
 simple/instantiate_loader.jtag_loader_6_inst/drck| BUFG                                                                 | 31    |
 -------------------------------------------------+----------------------------------------------------------------------+-------+
@@ -961,25 +987,45 @@ Delay:               7.579ns (Levels of Logic = 9)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'DivBy100000/clk_out'
-  Clock period: 2.216ns (frequency: 451.233MHz)
-  Total number of paths / destination ports: 6 / 4
+  Clock period: 5.059ns (frequency: 197.687MHz)
+  Total number of paths / destination ports: 3028 / 24
 -------------------------------------------------------------------------
-Delay:               2.216ns (Levels of Logic = 1)
-  Source:            SevenSegDisplay/sel_0 (FF)
-  Destination:       SevenSegDisplay/sel_0 (FF)
+Delay:               5.059ns (Levels of Logic = 21)
+  Source:            DivBy1000/i_8 (FF)
+  Destination:       DivBy1000/i_17 (FF)
   Source Clock:      DivBy100000/clk_out rising
   Destination Clock: DivBy100000/clk_out rising
 
-  Data Path: SevenSegDisplay/sel_0 to SevenSegDisplay/sel_0
+  Data Path: DivBy1000/i_8 to DivBy1000/i_17
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             11   0.447   0.882  SevenSegDisplay/sel_0 (SevenSegDisplay/sel_0)
-     INV:I->O              1   0.206   0.579  SevenSegDisplay/Mcount_sel_xor<0>11_INV_0 (Result<0>)
-     FDC:D                     0.102          SevenSegDisplay/sel_0
+     FDR:C->Q              2   0.447   0.961  DivBy1000/i_8 (DivBy1000/i_8)
+     LUT5:I0->O            2   0.203   0.981  DivBy1000/GND_53_o_i[17]_LessThan_3_o22 (DivBy1000/GND_53_o_i[17]_LessThan_3_o21)
+     LUT6:I0->O           19   0.203   1.300  DivBy1000/GND_53_o_i[17]_LessThan_3_o23 (DivBy1000/GND_53_o_i[17]_LessThan_3_o)
+     LUT3:I0->O            1   0.205   0.000  DivBy1000/Mcount_i_lut<0> (DivBy1000/Mcount_i_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  DivBy1000/Mcount_i_cy<0> (DivBy1000/Mcount_i_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<1> (DivBy1000/Mcount_i_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<2> (DivBy1000/Mcount_i_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<3> (DivBy1000/Mcount_i_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<4> (DivBy1000/Mcount_i_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<5> (DivBy1000/Mcount_i_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<6> (DivBy1000/Mcount_i_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<7> (DivBy1000/Mcount_i_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<8> (DivBy1000/Mcount_i_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<9> (DivBy1000/Mcount_i_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<10> (DivBy1000/Mcount_i_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<11> (DivBy1000/Mcount_i_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<12> (DivBy1000/Mcount_i_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<13> (DivBy1000/Mcount_i_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<14> (DivBy1000/Mcount_i_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  DivBy1000/Mcount_i_cy<15> (DivBy1000/Mcount_i_cy<15>)
+     MUXCY:CI->O           0   0.019   0.000  DivBy1000/Mcount_i_cy<16> (DivBy1000/Mcount_i_cy<16>)
+     XORCY:CI->O           1   0.180   0.000  DivBy1000/Mcount_i_xor<17> (DivBy1000/Mcount_i17)
+     FDR:D                     0.102          DivBy1000/i_17
     ----------------------------------------
-    Total                      2.216ns (0.755ns logic, 1.461ns route)
-                                       (34.1% logic, 65.9% route)
+    Total                      5.059ns (1.816ns logic, 3.242ns route)
+                                       (35.9% logic, 64.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'simple/jtag_clk'
@@ -1048,7 +1094,7 @@ Offset:              3.391ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'DivBy100000/clk_out'
-  Total number of paths / destination ports: 16 / 7
+  Total number of paths / destination ports: 35 / 26
 -------------------------------------------------------------------------
 Offset:              3.467ns (Levels of Logic = 2)
   Source:            row<0> (PAD)
@@ -1172,12 +1218,21 @@ Offset:              1.026ns (Levels of Logic = 0)
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock DivBy1000/clk_out
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+DivBy100000/clk_out|    2.414|         |         |         |
+clk                |    2.278|         |         |         |
+-------------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock DivBy100000/clk_out
 -------------------+---------+---------+---------+---------+
                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------+---------+---------+---------+---------+
-DivBy100000/clk_out|    2.216|         |         |         |
+DivBy100000/clk_out|    5.059|         |         |         |
 -------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -1185,18 +1240,9 @@ Clock to Setup on destination clock clk
                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------+---------+---------+---------+---------+
+DivBy1000/clk_out  |    1.026|         |         |         |
 DivBy100000/clk_out|    2.738|         |         |         |
 clk                |    7.579|         |         |         |
-keypad/interrupt   |    1.026|         |         |         |
--------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock keypad/interrupt
--------------------+---------+---------+---------+---------+
-                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------+---------+---------+---------+---------+
-DivBy100000/clk_out|    2.414|         |         |         |
-clk                |    2.278|         |         |         |
 -------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock simple/instantiate_loader.jtag_loader_6_inst/drck
@@ -1221,13 +1267,13 @@ simple/jtag_clk                                  |    1.579|         |         |
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.80 secs
+Total CPU time to Xst completion: 5.88 secs
  
 --> 
 
 Total memory usage is 254000 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   32 (   0 filtered)
-Number of infos    :   12 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
 

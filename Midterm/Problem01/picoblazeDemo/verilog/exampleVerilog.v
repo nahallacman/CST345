@@ -154,13 +154,20 @@ Clock_Divider DivBy100000 (
     .i(i)
     );
 
+Clock_Divider_2 DivBy1000 ( 
+	.reset(rst),
+	.clk_in(clk_1khz),
+	.clk_out(clk_1hz)
+	);
+
 //interrupt synchronizer to ensure a 2 clock cycles interrupt is triggered, then no other interrupt will be triggered until the interrupt line has gone low and then back high	 
+
 sync_int interrupt_synchonrizer (
     .clk(clk), 
-    .interrupt_in(interrupt_keypad), 
+    .interrupt_in(clk_1hz), 
     .interrupt(synced_interrupt)
     ); 
-	 
+	
 	 
 //assign leds[7:0] = i[17:9];
 
