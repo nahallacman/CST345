@@ -37,13 +37,13 @@
                 <outputFile></outputFile>
             </vhdl>
             <verilog>
-                <en>0</en>
+                <en>1</en>
                 <writeFileEventBut1>1</writeFileEventBut1>
                 <writeFileEventBut2>1</writeFileEventBut2>
                 <writeFileEventSave>0</writeFileEventSave>
-                <entityName></entityName>
-                <templateFile></templateFile>
-                <outputFile></outputFile>
+                <entityName>simple</entityName>
+                <templateFile>ROM_form.v</templateFile>
+                <outputFile>simple.v</outputFile>
             </verilog>
             <hex>
                 <en>0</en>

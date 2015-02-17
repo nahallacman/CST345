@@ -6,7 +6,8 @@
 ;## Creation Date:      2/17/2015
 ;## Revision:           1
 ;## Program Purpose:    "Microwave Timer" problem. Put in a timer amount, 
-;	run the timer for that amount of (seconds? minutes?) 
+;	run the timer for that amount of (seconds? minutes?), then turn on an alarm
+; 	for 5 seconds and flash an LED for the same amount of time
 ; 	
 ; 
 ;
@@ -22,9 +23,9 @@
 #EQU LEDS, 0x05	;CONSTANT LEDS, 05					; LED bank WRPRT = port 5 (WRPRT)
 
 ; labels for state machine
-#EQU s_LOAD, 0x01
-#EQU s_OPEN, 0x02
-#EQU s_INCORRECT, 0x03
+#EQU s_INPUT, 0x01
+#EQU s_COUNTDOWN, 0x02
+#EQU s_ALARM, 0x03
 
 #EQU CODE_LED, 0x01
 #EQU DOOR_LED, 0x02
@@ -110,82 +111,69 @@ JUMP Z, begin_timer
 RET; if the keypress is any other value, ignore it
 
 shift_7seg_display:
+;increment number of key presses
+ADD char_count, 0x01
+;check if less than 4 key presses have been made
+COMP char_count, 0x04
+JUMP NC, no_shift ; if they have, ignore the input
+
+;else shift the display down
 LOAD r7seg0, r7seg1
 LOAD r7seg1, r7seg2
 LOAD r7seg2, r7seg3
 LOAD r7seg3, keypad_value
-;increment number of key presses
-ADD char_count, 0x01
-;check if 5 key presses have been made
-COMP char_count, 0x05
-JUMP NC, incorrect
+
+no_shift:
 ;else
 ;set up the interrupt for 5 seconds
-LOAD int_done_count, 0x05
-LOAD int_state, s_LOAD
-INT ENABLE
+;LOAD int_done_count, 0x05
+;LOAD int_state, s_LOAD
+;INT ENABLE
 RET;done and return
 
 reset:
-	LOAD r7seg0, 0x00
+	LOAD r7seg0, 0x00 ; clear the 7 seg display
 	LOAD r7seg1, 0x00
 	LOAD r7seg2, 0x00
 	LOAD r7seg3, 0x00
 	;clear the number of keys entered
 	LOAD char_count, 0x00
 	;dont forget to add a lock the door option here
-	AND output_leds, CODE_LED ; mask off the door open LED
+	;AND output_leds, CODE_LED ; mask off the door open LED
 	RET;done and return
 
 begin_timer:
 ;for testing, lets just pretend all codes work
-;first, make sure there are 4 keys pressed
-COMP char_count, 0x04
-JUMP NZ, incorrect
-;now compare them to existing key codes
-CALL check_key_code
-COMP correct_code, 0x01
-JUMP NZ, check_incorrect
-;if we return normally, check passed! (needs to be tested)
-LOAD int_done_count, 0x05 ; load interrupt machine with 5 seconds of delay
-LOAD int_state, s_OPEN
-OR output_leds, DOOR_LED ;mask ON the door LED
-JUMP done_check
-;else, do the incorrect sequence
-check_incorrect:
-LOAD int_done_count, 0x02 ; load interrupt machine with 2 seconds of delay
-LOAD int_state, s_INCORRECT
-OR output_leds, CODE_LED; mask ON the bad door code LED 
-done_check:
-RETI ENABLE ;done and return with enabled interrupts for delay interupt machine
-	
-incorrect:
-LOAD int_done_count, 0x02 ; load interrupt machine with 2 seconds of delay
-LOAD int_state, s_INCORRECT
-OR output_leds, CODE_LED; mask ON the bad door code LED 
-RETI ENABLE ;return and enable interrupts for delay interupt machine
+;first, make sure there are 4 keys pressed ; this is unnecessary
+;COMP char_count, 0x04
+;JUMP NZ, incorrect
+;take away keypad control and begin the timer
 
-; checking current key codes, if the key code isn't in the list, call incorrect, then no matter what, return
-check_key_code:
-COMP r7seg0, 0x01
-JUMP NZ, test_code_2
-COMP r7seg1, 0x02
-JUMP NZ, test_code_2
-COMP r7seg2, 0x03
-JUMP NZ, test_code_2
-COMP r7seg3, 0x04
-JUMP Z, correct_key_code
-test_code_2:
-JUMP incorrect_key_code
-incorrect_key_code:
-;do I call this or do I jump here?
-;CALL incorrect
-LOAD correct_code, 0x00
 RET
-;JUMP incorrect
-correct_key_code:
-LOAD correct_code, 0x01
-RET
+
+;now compare them to existing key codes
+;CALL check_key_code
+;COMP correct_code, 0x01
+;JUMP NZ, check_incorrect
+;if we return normally, check passed! (needs to be tested)
+;LOAD int_done_count, 0x05 ; load interrupt machine with 5 seconds of delay
+;LOAD int_state, s_OPEN
+;OR output_leds, DOOR_LED ;mask ON the door LED
+;JUMP done_check
+;else, do the incorrect sequence
+;check_incorrect:
+;LOAD int_done_count, 0x02 ; load interrupt machine with 2 seconds of delay
+;LOAD int_state, s_INCORRECT
+;OR output_leds, CODE_LED; mask ON the bad door code LED 
+;done_check:
+;RETI ENABLE ;done and return with enabled interrupts for delay interupt machine
+
+;was used in Problem 01, may be unnecessary here	
+;incorrect:
+;LOAD int_done_count, 0x02 ; load interrupt machine with 2 seconds of delay
+;LOAD int_state, s_INCORRECT
+;OR output_leds, CODE_LED; mask ON the bad door code LED 
+;RETI ENABLE ;return and enable interrupts for delay interupt machine
 
 
 ; Interrupt handling
@@ -201,43 +189,33 @@ RETI ENABLE
 int_done:
 LOAD int_count, 0x00 ; reset count
 ;if state == s_LOAD
-COMP int_state, s_LOAD
-JUMP Z, int_load
+COMP int_state, s_INPUT
+JUMP Z, int_input
 ;if state == s_OPEN
-COMP int_state, s_OPEN
-JUMP Z, int_open
+COMP int_state, s_COUNTDOWN
+JUMP Z, int_countdown
 ;if state == s_INCORRECT
-COMP int_state, s_INCORRECT
-JUMP Z, int_incorrect
+COMP int_state, s_ALARM
+JUMP Z, int_alarm
 
 ;??? else return and disable?
 RETI DISABLE
 
-; change state to s_INCORRECT 
-; load int_done_count with 2
-; re-enable the timer to run again
-int_load:
-LOAD int_state, s_INCORRECT
-LOAD int_done_count, 0x02
-RETI ENABLE
-
-; change state to s_LOAD (?)
-; JUMP to reset vector
-; disable the timer
-int_open:
-LOAD int_state, s_LOAD
-INT DISABLE
-CALL reset
-;JUMP reset ; this may cause an imballance in the return stack
-
-; change state to s_LOAD (?)
-; disable the timer
-; turn off the flashing LED
-int_incorrect:
-LOAD int_state, s_LOAD
-AND output_leds, DOOR_LED ; mask off the other LED so it's state doesn't change, and clear the door LED
-CALL reset
+;this shouldn't ever be reached?
+int_input:
 RETI DISABLE
+
+;every time this is entered, count the 7 seg display values down by one
+;if the units column is 0, check if tens is greater than 0, if it is, minus one from tens and put 9 in units
+;repeat with hundreds column, but put 6 in tens instead
+;if all three are 0 and this is reached, begin the alarm sequence
+int_countdown:
+RETI ENABLE ; make sure we are still enabled so we keep interrupting
+
+;ends the alarm sequence
+int_alarm:
+CALL reset ; this will clear the 7seg display and character count
+RETI DISABLE ; disable interrupts as we leave so we don't have any more counting instances
 
 ;setup interrupt vector
 #org 0x3FF
