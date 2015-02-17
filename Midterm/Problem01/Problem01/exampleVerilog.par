@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-I7-LIVINGROOM::  Mon Feb 16 23:28:39 2015
+I7-LIVINGROOM::  Tue Feb 17 00:46:07 2015
 
 par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd
 exampleVerilog.pcf 
