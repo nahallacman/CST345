@@ -48,10 +48,11 @@
 initialize:
 ;DISABLE INTERRUPT ; turn interrupts off for now
 INT DISABLE
+LOAD int_state, s_INPUT
 LOAD output_leds, 0x00
 main:
-;for debugging turn off the LEDS
-;LOAD keypad_value, 0x00
+COMP int_state, s_INPUT ; if state != s_INPUT
+JUMP NZ, no_button_pressed ; skip all of the input until state is s_INPUT again
 RDPRT keypad_value, KEYPAD
 LOAD s5, keypad_value ; use another register
 ;AND s5, 0x10 ; mask the value
@@ -143,37 +144,10 @@ reset:
 	RET;done and return
 
 begin_timer:
-;for testing, lets just pretend all codes work
-;first, make sure there are 4 keys pressed ; this is unnecessary
-;COMP char_count, 0x04
-;JUMP NZ, incorrect
+;maybe make sure at least one key has been pressed?
 ;take away keypad control and begin the timer
-
-RET
-
-;now compare them to existing key codes
-;CALL check_key_code
-;COMP correct_code, 0x01
-;JUMP NZ, check_incorrect
-;if we return normally, check passed! (needs to be tested)
-;LOAD int_done_count, 0x05 ; load interrupt machine with 5 seconds of delay
-;LOAD int_state, s_OPEN
-;OR output_leds, DOOR_LED ;mask ON the door LED
-;JUMP done_check
-;else, do the incorrect sequence
-;check_incorrect:
-;LOAD int_done_count, 0x02 ; load interrupt machine with 2 seconds of delay
-;LOAD int_state, s_INCORRECT
-;OR output_leds, CODE_LED; mask ON the bad door code LED 
-;done_check:
-;RETI ENABLE ;done and return with enabled interrupts for delay interupt machine
-
-;was used in Problem 01, may be unnecessary here	
-;incorrect:
-;LOAD int_done_count, 0x02 ; load interrupt machine with 2 seconds of delay
-;LOAD int_state, s_INCORRECT
-;OR output_leds, CODE_LED; mask ON the bad door code LED 
-;RETI ENABLE ;return and enable interrupts for delay interupt machine
+LOAD int_state, s_COUNTDOWN
+RETI ENABLE ; return and enable interrupts so the countdown can begin
 
 
 ; Interrupt handling
@@ -181,13 +155,14 @@ RET
 ;ADDRESS 2B0
 #org 0x2B0
 int_routine:
-ADD int_count, 0x01 ; increment count
-COMP int_done_count, int_count ; check if the counter is done
-JUMP Z, int_done
-RETI ENABLE
+;this section may be unnecessary for the countdown timer stuff. it would probably be easier to just rawly interpret the count part
+;ADD int_count, 0x01 ; increment count
+;COMP int_done_count, int_count ; check if the counter is done
+;JUMP Z, int_done
+;RETI ENABLE
 
-int_done:
-LOAD int_count, 0x00 ; reset count
+;int_done:
+;LOAD int_count, 0x00 ; reset count
 ;if state == s_LOAD
 COMP int_state, s_INPUT
 JUMP Z, int_input
@@ -210,10 +185,21 @@ RETI DISABLE
 ;repeat with hundreds column, but put 6 in tens instead
 ;if all three are 0 and this is reached, begin the alarm sequence
 int_countdown:
+LOAD int_state, s_ALARM ; for debugging just skip the countdown
 RETI ENABLE ; make sure we are still enabled so we keep interrupting
 
-;ends the alarm sequence
+;every time this is entered, count down the current time (which should be started at 5) until it reaches 0
+;at 0, disable the alarm, and set the state machine back to input
 int_alarm:
+LOAD output_leds, 0x03 ;turn on ALARM LED and blinking LED
+COMP int_count, 0x05 ; check if 5 seconds have passed
+JUMP Z, int_alarm_done
+ADD int_count, 0x01 ; if not done, add 1 and return
+RETI ENABLE
+
+int_alarm_done:
+LOAD output_leds, 0x00 ;turn off ALARM LED and blinking LED
+LOAD int_count, 0x00; reset the alarm sequence
 CALL reset ; this will clear the 7seg display and character count
 RETI DISABLE ; disable interrupts as we leave so we don't have any more counting instances
 
