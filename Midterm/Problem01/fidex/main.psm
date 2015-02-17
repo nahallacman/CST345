@@ -38,6 +38,7 @@
 #EQU int_state, s7
 #EQU char_count, s1
 #EQU output_leds, s2 ; LED 0 = door open, LED 1 = problem
+#EQU correct_code, s0
 ;##########################################################################
 ; Main Program
 ;##########################################################################
@@ -115,7 +116,7 @@ LOAD r7seg3, keypad_value
 ADD char_count, 0x01
 ;check if 5 key presses have been made
 COMP char_count, 0x05
-JUMP Z, incorrect
+JUMP NC, incorrect
 ;else
 ;set up the interrupt for 5 seconds
 LOAD int_done_count, 0x05
@@ -128,17 +129,32 @@ reset:
 	LOAD r7seg1, 0x00
 	LOAD r7seg2, 0x00
 	LOAD r7seg3, 0x00
+	;clear the number of keys entered
+	LOAD char_count, 0x00
 	;dont forget to add a lock the door option here
 	AND output_leds, CODE_LED ; mask off the door open LED
 	RET;done and return
 
 begin_check:
 ;for testing, lets just pretend all codes work
-
-;check passed!
+;first, make sure there are 4 keys pressed
+COMP char_count, 0x04
+JUMP NZ, incorrect
+;now compare them to existing key codes
+CALL check_key_code
+COMP correct_code, 0x01
+JUMP NZ, check_incorrect
+;if we return normally, check passed! (needs to be tested)
 LOAD int_done_count, 0x05 ; load interrupt machine with 5 seconds of delay
 LOAD int_state, s_OPEN
 OR output_leds, DOOR_LED ;mask ON the door LED
+JUMP done_check
+;else, do the incorrect sequence
+check_incorrect:
+LOAD int_done_count, 0x02 ; load interrupt machine with 2 seconds of delay
+LOAD int_state, s_INCORRECT
+OR output_leds, CODE_LED; mask ON the bad door code LED 
+done_check:
 RETI ENABLE ;done and return with enabled interrupts for delay interupt machine
 	
 incorrect:
@@ -146,6 +162,29 @@ LOAD int_done_count, 0x02 ; load interrupt machine with 2 seconds of delay
 LOAD int_state, s_INCORRECT
 OR output_leds, CODE_LED; mask ON the bad door code LED 
 RETI ENABLE ;return and enable interrupts for delay interupt machine
+
+; checking current key codes, if the key code isn't in the list, call incorrect, then no matter what, return
+check_key_code:
+COMP r7seg0, 0x01
+JUMP NZ, test_code_2
+COMP r7seg1, 0x02
+JUMP NZ, test_code_2
+COMP r7seg2, 0x03
+JUMP NZ, test_code_2
+COMP r7seg3, 0x04
+JUMP Z, correct_key_code
+test_code_2:
+JUMP incorrect_key_code
+incorrect_key_code:
+;do I call this or do I jump here?
+;CALL incorrect
+LOAD correct_code, 0x00
+RET
+;JUMP incorrect
+correct_key_code:
+LOAD correct_code, 0x01
+RET
+
 
 ; Interrupt handling
 ;------------------------------------------------------------------------------------
@@ -186,7 +225,8 @@ RETI ENABLE
 int_open:
 LOAD int_state, s_LOAD
 INT DISABLE
-JUMP reset ; this may cause an imballance in the return stack
+CALL reset
+;JUMP reset ; this may cause an imballance in the return stack
 
 ; change state to s_LOAD (?)
 ; disable the timer
@@ -194,6 +234,7 @@ JUMP reset ; this may cause an imballance in the return stack
 int_incorrect:
 LOAD int_state, s_LOAD
 AND output_leds, DOOR_LED ; mask off the other LED so it's state doesn't change, and clear the door LED
+CALL reset
 RETI DISABLE
 
 ;setup interrupt vector

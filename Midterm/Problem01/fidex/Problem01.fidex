@@ -41,7 +41,7 @@
                 <writeFileEventBut1>1</writeFileEventBut1>
                 <writeFileEventBut2>1</writeFileEventBut2>
                 <writeFileEventSave>0</writeFileEventSave>
-                <entityName>simple.v</entityName>
+                <entityName>simple</entityName>
                 <templateFile>ROM_form.v</templateFile>
                 <outputFile>simple.v</outputFile>
             </verilog>
@@ -101,7 +101,7 @@
         <tabIndent>4</tabIndent>
         <openFiles>main.psm</openFiles>
         <lastFile>main.psm</lastFile>
-        <lastCursorPos>1784</lastCursorPos>
+        <lastCursorPos>2204</lastCursorPos>
     </ModEditor>
     <ModHlp>
         <openFiles>pageid&amp;amp;#58;&amp;#47;&amp;#47;gettingstarted:qthelp&amp;amp;#58;&amp;#47;&amp;#47;fx&amp;#47;FIDEx&amp;#47;manual&amp;#47;processorManuals&amp;#47;xilinxPicoBlazeSeries&amp;#47;mnemonics&amp;#47;index.html</openFiles>

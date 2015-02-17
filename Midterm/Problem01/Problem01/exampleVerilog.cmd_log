@@ -104,3 +104,135 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
 bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
+xst -intstyle ise -ifn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.xst" -ofn "C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/Problem01/exampleVerilog.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/cal/Desktop/School/CST345/Midterm/Problem01/picoblazeDemo/PicoBlazeDemo.ucf -p xc6slx16-csg324-3 exampleVerilog.ngc exampleVerilog.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o exampleVerilog_map.ncd exampleVerilog.ngd exampleVerilog.pcf 
+par -w -intstyle ise -ol high -mt off exampleVerilog_map.ncd exampleVerilog.ncd exampleVerilog.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml exampleVerilog.twx exampleVerilog.ncd -o exampleVerilog.twr exampleVerilog.pcf 
+bitgen -intstyle ise -f exampleVerilog.ut exampleVerilog.ncd 
