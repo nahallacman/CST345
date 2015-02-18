@@ -145,6 +145,17 @@ reset:
 
 begin_timer:
 ;maybe make sure at least one key has been pressed?
+COMP char_count, 0x00
+JUMP Z, reset
+;now check if the leading digit is a 9.
+COMP r7seg1, 0x09
+JUMP NZ, not_nine
+;If it is, make sure the next two are 0's, else reset (since there is nothing that can be done with above 9:00?) (8:99 is fine)
+COMP r7seg2, 0x00
+JUMP NZ, reset
+COMP r7seg3, 0x00
+JUMP NZ, reset
+not_nine:
 ;take away keypad control and begin the timer
 LOAD int_state, s_COUNTDOWN
 RETI ENABLE ; return and enable interrupts so the countdown can begin
@@ -183,9 +194,29 @@ RETI DISABLE
 ;every time this is entered, count the 7 seg display values down by one
 ;if the units column is 0, check if tens is greater than 0, if it is, minus one from tens and put 9 in units
 ;repeat with hundreds column, but put 6 in tens instead
-;if all three are 0 and this is reached, begin the alarm sequence
+;if all three are 0, begin the alarm sequence
 int_countdown:
-LOAD int_state, s_ALARM ; for debugging just skip the countdown
+COMP r7seg3, 0x00
+JUMP Z, carry_tens ; if it is 0, try to carry from the tens
+SUB r7seg3, 0x01 ; if it is not 0, subtract one and keep going
+JUMP countdown_continue
+carry_tens:
+COMP r7seg2, 0x00 
+JUMP Z, carry_hundreds ; if it is 0, try to carry from the hundreds
+SUB r7seg2, 0x01 ; if it is not 0, subtract one 
+ADD r7seg3, 0x09; and add 9 to the units, and keep going
+JUMP countdown_continue
+carry_hundreds:
+COMP r7seg1, 0x00 
+JUMP Z, countdown_done ; if it is 0, we can't carry anymore, so we are done counting
+SUB r7seg1, 0x01 ;else, we subtract one from hundreds
+LOAD r7seg2, 0x05; make the tens 5
+LOAD r7seg3, 0x09; and units 9, and keep going
+JUMP countdown_continue
+countdown_done:
+LOAD int_state, s_ALARM ; when we are done, move the state machine on to the alarm part
+LOAD last_int_flag, 0x00 ; not sure where to put this, but the interrupt machine doesn't work when I return without this
+countdown_continue:
 RETI ENABLE ; make sure we are still enabled so we keep interrupting
 
 ;every time this is entered, count down the current time (which should be started at 5) until it reaches 0
@@ -201,6 +232,7 @@ int_alarm_done:
 LOAD output_leds, 0x00 ;turn off ALARM LED and blinking LED
 LOAD int_count, 0x00; reset the alarm sequence
 CALL reset ; this will clear the 7seg display and character count
+LOAD int_state, s_INPUT ; reset the state machine
 RETI DISABLE ; disable interrupts as we leave so we don't have any more counting instances
 
 ;setup interrupt vector
