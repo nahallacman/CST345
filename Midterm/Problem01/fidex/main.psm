@@ -131,6 +131,8 @@ reset:
 	LOAD r7seg3, 0x00
 	;clear the number of keys entered
 	LOAD char_count, 0x00
+	;just in case clear the int_count
+	LOAD int_count, 0x00
 	;dont forget to add a lock the door option here
 	AND output_leds, CODE_LED ; mask off the door open LED
 	RET;done and return

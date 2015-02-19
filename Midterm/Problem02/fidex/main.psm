@@ -42,6 +42,7 @@
 #EQU char_count, s1
 #EQU output_leds, s2 ; LED 0 = door open, LED 1 = problem
 #EQU correct_code, s0
+#EQU int_keypad_value, s4
 ;##########################################################################
 ; Main Program
 ;##########################################################################
@@ -179,7 +180,7 @@ COMP int_state, s_INPUT
 JUMP Z, int_input
 ;if state == s_OPEN
 COMP int_state, s_COUNTDOWN
-JUMP Z, int_countdown
+JUMP Z, int_countdown_keypressdetect
 ;if state == s_INCORRECT
 COMP int_state, s_ALARM
 JUMP Z, int_alarm
@@ -190,6 +191,20 @@ RETI DISABLE
 ;this shouldn't ever be reached?
 int_input:
 RETI DISABLE
+
+int_countdown_keypressdetect:
+RDPRT int_keypad_value, KEYPAD ;read the keypad
+AND int_keypad_value, 0x10 ; mask off the keypad value
+COMP int_keypad_value, 0x10 ; if a key is pressed
+JUMP NZ, int_countdown ;not pressed
+RDPRT int_keypad_value, KEYPAD ; read again just in case? (running out of registers)
+AND int_keypad_value, 0x0F
+COMP int_keypad_value, 0x0C;	if the key is "C", reset everything
+CALL Z, reset ; do I jump or call here?
+;RETI DISABLE ; return and disable interrupts so we stop counting
+;	else just keep the same count
+JUMP countdown_continue
+;if no key is pressed, 
 
 ;every time this is entered, count the 7 seg display values down by one
 ;if the units column is 0, check if tens is greater than 0, if it is, minus one from tens and put 9 in units
