@@ -196,6 +196,15 @@ Mux_disp SevenSegDisplay (
     .an4(an4)
     );
 
+/*
+always@(*)
+begin
+if(leds[0] == 1'b1)
+	blink_clk <= blink_clk_src;
+else
+	blink_clk <= 1'b0;
+end
+*/
 
 // Input Ports
 always @ (posedge clk)

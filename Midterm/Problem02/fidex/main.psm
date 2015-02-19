@@ -215,6 +215,7 @@ LOAD r7seg3, 0x09; and units 9, and keep going
 JUMP countdown_continue
 countdown_done:
 LOAD int_state, s_ALARM ; when we are done, move the state machine on to the alarm part
+LOAD int_count, 0x00; just in case, reload the count with 0
 LOAD last_int_flag, 0x00 ; not sure where to put this, but the interrupt machine doesn't work when I return without this
 countdown_continue:
 RETI ENABLE ; make sure we are still enabled so we keep interrupting

@@ -36,7 +36,8 @@ module Clock_Divider_2(
 			i <= 0;
 			clk_out <= 0;
 		end
-	else if(i > 999)
+	//else if(i > 999)
+	else if(i > 499)
 	//else if(i > 9) // edited for simulation 
 		begin
 			i <= 0;
