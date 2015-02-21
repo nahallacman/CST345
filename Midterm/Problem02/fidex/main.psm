@@ -142,6 +142,9 @@ reset:
 	LOAD char_count, 0x00
 	;dont forget to add a lock the door option here
 	;AND output_leds, CODE_LED ; mask off the door open LED
+	
+	;make sure the alarm doesn't go off after clearing
+	LOAD int_state, s_INPUT
 	RET;done and return
 
 begin_timer:

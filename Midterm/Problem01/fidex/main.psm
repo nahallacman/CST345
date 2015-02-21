@@ -119,6 +119,7 @@ COMP char_count, 0x05
 JUMP NC, incorrect
 ;else
 ;set up the interrupt for 5 seconds
+LOAD int_count, 0x00
 LOAD int_done_count, 0x05
 LOAD int_state, s_LOAD
 INT ENABLE
@@ -255,6 +256,8 @@ RETI DISABLE
 int_load:
 LOAD int_state, s_INCORRECT
 LOAD int_done_count, 0x02
+;turn on the incorrect LED
+OR output_leds, CODE_LED; mask ON the bad door code LED 
 RETI ENABLE
 
 ; change state to s_LOAD (?)
