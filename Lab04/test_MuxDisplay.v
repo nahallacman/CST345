@@ -99,13 +99,23 @@ module test_MuxDisplay;
 		#10;
 		reset = 0;
 		#10;
-		$display("At time %t, a = %b, b = %b, c = %b, d = %b, e = %b, f = %b, g = %b, dp = %b, an1 = %b ,an2 = %b an3 = %b, an4 = %b.",$time,a,b,c,d,e,f,g,dp,an1,an2,an3,an4);
 		
-		Val0 = 4'b0001;
 		#100;
 		$display("At time %t, a = %b, b = %b, c = %b, d = %b, e = %b, f = %b, g = %b, dp = %b, an1 = %b ,an2 = %b an3 = %b, an4 = %b.",$time,a,b,c,d,e,f,g,dp,an1,an2,an3,an4);
-        
-		// Add stimulus here
+		Val0 = 4'd1;
+		
+		#100;
+		$display("At time %t, a = %b, b = %b, c = %b, d = %b, e = %b, f = %b, g = %b, dp = %b, an1 = %b ,an2 = %b an3 = %b, an4 = %b.",$time,a,b,c,d,e,f,g,dp,an1,an2,an3,an4);
+		Val1 = 4'd2;
+		
+		#100;
+		$display("At time %t, a = %b, b = %b, c = %b, d = %b, e = %b, f = %b, g = %b, dp = %b, an1 = %b ,an2 = %b an3 = %b, an4 = %b.",$time,a,b,c,d,e,f,g,dp,an1,an2,an3,an4);
+		Val2 = 4'd3;
+		
+		#100;
+		$display("At time %t, a = %b, b = %b, c = %b, d = %b, e = %b, f = %b, g = %b, dp = %b, an1 = %b ,an2 = %b an3 = %b, an4 = %b.",$time,a,b,c,d,e,f,g,dp,an1,an2,an3,an4);
+		Val3 = 4'd4;		
+
 
 	end
 	

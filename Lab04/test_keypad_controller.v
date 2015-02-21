@@ -60,12 +60,15 @@ module test_keypad_controller;
 		#100;
 		reset = 0;
 		
-		#1000;
+		#100;
 		
 		row = 4'b1011;
 		#100;
 		row = 4'b1111;       
 		// Add stimulus here
+		
+		#100;
+		$finish;
 
 	end
       
