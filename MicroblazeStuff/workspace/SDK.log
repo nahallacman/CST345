@@ -1,0 +1,28 @@
+20:15:40.181 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\MicroblazeStuff\SDK\SDK_Export\hw\system.xml. 
+20:25:09.549 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+20:25:25.343 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/MicroblazeStuff/workspace/MicroblazeStuff_hw_platform/download.bit" 
+20:27:49.354 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:28:07.632 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:28:52.624 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:29:07.999 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:11:23.824 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+21:11:23.825 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+21:13:25.205 WARN  - Terminating existing sessions on processor microblaze_0 
+21:13:28.250 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/MicroblazeStuff/workspace/MicroblazeStuff_hw_platform/download.bit" 
+21:16:58.993 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+21:16:59.008 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+21:16:59.008 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
