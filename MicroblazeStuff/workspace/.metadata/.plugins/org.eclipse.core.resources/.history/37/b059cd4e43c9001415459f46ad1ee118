@@ -42,10 +42,6 @@ int main()
 	init_platform();
 
 	char swval = 0;
-	int i = 100;
-
-	float test;
-	test = i *.25;
 
 	XGpio dipsw, leds;
 
@@ -59,8 +55,7 @@ int main()
 	{
 		swval = XGpio_DiscreteRead(&dipsw, 1);
 		swval = ~ swval;
-		//XGpio_DiscreteWrite(&leds, 1, swval);
-		XGpio_DiscreteWrite(&leds, 1, test);
+		XGpio_DiscreteWrite(&leds, 1, swval);
 	}
 
     return 0;

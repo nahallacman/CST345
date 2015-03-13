@@ -26,3 +26,14 @@
 	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
 
 21:16:59.008 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+22:39:30.463 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:39:54.262 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+01:46:52.442 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+01:46:52.442 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+01:46:52.457 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 

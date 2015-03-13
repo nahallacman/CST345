@@ -42,7 +42,7 @@ int main()
 	init_platform();
 
 	char swval = 0;
-	int i = 100;
+	int i = 10;
 
 	float test;
 	test = i *.25;
