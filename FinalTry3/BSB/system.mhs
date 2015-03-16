@@ -23,6 +23,8 @@
  PORT mydemoleds_0_myleds_pin = mydemoleds_0_myleds, DIR = O, VEC = [0:7]
  PORT mymuxeddisplay_0_segments_pin = mymuxeddisplay_0_segments, DIR = O, VEC = [0:7]
  PORT mymuxeddisplay_0_anodes_pin = mymuxeddisplay_0_anodes, DIR = O, VEC = [0:3]
+ PORT mykeyboard_0_row_pin = mykeyboard_0_row, DIR = I, VEC = [0:3]
+ PORT mykeyboard_0_column_pin = mykeyboard_0_column, DIR = O, VEC = [0:3]
 
 
 BEGIN microblaze
@@ -154,8 +156,8 @@ END
 BEGIN mydemoleds
  PARAMETER INSTANCE = mydemoleds_0
  PARAMETER HW_VER = 1.00.a
- PARAMETER C_BASEADDR = 0xcc600000
- PARAMETER C_HIGHADDR = 0xcc60ffff
+ PARAMETER C_BASEADDR = 0xcc620000
+ PARAMETER C_HIGHADDR = 0xcc62ffff
  BUS_INTERFACE SPLB = mb_plb
  PORT myleds = mydemoleds_0_myleds
 END
@@ -168,5 +170,15 @@ BEGIN mymuxeddisplay
  BUS_INTERFACE SPLB = mb_plb
  PORT segments = mymuxeddisplay_0_segments
  PORT anodes = mymuxeddisplay_0_anodes
+END
+
+BEGIN mykeyboard
+ PARAMETER INSTANCE = mykeyboard_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0xcc600000
+ PARAMETER C_HIGHADDR = 0xcc60ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT row = mykeyboard_0_row
+ PORT column = mykeyboard_0_column
 END
 

@@ -1,0 +1,822 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: mykeyboard.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mykeyboard.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mykeyboard"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : mykeyboard
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\mainuser\Desktop\School\CST345\Final\VerilogSource\keypad_controller.v" into library work
+Parsing module <keypad_controller>.
+Analyzing Verilog file "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" into library work
+Parsing module <user_logic>.
+Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\proc_common_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <proc_common_pkg>.
+Parsing package body <proc_common_pkg>.
+Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\or_muxcy.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy>.
+Parsing architecture <implementation> of entity <or_muxcy>.
+Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\family_support.vhd" into library proc_common_v3_00_a
+Parsing package <family_support>.
+Parsing package body <family_support>.
+Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\pselect_f.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_f>.
+Parsing architecture <imp> of entity <pselect_f>.
+Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\or_gate128.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate128>.
+Parsing architecture <imp> of entity <or_gate128>.
+Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\ipif_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <ipif_pkg>.
+Parsing package body <ipif_pkg>.
+Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\counter_f.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_f>.
+Parsing architecture <imp> of entity <counter_f>.
+Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plbv46_slave_single_v1_01_a\hdl\vhdl\plb_address_decoder.vhd" into library plbv46_slave_single_v1_01_a
+Parsing entity <plb_address_decoder>.
+Parsing architecture <IMP> of entity <plb_address_decoder>.
+Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plbv46_slave_single_v1_01_a\hdl\vhdl\plb_slave_attachment.vhd" into library plbv46_slave_single_v1_01_a
+Parsing entity <plb_slave_attachment>.
+Parsing architecture <implementation> of entity <plb_slave_attachment>.
+Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plbv46_slave_single_v1_01_a\hdl\vhdl\plbv46_slave_single.vhd" into library plbv46_slave_single_v1_01_a
+Parsing entity <plbv46_slave_single>.
+Parsing architecture <implementation> of entity <plbv46_slave_single>.
+Parsing VHDL file "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\vhdl\mykeyboard.vhd" into library work
+Parsing entity <mykeyboard>.
+Parsing architecture <IMP> of entity <mykeyboard>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <mykeyboard> (architecture <IMP>) with generics from library <work>.
+
+Elaborating entity <plbv46_slave_single> (architecture <implementation>) with generics from library <plbv46_slave_single_v1_01_a>.
+INFO:HDLCompiler:679 - "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plbv46_slave_single_v1_01_a\hdl\vhdl\plbv46_slave_single.vhd" Line 537. Case statement is complete. others clause is never selected
+
+Elaborating entity <plb_slave_attachment> (architecture <implementation>) with generics from library <plbv46_slave_single_v1_01_a>.
+
+Elaborating entity <plb_address_decoder> (architecture <IMP>) with generics from library <plbv46_slave_single_v1_01_a>.
+WARNING:HDLCompiler:1127 - "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plbv46_slave_single_v1_01_a\hdl\vhdl\plb_address_decoder.vhd" Line 319: Assignment to cs_s_h_clr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plbv46_slave_single_v1_01_a\hdl\vhdl\plb_address_decoder.vhd" Line 323: Assignment to addr_match_clr ignored, since the identifier is never used
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <or_gate128> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <or_muxcy> (architecture <implementation>) with generics from library <proc_common_v3_00_a>.
+INFO:HDLCompiler:679 - "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plbv46_slave_single_v1_01_a\hdl\vhdl\plb_slave_attachment.vhd" Line 711. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:1127 - "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plbv46_slave_single_v1_01_a\hdl\vhdl\plb_slave_attachment.vhd" Line 1025: Assignment to start_data_phase ignored, since the identifier is never used
+
+Elaborating entity <counter_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+Going to verilog side to elaborate module user_logic
+
+Elaborating module <user_logic(C_SLV_DWIDTH=32,C_NUM_REG=1)>.
+
+Elaborating module <keypad_controller>.
+WARNING:HDLCompiler:413 - "C:\Users\mainuser\Desktop\School\CST345\Final\VerilogSource\keypad_controller.v" Line 44: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" Line 125: Assignment to interrupt_keypad ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" Line 126: Size mismatch in connection of port <keypad_data>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" Line 126: Assignment to keypad_data ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" Line 151: Result of 5-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" Line 152: Assignment to interrupt_keypad ignored, since the identifier is never used
+Back to vhdl to continue elaboration
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mykeyboard>.
+    Related source file is "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\vhdl\mykeyboard.vhd".
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+        C_BASEADDR = "11111111111111111111111111111111"
+        C_HIGHADDR = "00000000000000000000000000000000"
+        C_SPLB_AWIDTH = 32
+        C_SPLB_DWIDTH = 128
+        C_SPLB_NUM_MASTERS = 8
+        C_SPLB_MID_WIDTH = 3
+        C_SPLB_NATIVE_DWIDTH = 32
+        C_SPLB_P2P = 0
+        C_SPLB_SUPPORT_BURSTS = 0
+        C_SPLB_SMALLEST_MASTER = 32
+        C_SPLB_CLK_PERIOD_PS = 10000
+        C_INCLUDE_DPHASE_TIMER = 1
+        C_FAMILY = "virtex6"
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\vhdl\mykeyboard.vhd" line 342: Output port <Bus2IP_Addr> of the instance <PLBV46_SLAVE_SINGLE_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\vhdl\mykeyboard.vhd" line 342: Output port <Bus2IP_CS> of the instance <PLBV46_SLAVE_SINGLE_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\vhdl\mykeyboard.vhd" line 342: Output port <Bus2IP_RNW> of the instance <PLBV46_SLAVE_SINGLE_I> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <mykeyboard> synthesized.
+
+Synthesizing Unit <plbv46_slave_single>.
+    Related source file is "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plbv46_slave_single_v1_01_a\hdl\vhdl\plbv46_slave_single.vhd".
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011111111111111111111111111111111","0000000000000000000000000000000000000000000000000000000000000000")
+        C_ARD_NUM_CE_ARRAY = (1)
+        C_SPLB_P2P = 0
+        C_BUS2CORE_CLK_RATIO = 1
+        C_INCLUDE_DPHASE_TIMER = 1
+        C_SPLB_MID_WIDTH = 3
+        C_SPLB_NUM_MASTERS = 8
+        C_SPLB_AWIDTH = 32
+        C_SPLB_DWIDTH = 128
+        C_SIPIF_DWIDTH = 32
+        C_FAMILY = "virtex6"
+WARNING:Xst:647 - Input <PLB_MSize> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrDBus<32:127>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPendPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPendPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_reqPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_TAttribute> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_SAValid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPrim> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPrim> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_abort> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_busLock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_lockErr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrBurst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdBurst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPendReq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPendReq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit 4-to-1 multiplexer for signal <plb_be_muxed> created at line 524.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <plbv46_slave_single> synthesized.
+
+Synthesizing Unit <plb_slave_attachment>.
+    Related source file is "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plbv46_slave_single_v1_01_a\hdl\vhdl\plb_slave_attachment.vhd".
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011111111111111111111111111111111","0000000000000000000000000000000000000000000000000000000000000000")
+        C_ARD_NUM_CE_ARRAY = (1)
+        C_PLB_NUM_MASTERS = 8
+        C_PLB_MID_WIDTH = 3
+        C_SPLB_P2P = 0
+        C_BUS2CORE_CLK_RATIO = 1
+        C_IPIF_ABUS_WIDTH = 32
+        C_IPIF_DBUS_WIDTH = 32
+        C_DPHASE_TIMEOUT = 128
+        C_INCLUDE_DPHASE_TIMER = 1
+        C_FAMILY = "virtex6"
+WARNING:Xst:647 - Input <PLB_UABus> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plbv46_slave_single_v1_01_a\hdl\vhdl\plb_slave_attachment.vhd" line 1201: Output port <Count_Out> of the instance <INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER> is unconnected or connected to loadless signal.
+    Register <sl_rdcomp_i> equivalent to <rd_clear_sl_busy> has been removed
+    Register <sl_rddack_i> equivalent to <rd_clear_sl_busy> has been removed
+    Register <set_sl_busy> equivalent to <sl_addrack_i> has been removed
+    Register <wr_clear_sl_busy> equivalent to <sl_wrdack_i> has been removed
+    Register <sl_wrcomp_i> equivalent to <sl_wrdack_i> has been removed
+    Found 32-bit register for signal <plb_wrdbus_reg>.
+    Found 3-bit register for signal <plb_masterid_reg>.
+    Found 1-bit register for signal <plb_rnw_reg>.
+    Found 4-bit register for signal <plb_size_reg>.
+    Found 3-bit register for signal <plb_type_reg>.
+    Found 1-bit register for signal <plb_pavalid_reg>.
+    Found 32-bit register for signal <plb_abus_reg>.
+    Found 1-bit register for signal <GEN_FOR_SHARED.addr_cntl_cs>.
+    Found 1-bit register for signal <sl_addrack_i>.
+    Found 1-bit register for signal <sl_rearbitrate_i>.
+    Found 1-bit register for signal <addr_cycle_flush>.
+    Found 32-bit register for signal <master_id>.
+    Found 1-bit register for signal <sl_busy>.
+    Found 8-bit register for signal <sl_mbusy_i>.
+    Found 8-bit register for signal <sl_mrderr_i>.
+    Found 8-bit register for signal <sl_mwrerr_i>.
+    Found 1-bit register for signal <sl_wrdack_i>.
+    Found 1-bit register for signal <rd_clear_sl_busy>.
+    Found 32-bit register for signal <sl_rddbus_i>.
+    Found 1-bit register for signal <bus2ip_rnw_i>.
+    Found 4-bit register for signal <bus2ip_be_i>.
+    Found 32-bit register for signal <bus2ip_addr_i>.
+    Found 1-bit register for signal <data_timeout>.
+    Found 4-bit register for signal <plb_be_reg>.
+    Summary:
+	inferred 213 D-type flip-flop(s).
+	inferred  36 Multiplexer(s).
+Unit <plb_slave_attachment> synthesized.
+
+Synthesizing Unit <plb_address_decoder>.
+    Related source file is "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plbv46_slave_single_v1_01_a\hdl\vhdl\plb_address_decoder.vhd".
+        C_BUS_AWIDTH = 32
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011111111111111111111111111111111","0000000000000000000000000000000000000000000000000000000000000000")
+        C_ARD_NUM_CE_ARRAY = (1)
+        C_SPLB_P2P = 0
+        C_FAMILY = "nofamily"
+WARNING:Xst:647 - Input <Address_In_Erly> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Address_Valid_Erly> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus_RNW_Erly> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <MEM_DECODE_GEN[0].GEN_PLB_SHARED.cs_out_s_h>.
+    Found 1-bit register for signal <cs_out_i>.
+    Found 1-bit register for signal <decode_hit_reg>.
+    Found 1-bit register for signal <rdce_out_i>.
+    Found 1-bit register for signal <wrce_out_i>.
+    Found 1-bit register for signal <rnw_s_h>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <plb_address_decoder> synthesized.
+
+Synthesizing Unit <pselect_f>.
+    Related source file is "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\pselect_f.vhd".
+        C_AB = 0
+        C_AW = 32
+        C_BAR = "11111111111111111111111111111111"
+        C_FAMILY = "nofamily"
+WARNING:Xst:647 - Input <A> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <pselect_f> synthesized.
+
+Synthesizing Unit <or_gate128>.
+    Related source file is "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\or_gate128.vhd".
+        C_OR_WIDTH = 1
+        C_BUS_WIDTH = 1
+        C_USE_LUT_OR = false
+    Summary:
+	no macro.
+Unit <or_gate128> synthesized.
+
+Synthesizing Unit <or_muxcy>.
+    Related source file is "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\or_muxcy.vhd".
+        C_NUM_BITS = 1
+    Summary:
+	no macro.
+Unit <or_muxcy> synthesized.
+
+Synthesizing Unit <counter_f>.
+    Related source file is "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\counter_f.vhd".
+        C_NUM_BITS = 8
+        C_FAMILY = "nofamily"
+    Found 9-bit register for signal <INFERRED_GEN.icount_out>.
+    Found 9-bit subtractor for signal <INFERRED_GEN.icount_out[8]_GND_18_o_mux_5_OUT> created at line 292.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+Unit <counter_f> synthesized.
+
+Synthesizing Unit <user_logic>.
+    Related source file is "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v".
+        C_SLV_DWIDTH = 32
+        C_NUM_REG = 1
+INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" line 120: Output port <keypad_data> of the instance <keypad> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" line 120: Output port <interrupt> of the instance <keypad> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <slv_reg0<1>>.
+    Found 1-bit register for signal <slv_reg0<2>>.
+    Found 1-bit register for signal <slv_reg0<3>>.
+    Found 1-bit register for signal <slv_reg0<4>>.
+    Found 1-bit register for signal <slv_reg0<5>>.
+    Found 1-bit register for signal <slv_reg0<6>>.
+    Found 1-bit register for signal <slv_reg0<7>>.
+    Found 1-bit register for signal <slv_reg0<8>>.
+    Found 1-bit register for signal <slv_reg0<9>>.
+    Found 1-bit register for signal <slv_reg0<10>>.
+    Found 1-bit register for signal <slv_reg0<11>>.
+    Found 1-bit register for signal <slv_reg0<12>>.
+    Found 1-bit register for signal <slv_reg0<13>>.
+    Found 1-bit register for signal <slv_reg0<14>>.
+    Found 1-bit register for signal <slv_reg0<15>>.
+    Found 1-bit register for signal <slv_reg0<16>>.
+    Found 1-bit register for signal <slv_reg0<17>>.
+    Found 1-bit register for signal <slv_reg0<18>>.
+    Found 1-bit register for signal <slv_reg0<19>>.
+    Found 1-bit register for signal <slv_reg0<20>>.
+    Found 1-bit register for signal <slv_reg0<21>>.
+    Found 1-bit register for signal <slv_reg0<22>>.
+    Found 1-bit register for signal <slv_reg0<23>>.
+    Found 1-bit register for signal <slv_reg0<24>>.
+    Found 1-bit register for signal <slv_reg0<25>>.
+    Found 1-bit register for signal <slv_reg0<26>>.
+    Found 1-bit register for signal <slv_reg0<27>>.
+    Found 1-bit register for signal <slv_reg0<28>>.
+    Found 1-bit register for signal <slv_reg0<29>>.
+    Found 1-bit register for signal <slv_reg0<30>>.
+    Found 1-bit register for signal <slv_reg0<31>>.
+    Found 1-bit register for signal <slv_reg0<0>>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred  34 Multiplexer(s).
+Unit <user_logic> synthesized.
+
+Synthesizing Unit <keypad_controller>.
+    Related source file is "C:\Users\mainuser\Desktop\School\CST345\Final\VerilogSource\keypad_controller.v".
+    Found 2-bit register for signal <sel>.
+    Found 1-bit register for signal <interrupt>.
+    Found 2-bit adder for signal <sel[1]_GND_24_o_add_1_OUT> created at line 44.
+    Found 4x4-bit Read Only RAM for signal <column>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+Unit <keypad_controller> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 2
+ 2-bit adder                                           : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 34
+ 1-bit register                                        : 18
+ 2-bit register                                        : 1
+ 3-bit register                                        : 2
+ 32-bit register                                       : 6
+ 4-bit register                                        : 3
+ 8-bit register                                        : 3
+ 9-bit register                                        : 1
+# Multiplexers                                         : 71
+ 1-bit 2-to-1 multiplexer                              : 61
+ 32-bit 2-to-1 multiplexer                             : 2
+ 4-bit 4-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 7
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <GEN_FOR_SHARED.addr_cntl_cs> in Unit <I_SLAVE_ATTACHMENT> is equivalent to the following FF/Latch, which will be removed : <addr_cycle_flush> 
+INFO:Xst:2261 - The FF/Latch <master_id_3> in Unit <I_SLAVE_ATTACHMENT> is equivalent to the following 27 FFs/Latches, which will be removed : <master_id_4> <master_id_5> <master_id_6> <master_id_7> <master_id_8> <master_id_9> <master_id_10> <master_id_11> <master_id_12> <master_id_13> <master_id_14> <master_id_15> <master_id_16> <master_id_17> <master_id_18> <master_id_19> <master_id_20> <master_id_21> <master_id_22> <master_id_23> <master_id_24> <master_id_25> <master_id_26> <master_id_27> <master_id_28> <master_id_29> <master_id_30> 
+WARNING:Xst:1426 - The value init of the FF/Latch master_id_31 hinder the constant cleaning in the block I_SLAVE_ATTACHMENT.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <master_id_3> has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <keypad_controller>.
+The following registers are absorbed into counter <sel>: 1 register on signal <sel>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_column> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sel>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <column>        |          |
+    -----------------------------------------------------------------------
+Unit <keypad_controller> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 261
+ Flip-Flops                                            : 261
+# Multiplexers                                         : 71
+ 1-bit 2-to-1 multiplexer                              : 61
+ 32-bit 2-to-1 multiplexer                             : 2
+ 4-bit 4-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch master_id_31 hinder the constant cleaning in the block plb_slave_attachment.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <master_id_30> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_29> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_28> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_27> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_26> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_25> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_24> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_23> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_22> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_21> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_20> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_19> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_18> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_17> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_16> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_15> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_14> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_13> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_12> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_11> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_10> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_9> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_8> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_7> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_6> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_5> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_4> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_3> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <GEN_FOR_SHARED.addr_cntl_cs> in Unit <plb_slave_attachment> is equivalent to the following FF/Latch, which will be removed : <addr_cycle_flush> 
+
+Optimizing unit <mykeyboard> ...
+
+Optimizing unit <user_logic> ...
+
+Optimizing unit <keypad_controller> ...
+
+Optimizing unit <plb_slave_attachment> ...
+
+Optimizing unit <plb_address_decoder> ...
+
+Optimizing unit <counter_f> ...
+WARNING:Xst:1710 - FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_0> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_2> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_3> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_4> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_5> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_6> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_7> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_2> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_3> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_4> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_5> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_6> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_7> (without init value) has a constant value of 0 in block <mykeyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <USER_LOGIC_I/keypad/interrupt> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_0> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_1> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_2> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_3> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_4> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_5> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_6> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_7> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_8> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_9> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_10> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_11> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_12> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_13> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_14> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_15> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_16> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_17> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_18> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_19> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_20> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_21> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_22> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_23> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_24> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_25> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_26> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_27> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_29> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_30> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_31> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_0> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_1> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_2> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_3> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_4> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_5> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_6> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_8> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_9> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_10> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_11> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_12> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_13> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_14> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_15> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_16> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_17> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_18> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_19> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_20> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_21> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_22> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_23> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_24> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_25> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_26> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_27> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_28> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_29> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_30> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_31> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0> of sequential type is unconnected in block <mykeyboard>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN<0>.GEN_PLB_SHARED.cs_out_s_h_0> of sequential type is unconnected in block <mykeyboard>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mykeyboard, actual ratio is 2.
+FlipFlop PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0 has been replicated 1 time(s)
+FlipFlop PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_0 has been replicated 1 time(s)
+FlipFlop PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/data_timeout has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 154
+ Flip-Flops                                            : 154
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mykeyboard.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 134
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 15
+#      LUT3                        : 4
+#      LUT4                        : 75
+#      LUT5                        : 5
+#      LUT6                        : 29
+#      MUXF7                       : 4
+# FlipFlops/Latches                : 154
+#      FD                          : 54
+#      FDCE                        : 2
+#      FDR                         : 95
+#      FDRE                        : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 246
+#      IBUF                        : 67
+#      OBUF                        : 179
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             154  out of  18224     0%  
+ Number of Slice LUTs:                  129  out of   9112     1%  
+    Number used as Logic:               129  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    176
+   Number with an unused Flip Flop:      22  out of    176    12%  
+   Number with an unused LUT:            47  out of    176    26%  
+   Number of fully used LUT-FF pairs:   107  out of    176    60%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                         439
+ Number of bonded IOBs:                 247  out of    232   106% (*) 
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+SPLB_Clk                           | BUFGP                  | 154   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.018ns (Maximum Frequency: 331.389MHz)
+   Minimum input arrival time before clock: 5.043ns
+   Maximum output required time after clock: 4.649ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SPLB_Clk'
+  Clock period: 3.018ns (frequency: 331.389MHz)
+  Total number of paths / destination ports: 536 / 121
+-------------------------------------------------------------------------
+Delay:               3.018ns (Levels of Logic = 1)
+  Source:            PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/rd_clear_sl_busy (FF)
+  Destination:       PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0 (FF)
+  Source Clock:      SPLB_Clk rising
+  Destination Clock: SPLB_Clk rising
+
+  Data Path: PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/rd_clear_sl_busy to PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              9   0.447   0.934  PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/rd_clear_sl_busy (PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/rd_clear_sl_busy)
+     LUT3:I1->O           16   0.203   1.004  PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/Bus_Reset_clear_sl_busy_OR_22_o1 (PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/Bus_Reset_clear_sl_busy_OR_22_o)
+     FDR:R                     0.430          PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_7
+    ----------------------------------------
+    Total                      3.018ns (1.080ns logic, 1.938ns route)
+                                       (35.8% logic, 64.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
+  Total number of paths / destination ports: 229 / 203
+-------------------------------------------------------------------------
+Offset:              5.043ns (Levels of Logic = 2)
+  Source:            SPLB_Rst (PAD)
+  Destination:       PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0 (FF)
+  Destination Clock: SPLB_Clk rising
+
+  Data Path: SPLB_Rst to PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           129   1.222   2.182  SPLB_Rst_IBUF (SPLB_Rst_IBUF)
+     LUT3:I0->O           16   0.205   1.004  PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/Bus_Reset_clear_sl_busy_OR_22_o1 (PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/Bus_Reset_clear_sl_busy_OR_22_o)
+     FDR:R                     0.430          PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_7
+    ----------------------------------------
+    Total                      5.043ns (1.857ns logic, 3.186ns route)
+                                       (36.8% logic, 63.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
+  Total number of paths / destination ports: 150 / 146
+-------------------------------------------------------------------------
+Offset:              4.649ns (Levels of Logic = 2)
+  Source:            USER_LOGIC_I/keypad/sel_0 (FF)
+  Destination:       column<1> (PAD)
+  Source Clock:      SPLB_Clk rising
+
+  Data Path: USER_LOGIC_I/keypad/sel_0 to column<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.447   0.849  USER_LOGIC_I/keypad/sel_0 (USER_LOGIC_I/keypad/sel_0)
+     LUT2:I0->O            1   0.203   0.579  USER_LOGIC_I/keypad/Mram_column21 (column_1_OBUF)
+     OBUF:I->O                 2.571          column_1_OBUF (column<1>)
+    ----------------------------------------
+    Total                      4.649ns (3.221ns logic, 1.428ns route)
+                                       (69.3% logic, 30.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock SPLB_Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+SPLB_Clk       |    3.018|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.13 secs
+ 
+--> 
+
+Total memory usage is 283224 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  149 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

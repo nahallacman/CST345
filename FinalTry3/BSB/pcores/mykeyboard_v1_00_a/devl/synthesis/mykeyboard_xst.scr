@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\devl\synthesis\mykeyboard_xst.prj"
+-top mykeyboard
+-p virtex6
+-ofn "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\devl\synthesis\mykeyboard_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib mykeyboard_v1_00_a

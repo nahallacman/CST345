@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> 
 TABLE OF CONTENTS
@@ -484,8 +484,8 @@ Synthesizing Unit <mydemoleds>.
     Related source file is "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/BSB/pcores/mydemoleds_v1_00_a/hdl/vhdl/mydemoleds.vhd".
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
-        C_BASEADDR = "11001100011000000000000000000000"
-        C_HIGHADDR = "11001100011000001111111111111111"
+        C_BASEADDR = "11001100011000100000000000000000"
+        C_HIGHADDR = "11001100011000101111111111111111"
         C_SPLB_AWIDTH = 32
         C_SPLB_DWIDTH = 32
         C_SPLB_NUM_MASTERS = 2
@@ -508,7 +508,7 @@ Unit <mydemoleds> synthesized.
 
 Synthesizing Unit <plbv46_slave_single>.
     Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plbv46_slave_single.vhd".
-        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011001100011000000000000000000000","0000000000000000000000000000000011001100011000001111111111111111")
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011001100011000100000000000000000","0000000000000000000000000000000011001100011000101111111111111111")
         C_ARD_NUM_CE_ARRAY = (2)
         C_SPLB_P2P = 0
         C_BUS2CORE_CLK_RATIO = 1
@@ -540,7 +540,7 @@ Unit <plbv46_slave_single> synthesized.
 
 Synthesizing Unit <plb_slave_attachment>.
     Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd".
-        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011001100011000000000000000000000","0000000000000000000000000000000011001100011000001111111111111111")
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011001100011000100000000000000000","0000000000000000000000000000000011001100011000101111111111111111")
         C_ARD_NUM_CE_ARRAY = (2)
         C_PLB_NUM_MASTERS = 2
         C_PLB_MID_WIDTH = 1
@@ -590,7 +590,7 @@ Unit <plb_slave_attachment> synthesized.
 Synthesizing Unit <plb_address_decoder>.
     Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_address_decoder.vhd".
         C_BUS_AWIDTH = 32
-        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011001100011000000000000000000000","0000000000000000000000000000000011001100011000001111111111111111")
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011001100011000100000000000000000","0000000000000000000000000000000011001100011000101111111111111111")
         C_ARD_NUM_CE_ARRAY = (2)
         C_SPLB_P2P = 0
         C_FAMILY = "nofamily"
@@ -614,7 +614,7 @@ Synthesizing Unit <pselect_f_1>.
     Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
         C_AB = 16
         C_AW = 32
-        C_BAR = "11001100011000000000000000000000"
+        C_BAR = "11001100011000100000000000000000"
         C_FAMILY = "nofamily"
 WARNING:Xst:647 - Input <A<16:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
@@ -891,7 +891,6 @@ FlipFlop mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_ou
 FlipFlop mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_1 has been replicated 2 time(s)
 FlipFlop mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_0 has been replicated 2 time(s)
 FlipFlop mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_1 has been replicated 2 time(s)
-FlipFlop mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/data_timeout has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -899,8 +898,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 200
- Flip-Flops                                            : 200
+# Registers                                            : 199
+ Flip-Flops                                            : 199
 
 =========================================================================
 
@@ -923,16 +922,16 @@ Top Level Output File Name         : system_mydemoleds_0_wrapper.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 150
+# BELS                             : 149
 #      GND                         : 1
 #      LUT2                        : 7
-#      LUT3                        : 2
+#      LUT3                        : 3
 #      LUT4                        : 18
-#      LUT5                        : 71
+#      LUT5                        : 69
 #      LUT6                        : 51
-# FlipFlops/Latches                : 200
+# FlipFlops/Latches                : 199
 #      FD                          : 62
-#      FDR                         : 138
+#      FDR                         : 137
 
 Device utilization summary:
 ---------------------------
@@ -941,15 +940,15 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             200  out of  18224     1%  
- Number of Slice LUTs:                  149  out of   9112     1%  
-    Number used as Logic:               149  out of   9112     1%  
+ Number of Slice Registers:             199  out of  18224     1%  
+ Number of Slice LUTs:                  148  out of   9112     1%  
+    Number used as Logic:               148  out of   9112     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    220
-   Number with an unused Flip Flop:      20  out of    220     9%  
-   Number with an unused LUT:            71  out of    220    32%  
-   Number of fully used LUT-FF pairs:   129  out of    220    58%  
+ Number of LUT Flip Flop pairs used:    218
+   Number with an unused Flip Flop:      19  out of    218     8%  
+   Number with an unused LUT:            70  out of    218    32%  
+   Number of fully used LUT-FF pairs:   129  out of    218    59%  
    Number of unique control sets:         4
 
 IO Utilization: 
@@ -979,7 +978,7 @@ Clock Information:
 -----------------------------------+-------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                   | Load  |
 -----------------------------------+-------------------------------------------------------------------------+-------+
-SPLB_Clk                           | NONE(mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/data_timeout)| 200   |
+SPLB_Clk                           | NONE(mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/data_timeout)| 199   |
 -----------------------------------+-------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -991,8 +990,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.613ns (Maximum Frequency: 276.790MHz)
-   Minimum input arrival time before clock: 1.737ns
+   Minimum period: 3.710ns (Maximum Frequency: 269.553MHz)
+   Minimum input arrival time before clock: 1.798ns
    Maximum output required time after clock: 0.447ns
    Maximum combinational path delay: No path found
 
@@ -1002,47 +1001,47 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SPLB_Clk'
-  Clock period: 3.613ns (frequency: 276.790MHz)
-  Total number of paths / destination ports: 1085 / 144
+  Clock period: 3.710ns (frequency: 269.553MHz)
+  Total number of paths / destination ports: 1084 / 143
 -------------------------------------------------------------------------
-Delay:               3.613ns (Levels of Logic = 3)
-  Source:            mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_6 (FF)
+Delay:               3.710ns (Levels of Logic = 3)
+  Source:            mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7 (FF)
   Destination:       mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0 (FF)
   Source Clock:      SPLB_Clk rising
   Destination Clock: SPLB_Clk rising
 
-  Data Path: mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_6 to mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0
+  Data Path: mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7 to mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              1   0.447   0.827  mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_6 (mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_6)
-     LUT4:I0->O            6   0.203   0.973  mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/Mmux_CS13 (mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/Mmux_CS12)
-     LUT6:I3->O            3   0.205   0.651  mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[1].MULTIPLE_CES_THIS_CS_GEN.CE_I/Mmux_CS11 (mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_expnd_i<1>)
+     FDR:C->Q              1   0.447   0.924  mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7 (mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7)
+     LUT5:I0->O            6   0.203   0.973  mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/Mmux_CS13 (mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I/Mmux_CS12)
+     LUT4:I1->O            3   0.205   0.651  mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[1].MULTIPLE_CES_THIS_CS_GEN.CE_I/Mmux_CS11 (mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_expnd_i<1>)
      LUT4:I3->O            3   0.205   0.000  mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_1_rstpot (mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_1_rstpot)
      FD:D                      0.102          mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_1
     ----------------------------------------
-    Total                      3.613ns (1.162ns logic, 2.451ns route)
-                                       (32.2% logic, 67.8% route)
+    Total                      3.710ns (1.162ns logic, 2.548ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 256 / 256
+  Total number of paths / destination ports: 255 / 255
 -------------------------------------------------------------------------
-Offset:              1.737ns (Levels of Logic = 2)
+Offset:              1.798ns (Levels of Logic = 2)
   Source:            SPLB_Rst (PAD)
-  Destination:       mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0 (FF)
+  Destination:       mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0 (FF)
   Destination Clock: SPLB_Clk rising
 
-  Data Path: SPLB_Rst to mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0
+  Data Path: SPLB_Rst to mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT6:I0->O            2   0.203   0.864  mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_clr1 (mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_clr)
-     LUT4:I0->O            3   0.203   0.000  mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0_rstpot (mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0_rstpot)
-     FD:D                      0.102          mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0
+     LUT3:I0->O            5   0.205   1.059  mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/Bus_Reset_clear_sl_busy_OR_37_o1 (mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/Bus_Reset_clear_sl_busy_OR_37_o)
+     LUT5:I0->O            1   0.203   0.000  mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/Mmux_sl_mbusy_i[0]_GND_14_o_mux_29_OUT11 (mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i[0]_GND_14_o_mux_29_OUT<1>)
+     FDR:D                     0.102          mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0
     ----------------------------------------
-    Total                      1.737ns (0.873ns logic, 0.864ns route)
-                                       (50.3% logic, 49.7% route)
+    Total                      1.798ns (0.739ns logic, 1.059ns route)
+                                       (41.1% logic, 58.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
@@ -1072,14 +1071,14 @@ Clock to Setup on destination clock SPLB_Clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-SPLB_Clk       |    3.613|         |         |         |
+SPLB_Clk       |    3.710|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.46 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.51 secs
  
 --> 
 

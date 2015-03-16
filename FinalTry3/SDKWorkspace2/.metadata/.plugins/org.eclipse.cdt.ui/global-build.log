@@ -252,3 +252,96 @@ make -k all
 22:00:43 **** Incremental Build of configuration Debug for project Hello ****
 make all 
 make: Nothing to be done for `all'.
+22:16:24 **** Auto Build of configuration Debug for project Hello ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Hello_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:79:5: error: expected ';' before 'return'
+../src/helloworld.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+22:16:26 **** Auto Build of configuration Debug for project Hello ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Hello_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Hello.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Hello_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Hello.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Hello.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Hello.elf  |tee "Hello.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5870	    272	   2080	   8222	   201e	Hello.elf
+'Finished building: Hello.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Hello.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Hello.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Hello.elf 
+
+ELF file	: Hello.elf
+elfcheck passed.
+'Finished building: Hello.elf.elfcheck'
+' '
+22:16:30 **** Incremental Build of configuration Debug for project Hello ****
+make all 
+make: Nothing to be done for `all'.
+22:21:32 **** Auto Build of configuration Debug for project Hello ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Hello_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:5: warning: implicit declaration of function 'MYMUXEDDISPLAY_mWriteReg' [-Wimplicit-function-declaration]
+../src/helloworld.c:61:62: error: 'MYCORE_SLV_REG0_OFFSET' undeclared (first use in this function)
+../src/helloworld.c:61:62: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+22:22:23 **** Auto Build of configuration Debug for project Hello ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Hello_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Hello.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Hello_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Hello.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Hello.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Hello.elf  |tee "Hello.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5870	    272	   2080	   8222	   201e	Hello.elf
+'Finished building: Hello.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Hello.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Hello.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Hello.elf 
+
+ELF file	: Hello.elf
+elfcheck passed.
+'Finished building: Hello.elf.elfcheck'
+' '
+22:22:27 **** Incremental Build of configuration Debug for project Hello ****
+make all 
+make: Nothing to be done for `all'.
+01:11:22 **** Auto Build of project Hello_bsp ****
+make -k all 
+'Finished building libraries'
+01:11:24 **** Incremental Build of configuration Debug for project Hello ****
+make all 
+make: Nothing to be done for `all'.

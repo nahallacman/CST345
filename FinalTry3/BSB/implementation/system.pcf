@@ -1,10 +1,14 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Mar 15 21:37:55 2015
+// Written by: Map P.20131013 on Mon Mar 16 01:03:58 2015
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "fpga_0_RS232_Uart_1_RX_pin" LOCATE = SITE "N17" LEVEL 1;
 COMP "fpga_0_RS232_Uart_1_TX_pin" LOCATE = SITE "N18" LEVEL 1;
+COMP "mykeyboard_0_column_pin<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "mykeyboard_0_column_pin<1>" LOCATE = SITE "N10" LEVEL 1;
+COMP "mykeyboard_0_column_pin<2>" LOCATE = SITE "V12" LEVEL 1;
+COMP "mykeyboard_0_column_pin<3>" LOCATE = SITE "T12" LEVEL 1;
 COMP "mydemoleds_0_myleds_pin<0>" LOCATE = SITE "U16" LEVEL 1;
 COMP "mydemoleds_0_myleds_pin<1>" LOCATE = SITE "V16" LEVEL 1;
 COMP "mydemoleds_0_myleds_pin<2>" LOCATE = SITE "U15" LEVEL 1;
@@ -13,6 +17,10 @@ COMP "mydemoleds_0_myleds_pin<4>" LOCATE = SITE "M11" LEVEL 1;
 COMP "mydemoleds_0_myleds_pin<5>" LOCATE = SITE "N11" LEVEL 1;
 COMP "mydemoleds_0_myleds_pin<6>" LOCATE = SITE "R11" LEVEL 1;
 COMP "mydemoleds_0_myleds_pin<7>" LOCATE = SITE "T11" LEVEL 1;
+COMP "mykeyboard_0_row_pin<0>" LOCATE = SITE "V11" LEVEL 1;
+COMP "mykeyboard_0_row_pin<1>" LOCATE = SITE "U11" LEVEL 1;
+COMP "mykeyboard_0_row_pin<2>" LOCATE = SITE "N9" LEVEL 1;
+COMP "mykeyboard_0_row_pin<3>" LOCATE = SITE "M10" LEVEL 1;
 COMP "fpga_0_clk_1_sys_clk_pin" LOCATE = SITE "V10" LEVEL 1;
 COMP "fpga_0_rst_1_sys_rst_pin" LOCATE = SITE "B8" LEVEL 1;
 COMP "fpga_0_DIP_Switches_8Bits_GPIO_IO_I_pin<0>" LOCATE = SITE "T5" LEVEL 1;
@@ -431,6 +439,271 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         BEL
         "DIP_Switches_8Bits/DIP_Switches_8Bits/PLBV46_I/I_SLAVE_ATTACHMENT/data_timeout"
         BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_0_2"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0_2"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/data_timeout_2"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/data_timeout_1"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/INFERRED_GEN.icount_out_7"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/INFERRED_GEN.icount_out_6"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/INFERRED_GEN.icount_out_8"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_3"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_2"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_1"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_0"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/INFERRED_GEN.icount_out_0"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/INFERRED_GEN.icount_out_1"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/INFERRED_GEN.icount_out_2"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/INFERRED_GEN.icount_out_3"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/INFERRED_GEN.icount_out_4"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/INFERRED_GEN.icount_out_5"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_0_1"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0_1"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_29"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_28"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_27"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_26"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_25"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_24"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_23"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_22"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_21"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_20"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_19"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_18"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_17"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_16"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_15"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_14"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_13"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_12"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_11"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_10"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_9"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_8"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_7"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_6"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_5"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_4"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_3"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_2"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_1"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_0"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rnw_s_h"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_0"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_busy"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_15"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_14"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_13"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_12"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_11"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_10"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_9"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_8"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_6"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_5"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_4"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_3"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_2"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_1"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_0"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_be_reg_3"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_be_reg_2"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_be_reg_1"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_be_reg_0"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_30"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_29"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_28"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_27"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_26"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_25"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_24"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_23"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_22"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_21"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_20"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_19"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_18"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_17"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_16"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_15"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_14"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_13"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_12"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_11"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_10"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_9"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_8"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_7"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_6"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_5"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_3"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_2"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_1"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_0"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_rnw_reg"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/rd_clear_sl_busy"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_wrdack_i"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_pavalid_reg"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/GEN_FOR_SHARED.addr_cntl_cs"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_addrack_i"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i"
+        BEL
+        "mykeyboard_0/mykeyboard_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/data_timeout"
+        BEL "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/keypad/sel_0" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/keypad/sel_1" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_31" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_30" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_29" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_28" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_27" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_26" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_25" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_24" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_23" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_22" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_21" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_20" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_19" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_18" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_17" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_16" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_15" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_14" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_13" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_12" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_11" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_10" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_9" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_8" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_7" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_6" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_5" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_4" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_3" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_2" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_1" BEL
+        "mykeyboard_0/mykeyboard_0/USER_LOGIC_I/slv_reg0_0" BEL
         "RS232_Uart_1/RS232_Uart_1/UARTLITE_CORE_I/UARTLITE_TX_I/MID_START_BIT_SRL16_I/INFERRED_GEN.data_15"
         BEL
         "RS232_Uart_1/RS232_Uart_1/UARTLITE_CORE_I/UARTLITE_TX_I/MID_START_BIT_SRL16_I/Mshreg_INFERRED_GEN.data_15"
@@ -2820,7 +3093,8 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         "mb_plb/mb_plb/GEN_SPLB_RST[1].I_SPLB_RST" BEL
         "mb_plb/mb_plb/GEN_SPLB_RST[2].I_SPLB_RST" BEL
         "mb_plb/mb_plb/GEN_SPLB_RST[3].I_SPLB_RST" BEL
-        "mb_plb/mb_plb/GEN_SPLB_RST[4].I_SPLB_RST" BEL "ilmb/ilmb/POR_FF_I"
+        "mb_plb/mb_plb/GEN_SPLB_RST[4].I_SPLB_RST" BEL
+        "mb_plb/mb_plb/GEN_SPLB_RST[5].I_SPLB_RST" BEL "ilmb/ilmb/POR_FF_I"
         BEL "dlmb/dlmb/POR_FF_I" BEL "dlmb_cntlr/dlmb_cntlr/Sl_Rdy" BEL
         "dlmb_cntlr/dlmb_cntlr/lmb_as" BEL "ilmb_cntlr/ilmb_cntlr/Sl_Rdy" BEL
         "ilmb_cntlr/ilmb_cntlr/lmb_as" BEL
@@ -2909,9 +3183,9 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         BEL
         "mydemoleds_0/mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_1_2"
         BEL
-        "mydemoleds_0/mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_0_2"
+        "mydemoleds_0/mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0_2"
         BEL
-        "mydemoleds_0/mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/data_timeout_1"
+        "mydemoleds_0/mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_0_2"
         BEL
         "mydemoleds_0/mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/INFERRED_GEN.icount_out_7"
         BEL
@@ -2922,8 +3196,6 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = PIN
         "mydemoleds_0/mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/INFERRED_GEN.icount_out_4"
         BEL
         "mydemoleds_0/mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/INFERRED_GEN.icount_out_5"
-        BEL
-        "mydemoleds_0/mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0_2"
         BEL
         "mydemoleds_0/mydemoleds_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_1_2"
         BEL

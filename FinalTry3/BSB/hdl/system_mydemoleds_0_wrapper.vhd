@@ -127,8 +127,8 @@ begin
 
   mydemoleds_0 : mydemoleds
     generic map (
-      C_BASEADDR => X"cc600000",
-      C_HIGHADDR => X"cc60ffff",
+      C_BASEADDR => X"cc620000",
+      C_HIGHADDR => X"cc62ffff",
       C_SPLB_AWIDTH => 32,
       C_SPLB_DWIDTH => 32,
       C_SPLB_NUM_MASTERS => 2,

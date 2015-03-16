@@ -29,13 +29,14 @@ Address Map for Processor microblaze_0
   (0x84000000-0x8400ffff) RS232_Uart_1	mb_plb
   (0x84400000-0x8440ffff) mdm_0	mb_plb
   (0xc3c00000-0xc3c0ffff) mymuxeddisplay_0	mb_plb
-  (0xcc600000-0xcc60ffff) mydemoleds_0	mb_plb
+  (0xcc600000-0xcc60ffff) mykeyboard_0	mb_plb
+  (0xcc620000-0xcc62ffff) mydemoleds_0	mb_plb
 INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
    C_PLBV46_NUM_MASTERS value to 2 -
    C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
    \plb_v46_v2_1_0.mpd line 79 
 INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
-   C_PLBV46_NUM_SLAVES value to 5 -
+   C_PLBV46_NUM_SLAVES value to 6 -
    C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
    \plb_v46_v2_1_0.mpd line 80 
 INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
@@ -98,18 +99,30 @@ INFO:EDK:4130 - IPNAME: mymuxeddisplay, INSTANCE:mymuxeddisplay_0 - tool is
    overriding PARAMETER C_SPLB_MID_WIDTH value to 1 -
    C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v
    1_00_a\data\mymuxeddisplay_v2_1_0.mpd line 27 
+INFO:EDK:4130 - IPNAME: mykeyboard, INSTANCE:mykeyboard_0 - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 32 -
+   C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00
+   _a\data\mykeyboard_v2_1_0.mpd line 25 
+INFO:EDK:4130 - IPNAME: mykeyboard, INSTANCE:mykeyboard_0 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00
+   _a\data\mykeyboard_v2_1_0.mpd line 26 
+INFO:EDK:4130 - IPNAME: mykeyboard, INSTANCE:mykeyboard_0 - tool is overriding
+   PARAMETER C_SPLB_MID_WIDTH value to 1 -
+   C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00
+   _a\data\mykeyboard_v2_1_0.mpd line 27 
 
 Checking platform address map ...
 
 Checking platform configuration ...
-IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 5 slave(s) 
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 6 slave(s) 
 IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
 IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
 
 Checking port drivers...
 WARNING:EDK:4181 - PORT: Peripheral_Reset, CONNECTOR: sys_periph_reset -
    floating connection -
-   C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 151 
+   C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 153 
 
 Performing Clock DRCs...
 
@@ -186,45 +199,45 @@ Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
 IPNAME:microblaze INSTANCE:microblaze_0 -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 28 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 30 -
 Copying cache implementation netlist
 IPNAME:lmb_v10 INSTANCE:ilmb -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 48 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 50 -
 Copying cache implementation netlist
 IPNAME:lmb_v10 INSTANCE:dlmb -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 55 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 57 -
 Copying cache implementation netlist
 IPNAME:lmb_bram_if_cntlr INSTANCE:dlmb_cntlr -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 62 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 64 -
 Copying cache implementation netlist
 IPNAME:lmb_bram_if_cntlr INSTANCE:ilmb_cntlr -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 71 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 73 -
 Copying cache implementation netlist
 IPNAME:bram_block INSTANCE:lmb_bram -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 80 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 82 -
 Copying cache implementation netlist
 IPNAME:xps_uartlite INSTANCE:rs232_uart_1 -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 87 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 89 -
 Copying cache implementation netlist
 IPNAME:xps_gpio INSTANCE:dip_switches_8bits -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 101 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 103 -
 Copying cache implementation netlist
 IPNAME:mdm INSTANCE:mdm_0 -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 129 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 131 -
 Copying cache implementation netlist
 IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 141 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 143 -
 Copying cache implementation netlist
-IPNAME:mydemoleds INSTANCE:mydemoleds_0 -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 154 -
+IPNAME:mymuxeddisplay INSTANCE:mymuxeddisplay_0 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 165 -
 Copying cache implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 80 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 82 -
 elaborating IP
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 114 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 116 -
 elaborating IP
 ClkGen elaborate status: PASSED
 ----------------------------------------
@@ -233,7 +246,7 @@ ClkGen elaborate status: PASSED
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Constructing platform-level connectivity ...
 Completion time: 0.00 seconds
@@ -250,18 +263,21 @@ INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
 INSTANCE:mb_plb -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 41 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 43 -
 Running XST synthesis
 INSTANCE:clock_generator_0 -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 114 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 116 -
 Running XST synthesis
-INSTANCE:mymuxeddisplay_0 -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 163 -
+INSTANCE:mydemoleds_0 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 156 -
+Running XST synthesis
+INSTANCE:mykeyboard_0 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 175 -
 Running XST synthesis
 
 Running NGCBUILD ...
 IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 114 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 116 -
 Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
@@ -269,4 +285,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 45.00 seconds
+Total run time: 56.00 seconds

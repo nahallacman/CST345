@@ -40,3 +40,14 @@ Net "mymuxeddisplay_0_anodes_pin<0>" LOC = N16 | IOSTANDARD = LVCMOS33; #Bank = 
 Net "mymuxeddisplay_0_anodes_pin<1>" LOC = N15 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L50P_M1UDQS, Sch name = AN1
 Net "mymuxeddisplay_0_anodes_pin<2>" LOC = P18 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L49N_M1DQ11, Sch name = AN2
 Net "mymuxeddisplay_0_anodes_pin<3>" LOC = P17 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L49P_M1DQ10, Sch name = AN3
+
+#keyboard connections with pawprint up on both sides
+
+NET "mykeyboard_0_column_pin<3>" LOC 	= T12 | IOSTANDARD = LVCMOS33;
+NET "mykeyboard_0_column_pin<2>" LOC 	= V12 | IOSTANDARD = LVCMOS33;
+NET "mykeyboard_0_column_pin<1>" LOC 	= N10 | IOSTANDARD = LVCMOS33;
+NET "mykeyboard_0_column_pin<0>" LOC 	= P11 | IOSTANDARD = LVCMOS33;
+NET "mykeyboard_0_row_pin<3>" LOC 		= M10 | IOSTANDARD = LVCMOS33;
+NET "mykeyboard_0_row_pin<2>" LOC 		= N9 | IOSTANDARD = LVCMOS33;
+NET "mykeyboard_0_row_pin<1>" LOC 		= U11 | IOSTANDARD = LVCMOS33;
+NET "mykeyboard_0_row_pin<0>" LOC 		= V11 | IOSTANDARD = LVCMOS33;

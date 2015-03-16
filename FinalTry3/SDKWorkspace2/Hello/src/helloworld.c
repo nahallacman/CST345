@@ -58,6 +58,8 @@ int main()
     data2 = 0x55555555;
     data = 0xAAAAAAAA;
 
+    //MYMUXEDDISPLAY_mWriteReg(XPAR_MYMUXEDDISPLAY_0_BASEADDR, MYCORE_SLV_REG0_OFFSET, 0x8);
+
     for( i = 0; i < 100; i++ )
     {
     	//data++;
@@ -73,6 +75,8 @@ int main()
     	data2 = XIo_In32(customip2);
     	xil_printf("Reading %d from muxed display register 0\r\n", data2);
     }
+
+    cleanup_platform();
 
     return 0;
 }

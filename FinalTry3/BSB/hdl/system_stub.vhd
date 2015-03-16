@@ -16,7 +16,9 @@ entity system_stub is
     fpga_0_rst_1_sys_rst_pin : in std_logic;
     mydemoleds_0_myleds_pin : out std_logic_vector(0 to 7);
     mymuxeddisplay_0_segments_pin : out std_logic_vector(0 to 7);
-    mymuxeddisplay_0_anodes_pin : out std_logic_vector(0 to 3)
+    mymuxeddisplay_0_anodes_pin : out std_logic_vector(0 to 3);
+    mykeyboard_0_row_pin : in std_logic_vector(0 to 3);
+    mykeyboard_0_column_pin : out std_logic_vector(0 to 3)
   );
 end system_stub;
 
@@ -31,7 +33,9 @@ architecture STRUCTURE of system_stub is
       fpga_0_rst_1_sys_rst_pin : in std_logic;
       mydemoleds_0_myleds_pin : out std_logic_vector(0 to 7);
       mymuxeddisplay_0_segments_pin : out std_logic_vector(0 to 7);
-      mymuxeddisplay_0_anodes_pin : out std_logic_vector(0 to 3)
+      mymuxeddisplay_0_anodes_pin : out std_logic_vector(0 to 3);
+      mykeyboard_0_row_pin : in std_logic_vector(0 to 3);
+      mykeyboard_0_column_pin : out std_logic_vector(0 to 3)
     );
   end component;
 
@@ -49,7 +53,9 @@ begin
       fpga_0_rst_1_sys_rst_pin => fpga_0_rst_1_sys_rst_pin,
       mydemoleds_0_myleds_pin => mydemoleds_0_myleds_pin,
       mymuxeddisplay_0_segments_pin => mymuxeddisplay_0_segments_pin,
-      mymuxeddisplay_0_anodes_pin => mymuxeddisplay_0_anodes_pin
+      mymuxeddisplay_0_anodes_pin => mymuxeddisplay_0_anodes_pin,
+      mykeyboard_0_row_pin => mykeyboard_0_row_pin,
+      mykeyboard_0_column_pin => mykeyboard_0_column_pin
     );
 
 end architecture STRUCTURE;

@@ -1,5 +1,4 @@
 # Xilinx project files
-*.xise
 *.gise
 *.xreport
 *.xmsgs

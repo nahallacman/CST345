@@ -8,3 +8,8 @@
 21:42:44.537 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/SDKWorkspace2/BSB_hw_platform/download.bit" 
 21:43:10.117 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/SDKWorkspace2/BSB_hw_platform/download.bit" 
 22:00:36.980 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/SDKWorkspace2/BSB_hw_platform/download.bit" 
+01:05:59.756 INFO  - Project BSB_hw_platform's source hardware specification located at C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+01:10:45.633 INFO  - Project BSB_hw_platform's source hardware specification location will not be monitored anymore. 
+01:11:21.828 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/SDKWorkspace2/BSB_hw_platform/download.bit" 
+01:11:51.811 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

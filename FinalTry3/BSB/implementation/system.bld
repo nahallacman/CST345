@@ -13,6 +13,9 @@ Loading design module
 "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/BSB/implementation/system_dip
 _switches_8bits_wrapper.ngc"...
 Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry3/BSB/implementation/system_myk
+eyboard_0_wrapper.ngc"...
+Loading design module
 "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/BSB/implementation/system_rs2
 32_uart_1_wrapper.ngc"...
 Loading design module
@@ -109,7 +112,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  13
 
-Total memory usage is 207616 kilobytes
+Total memory usage is 209344 kilobytes
 
 Writing NGD file "system.ngd" ...
 Total REAL time to NGDBUILD completion:  20 sec

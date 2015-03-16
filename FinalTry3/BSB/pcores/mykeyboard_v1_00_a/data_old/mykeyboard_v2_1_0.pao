@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          C:/Users/mainuser/Desktop/School/CST345/FinalTry3/BSB/pcores/mykeyboard_v1_00_a/data/mykeyboard_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Mon Mar 16 00:27:07 2015 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib plbv46_slave_single_v1_01_a  all 
+lib mykeyboard_v1_00_a user_logic verilog
+lib mykeyboard_v1_00_a mykeyboard vhdl
