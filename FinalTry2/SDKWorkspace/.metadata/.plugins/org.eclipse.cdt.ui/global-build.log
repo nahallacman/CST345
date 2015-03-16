@@ -292,3 +292,43 @@ elfcheck passed.
 20:03:27 **** Incremental Build of configuration Debug for project ledsdemo ****
 make all 
 make: Nothing to be done for `all'.
+20:15:36 **** Auto Build of project ledsdemo_bsp ****
+make -k all 
+'Finished building libraries'
+20:15:39 **** Incremental Build of configuration Debug for project ledsdemo ****
+make all 
+make: Nothing to be done for `all'.
+20:17:39 **** Auto Build of configuration Debug for project ledsdemo ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../ledsdemo_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: ledsdemo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ledsdemo_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ledsdemo.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ledsdemo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ledsdemo.elf  |tee "ledsdemo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5270	    272	   2080	   7622	   1dc6	ledsdemo.elf
+'Finished building: ledsdemo.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck ledsdemo.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "ledsdemo.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+ledsdemo.elf 
+
+ELF file	: ledsdemo.elf
+elfcheck passed.
+'Finished building: ledsdemo.elf.elfcheck'
+' '
+20:17:43 **** Incremental Build of configuration Debug for project ledsdemo ****
+make all 
+make: Nothing to be done for `all'.

@@ -1,6 +1,6 @@
-19:52:47 **** Auto Build of project ledsdemo_bsp ****
+20:15:36 **** Auto Build of project ledsdemo_bsp ****
 make -k all 
 'Finished building libraries'
 
-19:52:47 Build Finished (took 300ms)
+20:15:36 Build Finished (took 316ms)
 
