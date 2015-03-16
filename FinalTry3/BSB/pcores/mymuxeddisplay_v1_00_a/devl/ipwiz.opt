@@ -1,0 +1,10 @@
+-batch 
+-create mymuxeddisplay 
+-ver 1.00.a 
+-dir "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB" 
+-lang verilog 
+-bus plbv46 s 
+-reg 5 
+-xps 
+-ise 
+-driver 

@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\devl\synthesis\mymuxeddisplay_xst.prj"
+-top mymuxeddisplay
+-p virtex6
+-ofn "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\devl\synthesis\mymuxeddisplay_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib mymuxeddisplay_v1_00_a

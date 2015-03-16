@@ -6,3 +6,5 @@
     Cable target is not connected to the host
  
 19:52:46.187 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry2/SDKWorkspace/BSB_hw_platform/download.bit" 
+20:15:35.663 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry2/SDKWorkspace/BSB_hw_platform/download.bit" 
+20:25:23.920 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

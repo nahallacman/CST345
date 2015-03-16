@@ -1,0 +1,4 @@
+20:59:23.081 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\SDK\SDK_Export\hw\system.xml. 
+21:03:13.727 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/SDKWorkspace/BSB_hw_platform/download.bit" 
+21:03:46.001 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/SDKWorkspace/BSB_hw_platform/download.bit" 
+21:06:15.328 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

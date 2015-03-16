@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mydemoleds_v1_00_a\devl\synthesis\mydemoleds_xst.prj"
+-top mydemoleds
+-p virtex6
+-ofn "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mydemoleds_v1_00_a\devl\synthesis\mydemoleds_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib mydemoleds_v1_00_a
