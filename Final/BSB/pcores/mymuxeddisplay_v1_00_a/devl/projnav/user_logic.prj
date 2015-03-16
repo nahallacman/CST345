@@ -1,0 +1,2 @@
+verilog work "../../../../../VerilogSource/Mux_disp.v"
+verilog work "../../hdl/verilog/user_logic.v"

@@ -1,0 +1,10 @@
+-batch 
+-create mydemoleds 
+-ver 1.00.a 
+-dir "C:\Users\mainuser\Desktop\School\CST345\FinalTry2\BSB" 
+-lang verilog 
+-bus plbv46 s 
+-reg 2 
+-xps 
+-ise 
+-driver 

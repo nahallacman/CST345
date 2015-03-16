@@ -1,0 +1,107 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -p
+xc6slx16csg324-3 -nt timestamp -bm system.bmm
+C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system.ngc
+-uc system.ucf system.ngd
+
+Reading NGO file
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system.ngc
+" ...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_dip
+_switches_8bits_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_rs2
+32_uart_1_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_clo
+ck_generator_0_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_pro
+c_sys_reset_0_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_mic
+roblaze_0_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_mb_
+plb_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_ilm
+b_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_dlm
+b_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_dlm
+b_cntlr_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_ilm
+b_cntlr_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_mdm
+_0_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_myd
+emoleds_0_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/FinalTry2/BSB/implementation/system_lmb
+_bram_wrapper.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "system.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0" TS_sys_clk_pin
+   * 0.666666667 HIGH 50%>
+
+Done...
+
+Processing BMM file "system.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.
+   Gen_Bits[27].MEM_EX_Result_Inst' has unconnected output pin
+WARNING:NgdBuild:452 - logical net 'mydemoleds_0_myleds_pin_0_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mydemoleds_0_myleds_pin_1_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mydemoleds_0_myleds_pin_2_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mydemoleds_0_myleds_pin_3_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mydemoleds_0_myleds_pin_4_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mydemoleds_0_myleds_pin_5_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mydemoleds_0_myleds_pin_6_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mydemoleds_0_myleds_pin_7_OBUF' has no
+   driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   9
+
+Total memory usage is 204544 kilobytes
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion:  20 sec
+Total CPU time to NGDBUILD completion:   20 sec
+
+Writing NGDBUILD log file "system.bld"...

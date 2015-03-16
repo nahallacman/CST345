@@ -1,0 +1,11 @@
+##############################################################################
+## Filename:          C:\Users\mainuser\Desktop\School\CST345\Final\BSB\pcores/mymuxeddisplay_v1_00_a/data/mymuxeddisplay_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Sat Mar 14 00:47:28 2015 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a all vhdl
+lib plbv46_slave_single_v1_01_a all vhdl
+lib mymuxeddisplay_v1_00_a user_logic verilog
+lib mymuxeddisplay_v1_00_a mymuxeddisplay vhdl
+lib mymuxeddisplay_v1_00_a Mux_disp verilog

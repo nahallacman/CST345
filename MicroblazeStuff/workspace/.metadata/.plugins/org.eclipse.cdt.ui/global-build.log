@@ -358,3 +358,6 @@ ELF file	: demo.elf
 elfcheck passed.
 'Finished building: demo.elf.elfcheck'
 ' '
+00:59:31 **** Auto Build of project demo_bsp ****
+make -k all 
+'Finished building libraries'

@@ -1,0 +1,118 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -p
+xc6slx16csg324-3 -nt timestamp -bm system.bmm
+C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system.ngc -uc
+system.ucf system.ngd
+
+Reading NGO file
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system.ngc"
+...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_dip_swi
+tches_8bits_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_rs232_u
+art_1_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_clock_g
+enerator_0_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_proc_sy
+s_reset_0_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_microbl
+aze_0_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_mb_plb_
+wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_ilmb_wr
+apper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_dlmb_wr
+apper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_dlmb_cn
+tlr_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_ilmb_cn
+tlr_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_leds_8b
+its_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_mdm_0_w
+rapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_mymuxed
+display_0_wrapper.ngc"...
+Loading design module
+"C:/Users/mainuser/Desktop/School/CST345/Final/BSB/implementation/system_lmb_bra
+m_wrapper.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "system.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0" TS_sys_clk_pin
+   * 0.666666667 HIGH 50%>
+
+Done...
+
+Processing BMM file "system.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.
+   Gen_Bits[27].MEM_EX_Result_Inst' has unconnected output pin
+WARNING:NgdBuild:452 - logical net 'mymuxeddisplay_0_segments_pin_0_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mymuxeddisplay_0_segments_pin_1_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mymuxeddisplay_0_segments_pin_2_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mymuxeddisplay_0_segments_pin_3_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mymuxeddisplay_0_segments_pin_4_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mymuxeddisplay_0_segments_pin_5_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mymuxeddisplay_0_segments_pin_6_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mymuxeddisplay_0_segments_pin_7_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mymuxeddisplay_0_anodes_pin_0_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mymuxeddisplay_0_anodes_pin_1_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mymuxeddisplay_0_anodes_pin_2_OBUF' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'mymuxeddisplay_0_anodes_pin_3_OBUF' has no
+   driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  13
+
+Total memory usage is 207680 kilobytes
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion:  20 sec
+Total CPU time to NGDBUILD completion:   20 sec
+
+Writing NGDBUILD log file "system.bld"...

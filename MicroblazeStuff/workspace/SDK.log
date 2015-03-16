@@ -37,3 +37,12 @@
 	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
 
 01:46:52.457 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+00:59:29.041 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+00:59:30.621 INFO  - The hardware specification for project 'MicroblazeStuff_hw_platform' is different from C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+00:59:30.811 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml into \MicroblazeStuff_hw_platform\system.xml. 
+00:59:30.816 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.bit into \MicroblazeStuff_hw_platform\system.bit. 
+00:59:30.816 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system_bd.bmm into \MicroblazeStuff_hw_platform\system_bd.bmm. 
+00:59:31.061 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+00:59:33.336 INFO  - Updating hardware inferred compiler options for demo. 
+00:59:33.371 INFO  - Clearing existing target manager status. 
+00:59:46.727 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

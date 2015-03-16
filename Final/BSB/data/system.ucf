@@ -1,0 +1,40 @@
+#  Nexys 3 Board
+Net fpga_0_RS232_Uart_1_RX_pin LOC=N17  |  IOSTANDARD=LVCMOS33;
+Net fpga_0_RS232_Uart_1_TX_pin LOC=N18  |  IOSTANDARD=LVCMOS33;
+Net fpga_0_DIP_Switches_8Bits_GPIO_IO_I_pin<0> LOC=T5  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_DIP_Switches_8Bits_GPIO_IO_I_pin<1> LOC=V8  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_DIP_Switches_8Bits_GPIO_IO_I_pin<2> LOC=U8  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_DIP_Switches_8Bits_GPIO_IO_I_pin<3> LOC=N8  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_DIP_Switches_8Bits_GPIO_IO_I_pin<4> LOC=M8  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_DIP_Switches_8Bits_GPIO_IO_I_pin<5> LOC=V9  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_DIP_Switches_8Bits_GPIO_IO_I_pin<6> LOC=T9  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_DIP_Switches_8Bits_GPIO_IO_I_pin<7> LOC=T10  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bits_GPIO_IO_O_pin<0> LOC=T11  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bits_GPIO_IO_O_pin<1> LOC=R11  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bits_GPIO_IO_O_pin<2> LOC=N11  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bits_GPIO_IO_O_pin<3> LOC=M11  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bits_GPIO_IO_O_pin<4> LOC=V15  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bits_GPIO_IO_O_pin<5> LOC=U15  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bits_GPIO_IO_O_pin<6> LOC=V16  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bits_GPIO_IO_O_pin<7> LOC=U16  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_clk_1_sys_clk_pin TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100000 kHz;
+Net fpga_0_clk_1_sys_clk_pin LOC=V10  |  IOSTANDARD=LVCMOS33;
+Net fpga_0_rst_1_sys_rst_pin TIG;
+Net fpga_0_rst_1_sys_rst_pin LOC=B8  |  IOSTANDARD=LVCMOS33;
+
+#segments for muxed display
+Net "mymuxeddisplay_0_segments_pin<0>" LOC = T17 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L51P_M1DQ12, Sch name = CA
+Net "mymuxeddisplay_0_segments_pin<1>" LOC = T18 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L51N_M1DQ13, Sch name = CB
+Net "mymuxeddisplay_0_segments_pin<2>" LOC = U17 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L52P_M1DQ14, Sch name = CC
+Net "mymuxeddisplay_0_segments_pin<3>" LOC = U18 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L52N_M1DQ15, Sch name = CD
+Net "mymuxeddisplay_0_segments_pin<4>" LOC = M14 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L53P, Sch name = CE
+Net "mymuxeddisplay_0_segments_pin<5>" LOC = N14 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L53N_VREF, Sch name = CF
+Net "mymuxeddisplay_0_segments_pin<6>" LOC = L14 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L61P, Sch name = CG
+Net "mymuxeddisplay_0_segments_pin<7>" LOC = M13 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L61N, Sch name = DP
+
+#anodes for muxed display
+Net "mymuxeddisplay_0_anodes_pin<0>" LOC = N16 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L50N_M1UDQSN, Sch name = AN0
+Net "mymuxeddisplay_0_anodes_pin<1>" LOC = N15 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L50P_M1UDQS, Sch name = AN1
+Net "mymuxeddisplay_0_anodes_pin<2>" LOC = P18 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L49N_M1DQ11, Sch name = AN2
+Net "mymuxeddisplay_0_anodes_pin<3>" LOC = P17 | IOSTANDARD = LVCMOS33; #Bank = 1, pin name = IO_L49P_M1DQ10, Sch name = AN3

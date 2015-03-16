@@ -1,0 +1,8 @@
+19:47:33.504 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\FinalTry2\BSB\SDK\SDK_Export\hw\system.xml. 
+19:52:14.288 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+19:52:46.187 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry2/SDKWorkspace/BSB_hw_platform/download.bit" 

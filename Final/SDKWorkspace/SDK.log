@@ -1,0 +1,155 @@
+02:19:37.762 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+02:26:32.705 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+02:28:27.316 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+02:43:37.042 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+03:04:05.611 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+03:04:32.292 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+03:12:41.580 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:13:12.377 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:13:21.700 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:13:33.394 WARN  - Terminating existing sessions on processor microblaze_0 
+03:13:36.788 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+03:14:06.520 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:15:21.066 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+03:16:30.668 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:16:46.261 WARN  - Terminating existing sessions on processor microblaze_0 
+03:17:21.924 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:17:35.691 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:17:50.654 WARN  - Terminating existing sessions on processor microblaze_0 
+03:17:53.678 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+03:18:10.520 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:19:01.938 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:19:24.871 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:19:42.068 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:09:04.397 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+20:52:29.895 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+20:52:31.325 INFO  - The hardware specification for project 'BSB_hw_platform' is different from C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+20:52:31.525 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml into \BSB_hw_platform\system.xml. 
+20:52:31.530 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.bit into \BSB_hw_platform\system.bit. 
+20:52:31.535 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system_bd.bmm into \BSB_hw_platform\system_bd.bmm. 
+20:52:31.790 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+20:52:33.950 INFO  - Updating hardware inferred compiler options for hello. 
+20:52:34.010 INFO  - Clearing existing target manager status. 
+20:52:58.747 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+20:55:02.369 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+20:55:02.455 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+21:04:26.075 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+21:04:27.515 INFO  - The hardware specification for project 'BSB_hw_platform' is different from C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+21:04:27.720 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml into \BSB_hw_platform\system.xml. 
+21:04:27.725 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.bit into \BSB_hw_platform\system.bit. 
+21:04:27.725 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system_bd.bmm into \BSB_hw_platform\system_bd.bmm. 
+21:04:28.000 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+21:04:30.115 INFO  - Updating hardware inferred compiler options for hello. 
+21:04:30.165 INFO  - Clearing existing target manager status. 
+21:04:40.506 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+21:15:42.178 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:17:12.897 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:17:33.242 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:18:55.816 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:20:51.454 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:30:36.786 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:31:44.254 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+21:31:50.260 ERROR - Unexpected error while terminating XMD: {} org.eclipse.debug.core.DebugException: Terminate failed
+	at org.eclipse.debug.core.model.RuntimeProcess.terminate(RuntimeProcess.java:224)
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.terminate(Unknown Source)
+
+21:31:50.290 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+21:31:50.295 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+21:39:32.618 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+21:39:33.988 INFO  - The hardware specification for project 'BSB_hw_platform' is different from C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+21:39:34.183 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml into \BSB_hw_platform\system.xml. 
+21:39:34.188 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.bit into \BSB_hw_platform\system.bit. 
+21:39:34.188 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system_bd.bmm into \BSB_hw_platform\system_bd.bmm. 
+21:39:34.448 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+21:39:36.543 INFO  - Updating hardware inferred compiler options for hello. 
+21:39:36.603 INFO  - Clearing existing target manager status. 
+21:39:54.824 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+21:40:46.666 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+21:40:50.477 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+21:40:50.477 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+22:00:44.767 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+22:00:46.157 INFO  - The hardware specification for project 'BSB_hw_platform' is different from C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+22:00:46.347 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml into \BSB_hw_platform\system.xml. 
+22:00:46.352 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.bit into \BSB_hw_platform\system.bit. 
+22:00:46.357 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system_bd.bmm into \BSB_hw_platform\system_bd.bmm. 
+22:00:46.602 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+22:00:48.747 INFO  - Updating hardware inferred compiler options for hello. 
+22:00:48.812 INFO  - Clearing existing target manager status. 
+22:02:31.903 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+22:03:17.170 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+22:03:21.267 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+22:03:21.267 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+22:34:06.322 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+22:34:07.782 INFO  - The hardware specification for project 'BSB_hw_platform' is different from C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+22:34:07.982 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml into \BSB_hw_platform\system.xml. 
+22:34:07.987 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.bit into \BSB_hw_platform\system.bit. 
+22:34:07.987 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system_bd.bmm into \BSB_hw_platform\system_bd.bmm. 
+22:34:08.262 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+22:34:10.387 INFO  - Updating hardware inferred compiler options for hello. 
+22:34:10.442 INFO  - Clearing existing target manager status. 
+22:34:21.912 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+22:34:53.194 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+22:34:53.225 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+22:52:24.530 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+22:52:25.915 INFO  - The hardware specification for project 'BSB_hw_platform' is different from C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+22:52:26.115 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml into \BSB_hw_platform\system.xml. 
+22:52:26.115 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.bit into \BSB_hw_platform\system.bit. 
+22:52:26.120 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system_bd.bmm into \BSB_hw_platform\system_bd.bmm. 
+22:52:26.365 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+22:52:28.460 INFO  - Updating hardware inferred compiler options for hello. 
+22:52:28.515 INFO  - Clearing existing target manager status. 
+22:52:41.405 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+23:01:11.910 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+23:01:11.956 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+23:01:26.777 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+23:02:46.545 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+23:12:06.350 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+23:12:12.356 ERROR - Unexpected error while terminating XMD: {} org.eclipse.debug.core.DebugException: Terminate failed
+	at org.eclipse.debug.core.model.RuntimeProcess.terminate(RuntimeProcess.java:224)
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.terminate(Unknown Source)
+
+23:23:54.472 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+23:23:55.877 INFO  - The hardware specification for project 'BSB_hw_platform' is different from C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml. 
+23:23:56.067 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.xml into \BSB_hw_platform\system.xml. 
+23:23:56.072 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system.bit into \BSB_hw_platform\system.bit. 
+23:23:56.077 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\Final\BSB\SDK\SDK_Export\hw\system_bd.bmm into \BSB_hw_platform\system_bd.bmm. 
+23:23:56.287 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+23:23:58.487 INFO  - Updating hardware inferred compiler options for hello. 
+23:23:58.547 INFO  - Clearing existing target manager status. 
+23:24:08.307 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/Final/SDKWorkspace/BSB_hw_platform/download.bit" 
+23:43:38.530 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
