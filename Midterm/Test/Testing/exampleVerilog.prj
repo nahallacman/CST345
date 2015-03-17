@@ -1,0 +1,8 @@
+verilog work "../../Problem01/picoblazeDemo/verilog/kcpsm6.v"
+verilog work "../../Problem01/picoblazeDemo/asm/simple.v"
+verilog work "../../Problem01/Mux_disp.v"
+verilog work "../../Problem01/keypad_controller.v"
+verilog work "../../Problem01/InterruptSynch.v"
+verilog work "../../Problem01/Clock_Divider_2.v"
+verilog work "../../Problem01/Clock_Divider.v"
+verilog work "../../Problem01/picoblazeDemo/verilog/exampleVerilog.v"

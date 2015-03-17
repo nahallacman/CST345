@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/mainuser/Desktop/School/CST345/Midterm/Test/Testing/test_MuxDisplay.xst" -ofn "C:/Users/mainuser/Desktop/School/CST345/Midterm/Test/Testing/test_MuxDisplay.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 test_MuxDisplay.ngc test_MuxDisplay.ngd  

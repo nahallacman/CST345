@@ -121,11 +121,11 @@ assign kcpsm6_sleep = 1'b0;
 //assign interrupt = 0;
 
 // Tie in the program ROM
-simple #(
+SIMPLE #(
 	.C_FAMILY             ("S6"), //Family 'S6' or 'V6'
 	.C_RAM_SIZE_KWORDS    (1),  	//Program size '1', '2' or '4'
 	.C_JTAG_LOADER_ENABLE (1))  	//Include JTAG Loader when set to '1' 
-  simple (    				    		//Name to match your PSM file
+  SIMPLE (    				    		//Name to match your PSM file
  	.rdl 			(kcpsm6_reset),
 	.enable 		(bram_enable),
 	.address 		(address),

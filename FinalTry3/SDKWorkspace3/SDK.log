@@ -5,3 +5,5 @@
 01:12:33.395 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/SDKWorkspace3/BSB_hw_platform/download.bit" 
 01:14:41.370 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 01:16:05.463 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+04:59:30.047 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:15:02.589 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\SDK\SDK_Export\hw\system.xml. 

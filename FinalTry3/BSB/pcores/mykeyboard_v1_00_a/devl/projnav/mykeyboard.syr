@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: mykeyboard.prj
 
@@ -173,11 +173,8 @@ Elaborating module <user_logic(C_SLV_DWIDTH=32,C_NUM_REG=1)>.
 
 Elaborating module <keypad_controller>.
 WARNING:HDLCompiler:413 - "C:\Users\mainuser\Desktop\School\CST345\Final\VerilogSource\keypad_controller.v" Line 44: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" Line 125: Assignment to interrupt_keypad ignored, since the identifier is never used
-WARNING:HDLCompiler:189 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" Line 126: Size mismatch in connection of port <keypad_data>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" Line 126: Assignment to keypad_data ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" Line 151: Result of 5-bit expression is truncated to fit in 2-bit target.
 WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" Line 152: Assignment to interrupt_keypad ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" Line 153: Assignment to keypad_data ignored, since the identifier is never used
 Back to vhdl to continue elaboration
 
 =========================================================================
@@ -355,8 +352,8 @@ Synthesizing Unit <user_logic>.
     Related source file is "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v".
         C_SLV_DWIDTH = 32
         C_NUM_REG = 1
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" line 120: Output port <keypad_data> of the instance <keypad> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" line 120: Output port <interrupt> of the instance <keypad> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" line 147: Output port <keypad_data> of the instance <keypad> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" line 147: Output port <interrupt> of the instance <keypad> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <slv_reg0<1>>.
     Found 1-bit register for signal <slv_reg0<2>>.
     Found 1-bit register for signal <slv_reg0<3>>.
@@ -810,13 +807,13 @@ SPLB_Clk       |    3.018|         |         |         |
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.13 secs
+Total CPU time to Xst completion: 7.61 secs
  
 --> 
 
 Total memory usage is 283224 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  149 (   0 filtered)
+Number of warnings :  146 (   0 filtered)
 Number of infos    :   10 (   0 filtered)
 

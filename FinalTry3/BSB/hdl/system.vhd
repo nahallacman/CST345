@@ -18,7 +18,9 @@ entity system is
     mymuxeddisplay_0_segments_pin : out std_logic_vector(0 to 7);
     mymuxeddisplay_0_anodes_pin : out std_logic_vector(0 to 3);
     mykeyboard_0_row_pin : in std_logic_vector(0 to 3);
-    mykeyboard_0_column_pin : out std_logic_vector(0 to 3)
+    mykeyboard_0_column_pin : out std_logic_vector(0 to 3);
+    xps_iic_0_Sda : inout std_logic;
+    xps_iic_0_Scl : inout std_logic
   );
 end system;
 
@@ -674,7 +676,7 @@ architecture STRUCTURE of system is
       PLB_Clk : in std_logic;
       SYS_Rst : in std_logic;
       PLB_Rst : out std_logic;
-      SPLB_Rst : out std_logic_vector(0 to 5);
+      SPLB_Rst : out std_logic_vector(0 to 6);
       MPLB_Rst : out std_logic_vector(0 to 1);
       PLB_dcrAck : out std_logic;
       PLB_dcrDBus : out std_logic_vector(0 to 31);
@@ -698,22 +700,22 @@ architecture STRUCTURE of system is
       M_type : in std_logic_vector(0 to 5);
       M_wrBurst : in std_logic_vector(0 to 1);
       M_wrDBus : in std_logic_vector(0 to 63);
-      Sl_addrAck : in std_logic_vector(0 to 5);
-      Sl_MRdErr : in std_logic_vector(0 to 11);
-      Sl_MWrErr : in std_logic_vector(0 to 11);
-      Sl_MBusy : in std_logic_vector(0 to 11);
-      Sl_rdBTerm : in std_logic_vector(0 to 5);
-      Sl_rdComp : in std_logic_vector(0 to 5);
-      Sl_rdDAck : in std_logic_vector(0 to 5);
-      Sl_rdDBus : in std_logic_vector(0 to 191);
-      Sl_rdWdAddr : in std_logic_vector(0 to 23);
-      Sl_rearbitrate : in std_logic_vector(0 to 5);
-      Sl_SSize : in std_logic_vector(0 to 11);
-      Sl_wait : in std_logic_vector(0 to 5);
-      Sl_wrBTerm : in std_logic_vector(0 to 5);
-      Sl_wrComp : in std_logic_vector(0 to 5);
-      Sl_wrDAck : in std_logic_vector(0 to 5);
-      Sl_MIRQ : in std_logic_vector(0 to 11);
+      Sl_addrAck : in std_logic_vector(0 to 6);
+      Sl_MRdErr : in std_logic_vector(0 to 13);
+      Sl_MWrErr : in std_logic_vector(0 to 13);
+      Sl_MBusy : in std_logic_vector(0 to 13);
+      Sl_rdBTerm : in std_logic_vector(0 to 6);
+      Sl_rdComp : in std_logic_vector(0 to 6);
+      Sl_rdDAck : in std_logic_vector(0 to 6);
+      Sl_rdDBus : in std_logic_vector(0 to 223);
+      Sl_rdWdAddr : in std_logic_vector(0 to 27);
+      Sl_rearbitrate : in std_logic_vector(0 to 6);
+      Sl_SSize : in std_logic_vector(0 to 13);
+      Sl_wait : in std_logic_vector(0 to 6);
+      Sl_wrBTerm : in std_logic_vector(0 to 6);
+      Sl_wrComp : in std_logic_vector(0 to 6);
+      Sl_wrDAck : in std_logic_vector(0 to 6);
+      Sl_MIRQ : in std_logic_vector(0 to 13);
       PLB_MIRQ : out std_logic_vector(0 to 1);
       PLB_ABus : out std_logic_vector(0 to 31);
       PLB_UABus : out std_logic_vector(0 to 31);
@@ -745,13 +747,13 @@ architecture STRUCTURE of system is
       PLB_rdPendReq : out std_logic;
       PLB_wrPendReq : out std_logic;
       PLB_rdBurst : out std_logic;
-      PLB_rdPrim : out std_logic_vector(0 to 5);
+      PLB_rdPrim : out std_logic_vector(0 to 6);
       PLB_reqPri : out std_logic_vector(0 to 1);
       PLB_size : out std_logic_vector(0 to 3);
       PLB_type : out std_logic_vector(0 to 2);
       PLB_wrBurst : out std_logic;
       PLB_wrDBus : out std_logic_vector(0 to 31);
-      PLB_wrPrim : out std_logic_vector(0 to 5);
+      PLB_wrPrim : out std_logic_vector(0 to 6);
       PLB_SaddrAck : out std_logic;
       PLB_SMRdErr : out std_logic_vector(0 to 1);
       PLB_SMWrErr : out std_logic_vector(0 to 1);
@@ -1747,6 +1749,70 @@ architecture STRUCTURE of system is
     );
   end component;
 
+  component system_xps_iic_0_wrapper is
+    port (
+      Sda_I : in std_logic;
+      Sda_O : out std_logic;
+      Sda_T : out std_logic;
+      Scl_I : in std_logic;
+      Scl_O : out std_logic;
+      Scl_T : out std_logic;
+      Gpo : out std_logic_vector(31 to 31);
+      IIC2INTC_Irpt : out std_logic;
+      SPLB_Clk : in std_logic;
+      SPLB_Rst : in std_logic;
+      PLB_ABus : in std_logic_vector(0 to 31);
+      PLB_UABus : in std_logic_vector(0 to 31);
+      PLB_PAValid : in std_logic;
+      PLB_SAValid : in std_logic;
+      PLB_rdPrim : in std_logic;
+      PLB_wrPrim : in std_logic;
+      PLB_masterID : in std_logic_vector(0 to 0);
+      PLB_abort : in std_logic;
+      PLB_busLock : in std_logic;
+      PLB_RNW : in std_logic;
+      PLB_BE : in std_logic_vector(0 to 3);
+      PLB_MSize : in std_logic_vector(0 to 1);
+      PLB_size : in std_logic_vector(0 to 3);
+      PLB_type : in std_logic_vector(0 to 2);
+      PLB_lockErr : in std_logic;
+      PLB_wrDBus : in std_logic_vector(0 to 31);
+      PLB_wrBurst : in std_logic;
+      PLB_rdBurst : in std_logic;
+      PLB_wrPendReq : in std_logic;
+      PLB_rdPendReq : in std_logic;
+      PLB_wrPendPri : in std_logic_vector(0 to 1);
+      PLB_rdPendPri : in std_logic_vector(0 to 1);
+      PLB_reqPri : in std_logic_vector(0 to 1);
+      PLB_TAttribute : in std_logic_vector(0 to 15);
+      Sl_addrAck : out std_logic;
+      Sl_SSize : out std_logic_vector(0 to 1);
+      Sl_wait : out std_logic;
+      Sl_rearbitrate : out std_logic;
+      Sl_wrDAck : out std_logic;
+      Sl_wrComp : out std_logic;
+      Sl_wrBTerm : out std_logic;
+      Sl_rdDBus : out std_logic_vector(0 to 31);
+      Sl_rdWdAddr : out std_logic_vector(0 to 3);
+      Sl_rdDAck : out std_logic;
+      Sl_rdComp : out std_logic;
+      Sl_rdBTerm : out std_logic;
+      Sl_MBusy : out std_logic_vector(0 to 1);
+      Sl_MWrErr : out std_logic_vector(0 to 1);
+      Sl_MRdErr : out std_logic_vector(0 to 1);
+      Sl_MIRQ : out std_logic_vector(0 to 1)
+    );
+  end component;
+
+  component IOBUF is
+    port (
+      I : in std_logic;
+      IO : inout std_logic;
+      O : out std_logic;
+      T : in std_logic
+    );
+  end component;
+
   -- Internal signals
 
   signal CLK_S : std_logic;
@@ -1857,7 +1923,7 @@ architecture STRUCTURE of system is
   signal mb_plb_PLB_rdBurst : std_logic;
   signal mb_plb_PLB_rdPendPri : std_logic_vector(0 to 1);
   signal mb_plb_PLB_rdPendReq : std_logic;
-  signal mb_plb_PLB_rdPrim : std_logic_vector(0 to 5);
+  signal mb_plb_PLB_rdPrim : std_logic_vector(0 to 6);
   signal mb_plb_PLB_reqPri : std_logic_vector(0 to 1);
   signal mb_plb_PLB_size : std_logic_vector(0 to 3);
   signal mb_plb_PLB_type : std_logic_vector(0 to 2);
@@ -1865,24 +1931,24 @@ architecture STRUCTURE of system is
   signal mb_plb_PLB_wrDBus : std_logic_vector(0 to 31);
   signal mb_plb_PLB_wrPendPri : std_logic_vector(0 to 1);
   signal mb_plb_PLB_wrPendReq : std_logic;
-  signal mb_plb_PLB_wrPrim : std_logic_vector(0 to 5);
-  signal mb_plb_SPLB_Rst : std_logic_vector(0 to 5);
-  signal mb_plb_Sl_MBusy : std_logic_vector(0 to 11);
-  signal mb_plb_Sl_MIRQ : std_logic_vector(0 to 11);
-  signal mb_plb_Sl_MRdErr : std_logic_vector(0 to 11);
-  signal mb_plb_Sl_MWrErr : std_logic_vector(0 to 11);
-  signal mb_plb_Sl_SSize : std_logic_vector(0 to 11);
-  signal mb_plb_Sl_addrAck : std_logic_vector(0 to 5);
-  signal mb_plb_Sl_rdBTerm : std_logic_vector(0 to 5);
-  signal mb_plb_Sl_rdComp : std_logic_vector(0 to 5);
-  signal mb_plb_Sl_rdDAck : std_logic_vector(0 to 5);
-  signal mb_plb_Sl_rdDBus : std_logic_vector(0 to 191);
-  signal mb_plb_Sl_rdWdAddr : std_logic_vector(0 to 23);
-  signal mb_plb_Sl_rearbitrate : std_logic_vector(0 to 5);
-  signal mb_plb_Sl_wait : std_logic_vector(0 to 5);
-  signal mb_plb_Sl_wrBTerm : std_logic_vector(0 to 5);
-  signal mb_plb_Sl_wrComp : std_logic_vector(0 to 5);
-  signal mb_plb_Sl_wrDAck : std_logic_vector(0 to 5);
+  signal mb_plb_PLB_wrPrim : std_logic_vector(0 to 6);
+  signal mb_plb_SPLB_Rst : std_logic_vector(0 to 6);
+  signal mb_plb_Sl_MBusy : std_logic_vector(0 to 13);
+  signal mb_plb_Sl_MIRQ : std_logic_vector(0 to 13);
+  signal mb_plb_Sl_MRdErr : std_logic_vector(0 to 13);
+  signal mb_plb_Sl_MWrErr : std_logic_vector(0 to 13);
+  signal mb_plb_Sl_SSize : std_logic_vector(0 to 13);
+  signal mb_plb_Sl_addrAck : std_logic_vector(0 to 6);
+  signal mb_plb_Sl_rdBTerm : std_logic_vector(0 to 6);
+  signal mb_plb_Sl_rdComp : std_logic_vector(0 to 6);
+  signal mb_plb_Sl_rdDAck : std_logic_vector(0 to 6);
+  signal mb_plb_Sl_rdDBus : std_logic_vector(0 to 223);
+  signal mb_plb_Sl_rdWdAddr : std_logic_vector(0 to 27);
+  signal mb_plb_Sl_rearbitrate : std_logic_vector(0 to 6);
+  signal mb_plb_Sl_wait : std_logic_vector(0 to 6);
+  signal mb_plb_Sl_wrBTerm : std_logic_vector(0 to 6);
+  signal mb_plb_Sl_wrComp : std_logic_vector(0 to 6);
+  signal mb_plb_Sl_wrDAck : std_logic_vector(0 to 6);
   signal mb_reset : std_logic;
   signal microblaze_0_mdm_bus_Dbg_Capture : std_logic;
   signal microblaze_0_mdm_bus_Dbg_Clk : std_logic;
@@ -1909,6 +1975,12 @@ architecture STRUCTURE of system is
   signal net_vcc0 : std_logic;
   signal sys_bus_reset : std_logic_vector(0 to 0);
   signal sys_rst_s : std_logic;
+  signal xps_iic_0_Scl_I : std_logic;
+  signal xps_iic_0_Scl_O : std_logic;
+  signal xps_iic_0_Scl_T : std_logic;
+  signal xps_iic_0_Sda_I : std_logic;
+  signal xps_iic_0_Sda_O : std_logic;
+  signal xps_iic_0_Sda_T : std_logic;
 
   attribute BOX_TYPE : STRING;
   attribute BOX_TYPE of system_microblaze_0_wrapper : component is "user_black_box";
@@ -1926,6 +1998,7 @@ architecture STRUCTURE of system is
   attribute BOX_TYPE of system_mydemoleds_0_wrapper : component is "user_black_box";
   attribute BOX_TYPE of system_mymuxeddisplay_0_wrapper : component is "user_black_box";
   attribute BOX_TYPE of system_mykeyboard_0_wrapper : component is "user_black_box";
+  attribute BOX_TYPE of system_xps_iic_0_wrapper : component is "user_black_box";
 
 begin
 
@@ -3655,6 +3728,76 @@ begin
       Sl_MWrErr => mb_plb_Sl_MWrErr(10 to 11),
       Sl_MRdErr => mb_plb_Sl_MRdErr(10 to 11),
       Sl_MIRQ => mb_plb_Sl_MIRQ(10 to 11)
+    );
+
+  xps_iic_0 : system_xps_iic_0_wrapper
+    port map (
+      Sda_I => xps_iic_0_Sda_I,
+      Sda_O => xps_iic_0_Sda_O,
+      Sda_T => xps_iic_0_Sda_T,
+      Scl_I => xps_iic_0_Scl_I,
+      Scl_O => xps_iic_0_Scl_O,
+      Scl_T => xps_iic_0_Scl_T,
+      Gpo => open,
+      IIC2INTC_Irpt => open,
+      SPLB_Clk => clk_66_6667MHz,
+      SPLB_Rst => mb_plb_SPLB_Rst(6),
+      PLB_ABus => mb_plb_PLB_ABus,
+      PLB_UABus => mb_plb_PLB_UABus,
+      PLB_PAValid => mb_plb_PLB_PAValid,
+      PLB_SAValid => mb_plb_PLB_SAValid,
+      PLB_rdPrim => mb_plb_PLB_rdPrim(6),
+      PLB_wrPrim => mb_plb_PLB_wrPrim(6),
+      PLB_masterID => mb_plb_PLB_masterID(0 to 0),
+      PLB_abort => mb_plb_PLB_abort,
+      PLB_busLock => mb_plb_PLB_busLock,
+      PLB_RNW => mb_plb_PLB_RNW,
+      PLB_BE => mb_plb_PLB_BE,
+      PLB_MSize => mb_plb_PLB_MSize,
+      PLB_size => mb_plb_PLB_size,
+      PLB_type => mb_plb_PLB_type,
+      PLB_lockErr => mb_plb_PLB_lockErr,
+      PLB_wrDBus => mb_plb_PLB_wrDBus,
+      PLB_wrBurst => mb_plb_PLB_wrBurst,
+      PLB_rdBurst => mb_plb_PLB_rdBurst,
+      PLB_wrPendReq => mb_plb_PLB_wrPendReq,
+      PLB_rdPendReq => mb_plb_PLB_rdPendReq,
+      PLB_wrPendPri => mb_plb_PLB_wrPendPri,
+      PLB_rdPendPri => mb_plb_PLB_rdPendPri,
+      PLB_reqPri => mb_plb_PLB_reqPri,
+      PLB_TAttribute => mb_plb_PLB_TAttribute,
+      Sl_addrAck => mb_plb_Sl_addrAck(6),
+      Sl_SSize => mb_plb_Sl_SSize(12 to 13),
+      Sl_wait => mb_plb_Sl_wait(6),
+      Sl_rearbitrate => mb_plb_Sl_rearbitrate(6),
+      Sl_wrDAck => mb_plb_Sl_wrDAck(6),
+      Sl_wrComp => mb_plb_Sl_wrComp(6),
+      Sl_wrBTerm => mb_plb_Sl_wrBTerm(6),
+      Sl_rdDBus => mb_plb_Sl_rdDBus(192 to 223),
+      Sl_rdWdAddr => mb_plb_Sl_rdWdAddr(24 to 27),
+      Sl_rdDAck => mb_plb_Sl_rdDAck(6),
+      Sl_rdComp => mb_plb_Sl_rdComp(6),
+      Sl_rdBTerm => mb_plb_Sl_rdBTerm(6),
+      Sl_MBusy => mb_plb_Sl_MBusy(12 to 13),
+      Sl_MWrErr => mb_plb_Sl_MWrErr(12 to 13),
+      Sl_MRdErr => mb_plb_Sl_MRdErr(12 to 13),
+      Sl_MIRQ => mb_plb_Sl_MIRQ(12 to 13)
+    );
+
+  iobuf_0 : IOBUF
+    port map (
+      I => xps_iic_0_Sda_O,
+      IO => xps_iic_0_Sda,
+      O => xps_iic_0_Sda_I,
+      T => xps_iic_0_Sda_T
+    );
+
+  iobuf_1 : IOBUF
+    port map (
+      I => xps_iic_0_Scl_O,
+      IO => xps_iic_0_Scl,
+      O => xps_iic_0_Scl_I,
+      T => xps_iic_0_Scl_T
     );
 
 end architecture STRUCTURE;
