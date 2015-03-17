@@ -1,0 +1,2142 @@
+18:56:31 **** Build of project Final_bsp ****
+make -k all 
+libgen -hw ../BSB_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../BSB_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling iic"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+18:56:48 **** Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5598	    272	   2080	   7950	   1f0e	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+19:00:21 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:5: warning: implicit declaration of function 'SendSlaveAddr' [-Wimplicit-function-declaration]
+../src/helloworld.c:57:19: error: 'XIic' undeclared (first use in this function)
+../src/helloworld.c:57:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:57:25: error: 'InstancePtr' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+19:01:26 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:5: warning: implicit declaration of function 'SendSlaveAddr' [-Wimplicit-function-declaration]
+../src/helloworld.c:58:19: error: expected expression before 'XIic'
+make: *** [src/helloworld.o] Error 1
+19:03:22 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:5: error: too few arguments to function 'XIic_Initialize'
+../../Final_bsp/microblaze_0/include/xiic.h:491:5: note: declared here
+../src/helloworld.c:60:5: error: too few arguments to function 'XIic_Send'
+../../Final_bsp/microblaze_0/include/xiic_l.h:582:10: note: declared here
+../src/helloworld.c:61:5: error: too few arguments to function 'XIic_Recv'
+../../Final_bsp/microblaze_0/include/xiic_l.h:579:10: note: declared here
+make: *** [src/helloworld.o] Error 1
+19:04:42 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:21: error: expected expression before 'XIic'
+../src/helloworld.c:58:21: error: too few arguments to function 'XIic_Initialize'
+../../Final_bsp/microblaze_0/include/xiic.h:491:5: note: declared here
+../src/helloworld.c:60:5: error: too few arguments to function 'XIic_Send'
+../../Final_bsp/microblaze_0/include/xiic_l.h:582:10: note: declared here
+../src/helloworld.c:61:5: error: too few arguments to function 'XIic_Recv'
+../../Final_bsp/microblaze_0/include/xiic_l.h:579:10: note: declared here
+make: *** [src/helloworld.o] Error 1
+19:05:13 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:5: error: too few arguments to function 'XIic_Send'
+../../Final_bsp/microblaze_0/include/xiic_l.h:582:10: note: declared here
+../src/helloworld.c:64:5: error: too few arguments to function 'XIic_Recv'
+../../Final_bsp/microblaze_0/include/xiic_l.h:579:10: note: declared here
+make: *** [src/helloworld.o] Error 1
+19:05:42 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:5: error: too few arguments to function 'XIic_Send'
+../../Final_bsp/microblaze_0/include/xiic_l.h:582:10: note: declared here
+../src/helloworld.c:64:5: error: too few arguments to function 'XIic_Recv'
+../../Final_bsp/microblaze_0/include/xiic_l.h:579:10: note: declared here
+make: *** [src/helloworld.o] Error 1
+19:18:17 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:75:15: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
+../src/helloworld.c:75:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:75:33: error: 'DECODER_ADDR_W' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+19:19:11 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:20: warning: 'InstancePtr' is used uninitialized in this function [-Wuninitialized]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6902	    292	   2092	   9286	   2446	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+19:19:52 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6914	    292	   2098	   9304	   2458	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+19:20:19 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:5: error: expected ';' before 'data2'
+make: *** [src/helloworld.o] Error 1
+19:20:34 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6950	    292	   2092	   9334	   2476	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+19:20:56 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6974	    292	   2092	   9358	   248e	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+19:21:07 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7014	    292	   2092	   9398	   24b6	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+19:21:57 **** Auto Build of project Final_bsp ****
+make -k all 
+'Finished building libraries'
+19:22:27 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+19:22:56 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7038	    292	   2092	   9422	   24ce	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+19:23:14 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+19:25:05 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:9: warning: unused variable 'DeviceId' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7034	    292	   2098	   9424	   24d0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+19:25:12 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7026	    292	   2098	   9416	   24c8	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+19:25:43 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+19:26:19 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:80:15: warning: unknown escape sequence: '\c' [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7050	    292	   2098	   9440	   24e0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+19:26:23 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+19:28:32 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:90:15: warning: unknown escape sequence: '\c' [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21320	   1332	   2252	  24904	   6148	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+19:28:47 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+19:31:10 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+20:15:00 **** Auto Build of project Final_bsp ****
+make -k all 
+'Finished building libraries'
+20:15:26 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+20:15:31 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+20:16:34 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+20:16:52 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+20:47:10 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+20:47:35 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:90:15: warning: unknown escape sequence: '\c' [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20864	   1332	   2252	  24448	   5f80	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+20:47:45 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+20:48:03 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+20:48:13 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:90:15: warning: unknown escape sequence: '\c' [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21320	   1332	   2252	  24904	   6148	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+20:48:17 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+20:48:31 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:90:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6202	    272	   2086	   8560	   2170	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+20:48:47 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+20:52:09 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+20:53:06 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+21:00:59 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+21:14:48 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:89:35: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
+../src/helloworld.c:89:35: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:89:53: error: 'DECODER_ADDR_W' undeclared (first use in this function)
+../src/helloworld.c:89:69: error: 'ad7183_data' undeclared (first use in this function)
+../src/helloworld.c:90:70: error: 'ad7183_tmp' undeclared (first use in this function)
+../src/helloworld.c:95:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:87:9: warning: variable 'ReceivedByteCount' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+21:15:04 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:89:35: error: 'IIC_BASE_ADDRESS' undeclared (first use in this function)
+../src/helloworld.c:89:35: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:89:53: error: 'DECODER_ADDR_W' undeclared (first use in this function)
+../src/helloworld.c:90:70: error: 'ad7183_tmp' undeclared (first use in this function)
+../src/helloworld.c:95:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:87:9: warning: variable 'ReceivedByteCount' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+21:16:01 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:92:60: error: 'DECODER_ADDR_W' undeclared (first use in this function)
+../src/helloworld.c:92:60: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:101:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:87:9: warning: variable 'ReceivedByteCount' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+21:16:15 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:101:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:87:9: warning: variable 'ReceivedByteCount' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6214	    272	   2080	   8566	   2176	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+21:17:04 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:101:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:87:9: warning: variable 'ReceivedByteCount' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6674	    272	   2086	   9032	   2348	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+21:17:32 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:106:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6810	    272	   2086	   9168	   23d0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+21:17:39 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+21:18:18 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:106:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6810	    272	   2086	   9168	   23d0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+21:18:22 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+21:19:03 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:106:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6810	    272	   2086	   9168	   23d0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+21:19:08 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+21:19:21 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+21:21:46 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:110:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6810	    272	   2086	   9168	   23d0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+21:21:50 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+21:22:33 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:110:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6342	    272	   2080	   8694	   21f6	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+21:22:37 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+21:30:31 **** Auto Build of project Final_bsp ****
+make -k all 
+'Finished building libraries'
+21:30:49 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+21:32:33 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:110:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6810	    272	   2086	   9168	   23d0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+21:32:41 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+21:33:56 **** Auto Build of project Final_bsp ****
+make -k all 
+'Finished building libraries'
+21:34:16 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:13:39 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:14:16 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:110:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6810	    272	   2086	   9168	   23d0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:14:22 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:15:25 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:96:5: warning: passing argument 3 of 'XIic_Recv' makes pointer from integer without a cast [enabled by default]
+../../Final_bsp/microblaze_0/include/xiic_l.h:579:10: note: expected 'u8 *' but argument is of type 'u8'
+../src/helloworld.c:97:5: warning: passing argument 3 of 'XIic_Recv' makes pointer from integer without a cast [enabled by default]
+../../Final_bsp/microblaze_0/include/xiic_l.h:579:10: note: expected 'u8 *' but argument is of type 'u8'
+../src/helloworld.c:111:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6854	    272	   2080	   9206	   23f6	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:16:03 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:97:5: warning: passing argument 3 of 'XIic_Recv' makes pointer from integer without a cast [enabled by default]
+../../Final_bsp/microblaze_0/include/xiic_l.h:579:10: note: expected 'u8 *' but argument is of type 'u8'
+../src/helloworld.c:98:5: error: 'ReceivedByteCount2' undeclared (first use in this function)
+../src/helloworld.c:98:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:98:5: warning: passing argument 3 of 'XIic_Recv' makes pointer from integer without a cast [enabled by default]
+../../Final_bsp/microblaze_0/include/xiic_l.h:579:10: note: expected 'u8 *' but argument is of type 'u8'
+../src/helloworld.c:117:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+22:16:05 **** Incremental Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:97:5: warning: passing argument 3 of 'XIic_Recv' makes pointer from integer without a cast [enabled by default]
+../../Final_bsp/microblaze_0/include/xiic_l.h:579:10: note: expected 'u8 *' but argument is of type 'u8'
+../src/helloworld.c:98:5: error: 'ReceivedByteCount2' undeclared (first use in this function)
+../src/helloworld.c:98:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:98:5: warning: passing argument 3 of 'XIic_Recv' makes pointer from integer without a cast [enabled by default]
+../../Final_bsp/microblaze_0/include/xiic_l.h:579:10: note: expected 'u8 *' but argument is of type 'u8'
+../src/helloworld.c:117:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+22:16:53 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:98:5: error: 'ReceivedByteCount2' undeclared (first use in this function)
+../src/helloworld.c:98:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:117:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+22:17:01 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:106:8: error: 'ReceivedByteCount2' undeclared (first use in this function)
+../src/helloworld.c:106:8: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:117:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+22:17:25 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:118:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6810	    272	   2086	   9168	   23d0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:17:30 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:118:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6810	    272	   2086	   9168	   23d0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:17:36 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:18:07 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:113:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6810	    272	   2086	   9168	   23d0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:18:13 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:109:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6810	    272	   2086	   9168	   23d0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:19:16 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:110:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:105:9: warning: unused variable 'temperature_final' [-Wunused-variable]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6810	    272	   2086	   9168	   23d0	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:20:06 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:112:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:105:9: warning: variable 'temperature_final' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6818	    272	   2086	   9176	   23d8	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:20:36 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:114:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6862	    272	   2080	   9214	   23fe	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:20:43 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:114:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6866	    272	   2086	   9224	   2408	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:20:46 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:21:23 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:109:5: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:115:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6866	    272	   2086	   9224	   2408	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:21:31 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:109:5: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:115:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6922	    272	   2086	   9280	   2440	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:21:44 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:115:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6934	    272	   2080	   9286	   2446	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:21:49 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:22:25 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:23:18 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:116:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6954	    272	   2086	   9312	   2460	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:23:29 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:117:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7010	    272	   2086	   9368	   2498	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:23:32 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:24:20 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:119:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:106:11: warning: variable 'final_temp' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10690	    272	   2086	  13048	   32f8	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:24:39 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:120:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:106:11: warning: variable 'final_temp' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10746	    272	   2086	  13104	   3330	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:24:43 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:27:04 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:120:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:106:11: warning: variable 'final_temp' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10746	    272	   2086	  13104	   3330	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:27:08 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:27:25 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:120:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:106:11: warning: variable 'final_temp' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10746	    272	   2086	  13104	   3330	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:27:29 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:27:40 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:120:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11078	    272	   2080	  13430	   3476	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:27:44 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:28:01 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:120:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11078	    272	   2080	  13430	   3476	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:28:05 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:28:29 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:28:51 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:120:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11078	    272	   2080	  13430	   3476	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:28:56 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:30:01 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:123:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13314	    272	   2086	  15672	   3d38	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:30:05 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:31:40 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:125:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13382	    272	   2080	  15734	   3d76	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:31:46 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:32:12 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:125:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13382	    272	   2080	  15734	   3d76	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:32:16 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:32:43 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:125:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13382	    272	   2080	  15734	   3d76	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:32:47 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:42:09 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:125:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13382	    272	   2080	  15734	   3d76	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:42:13 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:44:10 **** Auto Build of configuration Debug for project Final ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Final_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:125:15: warning: unknown escape sequence: '\c' [enabled by default]
+../src/helloworld.c:88:9: warning: unused variable 'RecievedByteCount2' [-Wunused-variable]
+../src/helloworld.c:60:9: warning: unused variable 'test' [-Wunused-variable]
+../src/helloworld.c:59:17: warning: unused variable 'Iic' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Final_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Final.elf  |tee "Final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13374	    272	   2080	  15726	   3d6e	Final.elf
+'Finished building: Final.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck Final.elf -hw ../../BSB_hw_platform/system.xml -pe microblaze_0  |tee "Final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../BSB_hw_platform/system.xml -pe microblaze_0
+Final.elf 
+
+ELF file	: Final.elf
+elfcheck passed.
+'Finished building: Final.elf.elfcheck'
+' '
+22:44:14 **** Incremental Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.
+22:52:47 **** Auto Build of project Final_bsp ****
+make -k all 
+'Finished building libraries'
+22:52:47 **** Auto Build of configuration Debug for project Final ****
+make all 
+make: Nothing to be done for `all'.

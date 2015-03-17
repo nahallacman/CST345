@@ -1,13 +1,13 @@
 
 Checking platform configuration ...
-IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 6 slave(s) 
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 7 slave(s) 
 IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
 IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
 
 Checking port drivers...
 WARNING:EDK:4181 - PORT: Peripheral_Reset, CONNECTOR: sys_periph_reset -
    floating connection -
-   C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 153 
+   C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 155 
 
 Performing Clock DRCs...
 

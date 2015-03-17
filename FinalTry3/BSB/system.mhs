@@ -25,6 +25,8 @@
  PORT mymuxeddisplay_0_anodes_pin = mymuxeddisplay_0_anodes, DIR = O, VEC = [0:3]
  PORT mykeyboard_0_row_pin = mykeyboard_0_row, DIR = I, VEC = [0:3]
  PORT mykeyboard_0_column_pin = mykeyboard_0_column, DIR = O, VEC = [0:3]
+ PORT xps_iic_0_Sda = xps_iic_0_Sda, DIR = IO
+ PORT xps_iic_0_Scl = xps_iic_0_Scl, DIR = IO
 
 
 BEGIN microblaze
@@ -180,5 +182,15 @@ BEGIN mykeyboard
  BUS_INTERFACE SPLB = mb_plb
  PORT row = mykeyboard_0_row
  PORT column = mykeyboard_0_column
+END
+
+BEGIN xps_iic
+ PARAMETER INSTANCE = xps_iic_0
+ PARAMETER HW_VER = 2.03.a
+ PARAMETER C_BASEADDR = 0x81600000
+ PARAMETER C_HIGHADDR = 0x8160ffff
+ BUS_INTERFACE SPLB = mb_plb
+ PORT Sda = xps_iic_0_Sda
+ PORT Scl = xps_iic_0_Scl
 END
 

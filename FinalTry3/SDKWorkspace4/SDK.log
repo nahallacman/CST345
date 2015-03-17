@@ -1,0 +1,53 @@
+18:55:43.893 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\SDK\SDK_Export\hw\system.xml. 
+19:21:57.017 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/SDKWorkspace4/BSB_hw_platform/download.bit" 
+19:23:15.910 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:25:44.437 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:26:24.848 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:28:48.392 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:31:11.486 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:14:59.356 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/SDKWorkspace4/BSB_hw_platform/download.bit" 
+20:15:32.041 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:16:35.684 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:16:53.482 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:47:11.334 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:47:46.591 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:48:04.379 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:48:18.344 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:48:49.052 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:52:10.713 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+20:53:07.688 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:01:00.423 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:17:40.192 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:18:23.472 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:19:09.007 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:19:22.495 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:21:51.378 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:22:38.468 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:30:30.712 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/SDKWorkspace4/BSB_hw_platform/download.bit" 
+21:32:42.363 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:33:55.790 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/SDKWorkspace4/BSB_hw_platform/download.bit" 
+22:13:40.762 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:14:23.573 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:16:07.230 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:17:37.918 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:20:47.669 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:21:50.304 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:22:26.813 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:23:33.634 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:24:44.014 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:27:09.789 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:27:30.712 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:27:45.839 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:28:06.727 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:28:30.938 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:28:58.011 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:30:06.468 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:31:47.574 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:32:17.752 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:32:48.277 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:42:15.021 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:44:15.476 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:46:04.261 ERROR - Exception while attemping to 'diff' hardware specification files. 
+22:46:04.624 INFO  - Project BSB_hw_platform's source hardware specification located at C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+22:47:24.345 INFO  - Project BSB_hw_platform's source hardware specification location will not be monitored anymore. 
