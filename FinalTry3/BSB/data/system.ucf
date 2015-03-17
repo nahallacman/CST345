@@ -51,21 +51,3 @@ NET "mykeyboard_0_row_pin<3>" LOC 		= M10 | IOSTANDARD = LVCMOS33;
 NET "mykeyboard_0_row_pin<2>" LOC 		= N9 | IOSTANDARD = LVCMOS33;
 NET "mykeyboard_0_row_pin<1>" LOC 		= U11 | IOSTANDARD = LVCMOS33;
 NET "mykeyboard_0_row_pin<0>" LOC 		= V11 | IOSTANDARD = LVCMOS33;
-
-#xps_iic_0_Sda
-
-#xps_iic_0_Scl
-
-#pin 4 is SDA
-#pin 3 is SCL
-#starting counting from pin 1
-
-##JB
-#Net "JB<0>" LOC = K2 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L38P_M3DQ2, Sch name = JB1
-#Net "JB<1>" LOC = K1 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L38N_M3DQ3, Sch name = JB2
-Net "xps_iic_0_Scl" LOC = L4 | IOSTANDARD = LVCMOS33 | PULLUP; #Bank = 3, pin name = IO_L39P_M3LDQS, Sch name = JB3
-Net "xps_iic_0_Sda" LOC = L3 | IOSTANDARD = LVCMOS33 | PULLUP; #Bank = 3, pin name = IO_L39N_M3LDQSN, Sch name = JB4
-#Net "JB<4>" LOC = J3 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L40P_M3DQ6, Sch name = JB7
-#Net "JB<5>" LOC = J1 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L40N_M3DQ7, Sch name = JB8
-#Net "JB<6>" LOC = K3 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L42N_GCLK24_M3LDM, Sch name = JB9
-#Net "JB<7>" LOC = K5 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L43N_GCLK22_IRDY2_M3CASN, Sch name = JB10

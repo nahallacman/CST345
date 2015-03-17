@@ -1,0 +1,12 @@
+Release 14.7 - libgen Xilinx EDK 14.7 Build EDK_P.20131013
+ (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../Lab05_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+ERROR:EDK:410 - gpio -
+   C:\Users\mainuser\Desktop\School\CST345\XilinxSDKWorkspace\Lab05_bsp\system.m
+   ss line 51 - No IP instance named push_buttons_4bits is present in the
+   hardware!
+ERROR:EDK:1206 - Errors occured while parsing MSS file.

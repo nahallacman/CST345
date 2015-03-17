@@ -18,9 +18,7 @@ entity system_stub is
     mymuxeddisplay_0_segments_pin : out std_logic_vector(0 to 7);
     mymuxeddisplay_0_anodes_pin : out std_logic_vector(0 to 3);
     mykeyboard_0_row_pin : in std_logic_vector(0 to 3);
-    mykeyboard_0_column_pin : out std_logic_vector(0 to 3);
-    xps_iic_0_Sda : inout std_logic;
-    xps_iic_0_Scl : inout std_logic
+    mykeyboard_0_column_pin : out std_logic_vector(0 to 3)
   );
 end system_stub;
 
@@ -37,9 +35,7 @@ architecture STRUCTURE of system_stub is
       mymuxeddisplay_0_segments_pin : out std_logic_vector(0 to 7);
       mymuxeddisplay_0_anodes_pin : out std_logic_vector(0 to 3);
       mykeyboard_0_row_pin : in std_logic_vector(0 to 3);
-      mykeyboard_0_column_pin : out std_logic_vector(0 to 3);
-      xps_iic_0_Sda : inout std_logic;
-      xps_iic_0_Scl : inout std_logic
+      mykeyboard_0_column_pin : out std_logic_vector(0 to 3)
     );
   end component;
 
@@ -59,9 +55,7 @@ begin
       mymuxeddisplay_0_segments_pin => mymuxeddisplay_0_segments_pin,
       mymuxeddisplay_0_anodes_pin => mymuxeddisplay_0_anodes_pin,
       mykeyboard_0_row_pin => mykeyboard_0_row_pin,
-      mykeyboard_0_column_pin => mykeyboard_0_column_pin,
-      xps_iic_0_Sda => xps_iic_0_Sda,
-      xps_iic_0_Scl => xps_iic_0_Scl
+      mykeyboard_0_column_pin => mykeyboard_0_column_pin
     );
 
 end architecture STRUCTURE;

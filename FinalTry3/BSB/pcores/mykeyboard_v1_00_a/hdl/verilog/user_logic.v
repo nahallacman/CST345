@@ -105,7 +105,6 @@ output                                    IP2Bus_Error;
 // Implementation
 //----------------------------------------------------------------------------
 
-
   // --USER nets declarations added here, as needed for user logic
 
   // Nets for user logic slave model s/w accessible register example
@@ -118,7 +117,14 @@ output                                    IP2Bus_Error;
   integer                                   byte_index, bit_index;
 
   // --USER logic implementation added here
-
+keypad_controller keypad (
+    .reset(Bus2IP_Reset), 
+    .clk(Bus2IP_Clk), //does this clock need a 1khz operation? faster? slower?
+    .row(row),
+    .column(column),	 
+    .interrupt(interrupt_keypad), 
+    .keypad_data(keypad_data)
+    );
   // ------------------------------------------------------
   // Example code to read/write user logic slave model s/w accessible registers
   // 
@@ -138,37 +144,14 @@ output                                    IP2Bus_Error;
   // 
   // ------------------------------------------------------
 
-
-  	wire [0:3] keypad_data;
-	wire interrupt_keypad;
-	wire rst;
-	wire clk1x;
-  
-keypad_controller keypad (
-    .reset(rst), 
-    .clk(clk1x), //does this clock need a 1khz operation? faster? slower?
-    .row(row),
-    .column(column),	 
-    .interrupt(interrupt_keypad), 
-    .keypad_data(keypad_data)
-    );
-
-
   assign
     slv_reg_write_sel = Bus2IP_WrCE[0:0],
     slv_reg_read_sel  = Bus2IP_RdCE[0:0],
     slv_write_ack     = Bus2IP_WrCE[0],
     slv_read_ack      = Bus2IP_RdCE[0],
-	 rst = Bus2IP_Reset,
-	 clk1x = Bus2IP_Clk;
-	 //interrupt_keypad = slv_reg0[27],
-	 //keypad_data = slv_reg0[28:31];
-	 //slv_reg0[27] = interrupt_keypad,
-	 //slv_reg0[28:31] = keypad_data;
-	 
+	 {keypad_data, interrupt_keypad} = slv_reg0[27:31];
 
   // implement slave model register(s)
-  
   always @( posedge Bus2IP_Clk )
     begin: SLAVE_REG_WRITE_PROC
 
@@ -179,13 +162,10 @@ keypad_controller keypad (
       else
         case ( slv_reg_write_sel )
           1'b1 :
-			 
             for ( byte_index = 0; byte_index <= (C_SLV_DWIDTH/8)-1; byte_index = byte_index+1 )
               if ( Bus2IP_BE[byte_index] == 1 )
                 for ( bit_index = byte_index*8; bit_index <= byte_index*8+7; bit_index = bit_index+1 )
                   slv_reg0[bit_index] <= Bus2IP_Data[bit_index];
-					
-					//	slv_reg0[27:31] <= {interrupt_keypad, keypad_data};
           default : ;
         endcase
 
@@ -197,7 +177,6 @@ keypad_controller keypad (
 
       case ( slv_reg_read_sel )
         1'b1 : slv_ip2bus_data <= slv_reg0;
-		  //1'b1 : slv_ip2bus_data <= {slv_reg0[0:26], interrupt_keypad, keypad_data};
         default : slv_ip2bus_data <= 0;
       endcase
 
