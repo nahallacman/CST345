@@ -61,8 +61,8 @@ int main()
     static XIic Iic;
     int test;
 
-    int hightemp = 2345;
-    int lowtemp = 1234;
+    int hightemp = 4000;
+    int lowtemp = 3000;
     int h_t = hightemp;
     int l_t = lowtemp;
 
@@ -87,7 +87,9 @@ int main()
     u32 temperature;
     u32 temp_to_2_places; // you have to display a decimal point 2 places away from the right hand number, and there may be rounding errors
     float final_temp;
+    /*
     temperature_final = temperature_array[0];
+
 
     xil_printf("Temp final = %d\r\n", temperature_final);
     temperature_final = temperature_final << 8;
@@ -102,6 +104,7 @@ int main()
     xil_printf("Temp final decimal = %d\r\n", temperature);
     temp_to_2_places = temperature_final * 6.25;
     xil_printf("Temp final decimal to 2 places = %d\r\n", temp_to_2_places);
+*/
 
     unsigned char char0;
     unsigned char char1;
@@ -111,6 +114,7 @@ int main()
     unsigned char yesdps = 0x0D;
     unsigned char nodps = 0x0F;
 
+    /*
 
     dps = yesdps;
 
@@ -130,7 +134,7 @@ int main()
 	xil_printf("%d\n\r", char3);
 
     //char0 = temp_to_2_places
-
+*/
 
     /*
     while(score)
@@ -144,8 +148,8 @@ int main()
 
     xil_printf("temperature = %d %d\r\n", temperature_array[0], temperature_array[1]);
 
-    data = 0x55555555;
-    data2 = 0xAAAAAAAA;
+    //data = 0x55555555;
+    //data2 = 0xAAAAAAAA;
 
 
 
@@ -203,7 +207,18 @@ int main()
 	    temp_to_2_places = temperature_final * 6.25;
 	    xil_printf("Temp final decimal to 2 places = %d\r\n", temp_to_2_places);
 
+	    data = 0x0;
 
+	    if(temp_to_2_places > hightemp)
+	    {
+	    	//turn on AC
+	    	data = 0x1;
+	    }
+	    if(temp_to_2_places < lowtemp)
+	    {
+	    	//turn on heat
+	    	data = 0x2;
+	    }
 
 
 
@@ -384,6 +399,7 @@ int main()
 		default:
 			state = DISPLAY;
 		}
+
 
 		//write values to LEDs
 		xil_printf("Writing %d to myleds register\r\n", data);
