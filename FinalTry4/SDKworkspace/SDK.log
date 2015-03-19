@@ -1,0 +1,46 @@
+02:15:58.111 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\FinalTry4\BSB\SDK\SDK_Export\hw\Final.xml. 
+02:17:07.697 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+02:17:28.775 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry4/SDKworkspace/BSB_hw_platform/download.bit" 
+02:18:14.037 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+02:20:05.571 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+02:28:24.116 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+02:28:28.092 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+02:28:28.092 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+02:31:17.464 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\FinalTry4\BSB\SDK\SDK_Export\hw\Final.xml. 
+02:31:52.985 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry4/SDKworkspace/BSB_hw_platform/download.bit" 
+02:37:11.864 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+02:37:14.770 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+02:37:14.775 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+02:41:00.103 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\FinalTry4\BSB\SDK\SDK_Export\hw\Final.xml. 
+02:41:01.348 INFO  - The hardware specification for project 'BSB_hw_platform' is different from C:\Users\mainuser\Desktop\School\CST345\FinalTry4\BSB\SDK\SDK_Export\hw\Final.xml. 
+02:41:01.553 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\FinalTry4\BSB\SDK\SDK_Export\hw\Final.xml into \BSB_hw_platform\system.xml. 
+02:41:01.558 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\FinalTry4\BSB\SDK\SDK_Export\hw\Final.bit into \BSB_hw_platform\system.bit. 
+02:41:01.558 INFO  - Copied contents of C:\Users\mainuser\Desktop\School\CST345\FinalTry4\BSB\SDK\SDK_Export\hw\Final_bd.bmm into \BSB_hw_platform\system_bd.bmm. 
+02:41:01.783 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+02:41:04.108 INFO  - Updating hardware inferred compiler options for Final. 
+02:41:04.203 INFO  - Clearing existing target manager status. 
+02:41:21.374 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry4/SDKworkspace/BSB_hw_platform/download.bit" 
+02:43:01.683 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+02:43:29.773 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+02:44:21.921 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+02:45:03.333 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+02:45:36.668 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+02:46:56.832 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+03:59:28.744 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

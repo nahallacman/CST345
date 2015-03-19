@@ -1,0 +1,17 @@
+21:00:23.916 INFO  - Processing command line option -hwspec C:\Users\mainuser\Desktop\School\CST345\FinalTry7\BSB\SDK\SDK_Export\hw\system.xml. 
+21:06:02.199 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Unknown Error
+ 
+21:06:23.047 WARN  - Terminating existing sessions on processor microblaze_0 
+21:06:26.270 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry7/SDKWorkspace/BSB_hw_platform/download.bit" 
+21:07:21.543 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:16:47.527 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:17:37.871 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:24:15.485 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+21:58:52.631 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:00:29.959 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:00:47.558 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+22:01:14.576 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 

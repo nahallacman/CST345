@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:/Users/mainuser/Desktop/School/CST345/FinalTry3/BSB/pcores/mykeyboard_v1_00_a/devl/projnav/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Parameter xsthdpdir set to C:/Users/mainuser/Desktop/School/CST345/FinalTry3/BSB/pcores/mykeyboard_v1_00_a/devl/projnav/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> Reading design: user_logic.prj
 
@@ -39,12 +39,14 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "C:\Users\mainuser\Desktop\School\CST345\Final\VerilogSource\keypad_controller.v" into library work
+Parsing module <keypad_controller>.
 Analyzing Verilog file "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mykeyboard_v1_00_a\hdl\verilog\user_logic.v" into library work
 Parsing module <user_logic>.
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.17 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.38 secs
  
 --> 
 

@@ -1,6 +1,6 @@
-22:52:47 **** Auto Build of configuration Debug for project Final ****
+03:57:12 **** Incremental Build of configuration Debug for project Final ****
 make all 
 make: Nothing to be done for `all'.
 
-22:52:48 Build Finished (took 315ms)
+03:57:12 Build Finished (took 295ms)
 

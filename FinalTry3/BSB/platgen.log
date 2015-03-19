@@ -206,6 +206,9 @@ Managing cache ...
 IPNAME:microblaze INSTANCE:microblaze_0 -
 C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 32 -
 Copying cache implementation netlist
+IPNAME:plb_v46 INSTANCE:mb_plb -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 45 -
+Copying cache implementation netlist
 IPNAME:lmb_v10 INSTANCE:ilmb -
 C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 52 -
 Copying cache implementation netlist
@@ -242,6 +245,9 @@ Copying cache implementation netlist
 IPNAME:mykeyboard INSTANCE:mykeyboard_0 -
 C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 177 -
 Copying cache implementation netlist
+IPNAME:xps_iic INSTANCE:xps_iic_0 -
+C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 187 -
+Copying cache implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram -
@@ -257,7 +263,7 @@ ClkGen elaborate status: PASSED
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Constructing platform-level connectivity ...
 Completion time: 0.00 seconds
@@ -273,14 +279,8 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:mb_plb -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 45 -
-Running XST synthesis
 INSTANCE:clock_generator_0 -
 C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 118 -
-Running XST synthesis
-INSTANCE:xps_iic_0 -
-C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\system.mhs line 187 -
 Running XST synthesis
 
 Running NGCBUILD ...
@@ -293,4 +293,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 52.00 seconds
+Total run time: 23.00 seconds

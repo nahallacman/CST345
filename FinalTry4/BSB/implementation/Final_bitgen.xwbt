@@ -1,0 +1,7 @@
+INFILE=C:\Users\mainuser\Desktop\School\CST345\FinalTry4\BSB\implementation\Final.ncd
+OUTFILE=C:\Users\mainuser\Desktop\School\CST345\FinalTry4\BSB\implementation\Final.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\mainuser\Desktop\School\CST345\FinalTry4\BSB\implementation
+LICENSE=ISE
+USER_INFO=180155424_1777502509_210587552_863

@@ -7,6 +7,9 @@ Analyzing HDL source files ...
 Analyzing HDL source files successfully ...
 HDL language for the peripheral (top level) design unit keypad_controller is
 vhdl ...
+WARNING:EDK:2221 - Project file
+   C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores/mykeyboard.prj
+   already exists, will be overwrite and removed afterward ...
 resolving hierarchical inclusion of library proc_common_v3_00_a in
 C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/ ...
 resolving hierarchical inclusion of library plbv46_slave_single_v1_01_a in
@@ -17,8 +20,8 @@ WARNING:HDLParsers:3497 - Ignoring Verilog File
    "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/BSB/pcores/mykeyboard_v1_0
    0_a/hdl/verilog/user_logic.v"
 WARNING:HDLParsers:3497 - Ignoring Verilog File
-   "C:/Users/mainuser/Desktop/School/CST345/Final/VerilogSource/keypad_controlle
-   r.v"
+   "C:/Users/mainuser/Desktop/School/CST345/FinalTry3/BSB/pcores/mykeyboard_v1_0
+   0_a/hdl/verilog/keypad_controller.v"
 Compiling vhdl file
 "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hd
 l/vhdl/family_support.vhd" in Library proc_common_v3_00_a.

@@ -1,7 +1,7 @@
 ##############################################################################
 ## Filename:          C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores/mykeyboard_v1_00_a/data/mykeyboard_v2_1_0.pao
 ## Description:       Peripheral Analysis Order
-## Date:              Mon Mar 16 00:42:49 2015 (by Create and Import Peripheral Wizard)
+## Date:              Tue Mar 17 01:30:24 2015 (by Create and Import Peripheral Wizard)
 ##############################################################################
 
 lib proc_common_v3_00_a all vhdl

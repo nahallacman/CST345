@@ -1,0 +1,24 @@
+Writing filter settings....
+Done writing filter settings to:
+	C:\Users\mainuser\Desktop\School\CST345\FinalTry5\etc\system.filters
+Done writing Tab View settings to:
+	C:\Users\mainuser\Desktop\School\CST345\FinalTry5\etc\system.gui
+Assigned Driver iic 2.08.a for instance xps_iic_0
+xps_iic_0 has been added to the project
+ERROR:EDK:4125 - IPNAME: xps_iic, INSTANCE: xps_iic_0, PARAMETER: C_BASEADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+ERROR:EDK:4125 - IPNAME: xps_iic, INSTANCE: xps_iic_0, PARAMETER: C_HIGHADDR - ASSIGNMENT=REQUIRE is defined in the MPD. You must specify a value in the MHS. 
+WARNING:EDK:2137 - Peripheral xps_iic_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral xps_iic_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:4107 - IPNAME: xps_iic, INSTANCE: xps_iic_0 - base address C_BASEADDR (0xffffffff) is greater than high address C_HIGHADDR (0x00000000) - C:\Users\mainuser\Desktop\School\CST345\FinalTry5\system.mhs line 138 
+WARNING:EDK:4107 - IPNAME: xps_iic, INSTANCE: xps_iic_0 - base address C_BASEADDR (0xffffffff) is greater than high address C_HIGHADDR (0x00000000) - C:\Users\mainuser\Desktop\School\CST345\FinalTry5\system.mhs line 138 
+Writing filter settings....
+Done writing filter settings to:
+	C:\Users\mainuser\Desktop\School\CST345\FinalTry5\etc\system.filters
+Done writing Tab View settings to:
+	C:\Users\mainuser\Desktop\School\CST345\FinalTry5\etc\system.gui
+WARNING:EDK:2137 - Peripheral xps_iic_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Writing filter settings....
+Done writing filter settings to:
+	C:\Users\mainuser\Desktop\School\CST345\FinalTry5\etc\system.filters
+Done writing Tab View settings to:
+	C:\Users\mainuser\Desktop\School\CST345\FinalTry5\etc\system.gui

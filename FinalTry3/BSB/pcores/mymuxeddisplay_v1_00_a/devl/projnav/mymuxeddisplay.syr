@@ -107,6 +107,8 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file "C:\Users\mainuser\Desktop\School\CST345\Final\VerilogSource\Mux_disp.v" into library work
 Parsing module <Mux_disp>.
+Analyzing Verilog file "C:\Users\mainuser\Desktop\School\CST345\Final\VerilogSource\Clock_Divider.v" into library work
+Parsing module <Clock_Divider>.
 Analyzing Verilog file "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" into library work
 Parsing module <user_logic>.
 Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\proc_common_v3_00_a\hdl\vhdl\proc_common_pkg.vhd" into library proc_common_v3_00_a
@@ -184,35 +186,16 @@ WARNING:HDLCompiler:1127 - "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pc
 
 Elaborating entity <counter_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
 Going to verilog side to elaborate module user_logic
+WARNING:HDLCompiler:1016 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 192: Port i is not connected to this instance
 
 Elaborating module <user_logic(C_SLV_DWIDTH=32,C_NUM_REG=5)>.
 
 Elaborating module <Mux_disp>.
 WARNING:HDLCompiler:413 - "C:\Users\mainuser\Desktop\School\CST345\Final\VerilogSource\Mux_disp.v" Line 66: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:189 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 150: Size mismatch in connection of port <Val0>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 151: Size mismatch in connection of port <Val1>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 152: Size mismatch in connection of port <Val2>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 153: Size mismatch in connection of port <Val3>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 154: Assignment to a ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 155: Assignment to b ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 156: Assignment to c ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 157: Assignment to d ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 158: Assignment to e ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 159: Assignment to f ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 160: Assignment to g ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 161: Assignment to dp ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 162: Assignment to an1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 163: Assignment to an2 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 164: Assignment to an3 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 165: Assignment to an4 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 175: Assignment to an4 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 176: Assignment to dp ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 176: Result of 4-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 177: Result of 4-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 178: Result of 4-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" Line 179: Result of 4-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <Clock_Divider>.
+WARNING:HDLCompiler:413 - "C:\Users\mainuser\Desktop\School\CST345\Final\VerilogSource\Clock_Divider.v" Line 47: Result of 19-bit expression is truncated to fit in 18-bit target.
 Back to vhdl to continue elaboration
-WARNING:Xst:2972 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143. All outputs of instance <SevenSegDisplay> of block <Mux_disp> are unconnected in block <user_logic>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -484,18 +467,7 @@ Synthesizing Unit <user_logic>.
     Related source file is "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v".
         C_SLV_DWIDTH = 32
         C_NUM_REG = 5
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143: Output port <a> of the instance <SevenSegDisplay> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143: Output port <b> of the instance <SevenSegDisplay> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143: Output port <c> of the instance <SevenSegDisplay> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143: Output port <d> of the instance <SevenSegDisplay> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143: Output port <e> of the instance <SevenSegDisplay> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143: Output port <f> of the instance <SevenSegDisplay> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143: Output port <g> of the instance <SevenSegDisplay> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143: Output port <dp> of the instance <SevenSegDisplay> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143: Output port <an1> of the instance <SevenSegDisplay> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143: Output port <an2> of the instance <SevenSegDisplay> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143: Output port <an3> of the instance <SevenSegDisplay> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 143: Output port <an4> of the instance <SevenSegDisplay> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\mymuxeddisplay_v1_00_a\hdl\verilog\user_logic.v" line 192: Output port <i> of the instance <clk_div0> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <slv_reg0<1>>.
     Found 1-bit register for signal <slv_reg0<2>>.
     Found 1-bit register for signal <slv_reg0<3>>.
@@ -651,34 +623,70 @@ INFO:Xst:3210 - "C:\Users\mainuser\Desktop\School\CST345\FinalTry3\BSB\pcores\my
     Found 1-bit register for signal <slv_reg4<25>>.
     Found 1-bit register for signal <slv_reg4<26>>.
     Found 1-bit register for signal <slv_reg4<27>>.
-    Found 1-bit register for signal <slv_reg4<28>>.
-    Found 1-bit register for signal <slv_reg4<29>>.
-    Found 1-bit register for signal <slv_reg4<30>>.
-    Found 1-bit register for signal <slv_reg4<31>>.
+    Found 1-bit register for signal <dp0>.
+    Found 1-bit register for signal <dp1>.
+    Found 1-bit register for signal <dp2>.
+    Found 1-bit register for signal <dp3>.
     Found 1-bit register for signal <slv_reg0<0>>.
     Summary:
 	inferred 160 D-type flip-flop(s).
 	inferred 165 Multiplexer(s).
 Unit <user_logic> synthesized.
 
+Synthesizing Unit <Mux_disp>.
+    Related source file is "C:\Users\mainuser\Desktop\School\CST345\Final\VerilogSource\Mux_disp.v".
+    Found 2-bit register for signal <sel>.
+    Found 2-bit adder for signal <sel[1]_GND_32_o_add_0_OUT> created at line 66.
+    Found 4x4-bit Read Only RAM for signal <_n0033>
+    Found 16x7-bit Read Only RAM for signal <_n0050>
+    Found 5-bit 4-to-1 multiplexer for signal <MuxOut> created at line 86.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Mux_disp> synthesized.
+
+Synthesizing Unit <Clock_Divider>.
+    Related source file is "C:\Users\mainuser\Desktop\School\CST345\Final\VerilogSource\Clock_Divider.v".
+    Found 1-bit register for signal <clk_out>.
+    Found 18-bit register for signal <i>.
+    Found 18-bit adder for signal <i[17]_GND_33_o_add_3_OUT> created at line 47.
+    Found 18-bit comparator greater for signal <GND_33_o_i[17]_LessThan_3_o> created at line 39
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <Clock_Divider> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 1
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 3
+ 18-bit adder                                          : 1
+ 2-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 37
- 1-bit register                                        : 15
+# Registers                                            : 152
+ 1-bit register                                        : 128
+ 18-bit register                                       : 1
+ 2-bit register                                        : 1
  3-bit register                                        : 2
- 32-bit register                                       : 10
- 4-bit register                                        : 3
+ 32-bit register                                       : 6
+ 4-bit register                                        : 7
  5-bit register                                        : 1
  8-bit register                                        : 5
  9-bit register                                        : 1
-# Multiplexers                                         : 210
+# Comparators                                          : 1
+ 18-bit comparator greater                             : 1
+# Multiplexers                                         : 211
  1-bit 2-to-1 multiplexer                              : 197
  32-bit 2-to-1 multiplexer                             : 5
  4-bit 4-to-1 multiplexer                              : 1
+ 5-bit 4-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 7
 
 =========================================================================
@@ -729,6 +737,36 @@ WARNING:Xst:2677 - Node <plb_abus_reg_3> of sequential type is unconnected in bl
 WARNING:Xst:2677 - Node <plb_abus_reg_2> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
 WARNING:Xst:2677 - Node <plb_abus_reg_1> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
 WARNING:Xst:2677 - Node <plb_abus_reg_0> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+
+Synthesizing (advanced) Unit <Clock_Divider>.
+The following registers are absorbed into counter <i>: 1 register on signal <i>.
+Unit <Clock_Divider> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Mux_disp>.
+The following registers are absorbed into counter <sel>: 1 register on signal <sel>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0033> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sel>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0050> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <MuxOut<4:1>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Mux_disp> synthesized (advanced).
 WARNING:Xst:2677 - Node <addr_out_s_h_4> of sequential type is unconnected in block <plb_address_decoder>.
 WARNING:Xst:2677 - Node <addr_out_s_h_3> of sequential type is unconnected in block <plb_address_decoder>.
 
@@ -736,14 +774,23 @@ WARNING:Xst:2677 - Node <addr_out_s_h_3> of sequential type is unconnected in bl
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
 # Adders/Subtractors                                   : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 405
- Flip-Flops                                            : 405
-# Multiplexers                                         : 202
+# Counters                                             : 2
+ 18-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 406
+ Flip-Flops                                            : 406
+# Comparators                                          : 1
+ 18-bit comparator greater                             : 1
+# Multiplexers                                         : 203
  1-bit 2-to-1 multiplexer                              : 189
  32-bit 2-to-1 multiplexer                             : 5
  4-bit 4-to-1 multiplexer                              : 1
+ 5-bit 4-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 7
 
 =========================================================================
@@ -877,11 +924,12 @@ WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce
 WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_7> of sequential type is unconnected in block <mymuxeddisplay>.
 WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0> of sequential type is unconnected in block <mymuxeddisplay>.
 WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN<0>.GEN_PLB_SHARED.cs_out_s_h_0> of sequential type is unconnected in block <mymuxeddisplay>.
+WARNING:Xst:1710 - FF/Latch <USER_LOGIC_I/clk_div0/i_17> (without init value) has a constant value of 0 in block <mymuxeddisplay>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block mymuxeddisplay, actual ratio is 4.
-FlipFlop PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_1 has been replicated 3 time(s)
+Found area constraint ratio of 100 (+ 5) on block mymuxeddisplay, actual ratio is 5.
+FlipFlop PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_0 has been replicated 3 time(s)
 FlipFlop PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_2 has been replicated 3 time(s)
 FlipFlop PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_3 has been replicated 3 time(s)
 FlipFlop PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_4 has been replicated 3 time(s)
@@ -892,8 +940,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 303
- Flip-Flops                                            : 303
+# Registers                                            : 323
+ Flip-Flops                                            : 323
 
 =========================================================================
 
@@ -916,22 +964,28 @@ Top Level Output File Name         : mymuxeddisplay.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 377
+# BELS                             : 470
 #      GND                         : 1
-#      LUT2                        : 10
+#      INV                         : 2
+#      LUT1                        : 16
+#      LUT2                        : 35
 #      LUT3                        : 12
-#      LUT4                        : 269
+#      LUT4                        : 276
 #      LUT5                        : 11
-#      LUT6                        : 74
-# FlipFlops/Latches                : 303
-#      FD                          : 70
-#      FDR                         : 226
+#      LUT6                        : 83
+#      MUXCY                       : 16
+#      VCC                         : 1
+#      XORCY                       : 17
+# FlipFlops/Latches                : 323
+#      FD                          : 87
+#      FDC                         : 2
+#      FDR                         : 227
 #      FDRE                        : 7
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 239
+# IO Buffers                       : 251
 #      IBUF                        : 64
-#      OBUF                        : 175
+#      OBUF                        : 187
 
 Device utilization summary:
 ---------------------------
@@ -940,20 +994,20 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             303  out of  18224     1%  
- Number of Slice LUTs:                  376  out of   9112     4%  
-    Number used as Logic:               376  out of   9112     4%  
+ Number of Slice Registers:             323  out of  18224     1%  
+ Number of Slice LUTs:                  435  out of   9112     4%  
+    Number used as Logic:               435  out of   9112     4%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    443
-   Number with an unused Flip Flop:     140  out of    443    31%  
-   Number with an unused LUT:            67  out of    443    15%  
-   Number of fully used LUT-FF pairs:   236  out of    443    53%  
-   Number of unique control sets:         6
+ Number of LUT Flip Flop pairs used:    494
+   Number with an unused Flip Flop:     171  out of    494    34%  
+   Number with an unused LUT:            59  out of    494    11%  
+   Number of fully used LUT-FF pairs:   264  out of    494    53%  
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                         443
- Number of bonded IOBs:                 240  out of    232   103% (*) 
+ Number of bonded IOBs:                 252  out of    232   108% (*) 
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -978,11 +1032,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-SPLB_Clk                           | BUFGP                  | 303   |
------------------------------------+------------------------+-------+
+-----------------------------------+-----------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                   | Load  |
+-----------------------------------+-----------------------------------------+-------+
+SPLB_Clk                           | BUFGP                                   | 321   |
+USER_LOGIC_I/clk_div0/clk_out      | NONE(USER_LOGIC_I/SevenSegDisplay/sel_1)| 2     |
+-----------------------------------+-----------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -994,7 +1050,7 @@ Speed Grade: -3
 
    Minimum period: 3.911ns (Maximum Frequency: 255.676MHz)
    Minimum input arrival time before clock: 5.265ns
-   Maximum output required time after clock: 4.210ns
+   Maximum output required time after clock: 6.271ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1004,7 +1060,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SPLB_Clk'
   Clock period: 3.911ns (frequency: 255.676MHz)
-  Total number of paths / destination ports: 2916 / 276
+  Total number of paths / destination ports: 3286 / 294
 -------------------------------------------------------------------------
 Delay:               3.911ns (Levels of Logic = 3)
   Source:            PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_2_2 (FF)
@@ -1026,8 +1082,30 @@ Delay:               3.911ns (Levels of Logic = 3)
                                        (29.8% logic, 70.2% route)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'USER_LOGIC_I/clk_div0/clk_out'
+  Clock period: 2.216ns (frequency: 451.233MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               2.216ns (Levels of Logic = 1)
+  Source:            USER_LOGIC_I/SevenSegDisplay/sel_0 (FF)
+  Destination:       USER_LOGIC_I/SevenSegDisplay/sel_0 (FF)
+  Source Clock:      USER_LOGIC_I/clk_div0/clk_out rising
+  Destination Clock: USER_LOGIC_I/clk_div0/clk_out rising
+
+  Data Path: USER_LOGIC_I/SevenSegDisplay/sel_0 to USER_LOGIC_I/SevenSegDisplay/sel_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   0.447   0.882  USER_LOGIC_I/SevenSegDisplay/sel_0 (USER_LOGIC_I/SevenSegDisplay/sel_0)
+     INV:I->O              1   0.206   0.579  USER_LOGIC_I/SevenSegDisplay/Mcount_sel_xor<0>11_INV_0 (USER_LOGIC_I/Result<0>)
+     FDC:D                     0.102          USER_LOGIC_I/SevenSegDisplay/sel_0
+    ----------------------------------------
+    Total                      2.216ns (0.755ns logic, 1.461ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 373 / 353
+  Total number of paths / destination ports: 391 / 371
 -------------------------------------------------------------------------
 Offset:              5.265ns (Levels of Logic = 2)
   Source:            SPLB_Rst (PAD)
@@ -1038,7 +1116,7 @@ Offset:              5.265ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           256   1.222   2.295  SPLB_Rst_IBUF (SPLB_Rst_IBUF)
+     IBUF:I->O           261   1.222   2.296  SPLB_Rst_IBUF (SPLB_Rst_IBUF)
      LUT3:I0->O           21   0.205   1.113  PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/Bus_Reset_clear_sl_busy_OR_22_o1 (PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/Bus_Reset_clear_sl_busy_OR_22_o)
      FDR:R                     0.430          PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_7
     ----------------------------------------
@@ -1046,23 +1124,65 @@ Offset:              5.265ns (Levels of Logic = 2)
                                        (35.3% logic, 64.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 142 / 142
+Timing constraint: Default OFFSET IN BEFORE for Clock 'USER_LOGIC_I/clk_div0/clk_out'
+  Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              4.210ns (Levels of Logic = 1)
-  Source:            PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_addrack_i (FF)
-  Destination:       Sl_addrAck (PAD)
-  Source Clock:      SPLB_Clk rising
+Offset:              3.719ns (Levels of Logic = 1)
+  Source:            SPLB_Rst (PAD)
+  Destination:       USER_LOGIC_I/SevenSegDisplay/sel_1 (FF)
+  Destination Clock: USER_LOGIC_I/clk_div0/clk_out rising
 
-  Data Path: PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_addrack_i to Sl_addrAck
+  Data Path: SPLB_Rst to USER_LOGIC_I/SevenSegDisplay/sel_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             25   0.447   1.192  PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_addrack_i (PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_addrack_i)
-     OBUF:I->O                 2.571          Sl_addrAck_OBUF (Sl_addrAck)
+     IBUF:I->O           261   1.222   2.067  SPLB_Rst_IBUF (SPLB_Rst_IBUF)
+     FDC:CLR                   0.430          USER_LOGIC_I/SevenSegDisplay/sel_0
     ----------------------------------------
-    Total                      4.210ns (3.018ns logic, 1.192ns route)
-                                       (71.7% logic, 28.3% route)
+    Total                      3.719ns (1.652ns logic, 2.067ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'USER_LOGIC_I/clk_div0/clk_out'
+  Total number of paths / destination ports: 66 / 12
+-------------------------------------------------------------------------
+Offset:              6.271ns (Levels of Logic = 3)
+  Source:            USER_LOGIC_I/SevenSegDisplay/sel_0 (FF)
+  Destination:       segments<0> (PAD)
+  Source Clock:      USER_LOGIC_I/clk_div0/clk_out rising
+
+  Data Path: USER_LOGIC_I/SevenSegDisplay/sel_0 to segments<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   0.447   1.247  USER_LOGIC_I/SevenSegDisplay/sel_0 (USER_LOGIC_I/SevenSegDisplay/sel_0)
+     LUT6:I0->O            7   0.203   1.021  USER_LOGIC_I/SevenSegDisplay/Mmux_MuxOut41 (USER_LOGIC_I/SevenSegDisplay/MuxOut<4>)
+     LUT4:I0->O            1   0.203   0.579  USER_LOGIC_I/SevenSegDisplay/Mram__n005051 (segments_5_OBUF)
+     OBUF:I->O                 2.571          segments_5_OBUF (segments<5>)
+    ----------------------------------------
+    Total                      6.271ns (3.424ns logic, 2.847ns route)
+                                       (54.6% logic, 45.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
+  Total number of paths / destination ports: 258 / 150
+-------------------------------------------------------------------------
+Offset:              5.922ns (Levels of Logic = 3)
+  Source:            USER_LOGIC_I/slv_reg1_31 (FF)
+  Destination:       segments<0> (PAD)
+  Source Clock:      SPLB_Clk rising
+
+  Data Path: USER_LOGIC_I/slv_reg1_31 to segments<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.447   0.898  USER_LOGIC_I/slv_reg1_31 (USER_LOGIC_I/slv_reg1_31)
+     LUT6:I2->O            7   0.203   1.021  USER_LOGIC_I/SevenSegDisplay/Mmux_MuxOut11 (USER_LOGIC_I/SevenSegDisplay/MuxOut<1>)
+     LUT4:I0->O            1   0.203   0.579  USER_LOGIC_I/SevenSegDisplay/Mram__n005021 (segments_2_OBUF)
+     OBUF:I->O                 2.571          segments_2_OBUF (segments<2>)
+    ----------------------------------------
+    Total                      5.922ns (3.424ns logic, 2.498ns route)
+                                       (57.8% logic, 42.2% route)
 
 =========================================================================
 
@@ -1077,17 +1197,25 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 SPLB_Clk       |    3.911|         |         |         |
 ---------------+---------+---------+---------+---------+
 
+Clock to Setup on destination clock USER_LOGIC_I/clk_div0/clk_out
+-----------------------------+---------+---------+---------+---------+
+                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------+---------+---------+---------+---------+
+USER_LOGIC_I/clk_div0/clk_out|    2.216|         |         |         |
+-----------------------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.32 secs
+Total CPU time to Xst completion: 8.79 secs
  
 --> 
 
-Total memory usage is 284760 kilobytes
+Total memory usage is 285336 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  208 (   0 filtered)
-Number of infos    :   19 (   0 filtered)
+Number of warnings :  188 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 
