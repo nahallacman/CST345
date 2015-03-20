@@ -40,6 +40,7 @@ typedef enum {DISPLAY, SHOWHIGH, SHOWLOW, SETHIGH, SETLOW} state_t;
 #include <xgpio.h>
 
 //void print(char *str);
+int convertkeypress(int toconvert);
 
 int main()
 {
@@ -53,6 +54,8 @@ int main()
 
 	Xuint32 *customip3 =  (Xuint32 *) XPAR_MYKEYBOARD_0_BASEADDR;
 	Xuint32 data3 = 0x0000;
+
+	Xuint32 lastkeypress = 0;
 
 	int i = 0;
 
@@ -72,6 +75,13 @@ int main()
     int RecievedByteCount2;
 
 
+
+
+
+    int keypressed = 0;
+    int lastkeypressed = 0;
+
+/*
     //IIC communication
     ReceivedByteCount = XIic_Send(XPAR_XPS_IIC_0_BASEADDR, 0x4B, 0x00, 1, 0);
     ReceivedByteCount = XIic_Recv(XPAR_XPS_IIC_0_BASEADDR, 0x4B, temperature_array, 2, 0);
@@ -80,7 +90,7 @@ int main()
            xil_printf("ad7183_recv_fail: 0x%x %d\r\n",temperature_array[0],ReceivedByteCount);
         else
            xil_printf("ad7183_recv_succ: 0x%x %d\r\n",temperature_array[0],ReceivedByteCount);
-
+*/
 
     //temperature calculations
     u16 temperature_final;
@@ -110,10 +120,10 @@ int main()
     unsigned char char1;
     unsigned char char2;
     unsigned char char3;
-    unsigned char dps;
+
     unsigned char yesdps = 0x0D;
     unsigned char nodps = 0x0F;
-
+    unsigned char dps = yesdps;
     /*
 
     dps = yesdps;
@@ -180,10 +190,10 @@ int main()
 	    ReceivedByteCount = XIic_Send(XPAR_XPS_IIC_0_BASEADDR, 0x4B, 0x00, 1, 0);
 	    ReceivedByteCount = XIic_Recv(XPAR_XPS_IIC_0_BASEADDR, 0x4B, temperature_array, 2, 0);
 
-	    if(ReceivedByteCount != 2)
-	           xil_printf("ad7183_recv_fail: 0x%x %d\r\n",temperature_array[0],ReceivedByteCount);
-	        else
-	           xil_printf("ad7183_recv_succ: 0x%x %d\r\n",temperature_array[0],ReceivedByteCount);
+	    //if(ReceivedByteCount != 2)
+	     //      xil_printf("ad7183_recv_fail: 0x%x %d\r\n",temperature_array[0],ReceivedByteCount);
+	    //    else
+	     //      xil_printf("ad7183_recv_succ: 0x%x %d\r\n",temperature_array[0],ReceivedByteCount);
 
 
 	    //temperature calculations
@@ -193,28 +203,33 @@ int main()
 	    float final_temp;
 	    temperature_final = temperature_array[0];
 
-	    xil_printf("Temp final = %d\r\n", temperature_final);
+	    //xil_printf("Temp final = %d\r\n", temperature_final);
 	    temperature_final = temperature_final << 8;
-	    xil_printf("Temp final shifted = %d\r\n", temperature_final);
+	    //xil_printf("Temp final shifted = %d\r\n", temperature_final);
 	    temperature_final |= temperature_array[1];
-	    xil_printf("Temp final combined = %d\r\n", temperature_final);
+	    //xil_printf("Temp final combined = %d\r\n", temperature_final);
 	    temperature_final = temperature_final >> 3;
-	    xil_printf("Temp final shift #2 = %d\r\n", temperature_final);
+	    //xil_printf("Temp final shift #2 = %d\r\n", temperature_final);
 	    final_temp = temperature_final * .0625;
 	    temperature = temperature_final * .0625;
-	    xil_printf("Temp final float = %a\r\n", final_temp);
-	    xil_printf("Temp final decimal = %d\r\n", temperature);
+	    //xil_printf("Temp final float = %a\r\n", final_temp);
+	    //xil_printf("Temp final decimal = %d\r\n", temperature);
 	    temp_to_2_places = temperature_final * 6.25;
-	    xil_printf("Temp final decimal to 2 places = %d\r\n", temp_to_2_places);
+	    //xil_printf("Temp final decimal to 2 places = %d\r\n", temp_to_2_places);
 
 	    data = 0x0;
 
-	    if(temp_to_2_places > hightemp)
+	    if(hightemp <= lowtemp)
+	    {
+	    	//turn on programming error LED
+	    	data = 0x04;
+	    }
+	    else if(temp_to_2_places > hightemp)
 	    {
 	    	//turn on AC
 	    	data = 0x1;
 	    }
-	    if(temp_to_2_places < lowtemp)
+	    else if(temp_to_2_places < lowtemp)
 	    {
 	    	//turn on heat
 	    	data = 0x2;
@@ -231,10 +246,10 @@ int main()
 		sw2 = swval & 0x02;
 		sw3 = swval & 0x04;
 
-		xil_printf("switches value = %d", swval);
-		xil_printf("sw1 = %d", sw1);
-		xil_printf("sw2 = %d", sw2);
-		xil_printf("sw3 = %d", sw3);
+		//xil_printf("switches value = %d", swval);
+		//xil_printf("sw1 = %d", sw1);
+		//xil_printf("sw2 = %d", sw2);
+		//xil_printf("sw3 = %d", sw3);
 
 		switch(state)
 		{
@@ -262,8 +277,9 @@ int main()
 					state = SHOWHIGH;
 				}
 			}
+			//state stays the same
 
-		    xil_printf("printchars\n\r");
+		   // xil_printf("printchars\n\r");
 		    char0 = temp_to_2_places % 10;
 		    temp_to_2_places /= 10;
 		    char1 = temp_to_2_places % 10;
@@ -272,17 +288,13 @@ int main()
 		    temp_to_2_places /= 10;
 		    char3 = temp_to_2_places % 10;
 
-			xil_printf("%d\n\r", char0);
-			xil_printf("%d\n\r", char1);
-			xil_printf("%d\n\r", char2);
-			xil_printf("%d\n\r", char3);
+		//	xil_printf("%d\n\r", char0);
+		//	xil_printf("%d\n\r", char1);
+		//	xil_printf("%d\n\r", char2);
+		//	xil_printf("%d\n\r", char3);
 
-			//state stays the same
-			//char0 = 0;
-			//char1 = 0;
-			//char2 = 0;
-			//char3 = 1;
-			dps = yesdps;
+
+
 			break;
 		case SHOWHIGH:
 			//show the current high temperature
@@ -312,11 +324,6 @@ int main()
 		    h_t /= 10;
 		    char3 = h_t % 10;
 
-			//char0 = 1;
-			//char1 = 0;
-			//char2 = 0;
-			//char3 = 1;
-			dps = yesdps;
 			break;
 		case SHOWLOW:
 			//show the current low temperature
@@ -345,11 +352,6 @@ int main()
 		    l_t /= 10;
 		    char3 = l_t % 10;
 
-			//char0 = 1;
-			//char1 = 0;
-			//char2 = 0;
-			//char3 = 2;
-			dps = yesdps;
 			break;
 		case SETHIGH:
 			//set the high temperature
@@ -366,11 +368,78 @@ int main()
 				state = DISPLAY;
 			}
 
-			char0 = 2;
-			char1 = 0;
-			char2 = 0;
-			char3 = 1;
-			dps = nodps;
+			//read a value from the keypad
+	    	XIo_Out32(customip3, data3);
+	    	data3 = XIo_In32(customip3);
+	    	data3 = convertkeypress((unsigned char)data3);
+
+	    	if(data3 == 0)
+	    	{
+	    		keypressed = 0;
+	    		//lastkeypress = 0;
+	    	}
+	    	else
+	    	{
+	    		keypressed = 1;
+	    	}
+
+	    	//after the read, check if the value is the same as the value detected before
+	    	//if they are the same value, ignore it
+	    	//if the value is 0 ignore it
+	    	//else shift in keypress
+	    	if(keypressed != lastkeypressed)
+	    	{
+	    		xil_printf("keypressed status = %d, last key pressed = %d, keypress = %d\r\n", keypressed, lastkeypressed, data3);
+	    		lastkeypressed = keypressed;
+
+
+
+				if(keypressed)
+				{
+					xil_printf("keypress detected = %d\r\n", data3);
+
+					//lastkeypress = data3;
+
+					if(data3 < 10) // if keypress is 0 to 9 shift in the keypress
+					{
+						xil_printf("%d keypress detected\r\n", data3);
+
+						char3 = char2;
+						char2 = char1;
+						char1 = char0;
+						char0 = data3;
+					}
+					else if(data3 == 0xC)
+					{
+						xil_printf("clear detected\r\n");
+						char3 = 0;
+						char2 = 0;
+						char1 = 0;
+						char0 = 0;
+					}
+					else if(data3 == 0xE)
+					{
+						//set value
+						xil_printf("Set Value keypress detected\r\n");
+						hightemp = 0;
+						hightemp = (char3 * 1000) + (char2 * 100) + (char1 * 10) + char0;
+						xil_printf("New High Temp = %d\r\n", hightemp);
+					}
+					else if(data3 == 0x10) //if data = 0
+					{
+						xil_printf("%d keypress detected\r\n", data3);
+						char3 = char2;
+						char2 = char1;
+						char1 = char0;
+						char0 = 0;
+					}
+					else
+					{
+						xil_printf("Non printable keypress detected = %d\r\n", data3);
+					}
+				}
+	    	}
+			//dps = nodps;
 			break;
 		case SETLOW:
 			//set the low temperature
@@ -390,11 +459,77 @@ int main()
 				state = DISPLAY;
 			}
 
-			char0 = 2;
-			char1 = 0;
-			char2 = 0;
-			char3 = 2;
-			dps = nodps;
+			//read a value from the keypad
+	    	XIo_Out32(customip3, data3);
+	    	data3 = XIo_In32(customip3);
+	    	data3 = convertkeypress((unsigned char)data3);
+
+	    	if(data3 == 0)
+	    	{
+	    		keypressed = 0;
+	    		//lastkeypress = 0;
+	    	}
+	    	else
+	    	{
+	    		keypressed = 1;
+	    	}
+
+	    	//after the read, check if the value is the same as the value detected before
+	    	//if they are the same value, ignore it
+	    	//if the value is 0 ignore it
+	    	//else shift in keypress
+	    	if(keypressed != lastkeypressed)
+	    	{
+	    		xil_printf("keypressed status = %d, last key pressed = %d, keypress = %d\r\n", keypressed, lastkeypressed, data3);
+	    		lastkeypressed = keypressed;
+
+
+
+				if(keypressed)
+				{
+					xil_printf("keypress detected = %d\r\n", data3);
+
+					//lastkeypress = data3;
+
+					if(data3 < 10) // if keypress is 0 to 9 shift in the keypress
+					{
+						xil_printf("%d keypress detected\r\n", data3);
+
+						char3 = char2;
+						char2 = char1;
+						char1 = char0;
+						char0 = data3;
+					}
+					else if(data3 == 0xC)
+					{
+						xil_printf("clear detected\r\n");
+						char3 = 0;
+						char2 = 0;
+						char1 = 0;
+						char0 = 0;
+					}
+					else if(data3 == 0xE)
+					{
+						//set value
+						xil_printf("Set Value keypress detected\r\n");
+						lowtemp = 0;
+						lowtemp = (char3 * 1000) + (char2 * 100) + (char1 * 10) + char0;
+						xil_printf("New High Temp = %d\r\n", lowtemp);
+					}
+					else if(data3 == 0x10) //if data = 0
+					{
+						xil_printf("%d keypress detected\r\n", data3);
+						char3 = char2;
+						char2 = char1;
+						char1 = char0;
+						char0 = 0;
+					}
+					else
+					{
+						xil_printf("Non printable keypress detected = %d\r\n", data3);
+					}
+				}
+	    	}
 			break;
 		default:
 			state = DISPLAY;
@@ -402,23 +537,23 @@ int main()
 
 
 		//write values to LEDs
-		xil_printf("Writing %d to myleds register\r\n", data);
+		//xil_printf("Writing %d to myleds register\r\n", data);
 		XIo_Out32(customip, data);
 
 		//write values to muxed display
-		xil_printf("Writing %d to muxed display register 0\r\n", char0);
+		//xil_printf("Writing %d to muxed display register 0\r\n", char0);
 		XIo_Out32(customip2, char0);
 
-		xil_printf("Writing %d to muxed display register 1\r\n", char1);
+		//xil_printf("Writing %d to muxed display register 1\r\n", char1);
 		XIo_Out32(customip2 + 0x01, char1);
 
-		xil_printf("Writing %d to muxed display register 1\r\n", char2);
+		//xil_printf("Writing %d to muxed display register 1\r\n", char2);
 		XIo_Out32(customip2 + 0x02, char2);
 
-		xil_printf("Writing %d to muxed display register 2\r\n", char3);
+		//xil_printf("Writing %d to muxed display register 2\r\n", char3);
 		XIo_Out32(customip2 + 0x03, char3);
 
-		xil_printf("Writing %d to muxed display register decimal points\r\n", dps);
+		//xil_printf("Writing %d to muxed display register decimal points\r\n", dps);
 		XIo_Out32(customip2 + 0x04, dps);
 	}
 
@@ -430,7 +565,7 @@ int main()
     while(1)
     {
     	//xil_printf("Writing %d to muxed display register 0\r\n", data2);
-    	    	XIo_Out32(customip3, data2);
+    	XIo_Out32(customip3, data2);
     	data3 = XIo_In32(customip3);
     	if(data3 != 0)
     	{
@@ -441,4 +576,69 @@ int main()
     cleanup_platform();
 
     return 0;
+}
+
+int convertkeypress(int toconvert)
+{
+	unsigned char a;
+
+
+	switch(toconvert)
+	{
+	case 29:
+		a = 1;
+		break;
+	case 30:
+		a = 2;
+		break;
+	case 31:
+		a = 3;
+		break;
+	case 16:
+		a = 0xA;
+		break;
+	case 28:
+		a = 4;
+		break;
+	case 25:
+		a = 5;
+		break;
+	case 24:
+		a = 6;
+		break;
+	case 23:
+		a = 0xB;
+		break;
+	case 27:
+		a = 0x7;
+		break;
+	case 22:
+		a = 0x8;
+		break;
+	case 21:
+		a = 0x9;
+		break;
+	case 20:
+		a = 0xC;
+		break;
+	case 26:
+		a = 0x10; // 0
+		break;
+	case 19:
+		a = 0xF;
+		break;
+	case 18:
+		a = 0xE;
+		break;
+	case 17:
+		a = 0xD;
+		break;
+	default:
+		a = 0;
+	}
+/*
+	xil_printf("Converting keypress %d to ", toconvert);
+	xil_printf("%d\r\n", a);
+*/
+	return a;
 }
