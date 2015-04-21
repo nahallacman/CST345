@@ -111,3 +111,12 @@
 03:36:29.493 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 03:42:12.212 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 03:47:32.060 INFO  - FPGA configured successfully with bitstream "C:/Users/mainuser/Desktop/School/CST345/FinalTry7/SDKWorkspace/BSB_hw_platform/download.bit" 
+21:51:56.444 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+21:52:00.831 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+21:52:00.837 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
